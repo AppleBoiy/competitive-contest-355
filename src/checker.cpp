@@ -1,7 +1,9 @@
 #include "testlib.h"
 #include <bits/stdc++.h>
+
 using namespace std;
 int n;
+
 bool has[1010];
 bool prime(int x) {
     if (x == 1)
@@ -12,7 +14,7 @@ bool prime(int x) {
     }
     return true;
 }
-int readAns(InStream& stream) {
+int readAns(InStream &stream) {
     int ans = stream.readInt(1, 1000);
     if (has[ans] == 0)
         return -1;
@@ -21,7 +23,7 @@ int readAns(InStream& stream) {
     return 1;
 }
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     registerTestlibCmd(argc, argv);
     int n = inf.readInt();
     for (int i = 0; i < n; i++) {

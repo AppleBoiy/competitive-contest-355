@@ -1,4 +1,4 @@
-+#include "testlib.h"
+#include "testlib.h"
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -12,7 +12,7 @@ bool prime(int x) {
     return true;
 }
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     registerGen(argc, argv, 1);
     int min_n = atoi(argv[1]);
     int max_n = atoi(argv[2]);
