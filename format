@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-find . -name "*.cpp" -exec clang-format -style=file -i {} \;
+find . -name "src/*.cpp" -exec clang-format -style=file -i {} \;

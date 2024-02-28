@@ -1,0 +1,19 @@
+# ninja log v5
+2	263	1709128300061340822	CMakeFiles/officialsol.dir/src/officialsol.cpp.o	75c2e42e62e9a59
+2	45	1709126564165445290	competitive_contest	f23d032614815ec0
+651	747	1709126755995365424	defaultsol	f6658ef24896a64d
+3	1313	1709126516436872320	CMakeFiles/competitive_contest.dir/src/test.cpp.o	3d6a17474106c064
+2	776	1709126515900026344	CMakeFiles/competitive_contest.dir/src/defaultsol.cpp.o	14f65bd148c7defe
+3	604	1709126515727036346	CMakeFiles/competitive_contest.dir/src/officialsol.cpp.o	49efcded42b42a0
+283	314	1709128284417039835	officialsol	ed10f7a22a045be6
+1	49	1709128507185189491	build.ninja	bad46f183d013def
+2	651	1709126755897487383	CMakeFiles/defaultsol.dir/src/defaultsol.cpp.o	b69ff567a47f06f4
+503	598	1709126799849593134	officalsol	f4588c408feb9d0b
+2	391	1709128459529552461	CMakeFiles/geninput.dir/src/generator.cpp.o	6c17100cf8c37fd2
+391	421	1709128459561204641	geninput	9cb2666363bc16f
+3	1308	1709126516427964392	CMakeFiles/competitive_contest.dir/src/validator.cpp.o	a0333a0e076dca7b
+0	1309	1709126516428374804	CMakeFiles/competitive_contest.dir/src/checker.cpp.o	125e7132f876cb22
+0	502	1709126799753350905	CMakeFiles/officalsol.dir/src/officialsol.cpp.o	149e19c4149163b9
+2	623	1709127813305782687	CMakeFiles/geninput.dir/src/geninput.cpp.o	6f823bd3b46b5c62
+0	433	1709128510593952565	CMakeFiles/generator.dir/src/generator.cpp.o	e50401f9fa1963c
+433	532	1709128510692536461	generator	1f75fe943091cfe8

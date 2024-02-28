@@ -1,24 +1,27 @@
 #include <bits/stdc++.h>
+#define ll long long
+
 using namespace std;
-bool prime(int x) {
-    if (x == 1)
-        return false;
-    for (int i = 2; i * i <= x; i++) {
-        if (x % i == 0)
-            return false;
+
+ll fib(ll n) {
+    if (n <= 1) {
+        return n;
     }
-    return true;
+    ll a = 0, b = 1, c;
+    for (ll i = 2; i <= n; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    return c;
 }
+
 int main() {
-    int n, x;
-    cin >> n;
-    bool has_prime = false;
-    for (int i = 1; i <= n; i++) {
-        cin >> x;
-        if (prime(x)) {
-            cout << x;
-            return 0;
-        }
-    }
+    ll n, m;
+
+    cin >> n >> m;
+
+    cout << fib(n) % m << endl;
+
     return 0;
 }
