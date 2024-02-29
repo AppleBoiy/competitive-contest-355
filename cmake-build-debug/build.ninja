@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_officialsol: phony || CMakeFiles/officia
 
 build CMakeFiles/officialsol.dir/src/officialsol.cpp.o: CXX_COMPILER__officialsol_unscanned_Debug /Users/iccy/Documents/study/cmu-y2-term2/competitive-contest/src/officialsol.cpp || cmake_object_order_depends_target_officialsol
   DEP_FILE = CMakeFiles/officialsol.dir/src/officialsol.cpp.o.d
-  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
   INCLUDES = -I/Users/iccy/Documents/study/cmu-y2-term2/competitive-contest/src
   OBJECT_DIR = CMakeFiles/officialsol.dir
   OBJECT_FILE_DIR = CMakeFiles/officialsol.dir/src
@@ -83,7 +83,7 @@ build cmake_object_order_depends_target_defaultsol: phony || CMakeFiles/defaults
 
 build CMakeFiles/defaultsol.dir/src/defaultsol.cpp.o: CXX_COMPILER__defaultsol_unscanned_Debug /Users/iccy/Documents/study/cmu-y2-term2/competitive-contest/src/defaultsol.cpp || cmake_object_order_depends_target_defaultsol
   DEP_FILE = CMakeFiles/defaultsol.dir/src/defaultsol.cpp.o.d
-  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
   INCLUDES = -I/Users/iccy/Documents/study/cmu-y2-term2/competitive-contest/src
   OBJECT_DIR = CMakeFiles/defaultsol.dir
   OBJECT_FILE_DIR = CMakeFiles/defaultsol.dir/src
@@ -115,7 +115,7 @@ build cmake_object_order_depends_target_generator: phony || CMakeFiles/generator
 
 build CMakeFiles/generator.dir/src/generator.cpp.o: CXX_COMPILER__generator_unscanned_Debug /Users/iccy/Documents/study/cmu-y2-term2/competitive-contest/src/generator.cpp || cmake_object_order_depends_target_generator
   DEP_FILE = CMakeFiles/generator.dir/src/generator.cpp.o.d
-  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
   INCLUDES = -I/Users/iccy/Documents/study/cmu-y2-term2/competitive-contest/src
   OBJECT_DIR = CMakeFiles/generator.dir
   OBJECT_FILE_DIR = CMakeFiles/generator.dir/src
@@ -147,7 +147,7 @@ build cmake_object_order_depends_target_fib: phony || CMakeFiles/fib.dir
 
 build CMakeFiles/fib.dir/src/fib.cpp.o: CXX_COMPILER__fib_unscanned_Debug /Users/iccy/Documents/study/cmu-y2-term2/competitive-contest/src/fib.cpp || cmake_object_order_depends_target_fib
   DEP_FILE = CMakeFiles/fib.dir/src/fib.cpp.o.d
-  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
   INCLUDES = -I/Users/iccy/Documents/study/cmu-y2-term2/competitive-contest/src
   OBJECT_DIR = CMakeFiles/fib.dir
   OBJECT_FILE_DIR = CMakeFiles/fib.dir/src
