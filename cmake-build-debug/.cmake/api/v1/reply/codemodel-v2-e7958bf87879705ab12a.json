@@ -17,7 +17,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -34,7 +35,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -45,6 +47,13 @@
 					"id" : "defaultsol::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-defaultsol-Debug-b60f5bb9b409ba8e93e1.json",
 					"name" : "defaultsol",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "fib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fib-Debug-0bd1fafdfa4fed6be678.json",
+					"name" : "fib",
 					"projectIndex" : 0
 				},
 				{

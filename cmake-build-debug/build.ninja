@@ -136,6 +136,38 @@ build generator: CXX_EXECUTABLE_LINKER__generator_Debug CMakeFiles/generator.dir
   TARGET_FILE = generator
   TARGET_PDB = generator.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target fib
+
+
+#############################################
+# Order-only phony target for fib
+
+build cmake_object_order_depends_target_fib: phony || CMakeFiles/fib.dir
+
+build CMakeFiles/fib.dir/src/fib.cpp.o: CXX_COMPILER__fib_unscanned_Debug /Users/iccy/Documents/study/cmu-y2-term2/competitive-contest/src/fib.cpp || cmake_object_order_depends_target_fib
+  DEP_FILE = CMakeFiles/fib.dir/src/fib.cpp.o.d
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/iccy/Documents/study/cmu-y2-term2/competitive-contest/src
+  OBJECT_DIR = CMakeFiles/fib.dir
+  OBJECT_FILE_DIR = CMakeFiles/fib.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target fib
+
+
+#############################################
+# Link the executable fib
+
+build fib: CXX_EXECUTABLE_LINKER__fib_Debug CMakeFiles/fib.dir/src/fib.cpp.o
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
+  OBJECT_DIR = CMakeFiles/fib.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = fib
+  TARGET_PDB = fib.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -170,7 +202,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/iccy/Documents/study/cmu-y2-term2/competitive-contest/cmake-build-debug
 
-build all: phony officialsol defaultsol generator
+build all: phony officialsol defaultsol generator fib
 
 # =============================================================================
 # Built-in targets

@@ -16,3 +16,7 @@ add_executable(defaultsol
 add_executable(generator
         src/generator.cpp
 )
+
+add_executable(fib
+        src/fib.cpp
+)

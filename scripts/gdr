@@ -1,0 +1,10 @@
+#!/bin/bash
+
+/usr/bin/g++ -DEVAL -std=c++14 -O2 -pipe -o officialsol src/officialsol.cpp
+
+if [ $? -ne 0 ]; then
+    echo "Compilation error"
+    exit 1
+else
+    ./officialsol && rm officialsol
+fi

@@ -32,23 +32,39 @@ void gen_input(int &cases, ll max_n = 1e14, ll max_m = 1e3) {
     }
 }
 
-void gen_input_all() {
-    int cases = 0;
+void gen_input_all(int &cases) {
+
+    if (stat("../in", &info) != 0) {
+        // create input folder
+        system("mkdir -p ../in");
+    } else if (info.st_mode & S_IFDIR) {
+        // clear input folder
+        system("rm -rf ../in/*");
+        cout << "Input folder cleared!" << endl;
+    }
+
     gen_input(cases, 1e3, 1e1);
     gen_input(cases, 1e6, 1e2);
     gen_input(cases, 1e9, 1e2);
     gen_input(cases, 1e12, 1e3);
-    gen_input(cases, 1e14, 1e3);
+    //    gen_input(cases, 1e14, 1e3);
 
     cout << "Total " << cases << " test cases generated!" << endl;
 }
 
-void gen_output() {
+void gen_output(int cases) {
 
-    // create output folder
-    system("mkdir -p ../out");
+    // check output folder exists
+    if (stat("../out", &info) != 0) {
+        // create output folder
+        system("mkdir -p ../out");
+    } else if (info.st_mode & S_IFDIR) {
+        // clear output folder
+        system("rm -rf ../out/*");
+        cout << "Output folder cleared!" << endl;
+    }
 
-    for (int i = 0; i < 50; ++i) {
+    for (int i = 0; i < cases; ++i) {
         string in = "../in/" + to_string(i) + ".in";
 
         ll n = 0, m = 0;
@@ -74,12 +90,15 @@ void gen_output() {
 
         outfile.close();
     }
+
+    cout << "Total " << cases << " results generated!" << endl;
 }
 
 int main() {
 
-    gen_input_all();
-    gen_output();
+    int cases = 0;
+    gen_input_all(cases);
+    gen_output(cases);
 
     return 0;
 }

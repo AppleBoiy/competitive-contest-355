@@ -8,8 +8,11 @@
 #include <fstream>
 #include <iostream>
 #include <random>
+#include <sys/stat.h>
 
 #include "./officialsol.cpp"
+
+struct stat info;
 
 class generator {};
 
