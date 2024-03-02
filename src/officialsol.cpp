@@ -34,9 +34,9 @@ ll fib_fast(ll n, ll m) {
     return c % m;
 }
 
-// int main() {
-//     long long n, m;
-//     std::cin >> n >> m;
-//     // std::cout << get_fibonacci_huge_naive(n, m) << '\n';
-//     std::cout << fib_fast(n, m) << '\n';
-// }
+int main() {
+    long long n, m;
+    std::cin >> n >> m;
+    // std::cout << get_fibonacci_huge_naive(n, m) << '\n';
+    std::cout << fib_fast(n, m) << '\n';
+}
