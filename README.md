@@ -20,10 +20,10 @@ for large values of **n**. However, you can optimize the solution using the Pisa
 
 ### Pisano Period
 
-#### Pisano Period
-
 The Pisano period, also known as the Fibonacci period or cycle, refers to the periodic and repetitive nature of the
 remainders when the Fibonacci sequence is divided by a positive integer called the "modulus."
+
+[read more](https://en.wikipedia.org/wiki/Pisano_period)
 
 #### Fibonacci Sequence
 
