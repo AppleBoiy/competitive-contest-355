@@ -124,7 +124,3 @@ The program outputs the **nth Fibonacci number modulo m**.
 The time complexity of this solution is **O(remainder + new_n)**, where **remainder** is the Pisano Period and **new_n**
 is the position of the Fibonacci number within the Pisano Period. This is a significant optimization over the naive
 approach.
-
-### Space Complexity
-
-The space complexity is **O(1)** as the algorithm uses a constant amount of space.
