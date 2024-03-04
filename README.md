@@ -1,8 +1,11 @@
-# Competitive contest
-
+<!--
 <p align="center">
   <img src="sample.png"/>
-</p>
+</p> 
+-->
+
+
+# Competitive contest
 
 ## Fibonacci Modulo Problem
 
