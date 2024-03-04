@@ -1,3 +1,9 @@
+# Competitive contest
+
+<p align="center">
+  <img src="sample.png"/>
+</p>
+
 ## Fibonacci Modulo Problem
 
 ### Problem Statement
