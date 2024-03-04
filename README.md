@@ -1,37 +1,118 @@
-# competitive-contest-355
+## Fibonacci Modulo Problem
 
-## Question: Huge Fibonacci Number Problem
+### Problem Statement
 
-Compute the n-th Fibonacci number modulo m.
+You are given two integers, **n** and **m**, and you need to find the **nth Fibonacci number modulo m**.
 
-![fib_img](sample.png)
+### Approach
 
-- Input format. `Integers n and m.` 
-- Output format. `Fn mod m`
--  Constraints. `1 ≤ n ≤ 1014` and `2 ≤ m ≤ 103`
+The naive approach to find the Fibonacci number at position **n** and then taking the modulo **m** might be inefficient
+for large values of **n**. However, you can optimize the solution using the Pisano Period.
 
-Sample 1.
+### Pisano Period
 
-    Input:
-        1 239
-    Output:
-        1
+#### Pisano Period
 
-Sample 2.
+The Pisano period, also known as the Fibonacci period or cycle, refers to the periodic and repetitive nature of the
+remainders when the Fibonacci sequence is divided by a positive integer called the "modulus."
 
-    Input:
-        115 1000
-    Output:
-        885
+#### Fibonacci Sequence
 
-Sample 3.
+The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, usually starting
+with 0 and 1.
 
-    Input:
-        2816213588 239
-    Output:
-        151
+Example Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
 
-## Source
+#### Pisano Period
 
-- [gist: Validator.cpp](https://gist.github.com/cjakarin/c12c10db9ed79287f3456b7fa34d1bd8)
-- [gist: bits/stdc++.h](https://gist.github.com/AppleBoiy/d876b6e31320b703f13e5f3f222fb9ae)
+When the Fibonacci sequence is divided by a modulus (a positive integer), the remainders exhibit a periodic pattern
+known as the Pisano period. The length of this period depends on the modulus chosen.
+
+The Pisano period is useful in various applications, especially in problems related to number theory and modular
+arithmetic.
+
+#### Formula
+
+Given a modulus 'm,' the Pisano period is denoted as π(m). The period starts with the pair (0, 1) and repeats after a
+certain number of terms.
+
+#### Example
+
+For example, if the modulus is 5:
+Fibonacci sequence modulo 5
+
+    0, 1, 1, 2, 3, 0, 3, 3, 1, 4,
+    0, 4, 4, 3, 2, 0, 2, 2, 4, 1,
+    0, 1, 1, 2, 3, 0, 3, 3, 1, 4,
+    0, 4, 4, 3, 2, 0, 2, 2, 4, 1,
+    --- Pisano period starts here ---
+    0, 1, 1, 2, 3, 0, 3, 3, 1, 4
+    ... and so on
+
+In this case, the Pisano period (π(5)) is 20, as the sequence starts repeating after 20 terms.
+
+### Code Explanation
+
+Below is the C++ code implementing this approach:
+
+```cpp
+#include <iostream>
+
+#define ll long long
+
+ll fib_fast(ll n, ll m) {
+    if (n <= 1)
+        return n;
+
+    // Pisano period
+    ll remainder = 0;
+
+    ll a = 0, b = 1, c;
+    for (ll i = 0; i < n - 1; i++) {
+        c = (a + b) % m;
+        a = b;
+        b = c;
+        if (a == 0 && b == 1) {
+            remainder = i + 1;
+            break;
+        }
+    }
+
+    ll new_n = n % remainder;
+    if (new_n <= 1)
+        return new_n;
+
+    a = 0, b = 1, c = a + b;
+    for (ll i = 0; i < new_n - 1; i++) {
+        c = (a + b) % m;
+        a = b;
+        b = c;
+    }
+
+    return c % m;
+}
+
+int main() {
+    long long n, m;
+    std::cin >> n >> m;
+    std::cout << fib_fast(n, m) << '\n';
+}
+```
+
+### Input
+
+The program takes two inputs, **n** and **m**, representing the position of the Fibonacci number and the modulo value.
+
+### Output
+
+The program outputs the **nth Fibonacci number modulo m**.
+
+### Time Complexity
+
+The time complexity of this solution is **O(remainder + new_n)**, where **remainder** is the Pisano Period and **new_n**
+is the position of the Fibonacci number within the Pisano Period. This is a significant optimization over the naive
+approach.
+
+### Space Complexity
+
+The space complexity is **O(1)** as the algorithm uses a constant amount of space.
