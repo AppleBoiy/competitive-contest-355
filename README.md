@@ -52,10 +52,13 @@ Fibonacci sequence modulo 5
 
     0, 1, 1, 2, 3, 0, 3, 3, 1, 4,
     0, 4, 4, 3, 2, 0, 2, 2, 4, 1,
+
+    --- Pisano period starts here ---
+
     0, 1, 1, 2, 3, 0, 3, 3, 1, 4,
     0, 4, 4, 3, 2, 0, 2, 2, 4, 1,
-    --- Pisano period starts here ---
     0, 1, 1, 2, 3, 0, 3, 3, 1, 4
+
     ... and so on
 
 In this case, the Pisano period (π(5)) is 20, as the sequence starts repeating after 20 terms.
