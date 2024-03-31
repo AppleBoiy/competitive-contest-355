@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_defaultsol_8cpp" xml:lang="en-US">
+<title>src/defaultsol.cpp File Reference</title>
+<indexterm><primary>src/defaultsol.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;bits/stdc++.h&gt;<?linebreak?></programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_defaultsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba">ll</link>&#160;&#160;&#160;long long</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_defaultsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba">ll</link> <link linkend="_defaultsol_8cpp_1a9b270c7812621fd1f443c744bf3c3b3a">fib</link> (<link linkend="_defaultsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba">ll</link> <link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>)</para>
+</listitem>
+            <listitem><para>int <link linkend="_defaultsol_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_defaultsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba"/><section>
+    <title>ll</title>
+<indexterm><primary>ll</primary><secondary>defaultsol.cpp</secondary></indexterm>
+<indexterm><primary>defaultsol.cpp</primary><secondary>ll</secondary></indexterm>
+<para><computeroutput>#define ll&#160;&#160;&#160;long long</computeroutput></para><para>
+Definition at line <link linkend="_defaultsol_8cpp_source_1l00002">2</link> of file <link linkend="_defaultsol_8cpp_source">defaultsol.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_defaultsol_8cpp_1a9b270c7812621fd1f443c744bf3c3b3a"/><section>
+    <title>fib()</title>
+<indexterm><primary>fib</primary><secondary>defaultsol.cpp</secondary></indexterm>
+<indexterm><primary>defaultsol.cpp</primary><secondary>fib</secondary></indexterm>
+<para><computeroutput><link linkend="_defaultsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba">ll</link> fib (<link linkend="_defaultsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba">ll</link> n)</computeroutput></para><para>
+Definition at line <link linkend="_defaultsol_8cpp_source_1l00006">6</link> of file <link linkend="_defaultsol_8cpp_source">defaultsol.cpp</link>.</para>
+</section>
+<anchor xml:id="_defaultsol_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>defaultsol.cpp</secondary></indexterm>
+<indexterm><primary>defaultsol.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main ( )</computeroutput></para><para>
+Definition at line <link linkend="_defaultsol_8cpp_source_1l00019">19</link> of file <link linkend="_defaultsol_8cpp_source">defaultsol.cpp</link>.</para>
+</section>
+</section>
+</section>

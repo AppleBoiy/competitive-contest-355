@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="checker_8cpp">checker.cpp</innerfile>
+    <innerfile refid="defaultsol_8cpp">defaultsol.cpp</innerfile>
+    <innerfile refid="fib_8cpp">fib.cpp</innerfile>
+    <innerfile refid="fib_8h">fib.h</innerfile>
+    <innerfile refid="generator_8cpp">generator.cpp</innerfile>
+    <innerfile refid="generator_8h">generator.h</innerfile>
+    <innerfile refid="officialsol_8cpp">officialsol.cpp</innerfile>
+    <innerfile refid="test_8cpp">test.cpp</innerfile>
+    <innerfile refid="testlib_8h">testlib.h</innerfile>
+    <innerfile refid="validator_8cpp">validator.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

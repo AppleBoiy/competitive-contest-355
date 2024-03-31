@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classpattern" kind="class" language="C++" prot="public">
+    <compoundname>pattern</compoundname>
+    <includes refid="testlib_8h" local="no">testlib.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpattern_1a450a47980b222ddaf7cddbced75ec716" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string pattern::s</definition>
+        <argsstring></argsstring>
+        <name>s</name>
+        <qualifiedname>pattern::s</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="730" column="17" bodyfile="src/testlib.h" bodystart="730" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpattern_1ab7a8ffc3a57975b494456b7d8a3d41d0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classpattern" kindref="compound">pattern</ref> &gt;</type>
+        <definition>std::vector&lt;pattern&gt; pattern::children</definition>
+        <argsstring></argsstring>
+        <name>children</name>
+        <qualifiedname>pattern::children</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="731" column="17" bodyfile="src/testlib.h" bodystart="731" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpattern_1a7b8fe0cf55f0f2aa89bdc0d53de9eafa" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; char &gt;</type>
+        <definition>std::vector&lt;char&gt; pattern::chars</definition>
+        <argsstring></argsstring>
+        <name>chars</name>
+        <qualifiedname>pattern::chars</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="732" column="17" bodyfile="src/testlib.h" bodystart="732" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpattern_1a772a8585948ceb351f3bcdc0aab76b06" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pattern::from</definition>
+        <argsstring></argsstring>
+        <name>from</name>
+        <qualifiedname>pattern::from</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="733" column="9" bodyfile="src/testlib.h" bodystart="733" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpattern_1a1c1678c5df8adc9d210dc1e7e584f24e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pattern::to</definition>
+        <argsstring></argsstring>
+        <name>to</name>
+        <qualifiedname>pattern::to</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="734" column="9" bodyfile="src/testlib.h" bodystart="734" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpattern_1a40258f871a5d68827191054e3e845ccf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>pattern::pattern</definition>
+        <argsstring>(std::string s)</argsstring>
+        <name>pattern</name>
+        <qualifiedname>pattern::pattern</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="716" column="5" bodyfile="src/testlib.h" bodystart="1524" bodyend="1578"/>
+      </memberdef>
+      <memberdef kind="function" id="classpattern_1afc240d1630f47a451af22aff8dbf073d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string pattern::next</definition>
+        <argsstring>(random_t &amp;rnd) const</argsstring>
+        <name>next</name>
+        <qualifiedname>pattern::next</qualifiedname>
+        <param>
+          <type><ref refid="classrandom__t" kindref="compound">random_t</ref> &amp;</type>
+          <declname>rnd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="719" column="17" bodyfile="src/testlib.h" bodystart="1369" bodyend="1388"/>
+      </memberdef>
+      <memberdef kind="function" id="classpattern_1ab4c557a012185d453ddf8730f7a98dc0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pattern::matches</definition>
+        <argsstring>(const std::string &amp;s) const</argsstring>
+        <name>matches</name>
+        <qualifiedname>pattern::matches</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="722" column="10" bodyfile="src/testlib.h" bodystart="1294" bodyend="1296"/>
+      </memberdef>
+      <memberdef kind="function" id="classpattern_1a4795cb9cb1b3b10c551fdce03608786a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string pattern::src</definition>
+        <argsstring>() const</argsstring>
+        <name>src</name>
+        <qualifiedname>pattern::src</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="725" column="17" bodyfile="src/testlib.h" bodystart="1344" bodyend="1346"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classpattern_1a7e97668512085a08c46f49a9f04270f6" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pattern::matches</definition>
+        <argsstring>(const std::string &amp;s, size_t pos) const</argsstring>
+        <name>matches</name>
+        <qualifiedname>pattern::matches</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="728" column="10" bodyfile="src/testlib.h" bodystart="1348" bodyend="1367"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/testlib.h" line="713" column="1" bodyfile="src/testlib.h" bodystart="713" bodyend="735"/>
+    <listofallmembers>
+      <member refid="classpattern_1a7b8fe0cf55f0f2aa89bdc0d53de9eafa" prot="private" virt="non-virtual"><scope>pattern</scope><name>chars</name></member>
+      <member refid="classpattern_1ab7a8ffc3a57975b494456b7d8a3d41d0" prot="private" virt="non-virtual"><scope>pattern</scope><name>children</name></member>
+      <member refid="classpattern_1a772a8585948ceb351f3bcdc0aab76b06" prot="private" virt="non-virtual"><scope>pattern</scope><name>from</name></member>
+      <member refid="classpattern_1ab4c557a012185d453ddf8730f7a98dc0" prot="public" virt="non-virtual"><scope>pattern</scope><name>matches</name></member>
+      <member refid="classpattern_1a7e97668512085a08c46f49a9f04270f6" prot="private" virt="non-virtual"><scope>pattern</scope><name>matches</name></member>
+      <member refid="classpattern_1afc240d1630f47a451af22aff8dbf073d" prot="public" virt="non-virtual"><scope>pattern</scope><name>next</name></member>
+      <member refid="classpattern_1a40258f871a5d68827191054e3e845ccf" prot="public" virt="non-virtual"><scope>pattern</scope><name>pattern</name></member>
+      <member refid="classpattern_1a450a47980b222ddaf7cddbced75ec716" prot="private" virt="non-virtual"><scope>pattern</scope><name>s</name></member>
+      <member refid="classpattern_1a4795cb9cb1b3b10c551fdce03608786a" prot="public" virt="non-virtual"><scope>pattern</scope><name>src</name></member>
+      <member refid="classpattern_1a1c1678c5df8adc9d210dc1e7e584f24e" prot="private" virt="non-virtual"><scope>pattern</scope><name>to</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

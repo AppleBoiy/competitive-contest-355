@@ -1,0 +1,353 @@
+.TH "random_t" 3 "competitive-contest" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+random_t
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <testlib\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBrandom_t\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetSeed\fP (int argc, char *argv[])"
+.br
+.ti -1c
+.RI "void \fBsetSeed\fP (long long _seed)"
+.br
+.ti -1c
+.RI "std::string \fBnext\fP (const std::string &ptrn)"
+.br
+.ti -1c
+.RI "int \fBnext\fP (int \fBn\fP)"
+.br
+.ti -1c
+.RI "unsigned int \fBnext\fP (unsigned int \fBn\fP)"
+.br
+.ti -1c
+.RI "long long \fBnext\fP (long long \fBn\fP)"
+.br
+.ti -1c
+.RI "unsigned long long \fBnext\fP (unsigned long long \fBn\fP)"
+.br
+.ti -1c
+.RI "long \fBnext\fP (long \fBn\fP)"
+.br
+.ti -1c
+.RI "unsigned long \fBnext\fP (unsigned long \fBn\fP)"
+.br
+.ti -1c
+.RI "int \fBnext\fP (int from, int to)"
+.br
+.ti -1c
+.RI "unsigned int \fBnext\fP (unsigned int from, unsigned int to)"
+.br
+.ti -1c
+.RI "long long \fBnext\fP (long long from, long long to)"
+.br
+.ti -1c
+.RI "unsigned long long \fBnext\fP (unsigned long long from, unsigned long long to)"
+.br
+.ti -1c
+.RI "long \fBnext\fP (long from, long to)"
+.br
+.ti -1c
+.RI "unsigned long \fBnext\fP (unsigned long from, unsigned long to)"
+.br
+.ti -1c
+.RI "double \fBnext\fP ()"
+.br
+.ti -1c
+.RI "double \fBnext\fP (double \fBn\fP)"
+.br
+.ti -1c
+.RI "double \fBnext\fP (double from, double to)"
+.br
+.ti -1c
+.RI "template<typename Container > Container::value_type \fBany\fP (const Container &c)"
+.br
+.ti -1c
+.RI "template<typename Iter > Iter::value_type \fBany\fP (const Iter &begin, const Iter &end)"
+.br
+.ti -1c
+.RI "std::string \fBnext\fP (const char *\fBformat\fP,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "int \fBwnext\fP (int \fBn\fP, int type)"
+.br
+.ti -1c
+.RI "long long \fBwnext\fP (long long \fBn\fP, int type)"
+.br
+.ti -1c
+.RI "double \fBwnext\fP (double \fBn\fP, int type)"
+.br
+.ti -1c
+.RI "double \fBwnext\fP (int type)"
+.br
+.ti -1c
+.RI "unsigned int \fBwnext\fP (unsigned int \fBn\fP, int type)"
+.br
+.ti -1c
+.RI "unsigned long long \fBwnext\fP (unsigned long long \fBn\fP, int type)"
+.br
+.ti -1c
+.RI "long \fBwnext\fP (long \fBn\fP, int type)"
+.br
+.ti -1c
+.RI "unsigned long \fBwnext\fP (unsigned long \fBn\fP, int type)"
+.br
+.ti -1c
+.RI "int \fBwnext\fP (int from, int to, int type)"
+.br
+.ti -1c
+.RI "int \fBwnext\fP (unsigned int from, unsigned int to, int type)"
+.br
+.ti -1c
+.RI "long long \fBwnext\fP (long long from, long long to, int type)"
+.br
+.ti -1c
+.RI "unsigned long long \fBwnext\fP (unsigned long long from, unsigned long long to, int type)"
+.br
+.ti -1c
+.RI "long \fBwnext\fP (long from, long to, int type)"
+.br
+.ti -1c
+.RI "unsigned long \fBwnext\fP (unsigned long from, unsigned long to, int type)"
+.br
+.ti -1c
+.RI "double \fBwnext\fP (double from, double to, int type)"
+.br
+.ti -1c
+.RI "template<typename Container > Container::value_type \fBwany\fP (const Container &c, int type)"
+.br
+.ti -1c
+.RI "template<typename Iter > Iter::value_type \fBwany\fP (const Iter &begin, const Iter &end, int type)"
+.br
+.ti -1c
+.RI "template<typename T , typename E > std::vector< E > \fBperm\fP (T size, E first)"
+.br
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBperm\fP (T size)"
+.br
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBdistinct\fP (int size, T from, T to)"
+.br
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBdistinct\fP (int size, T upper)"
+.br
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBpartition\fP (int size, T sum, T min_part)"
+.br
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBpartition\fP (int size, T sum)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBversion\fP = \-1"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB749\fP of file \fBtestlib\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "random_t::random_t ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB778\fP of file \fBtestlib\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename Container > Container::value_type random_t::any (const Container & c)\fR [inline]\fP"
+
+.PP
+Definition at line \fB936\fP of file \fBtestlib\&.h\fP\&.
+.SS "template<typename Iter > Iter::value_type random_t::any (const Iter & begin, const Iter & end)\fR [inline]\fP"
+
+.PP
+Definition at line \fB947\fP of file \fBtestlib\&.h\fP\&.
+.SS "template<typename T > std::vector< T > random_t::distinct (int size, T from, T to)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1184\fP of file \fBtestlib\&.h\fP\&.
+.SS "template<typename T > std::vector< T > random_t::distinct (int size, T upper)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1222\fP of file \fBtestlib\&.h\fP\&.
+.SS "double random_t::next ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB914\fP of file \fBtestlib\&.h\fP\&.
+.SS "std::string random_t::next (const char * format,  \&.\&.\&.)\fR [inline]\fP"
+
+.PP
+Definition at line \fB960\fP of file \fBtestlib\&.h\fP\&.
+.SS "std::string random_t::next (const std::string & ptrn)\fR [inline]\fP"
+
+.PP
+Definition at line \fB806\fP of file \fBtestlib\&.h\fP\&.
+.SS "double random_t::next (double from, double to)\fR [inline]\fP"
+
+.PP
+Definition at line \fB928\fP of file \fBtestlib\&.h\fP\&.
+.SS "double random_t::next (double n)\fR [inline]\fP"
+
+.PP
+Definition at line \fB921\fP of file \fBtestlib\&.h\fP\&.
+.SS "int random_t::next (int from, int to)\fR [inline]\fP"
+
+.PP
+Definition at line \fB880\fP of file \fBtestlib\&.h\fP\&.
+.SS "int random_t::next (int n)\fR [inline]\fP"
+
+.PP
+Definition at line \fB821\fP of file \fBtestlib\&.h\fP\&.
+.SS "long random_t::next (long from, long to)\fR [inline]\fP"
+
+.PP
+Definition at line \fB902\fP of file \fBtestlib\&.h\fP\&.
+.SS "long long random_t::next (long long from, long long to)\fR [inline]\fP"
+
+.PP
+Definition at line \fB890\fP of file \fBtestlib\&.h\fP\&.
+.SS "long long random_t::next (long long n)\fR [inline]\fP"
+
+.PP
+Definition at line \fB846\fP of file \fBtestlib\&.h\fP\&.
+.SS "long random_t::next (long n)\fR [inline]\fP"
+
+.PP
+Definition at line \fB868\fP of file \fBtestlib\&.h\fP\&.
+.SS "unsigned int random_t::next (unsigned int from, unsigned int to)\fR [inline]\fP"
+
+.PP
+Definition at line \fB885\fP of file \fBtestlib\&.h\fP\&.
+.SS "unsigned int random_t::next (unsigned int n)\fR [inline]\fP"
+
+.PP
+Definition at line \fB839\fP of file \fBtestlib\&.h\fP\&.
+.SS "unsigned long random_t::next (unsigned long from, unsigned long to)\fR [inline]\fP"
+
+.PP
+Definition at line \fB907\fP of file \fBtestlib\&.h\fP\&.
+.SS "unsigned long long random_t::next (unsigned long long from, unsigned long long to)\fR [inline]\fP"
+
+.PP
+Definition at line \fB895\fP of file \fBtestlib\&.h\fP\&.
+.SS "unsigned long long random_t::next (unsigned long long n)\fR [inline]\fP"
+
+.PP
+Definition at line \fB861\fP of file \fBtestlib\&.h\fP\&.
+.SS "unsigned long random_t::next (unsigned long n)\fR [inline]\fP"
+
+.PP
+Definition at line \fB873\fP of file \fBtestlib\&.h\fP\&.
+.SS "template<typename T > std::vector< T > random_t::partition (int size, T sum)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1282\fP of file \fBtestlib\&.h\fP\&.
+.SS "template<typename T > std::vector< T > random_t::partition (int size, T sum, T min_part)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1238\fP of file \fBtestlib\&.h\fP\&.
+.SS "template<typename T > std::vector< T > random_t::perm (T size)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1178\fP of file \fBtestlib\&.h\fP\&.
+.SS "template<typename T , typename E > std::vector< E > random_t::perm (T size, E first)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1161\fP of file \fBtestlib\&.h\fP\&.
+.SS "void random_t::setSeed (int argc, char * argv[])\fR [inline]\fP"
+
+.PP
+Definition at line \fB783\fP of file \fBtestlib\&.h\fP\&.
+.SS "void random_t::setSeed (long long _seed)\fR [inline]\fP"
+
+.PP
+Definition at line \fB798\fP of file \fBtestlib\&.h\fP\&.
+.SS "template<typename Container > Container::value_type random_t::wany (const Container & c, int type)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1138\fP of file \fBtestlib\&.h\fP\&.
+.SS "template<typename Iter > Iter::value_type random_t::wany (const Iter & begin, const Iter & end, int type)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1149\fP of file \fBtestlib\&.h\fP\&.
+.SS "double random_t::wnext (double from, double to, int type)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1130\fP of file \fBtestlib\&.h\fP\&.
+.SS "double random_t::wnext (double n, int type)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1027\fP of file \fBtestlib\&.h\fP\&.
+.SS "int random_t::wnext (int from, int to, int type)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1087\fP of file \fBtestlib\&.h\fP\&.
+.SS "int random_t::wnext (int n, int type)\fR [inline]\fP"
+
+.PP
+Definition at line \fB973\fP of file \fBtestlib\&.h\fP\&.
+.SS "double random_t::wnext (int type)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1054\fP of file \fBtestlib\&.h\fP\&.
+.SS "long random_t::wnext (long from, long to, int type)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1116\fP of file \fBtestlib\&.h\fP\&.
+.SS "long long random_t::wnext (long long from, long long to, int type)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1101\fP of file \fBtestlib\&.h\fP\&.
+.SS "long long random_t::wnext (long long n, int type)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1000\fP of file \fBtestlib\&.h\fP\&.
+.SS "long random_t::wnext (long n, int type)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1074\fP of file \fBtestlib\&.h\fP\&.
+.SS "int random_t::wnext (unsigned int from, unsigned int to, int type)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1094\fP of file \fBtestlib\&.h\fP\&.
+.SS "unsigned int random_t::wnext (unsigned int n, int type)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1059\fP of file \fBtestlib\&.h\fP\&.
+.SS "unsigned long random_t::wnext (unsigned long from, unsigned long to, int type)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1123\fP of file \fBtestlib\&.h\fP\&.
+.SS "unsigned long long random_t::wnext (unsigned long long from, unsigned long long to, int type)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1108\fP of file \fBtestlib\&.h\fP\&.
+.SS "unsigned long long random_t::wnext (unsigned long long n, int type)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1066\fP of file \fBtestlib\&.h\fP\&.
+.SS "unsigned long random_t::wnext (unsigned long n, int type)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1079\fP of file \fBtestlib\&.h\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int random_t::version = \-1\fR [static]\fP"
+
+.PP
+Definition at line \fB775\fP of file \fBtestlib\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for competitive-contest from the source code\&.

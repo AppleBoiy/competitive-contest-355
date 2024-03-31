@@ -1,0 +1,1499 @@
+\doxysection{In\+Stream Struct Reference}
+\hypertarget{struct_in_stream}{}\label{struct_in_stream}\index{InStream@{InStream}}
+
+
+{\ttfamily \#include $<$testlib.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_in_stream_a6682d5e68cdbb92c667e6fc8e5e3c6dd}{In\+Stream}} ()
+\item 
+\mbox{\hyperlink{struct_in_stream_ab75c26c4747d2a23388735cdfebbe4fa}{\texorpdfstring{$\sim$}{\string~}\+In\+Stream}} ()
+\item 
+\mbox{\hyperlink{struct_in_stream_a6f82f3399cf052c8b55d500feec79bd2}{In\+Stream}} (const \mbox{\hyperlink{struct_in_stream}{In\+Stream}} \&base\+Stream, std\+::string content)
+\item 
+void \mbox{\hyperlink{struct_in_stream_a249983cd8365347d249485c7840e3424}{init}} (std\+::string file\+Name, \mbox{\hyperlink{testlib_8h_ae73df2968f2f656074dc00e062600ddb}{TMode}} \mbox{\hyperlink{struct_in_stream_a22c9fbb12ed6da923353c3a477881686}{mode}})
+\item 
+void \mbox{\hyperlink{struct_in_stream_a4b78654581508e7ace12cdda20de48df}{init}} (std\+::\+FILE \texorpdfstring{$\ast$}{*}f, \mbox{\hyperlink{testlib_8h_ae73df2968f2f656074dc00e062600ddb}{TMode}} \mbox{\hyperlink{struct_in_stream_a22c9fbb12ed6da923353c3a477881686}{mode}})
+\item 
+void \mbox{\hyperlink{struct_in_stream_a7e9ee69fe14cc6c19b059b384eebed5c}{set\+Test\+Case}} (int test\+Case)
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{struct_in_stream_ab88e3e00ca1111534d3d110166f275bd}{get\+Read\+Chars}} ()
+\item 
+void \mbox{\hyperlink{struct_in_stream_a3caea7dc5003207a13b690e1e6523759}{skip\+Blanks}} ()
+\item 
+char \mbox{\hyperlink{struct_in_stream_af208d97fa6484d10b88d611012fce578}{cur\+Char}} ()
+\item 
+void \mbox{\hyperlink{struct_in_stream_a15dbd488971ba0da79085f7bd980f1f1}{skip\+Char}} ()
+\item 
+char \mbox{\hyperlink{struct_in_stream_af46102c51b215e59e3b9e993ac999fe5}{next\+Char}} ()
+\item 
+char \mbox{\hyperlink{struct_in_stream_aa7711bdcca7b52181fd0f3072d935205}{read\+Char}} ()
+\item 
+char \mbox{\hyperlink{struct_in_stream_a0c49c9fe193752b77e17fc7e45b0965b}{read\+Char}} (char c)
+\item 
+char \mbox{\hyperlink{struct_in_stream_a012e968b18b359b82897db805faeb0f6}{read\+Space}} ()
+\item 
+void \mbox{\hyperlink{struct_in_stream_a8c656e9ae7175e852033fbdffe41550b}{unread\+Char}} (char c)
+\item 
+void \mbox{\hyperlink{struct_in_stream_a0daf92605da53c68648ad78572965ca3}{reset}} (std\+::\+FILE \texorpdfstring{$\ast$}{*}file=NULL)
+\item 
+bool \mbox{\hyperlink{struct_in_stream_a8c1f774508b47b9e80c76d37d268f6f4}{eof}} ()
+\item 
+bool \mbox{\hyperlink{struct_in_stream_a2c7c8561462345e6ee18a0d8ea4bc00b}{seek\+Eof}} ()
+\item 
+bool \mbox{\hyperlink{struct_in_stream_ac54c356a099d9af022d59cdcd1b75bcd}{eoln}} ()
+\item 
+bool \mbox{\hyperlink{struct_in_stream_a106d09bbdd844ca246bfbf2c6409f4b6}{seek\+Eoln}} ()
+\item 
+void \mbox{\hyperlink{struct_in_stream_a86e63a6bb9bc47cae9f58f0591ecc53f}{next\+Line}} ()
+\item 
+std\+::string \mbox{\hyperlink{struct_in_stream_a2d0d971de1cd2d7da01f7d6bb4f836a3}{read\+Word}} ()
+\item 
+std\+::string \mbox{\hyperlink{struct_in_stream_aab5bf73477536435d39efd209bf672d0}{read\+Token}} ()
+\item 
+std\+::string \mbox{\hyperlink{struct_in_stream_a33a01a1ab403b91c58d630b2650f999e}{read\+Word}} (const std\+::string \&ptrn, const std\+::string \&variable\+Name="{}"{})
+\item 
+std\+::string \mbox{\hyperlink{struct_in_stream_a7848236cb25239dc96ac1d01953116c9}{read\+Word}} (const \mbox{\hyperlink{classpattern}{pattern}} \&p, const std\+::string \&variable\+Name="{}"{})
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{struct_in_stream_a05e78a1ad94e4ed2078daee8eeb7e2cf}{read\+Words}} (int size, const std\+::string \&ptrn, const std\+::string \&variables\+Name="{}"{}, int index\+Base=1)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{struct_in_stream_a0382d1f95cecf40e7c728c033c14123b}{read\+Words}} (int size, const \mbox{\hyperlink{classpattern}{pattern}} \&p, const std\+::string \&variables\+Name="{}"{}, int index\+Base=1)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{struct_in_stream_aaa61148d12958728cd443f21b2ed0aa3}{read\+Words}} (int size, int index\+Base=1)
+\item 
+std\+::string \mbox{\hyperlink{struct_in_stream_a1551acb574a25586a2ba2ad594398e8c}{read\+Token}} (const std\+::string \&ptrn, const std\+::string \&variable\+Name="{}"{})
+\item 
+std\+::string \mbox{\hyperlink{struct_in_stream_aa7e276efc82ccd5bcefbfaf8f0391677}{read\+Token}} (const \mbox{\hyperlink{classpattern}{pattern}} \&p, const std\+::string \&variable\+Name="{}"{})
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{struct_in_stream_a0c556560eb05d89757fc854d38ae650b}{read\+Tokens}} (int size, const std\+::string \&ptrn, const std\+::string \&variables\+Name="{}"{}, int index\+Base=1)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{struct_in_stream_a5f2d2a617eed60c5a05872af6ece6855}{read\+Tokens}} (int size, const \mbox{\hyperlink{classpattern}{pattern}} \&p, const std\+::string \&variables\+Name="{}"{}, int index\+Base=1)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{struct_in_stream_a7b79dfec1ae85f251876f603751036d9}{read\+Tokens}} (int size, int index\+Base=1)
+\item 
+void \mbox{\hyperlink{struct_in_stream_ace052a2f951135d3a7699c3824fbc4f7}{read\+Word\+To}} (std\+::string \&result)
+\item 
+void \mbox{\hyperlink{struct_in_stream_aae65d2db41677626fd5ffa446be65003}{read\+Word\+To}} (std\+::string \&result, const \mbox{\hyperlink{classpattern}{pattern}} \&p, const std\+::string \&variable\+Name="{}"{})
+\item 
+void \mbox{\hyperlink{struct_in_stream_a78c7969db04a87aea6263c8563dc5c93}{read\+Word\+To}} (std\+::string \&result, const std\+::string \&ptrn, const std\+::string \&variable\+Name="{}"{})
+\item 
+void \mbox{\hyperlink{struct_in_stream_a0512828fe7bc56a8fa2ddb4e0e6f2b72}{read\+Token\+To}} (std\+::string \&result)
+\item 
+void \mbox{\hyperlink{struct_in_stream_a6cc04d722a5e707b0450396c671c8732}{read\+Token\+To}} (std\+::string \&result, const \mbox{\hyperlink{classpattern}{pattern}} \&p, const std\+::string \&variable\+Name="{}"{})
+\item 
+void \mbox{\hyperlink{struct_in_stream_ac191b4317fc175b291cae1fa4fc7b399}{read\+Token\+To}} (std\+::string \&result, const std\+::string \&ptrn, const std\+::string \&variable\+Name="{}"{})
+\item 
+long long \mbox{\hyperlink{struct_in_stream_af964fda2b145a8c8d25965b7ef4784cd}{read\+Long}} ()
+\item 
+unsigned long long \mbox{\hyperlink{struct_in_stream_a473c29087621184bb71998a12957e822}{read\+Unsigned\+Long}} ()
+\item 
+int \mbox{\hyperlink{struct_in_stream_a68a75c1f359c0b3917a3922f4512da08}{read\+Integer}} ()
+\item 
+int \mbox{\hyperlink{struct_in_stream_ab9c40b84ce444e0eabbec47c881b4c38}{read\+Int}} ()
+\item 
+long long \mbox{\hyperlink{struct_in_stream_a1398548ec0f156ddc9add251addb63c4}{read\+Long}} (long long minv, long long maxv, const std\+::string \&variable\+Name="{}"{})
+\item 
+std\+::vector$<$ long long $>$ \mbox{\hyperlink{struct_in_stream_a469d95f96c09746781621480b74c5c83}{read\+Longs}} (int size, long long minv, long long maxv, const std\+::string \&variables\+Name="{}"{}, int index\+Base=1)
+\item 
+std\+::vector$<$ long long $>$ \mbox{\hyperlink{struct_in_stream_ab135bb75d235e57fea89a248acd51015}{read\+Longs}} (int size, int index\+Base=1)
+\item 
+unsigned long long \mbox{\hyperlink{struct_in_stream_ac168f51d536fd2fef12d6aa87ff5795f}{read\+Unsigned\+Long}} (unsigned long long minv, unsigned long long maxv, const std\+::string \&variable\+Name="{}"{})
+\item 
+std\+::vector$<$ unsigned long long $>$ \mbox{\hyperlink{struct_in_stream_a8c85a1d577aeb727bec09f362e3a395a}{read\+Unsigned\+Longs}} (int size, unsigned long long minv, unsigned long long maxv, const std\+::string \&variables\+Name="{}"{}, int index\+Base=1)
+\item 
+std\+::vector$<$ unsigned long long $>$ \mbox{\hyperlink{struct_in_stream_a5d3141608fafc3797171a3ea7627ec4d}{read\+Unsigned\+Longs}} (int size, int index\+Base=1)
+\item 
+unsigned long long \mbox{\hyperlink{struct_in_stream_aac4b9f822f2471eb19f89e3c0d78169b}{read\+Long}} (unsigned long long minv, unsigned long long maxv, const std\+::string \&variable\+Name="{}"{})
+\item 
+std\+::vector$<$ unsigned long long $>$ \mbox{\hyperlink{struct_in_stream_a9bd7a7d10db6d24401dfd3b421ed6045}{read\+Longs}} (int size, unsigned long long minv, unsigned long long maxv, const std\+::string \&variables\+Name="{}"{}, int index\+Base=1)
+\item 
+int \mbox{\hyperlink{struct_in_stream_a789739800a5332fb69578d60fef57947}{read\+Integer}} (int minv, int maxv, const std\+::string \&variable\+Name="{}"{})
+\item 
+int \mbox{\hyperlink{struct_in_stream_a0811e321fbb08005ef2dec953d6f3256}{read\+Int}} (int minv, int maxv, const std\+::string \&variable\+Name="{}"{})
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{struct_in_stream_adb2af0baf6e9e6efa47a084719f0b2ea}{read\+Integers}} (int size, int minv, int maxv, const std\+::string \&variables\+Name="{}"{}, int index\+Base=1)
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{struct_in_stream_ab76c62ce0113ca54feb21c1bd61611cf}{read\+Integers}} (int size, int index\+Base=1)
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{struct_in_stream_afe94166e208381f17f49906ee5d50ae1}{read\+Ints}} (int size, int minv, int maxv, const std\+::string \&variables\+Name="{}"{}, int index\+Base=1)
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{struct_in_stream_a9dc7971488f79c36b0c039faac9a91b1}{read\+Ints}} (int size, int index\+Base=1)
+\item 
+double \mbox{\hyperlink{struct_in_stream_a147bef1aea6670fb8e2e6be97e76edc2}{read\+Real}} ()
+\item 
+double \mbox{\hyperlink{struct_in_stream_a7409a09698273a264eaa9069ecf90abf}{read\+Double}} ()
+\item 
+double \mbox{\hyperlink{struct_in_stream_afefbbd644f24959a3c0dca545c50ca8d}{read\+Real}} (double minv, double maxv, const std\+::string \&variable\+Name="{}"{})
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{struct_in_stream_a6d4100230dab7762fc8a67889f0af48b}{read\+Reals}} (int size, double minv, double maxv, const std\+::string \&variables\+Name="{}"{}, int index\+Base=1)
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{struct_in_stream_a30e0fec1354eccc823c46fb2decb6a5d}{read\+Reals}} (int size, int index\+Base=1)
+\item 
+double \mbox{\hyperlink{struct_in_stream_a477dc26871b7cbb20c2d3c5aa7f51a8f}{read\+Double}} (double minv, double maxv, const std\+::string \&variable\+Name="{}"{})
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{struct_in_stream_aee88ed3c11ec6eb9d1d73053e6766e8e}{read\+Doubles}} (int size, double minv, double maxv, const std\+::string \&variables\+Name="{}"{}, int index\+Base=1)
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{struct_in_stream_a9be66f81b7039ccdc58bee885ee15278}{read\+Doubles}} (int size, int index\+Base=1)
+\item 
+double \mbox{\hyperlink{struct_in_stream_af4a862c387cf199c075896c046b3038b}{read\+Strict\+Real}} (double minv, double maxv, int min\+After\+Point\+Digit\+Count, int max\+After\+Point\+Digit\+Count, const std\+::string \&variable\+Name="{}"{})
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{struct_in_stream_a05d7a1183338770dd288298e6f4378c7}{read\+Strict\+Reals}} (int size, double minv, double maxv, int min\+After\+Point\+Digit\+Count, int max\+After\+Point\+Digit\+Count, const std\+::string \&variables\+Name="{}"{}, int index\+Base=1)
+\item 
+double \mbox{\hyperlink{struct_in_stream_aaecf640ad9de7cf1873b2bc216e32b47}{read\+Strict\+Double}} (double minv, double maxv, int min\+After\+Point\+Digit\+Count, int max\+After\+Point\+Digit\+Count, const std\+::string \&variable\+Name="{}"{})
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{struct_in_stream_af2689fbf7c65b80728826fcb4230163f}{read\+Strict\+Doubles}} (int size, double minv, double maxv, int min\+After\+Point\+Digit\+Count, int max\+After\+Point\+Digit\+Count, const std\+::string \&variables\+Name="{}"{}, int index\+Base=1)
+\item 
+std\+::string \mbox{\hyperlink{struct_in_stream_a6e45ce9c44925056ec1db59400012c3d}{read\+String}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{struct_in_stream_a2cba4bd119b24d1af9c70ce238b2fbd6}{read\+Strings}} (int size, int index\+Base=1)
+\item 
+void \mbox{\hyperlink{struct_in_stream_a79fc60da4d122afd8c8f6f76c1b7fa56}{read\+String\+To}} (std\+::string \&result)
+\item 
+std\+::string \mbox{\hyperlink{struct_in_stream_a25e0a8a1aef084955346a2b82cefa3b3}{read\+String}} (const \mbox{\hyperlink{classpattern}{pattern}} \&p, const std\+::string \&variable\+Name="{}"{})
+\item 
+std\+::string \mbox{\hyperlink{struct_in_stream_a5d4fd12c9b43f1357e56aed051524f7d}{read\+String}} (const std\+::string \&ptrn, const std\+::string \&variable\+Name="{}"{})
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{struct_in_stream_a7566b33af0c853ce8ddfcdd7ad0e9648}{read\+Strings}} (int size, const \mbox{\hyperlink{classpattern}{pattern}} \&p, const std\+::string \&variable\+Name="{}"{}, int index\+Base=1)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{struct_in_stream_a826426f9c306ac53747a3141f819a1c7}{read\+Strings}} (int size, const std\+::string \&ptrn, const std\+::string \&variable\+Name="{}"{}, int index\+Base=1)
+\item 
+void \mbox{\hyperlink{struct_in_stream_a6dd7e7971417eadfc7c89ed6063ee166}{read\+String\+To}} (std\+::string \&result, const \mbox{\hyperlink{classpattern}{pattern}} \&p, const std\+::string \&variable\+Name="{}"{})
+\item 
+void \mbox{\hyperlink{struct_in_stream_a90443a86a3a04208af259dbca2061b3b}{read\+String\+To}} (std\+::string \&result, const std\+::string \&ptrn, const std\+::string \&variable\+Name="{}"{})
+\item 
+std\+::string \mbox{\hyperlink{struct_in_stream_abd0f6cb6707dc00014499a12db9e7683}{read\+Line}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{struct_in_stream_a2815b773083f56cf836e3669cf467e1a}{read\+Lines}} (int size, int index\+Base=1)
+\item 
+void \mbox{\hyperlink{struct_in_stream_a3827b74ce0965b2b080319e24fa7a447}{read\+Line\+To}} (std\+::string \&result)
+\item 
+std\+::string \mbox{\hyperlink{struct_in_stream_a6d9a21120d8b21cf31e9bad2a1e83e92}{read\+Line}} (const \mbox{\hyperlink{classpattern}{pattern}} \&p, const std\+::string \&variable\+Name="{}"{})
+\item 
+std\+::string \mbox{\hyperlink{struct_in_stream_a4fd055a2face33d5862f23ee9cb86cd5}{read\+Line}} (const std\+::string \&ptrn, const std\+::string \&variable\+Name="{}"{})
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{struct_in_stream_a1ce8d0614039ae608612cca5d4fc5f28}{read\+Lines}} (int size, const \mbox{\hyperlink{classpattern}{pattern}} \&p, const std\+::string \&variable\+Name="{}"{}, int index\+Base=1)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{struct_in_stream_a5f62d4bb591a6de0a04cc8cc8a876202}{read\+Lines}} (int size, const std\+::string \&ptrn, const std\+::string \&variable\+Name="{}"{}, int index\+Base=1)
+\item 
+void \mbox{\hyperlink{struct_in_stream_a15203cdc5616988c0b76e8652ec05cb7}{read\+Line\+To}} (std\+::string \&result, const \mbox{\hyperlink{classpattern}{pattern}} \&p, const std\+::string \&variable\+Name="{}"{})
+\item 
+void \mbox{\hyperlink{struct_in_stream_a727fea17af0013a7a6089734292abd24}{read\+Line\+To}} (std\+::string \&result, const std\+::string \&ptrn, const std\+::string \&variable\+Name="{}"{})
+\item 
+void \mbox{\hyperlink{struct_in_stream_a034c0ee97269f7bbd1e73ccc85b13f54}{read\+Eoln}} ()
+\item 
+void \mbox{\hyperlink{struct_in_stream_a80e53f1d7a022f34f8d88839de43d6b5}{read\+Eof}} ()
+\item 
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{struct_in_stream_a95bee5abfce70b5e663359558080ada9}{quit}} (\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}} result, const char \texorpdfstring{$\ast$}{*}msg)
+\item 
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{struct_in_stream_a3238a2d2a6fdb963d8f7c57416b5c1e5}{quitf}} (\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}} result, const char \texorpdfstring{$\ast$}{*}msg,...)
+\item 
+void \mbox{\hyperlink{struct_in_stream_a0c969f83376d50af370615d44186647d}{quitif}} (bool condition, \mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}} result, const char \texorpdfstring{$\ast$}{*}msg,...)
+\item 
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{struct_in_stream_a65a8b22fb500b96357ad5630535ebb95}{quits}} (\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}} result, std\+::string msg)
+\item 
+void \mbox{\hyperlink{struct_in_stream_a44a5027f6d7000c62ef27c6719f225ef}{ensuref}} (bool cond, const char \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{testlib_8h_a1921b31564b858b45e94efff9e9d54bf}{format}},...)
+\item 
+void \mbox{\hyperlink{struct_in_stream_ad961f49275f9e4d97b3ab6691f4b3d07}{\+\_\+\+\_\+testlib\+\_\+ensure}} (bool cond, std\+::string message)
+\item 
+void \mbox{\hyperlink{struct_in_stream_a4e6d2f97680cbc53de0d6cb1a893016f}{close}} ()
+\item 
+void \mbox{\hyperlink{struct_in_stream_a7920954e072895d70f2127ccc7af789d}{xml\+Safe\+Write}} (std\+::\+FILE \texorpdfstring{$\ast$}{*}file, const char \texorpdfstring{$\ast$}{*}msg)
+\item 
+void \mbox{\hyperlink{struct_in_stream_a1ee5c101df11ec9fe00867379bf3937f}{skip\+Bom}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{struct_in_stream_a4ff4b2110a80dea66154702116080e49}{text\+Color}} (\mbox{\hyperlink{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5}{WORD}} color)
+\item 
+static void \mbox{\hyperlink{struct_in_stream_a681c59fb45459a1247d0bb237eb196eb}{quitscr}} (\mbox{\hyperlink{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5}{WORD}} color, const char \texorpdfstring{$\ast$}{*}msg)
+\item 
+static void \mbox{\hyperlink{struct_in_stream_ac1ca7d4baa1a28a7de0995a2581841b5}{quitscrS}} (\mbox{\hyperlink{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5}{WORD}} color, std\+::string msg)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_input_stream_reader}{Input\+Stream\+Reader}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_in_stream_ab970f7b2a0f0a699c6f3187f5b565c35}{reader}}
+\item 
+int \mbox{\hyperlink{struct_in_stream_a2e44f54a6f11bf8337e742ec131ac0b5}{last\+Line}}
+\item 
+std\+::string \mbox{\hyperlink{struct_in_stream_a0e45bfde029064fc64c36c1462e6ba8b}{name}}
+\item 
+\mbox{\hyperlink{testlib_8h_ae73df2968f2f656074dc00e062600ddb}{TMode}} \mbox{\hyperlink{struct_in_stream_a22c9fbb12ed6da923353c3a477881686}{mode}}
+\item 
+bool \mbox{\hyperlink{struct_in_stream_ac1db0153031be42e22117179c7cc70bf}{opened}}
+\item 
+bool \mbox{\hyperlink{struct_in_stream_a66d3e4b4c823f79d1f53ad5901733717}{stdfile}}
+\item 
+bool \mbox{\hyperlink{struct_in_stream_a8aec5ed448357d952d4fae14e4054d8c}{strict}}
+\item 
+int \mbox{\hyperlink{struct_in_stream_a8afeeed49266480bd239d832415fb85b}{word\+Reserve\+Size}}
+\item 
+std\+::string \mbox{\hyperlink{struct_in_stream_af2f09659cea3fd78f1e662cd918d2c30}{\+\_\+tmp\+Read\+Token}}
+\item 
+int \mbox{\hyperlink{struct_in_stream_a47cff32cdacd0978f83382c6c81d7df4}{read\+Many\+Iteration}}
+\item 
+size\+\_\+t \mbox{\hyperlink{struct_in_stream_a14e6d7455706cea771265a7ab8407918}{max\+File\+Size}}
+\item 
+size\+\_\+t \mbox{\hyperlink{struct_in_stream_a4a4e8df78395f7be17d9429e7640eb26}{max\+Token\+Length}}
+\item 
+size\+\_\+t \mbox{\hyperlink{struct_in_stream_a8ff983747e2b08a2f8f01d226b23f20a}{max\+Message\+Length}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{struct_in_stream_af18bd290c3c3907be197c1878946c4d8}{NO\+\_\+\+INDEX}} = INT\+\_\+\+MAX
+\item 
+static const char \mbox{\hyperlink{struct_in_stream_a582ee4c10e2543041466180e6134865a}{OPEN\+\_\+\+BRACKET}} = char(11)
+\item 
+static const char \mbox{\hyperlink{struct_in_stream_a3b35e480ab8ea91b44cd8be3bf550fa8}{CLOSE\+\_\+\+BRACKET}} = char(17)
+\item 
+static const \mbox{\hyperlink{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5}{WORD}} \mbox{\hyperlink{struct_in_stream_a2eb9f95d5c8ef82ec45295113294b836}{Light\+Gray}} = 0x07
+\item 
+static const \mbox{\hyperlink{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5}{WORD}} \mbox{\hyperlink{struct_in_stream_aa2b66ca7098a63f267cdc650eda5b11c}{Light\+Red}} = 0x0c
+\item 
+static const \mbox{\hyperlink{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5}{WORD}} \mbox{\hyperlink{struct_in_stream_a1906bb56c67bc1c4268903f37e2604a4}{Light\+Cyan}} = 0x0b
+\item 
+static const \mbox{\hyperlink{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5}{WORD}} \mbox{\hyperlink{struct_in_stream_a088a42a5a342bf630b6288c308d276e3}{Light\+Green}} = 0x0a
+\item 
+static const \mbox{\hyperlink{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5}{WORD}} \mbox{\hyperlink{struct_in_stream_a9dcd83240a933dee55e8195f6228ccad}{Light\+Yellow}} = 0x0e
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l01998}{1998}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_in_stream_a6682d5e68cdbb92c667e6fc8e5e3c6dd}\label{struct_in_stream_a6682d5e68cdbb92c667e6fc8e5e3c6dd} 
+\index{InStream@{InStream}!InStream@{InStream}}
+\index{InStream@{InStream}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{InStream()}{InStream()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily In\+Stream\+::\+In\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02828}{2828}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_ab75c26c4747d2a23388735cdfebbe4fa}\label{struct_in_stream_ab75c26c4747d2a23388735cdfebbe4fa} 
+\index{InStream@{InStream}!````~InStream@{\texorpdfstring{$\sim$}{\string~}InStream}}
+\index{````~InStream@{\texorpdfstring{$\sim$}{\string~}InStream}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}InStream()}{\string~InStream()}}
+{\footnotesize\ttfamily In\+Stream\+::\texorpdfstring{$\sim$}{\string~}\+In\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02857}{2857}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a6f82f3399cf052c8b55d500feec79bd2}\label{struct_in_stream_a6f82f3399cf052c8b55d500feec79bd2} 
+\index{InStream@{InStream}!InStream@{InStream}}
+\index{InStream@{InStream}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{InStream()}{InStream()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily In\+Stream\+::\+In\+Stream (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_in_stream}{In\+Stream}} \&}]{base\+Stream,  }\item[{std\+::string}]{content }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02843}{2843}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_in_stream_ad961f49275f9e4d97b3ab6691f4b3d07}\label{struct_in_stream_ad961f49275f9e4d97b3ab6691f4b3d07} 
+\index{InStream@{InStream}!\_\_testlib\_ensure@{\_\_testlib\_ensure}}
+\index{\_\_testlib\_ensure@{\_\_testlib\_ensure}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{\_\_testlib\_ensure()}{\_\_testlib\_ensure()}}
+{\footnotesize\ttfamily void In\+Stream\+::\+\_\+\+\_\+testlib\+\_\+ensure (\begin{DoxyParamCaption}\item[{bool}]{cond,  }\item[{std\+::string}]{message }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04396}{4396}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a4e6d2f97680cbc53de0d6cb1a893016f}\label{struct_in_stream_a4e6d2f97680cbc53de0d6cb1a893016f} 
+\index{InStream@{InStream}!close@{close}}
+\index{close@{close}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void In\+Stream\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04401}{4401}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_af208d97fa6484d10b88d611012fce578}\label{struct_in_stream_af208d97fa6484d10b88d611012fce578} 
+\index{InStream@{InStream}!curChar@{curChar}}
+\index{curChar@{curChar}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{curChar()}{curChar()}}
+{\footnotesize\ttfamily char In\+Stream\+::cur\+Char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03331}{3331}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a44a5027f6d7000c62ef27c6719f225ef}\label{struct_in_stream_a44a5027f6d7000c62ef27c6719f225ef} 
+\index{InStream@{InStream}!ensuref@{ensuref}}
+\index{ensuref@{ensuref}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{ensuref()}{ensuref()}}
+{\footnotesize\ttfamily void In\+Stream\+::ensuref (\begin{DoxyParamCaption}\item[{bool}]{cond,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04389}{4389}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a8c1f774508b47b9e80c76d37d268f6f4}\label{struct_in_stream_a8c1f774508b47b9e80c76d37d268f6f4} 
+\index{InStream@{InStream}!eof@{eof}}
+\index{eof@{eof}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{eof()}{eof()}}
+{\footnotesize\ttfamily bool In\+Stream\+::eof (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04154}{4154}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_ac54c356a099d9af022d59cdcd1b75bcd}\label{struct_in_stream_ac54c356a099d9af022d59cdcd1b75bcd} 
+\index{InStream@{InStream}!eoln@{eoln}}
+\index{eoln@{eoln}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{eoln()}{eoln()}}
+{\footnotesize\ttfamily bool In\+Stream\+::eoln (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04168}{4168}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_ab88e3e00ca1111534d3d110166f275bd}\label{struct_in_stream_ab88e3e00ca1111534d3d110166f275bd} 
+\index{InStream@{InStream}!getReadChars@{getReadChars}}
+\index{getReadChars@{getReadChars}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{getReadChars()}{getReadChars()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ In\+Stream\+::get\+Read\+Chars (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02872}{2872}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a4b78654581508e7ace12cdda20de48df}\label{struct_in_stream_a4b78654581508e7ace12cdda20de48df} 
+\index{InStream@{InStream}!init@{init}}
+\index{init@{init}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void In\+Stream\+::init (\begin{DoxyParamCaption}\item[{std\+::\+FILE \texorpdfstring{$\ast$}{*}}]{f,  }\item[{\mbox{\hyperlink{testlib_8h_ae73df2968f2f656074dc00e062600ddb}{TMode}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03301}{3301}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a249983cd8365347d249485c7840e3424}\label{struct_in_stream_a249983cd8365347d249485c7840e3424} 
+\index{InStream@{InStream}!init@{init}}
+\index{init@{init}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void In\+Stream\+::init (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Name,  }\item[{\mbox{\hyperlink{testlib_8h_ae73df2968f2f656074dc00e062600ddb}{TMode}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03277}{3277}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_af46102c51b215e59e3b9e993ac999fe5}\label{struct_in_stream_af46102c51b215e59e3b9e993ac999fe5} 
+\index{InStream@{InStream}!nextChar@{nextChar}}
+\index{nextChar@{nextChar}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{nextChar()}{nextChar()}}
+{\footnotesize\ttfamily char In\+Stream\+::next\+Char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03335}{3335}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a86e63a6bb9bc47cae9f58f0591ecc53f}\label{struct_in_stream_a86e63a6bb9bc47cae9f58f0591ecc53f} 
+\index{InStream@{InStream}!nextLine@{nextLine}}
+\index{nextLine@{nextLine}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{nextLine()}{nextLine()}}
+{\footnotesize\ttfamily void In\+Stream\+::next\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04246}{4246}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a95bee5abfce70b5e663359558080ada9}\label{struct_in_stream_a95bee5abfce70b5e663359558080ada9} 
+\index{InStream@{InStream}!quit@{quit}}
+\index{quit@{quit}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{quit()}{quit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void In\+Stream\+::quit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}}]{result,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03046}{3046}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a3238a2d2a6fdb963d8f7c57416b5c1e5}\label{struct_in_stream_a3238a2d2a6fdb963d8f7c57416b5c1e5} 
+\index{InStream@{InStream}!quitf@{quitf}}
+\index{quitf@{quitf}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{quitf()}{quitf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void In\+Stream\+::quitf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}}]{result,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{msg,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03189}{3189}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a0c969f83376d50af370615d44186647d}\label{struct_in_stream_a0c969f83376d50af370615d44186647d} 
+\index{InStream@{InStream}!quitif@{quitif}}
+\index{quitif@{quitif}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{quitif()}{quitif()}}
+{\footnotesize\ttfamily void In\+Stream\+::quitif (\begin{DoxyParamCaption}\item[{bool}]{condition,  }\item[{\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}}]{result,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{msg,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03197}{3197}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a65a8b22fb500b96357ad5630535ebb95}\label{struct_in_stream_a65a8b22fb500b96357ad5630535ebb95} 
+\index{InStream@{InStream}!quits@{quits}}
+\index{quits@{quits}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{quits()}{quits()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void In\+Stream\+::quits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}}]{result,  }\item[{std\+::string}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03204}{3204}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a681c59fb45459a1247d0bb237eb196eb}\label{struct_in_stream_a681c59fb45459a1247d0bb237eb196eb} 
+\index{InStream@{InStream}!quitscr@{quitscr}}
+\index{quitscr@{quitscr}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{quitscr()}{quitscr()}}
+{\footnotesize\ttfamily void In\+Stream\+::quitscr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5}{WORD}}}]{color,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03239}{3239}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_ac1ca7d4baa1a28a7de0995a2581841b5}\label{struct_in_stream_ac1ca7d4baa1a28a7de0995a2581841b5} 
+\index{InStream@{InStream}!quitscrS@{quitscrS}}
+\index{quitscrS@{quitscrS}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{quitscrS()}{quitscrS()}}
+{\footnotesize\ttfamily void In\+Stream\+::quitscrS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5}{WORD}}}]{color,  }\item[{std\+::string}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03235}{3235}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_aa7711bdcca7b52181fd0f3072d935205}\label{struct_in_stream_aa7711bdcca7b52181fd0f3072d935205} 
+\index{InStream@{InStream}!readChar@{readChar}}
+\index{readChar@{readChar}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readChar()}{readChar()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily char In\+Stream\+::read\+Char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03339}{3339}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a0c49c9fe193752b77e17fc7e45b0965b}\label{struct_in_stream_a0c49c9fe193752b77e17fc7e45b0965b} 
+\index{InStream@{InStream}!readChar@{readChar}}
+\index{readChar@{readChar}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readChar()}{readChar()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily char In\+Stream\+::read\+Char (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03343}{3343}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a7409a09698273a264eaa9069ecf90abf}\label{struct_in_stream_a7409a09698273a264eaa9069ecf90abf} 
+\index{InStream@{InStream}!readDouble@{readDouble}}
+\index{readDouble@{readDouble}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readDouble()}{readDouble()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double In\+Stream\+::read\+Double (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04022}{4022}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a477dc26871b7cbb20c2d3c5aa7f51a8f}\label{struct_in_stream_a477dc26871b7cbb20c2d3c5aa7f51a8f} 
+\index{InStream@{InStream}!readDouble@{readDouble}}
+\index{readDouble@{readDouble}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readDouble()}{readDouble()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double In\+Stream\+::read\+Double (\begin{DoxyParamCaption}\item[{double}]{minv,  }\item[{double}]{maxv,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04071}{4071}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_aee88ed3c11ec6eb9d1d73053e6766e8e}\label{struct_in_stream_aee88ed3c11ec6eb9d1d73053e6766e8e} 
+\index{InStream@{InStream}!readDoubles@{readDoubles}}
+\index{readDoubles@{readDoubles}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readDoubles()}{readDoubles()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ In\+Stream\+::read\+Doubles (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{double}]{minv,  }\item[{double}]{maxv,  }\item[{const std\+::string \&}]{variables\+Name = {\ttfamily "{}"{}},  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04076}{4076}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a9be66f81b7039ccdc58bee885ee15278}\label{struct_in_stream_a9be66f81b7039ccdc58bee885ee15278} 
+\index{InStream@{InStream}!readDoubles@{readDoubles}}
+\index{readDoubles@{readDoubles}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readDoubles()}{readDoubles()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ In\+Stream\+::read\+Doubles (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04082}{4082}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a80e53f1d7a022f34f8d88839de43d6b5}\label{struct_in_stream_a80e53f1d7a022f34f8d88839de43d6b5} 
+\index{InStream@{InStream}!readEof@{readEof}}
+\index{readEof@{readEof}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readEof()}{readEof()}}
+{\footnotesize\ttfamily void In\+Stream\+::read\+Eof (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04224}{4224}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a034c0ee97269f7bbd1e73ccc85b13f54}\label{struct_in_stream_a034c0ee97269f7bbd1e73ccc85b13f54} 
+\index{InStream@{InStream}!readEoln@{readEoln}}
+\index{readEoln@{readEoln}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readEoln()}{readEoln()}}
+{\footnotesize\ttfamily void In\+Stream\+::read\+Eoln (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04218}{4218}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_ab9c40b84ce444e0eabbec47c881b4c38}\label{struct_in_stream_ab9c40b84ce444e0eabbec47c881b4c38} 
+\index{InStream@{InStream}!readInt@{readInt}}
+\index{readInt@{readInt}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readInt()}{readInt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int In\+Stream\+::read\+Int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03956}{3956}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a0811e321fbb08005ef2dec953d6f3256}\label{struct_in_stream_a0811e321fbb08005ef2dec953d6f3256} 
+\index{InStream@{InStream}!readInt@{readInt}}
+\index{readInt@{readInt}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readInt()}{readInt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int In\+Stream\+::read\+Int (\begin{DoxyParamCaption}\item[{int}]{minv,  }\item[{int}]{maxv,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03960}{3960}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a68a75c1f359c0b3917a3922f4512da08}\label{struct_in_stream_a68a75c1f359c0b3917a3922f4512da08} 
+\index{InStream@{InStream}!readInteger@{readInteger}}
+\index{readInteger@{readInteger}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readInteger()}{readInteger()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int In\+Stream\+::read\+Integer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03832}{3832}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a789739800a5332fb69578d60fef57947}\label{struct_in_stream_a789739800a5332fb69578d60fef57947} 
+\index{InStream@{InStream}!readInteger@{readInteger}}
+\index{readInteger@{readInteger}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readInteger()}{readInteger()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int In\+Stream\+::read\+Integer (\begin{DoxyParamCaption}\item[{int}]{minv,  }\item[{int}]{maxv,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03991}{3991}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_ab76c62ce0113ca54feb21c1bd61611cf}\label{struct_in_stream_ab76c62ce0113ca54feb21c1bd61611cf} 
+\index{InStream@{InStream}!readIntegers@{readIntegers}}
+\index{readIntegers@{readIntegers}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readIntegers()}{readIntegers()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ In\+Stream\+::read\+Integers (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04011}{4011}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_adb2af0baf6e9e6efa47a084719f0b2ea}\label{struct_in_stream_adb2af0baf6e9e6efa47a084719f0b2ea} 
+\index{InStream@{InStream}!readIntegers@{readIntegers}}
+\index{readIntegers@{readIntegers}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readIntegers()}{readIntegers()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ In\+Stream\+::read\+Integers (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{minv,  }\item[{int}]{maxv,  }\item[{const std\+::string \&}]{variables\+Name = {\ttfamily "{}"{}},  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04005}{4005}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a9dc7971488f79c36b0c039faac9a91b1}\label{struct_in_stream_a9dc7971488f79c36b0c039faac9a91b1} 
+\index{InStream@{InStream}!readInts@{readInts}}
+\index{readInts@{readInts}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readInts()}{readInts()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ In\+Stream\+::read\+Ints (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04001}{4001}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_afe94166e208381f17f49906ee5d50ae1}\label{struct_in_stream_afe94166e208381f17f49906ee5d50ae1} 
+\index{InStream@{InStream}!readInts@{readInts}}
+\index{readInts@{readInts}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readInts()}{readInts()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ In\+Stream\+::read\+Ints (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{minv,  }\item[{int}]{maxv,  }\item[{const std\+::string \&}]{variables\+Name = {\ttfamily "{}"{}},  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03995}{3995}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_abd0f6cb6707dc00014499a12db9e7683}\label{struct_in_stream_abd0f6cb6707dc00014499a12db9e7683} 
+\index{InStream@{InStream}!readLine@{readLine}}
+\index{readLine@{readLine}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readLine()}{readLine()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::string In\+Stream\+::read\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04347}{4347}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a6d9a21120d8b21cf31e9bad2a1e83e92}\label{struct_in_stream_a6d9a21120d8b21cf31e9bad2a1e83e92} 
+\index{InStream@{InStream}!readLine@{readLine}}
+\index{readLine@{readLine}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readLine()}{readLine()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::string In\+Stream\+::read\+Line (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpattern}{pattern}} \&}]{p,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04363}{4363}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a4fd055a2face33d5862f23ee9cb86cd5}\label{struct_in_stream_a4fd055a2face33d5862f23ee9cb86cd5} 
+\index{InStream@{InStream}!readLine@{readLine}}
+\index{readLine@{readLine}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readLine()}{readLine()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::string In\+Stream\+::read\+Line (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ptrn,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04374}{4374}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a1ce8d0614039ae608612cca5d4fc5f28}\label{struct_in_stream_a1ce8d0614039ae608612cca5d4fc5f28} 
+\index{InStream@{InStream}!readLines@{readLines}}
+\index{readLines@{readLines}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readLines()}{readLines()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ In\+Stream\+::read\+Lines (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{const \mbox{\hyperlink{classpattern}{pattern}} \&}]{p,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}},  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04368}{4368}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a5f62d4bb591a6de0a04cc8cc8a876202}\label{struct_in_stream_a5f62d4bb591a6de0a04cc8cc8a876202} 
+\index{InStream@{InStream}!readLines@{readLines}}
+\index{readLines@{readLines}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readLines()}{readLines()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ In\+Stream\+::read\+Lines (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{const std\+::string \&}]{ptrn,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}},  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04379}{4379}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a2815b773083f56cf836e3669cf467e1a}\label{struct_in_stream_a2815b773083f56cf836e3669cf467e1a} 
+\index{InStream@{InStream}!readLines@{readLines}}
+\index{readLines@{readLines}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readLines()}{readLines()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ In\+Stream\+::read\+Lines (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04351}{4351}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a3827b74ce0965b2b080319e24fa7a447}\label{struct_in_stream_a3827b74ce0965b2b080319e24fa7a447} 
+\index{InStream@{InStream}!readLineTo@{readLineTo}}
+\index{readLineTo@{readLineTo}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readLineTo()}{readLineTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void In\+Stream\+::read\+Line\+To (\begin{DoxyParamCaption}\item[{std\+::string \&}]{result }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04343}{4343}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a15203cdc5616988c0b76e8652ec05cb7}\label{struct_in_stream_a15203cdc5616988c0b76e8652ec05cb7} 
+\index{InStream@{InStream}!readLineTo@{readLineTo}}
+\index{readLineTo@{readLineTo}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readLineTo()}{readLineTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void In\+Stream\+::read\+Line\+To (\begin{DoxyParamCaption}\item[{std\+::string \&}]{result,  }\item[{const \mbox{\hyperlink{classpattern}{pattern}} \&}]{p,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04355}{4355}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a727fea17af0013a7a6089734292abd24}\label{struct_in_stream_a727fea17af0013a7a6089734292abd24} 
+\index{InStream@{InStream}!readLineTo@{readLineTo}}
+\index{readLineTo@{readLineTo}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readLineTo()}{readLineTo()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void In\+Stream\+::read\+Line\+To (\begin{DoxyParamCaption}\item[{std\+::string \&}]{result,  }\item[{const std\+::string \&}]{ptrn,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04359}{4359}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_af964fda2b145a8c8d25965b7ef4784cd}\label{struct_in_stream_af964fda2b145a8c8d25965b7ef4784cd} 
+\index{InStream@{InStream}!readLong@{readLong}}
+\index{readLong@{readLong}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readLong()}{readLong()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily long long In\+Stream\+::read\+Long (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03845}{3845}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a1398548ec0f156ddc9add251addb63c4}\label{struct_in_stream_a1398548ec0f156ddc9add251addb63c4} 
+\index{InStream@{InStream}!readLong@{readLong}}
+\index{readLong@{readLong}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readLong()}{readLong()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily long long In\+Stream\+::read\+Long (\begin{DoxyParamCaption}\item[{long long}]{minv,  }\item[{long long}]{maxv,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03863}{3863}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_aac4b9f822f2471eb19f89e3c0d78169b}\label{struct_in_stream_aac4b9f822f2471eb19f89e3c0d78169b} 
+\index{InStream@{InStream}!readLong@{readLong}}
+\index{readLong@{readLong}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readLong()}{readLong()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily unsigned long long In\+Stream\+::read\+Long (\begin{DoxyParamCaption}\item[{unsigned long long}]{minv,  }\item[{unsigned long long}]{maxv,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03952}{3952}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_ab135bb75d235e57fea89a248acd51015}\label{struct_in_stream_ab135bb75d235e57fea89a248acd51015} 
+\index{InStream@{InStream}!readLongs@{readLongs}}
+\index{readLongs@{readLongs}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readLongs()}{readLongs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ long long $>$ In\+Stream\+::read\+Longs (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03901}{3901}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a469d95f96c09746781621480b74c5c83}\label{struct_in_stream_a469d95f96c09746781621480b74c5c83} 
+\index{InStream@{InStream}!readLongs@{readLongs}}
+\index{readLongs@{readLongs}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readLongs()}{readLongs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ long long $>$ In\+Stream\+::read\+Longs (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{long long}]{minv,  }\item[{long long}]{maxv,  }\item[{const std\+::string \&}]{variables\+Name = {\ttfamily "{}"{}},  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03895}{3895}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a9bd7a7d10db6d24401dfd3b421ed6045}\label{struct_in_stream_a9bd7a7d10db6d24401dfd3b421ed6045} 
+\index{InStream@{InStream}!readLongs@{readLongs}}
+\index{readLongs@{readLongs}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readLongs()}{readLongs()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ unsigned long long $>$ In\+Stream\+::read\+Longs (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{unsigned long long}]{minv,  }\item[{unsigned long long}]{maxv,  }\item[{const std\+::string \&}]{variables\+Name = {\ttfamily "{}"{}},  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+\Hypertarget{struct_in_stream_a147bef1aea6670fb8e2e6be97e76edc2}\label{struct_in_stream_a147bef1aea6670fb8e2e6be97e76edc2} 
+\index{InStream@{InStream}!readReal@{readReal}}
+\index{readReal@{readReal}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readReal()}{readReal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double In\+Stream\+::read\+Real (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04015}{4015}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_afefbbd644f24959a3c0dca545c50ca8d}\label{struct_in_stream_afefbbd644f24959a3c0dca545c50ca8d} 
+\index{InStream@{InStream}!readReal@{readReal}}
+\index{readReal@{readReal}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readReal()}{readReal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double In\+Stream\+::read\+Real (\begin{DoxyParamCaption}\item[{double}]{minv,  }\item[{double}]{maxv,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04026}{4026}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a6d4100230dab7762fc8a67889f0af48b}\label{struct_in_stream_a6d4100230dab7762fc8a67889f0af48b} 
+\index{InStream@{InStream}!readReals@{readReals}}
+\index{readReals@{readReals}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readReals()}{readReals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ In\+Stream\+::read\+Reals (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{double}]{minv,  }\item[{double}]{maxv,  }\item[{const std\+::string \&}]{variables\+Name = {\ttfamily "{}"{}},  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04061}{4061}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a30e0fec1354eccc823c46fb2decb6a5d}\label{struct_in_stream_a30e0fec1354eccc823c46fb2decb6a5d} 
+\index{InStream@{InStream}!readReals@{readReals}}
+\index{readReals@{readReals}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readReals()}{readReals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ In\+Stream\+::read\+Reals (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04067}{4067}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a012e968b18b359b82897db805faeb0f6}\label{struct_in_stream_a012e968b18b359b82897db805faeb0f6} 
+\index{InStream@{InStream}!readSpace@{readSpace}}
+\index{readSpace@{readSpace}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readSpace()}{readSpace()}}
+{\footnotesize\ttfamily char In\+Stream\+::read\+Space (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03357}{3357}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_aaecf640ad9de7cf1873b2bc216e32b47}\label{struct_in_stream_aaecf640ad9de7cf1873b2bc216e32b47} 
+\index{InStream@{InStream}!readStrictDouble@{readStrictDouble}}
+\index{readStrictDouble@{readStrictDouble}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readStrictDouble()}{readStrictDouble()}}
+{\footnotesize\ttfamily double In\+Stream\+::read\+Strict\+Double (\begin{DoxyParamCaption}\item[{double}]{minv,  }\item[{double}]{maxv,  }\item[{int}]{min\+After\+Point\+Digit\+Count,  }\item[{int}]{max\+After\+Point\+Digit\+Count,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04136}{4136}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_af2689fbf7c65b80728826fcb4230163f}\label{struct_in_stream_af2689fbf7c65b80728826fcb4230163f} 
+\index{InStream@{InStream}!readStrictDoubles@{readStrictDoubles}}
+\index{readStrictDoubles@{readStrictDoubles}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readStrictDoubles()}{readStrictDoubles()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ In\+Stream\+::read\+Strict\+Doubles (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{double}]{minv,  }\item[{double}]{maxv,  }\item[{int}]{min\+After\+Point\+Digit\+Count,  }\item[{int}]{max\+After\+Point\+Digit\+Count,  }\item[{const std\+::string \&}]{variables\+Name = {\ttfamily "{}"{}},  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04144}{4144}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_af4a862c387cf199c075896c046b3038b}\label{struct_in_stream_af4a862c387cf199c075896c046b3038b} 
+\index{InStream@{InStream}!readStrictReal@{readStrictReal}}
+\index{readStrictReal@{readStrictReal}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readStrictReal()}{readStrictReal()}}
+{\footnotesize\ttfamily double In\+Stream\+::read\+Strict\+Real (\begin{DoxyParamCaption}\item[{double}]{minv,  }\item[{double}]{maxv,  }\item[{int}]{min\+After\+Point\+Digit\+Count,  }\item[{int}]{max\+After\+Point\+Digit\+Count,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04086}{4086}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a05d7a1183338770dd288298e6f4378c7}\label{struct_in_stream_a05d7a1183338770dd288298e6f4378c7} 
+\index{InStream@{InStream}!readStrictReals@{readStrictReals}}
+\index{readStrictReals@{readStrictReals}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readStrictReals()}{readStrictReals()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ In\+Stream\+::read\+Strict\+Reals (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{double}]{minv,  }\item[{double}]{maxv,  }\item[{int}]{min\+After\+Point\+Digit\+Count,  }\item[{int}]{max\+After\+Point\+Digit\+Count,  }\item[{const std\+::string \&}]{variables\+Name = {\ttfamily "{}"{}},  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04126}{4126}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a6e45ce9c44925056ec1db59400012c3d}\label{struct_in_stream_a6e45ce9c44925056ec1db59400012c3d} 
+\index{InStream@{InStream}!readString@{readString}}
+\index{readString@{readString}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readString()}{readString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::string In\+Stream\+::read\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04280}{4280}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a25e0a8a1aef084955346a2b82cefa3b3}\label{struct_in_stream_a25e0a8a1aef084955346a2b82cefa3b3} 
+\index{InStream@{InStream}!readString@{readString}}
+\index{readString@{readString}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readString()}{readString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::string In\+Stream\+::read\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpattern}{pattern}} \&}]{p,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04318}{4318}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a5d4fd12c9b43f1357e56aed051524f7d}\label{struct_in_stream_a5d4fd12c9b43f1357e56aed051524f7d} 
+\index{InStream@{InStream}!readString@{readString}}
+\index{readString@{readString}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readString()}{readString()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::string In\+Stream\+::read\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ptrn,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04330}{4330}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a7566b33af0c853ce8ddfcdd7ad0e9648}\label{struct_in_stream_a7566b33af0c853ce8ddfcdd7ad0e9648} 
+\index{InStream@{InStream}!readStrings@{readStrings}}
+\index{readStrings@{readStrings}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readStrings()}{readStrings()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ In\+Stream\+::read\+Strings (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{const \mbox{\hyperlink{classpattern}{pattern}} \&}]{p,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}},  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04324}{4324}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a826426f9c306ac53747a3141f819a1c7}\label{struct_in_stream_a826426f9c306ac53747a3141f819a1c7} 
+\index{InStream@{InStream}!readStrings@{readStrings}}
+\index{readStrings@{readStrings}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readStrings()}{readStrings()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ In\+Stream\+::read\+Strings (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{const std\+::string \&}]{ptrn,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}},  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04336}{4336}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a2cba4bd119b24d1af9c70ce238b2fbd6}\label{struct_in_stream_a2cba4bd119b24d1af9c70ce238b2fbd6} 
+\index{InStream@{InStream}!readStrings@{readStrings}}
+\index{readStrings@{readStrings}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readStrings()}{readStrings()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ In\+Stream\+::read\+Strings (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04285}{4285}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a79fc60da4d122afd8c8f6f76c1b7fa56}\label{struct_in_stream_a79fc60da4d122afd8c8f6f76c1b7fa56} 
+\index{InStream@{InStream}!readStringTo@{readStringTo}}
+\index{readStringTo@{readStringTo}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readStringTo()}{readStringTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void In\+Stream\+::read\+String\+To (\begin{DoxyParamCaption}\item[{std\+::string \&}]{result }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04250}{4250}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a6dd7e7971417eadfc7c89ed6063ee166}\label{struct_in_stream_a6dd7e7971417eadfc7c89ed6063ee166} 
+\index{InStream@{InStream}!readStringTo@{readStringTo}}
+\index{readStringTo@{readStringTo}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readStringTo()}{readStringTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void In\+Stream\+::read\+String\+To (\begin{DoxyParamCaption}\item[{std\+::string \&}]{result,  }\item[{const \mbox{\hyperlink{classpattern}{pattern}} \&}]{p,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04289}{4289}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a90443a86a3a04208af259dbca2061b3b}\label{struct_in_stream_a90443a86a3a04208af259dbca2061b3b} 
+\index{InStream@{InStream}!readStringTo@{readStringTo}}
+\index{readStringTo@{readStringTo}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readStringTo()}{readStringTo()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void In\+Stream\+::read\+String\+To (\begin{DoxyParamCaption}\item[{std\+::string \&}]{result,  }\item[{const std\+::string \&}]{ptrn,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04314}{4314}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_aab5bf73477536435d39efd209bf672d0}\label{struct_in_stream_aab5bf73477536435d39efd209bf672d0} 
+\index{InStream@{InStream}!readToken@{readToken}}
+\index{readToken@{readToken}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readToken()}{readToken()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::string In\+Stream\+::read\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03412}{3412}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_aa7e276efc82ccd5bcefbfaf8f0391677}\label{struct_in_stream_aa7e276efc82ccd5bcefbfaf8f0391677} 
+\index{InStream@{InStream}!readToken@{readToken}}
+\index{readToken@{readToken}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readToken()}{readToken()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::string In\+Stream\+::read\+Token (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpattern}{pattern}} \&}]{p,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03507}{3507}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a1551acb574a25586a2ba2ad594398e8c}\label{struct_in_stream_a1551acb574a25586a2ba2ad594398e8c} 
+\index{InStream@{InStream}!readToken@{readToken}}
+\index{readToken@{readToken}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readToken()}{readToken()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::string In\+Stream\+::read\+Token (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ptrn,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03522}{3522}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a5f2d2a617eed60c5a05872af6ece6855}\label{struct_in_stream_a5f2d2a617eed60c5a05872af6ece6855} 
+\index{InStream@{InStream}!readTokens@{readTokens}}
+\index{readTokens@{readTokens}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readTokens()}{readTokens()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ In\+Stream\+::read\+Tokens (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{const \mbox{\hyperlink{classpattern}{pattern}} \&}]{p,  }\item[{const std\+::string \&}]{variables\+Name = {\ttfamily "{}"{}},  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03512}{3512}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a0c556560eb05d89757fc854d38ae650b}\label{struct_in_stream_a0c556560eb05d89757fc854d38ae650b} 
+\index{InStream@{InStream}!readTokens@{readTokens}}
+\index{readTokens@{readTokens}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readTokens()}{readTokens()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ In\+Stream\+::read\+Tokens (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{const std\+::string \&}]{ptrn,  }\item[{const std\+::string \&}]{variables\+Name = {\ttfamily "{}"{}},  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03527}{3527}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a7b79dfec1ae85f251876f603751036d9}\label{struct_in_stream_a7b79dfec1ae85f251876f603751036d9} 
+\index{InStream@{InStream}!readTokens@{readTokens}}
+\index{readTokens@{readTokens}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readTokens()}{readTokens()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ In\+Stream\+::read\+Tokens (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03518}{3518}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a0512828fe7bc56a8fa2ddb4e0e6f2b72}\label{struct_in_stream_a0512828fe7bc56a8fa2ddb4e0e6f2b72} 
+\index{InStream@{InStream}!readTokenTo@{readTokenTo}}
+\index{readTokenTo@{readTokenTo}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readTokenTo()}{readTokenTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void In\+Stream\+::read\+Token\+To (\begin{DoxyParamCaption}\item[{std\+::string \&}]{result }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03416}{3416}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a6cc04d722a5e707b0450396c671c8732}\label{struct_in_stream_a6cc04d722a5e707b0450396c671c8732} 
+\index{InStream@{InStream}!readTokenTo@{readTokenTo}}
+\index{readTokenTo@{readTokenTo}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readTokenTo()}{readTokenTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void In\+Stream\+::read\+Token\+To (\begin{DoxyParamCaption}\item[{std\+::string \&}]{result,  }\item[{const \mbox{\hyperlink{classpattern}{pattern}} \&}]{p,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03552}{3552}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_ac191b4317fc175b291cae1fa4fc7b399}\label{struct_in_stream_ac191b4317fc175b291cae1fa4fc7b399} 
+\index{InStream@{InStream}!readTokenTo@{readTokenTo}}
+\index{readTokenTo@{readTokenTo}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readTokenTo()}{readTokenTo()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void In\+Stream\+::read\+Token\+To (\begin{DoxyParamCaption}\item[{std\+::string \&}]{result,  }\item[{const std\+::string \&}]{ptrn,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03556}{3556}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a473c29087621184bb71998a12957e822}\label{struct_in_stream_a473c29087621184bb71998a12957e822} 
+\index{InStream@{InStream}!readUnsignedLong@{readUnsignedLong}}
+\index{readUnsignedLong@{readUnsignedLong}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readUnsignedLong()}{readUnsignedLong()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned long long In\+Stream\+::read\+Unsigned\+Long (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03854}{3854}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_ac168f51d536fd2fef12d6aa87ff5795f}\label{struct_in_stream_ac168f51d536fd2fef12d6aa87ff5795f} 
+\index{InStream@{InStream}!readUnsignedLong@{readUnsignedLong}}
+\index{readUnsignedLong@{readUnsignedLong}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readUnsignedLong()}{readUnsignedLong()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned long long In\+Stream\+::read\+Unsigned\+Long (\begin{DoxyParamCaption}\item[{unsigned long long}]{minv,  }\item[{unsigned long long}]{maxv,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03906}{3906}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a5d3141608fafc3797171a3ea7627ec4d}\label{struct_in_stream_a5d3141608fafc3797171a3ea7627ec4d} 
+\index{InStream@{InStream}!readUnsignedLongs@{readUnsignedLongs}}
+\index{readUnsignedLongs@{readUnsignedLongs}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readUnsignedLongs()}{readUnsignedLongs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ unsigned long long $>$ In\+Stream\+::read\+Unsigned\+Longs (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03947}{3947}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a8c85a1d577aeb727bec09f362e3a395a}\label{struct_in_stream_a8c85a1d577aeb727bec09f362e3a395a} 
+\index{InStream@{InStream}!readUnsignedLongs@{readUnsignedLongs}}
+\index{readUnsignedLongs@{readUnsignedLongs}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readUnsignedLongs()}{readUnsignedLongs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ unsigned long long $>$ In\+Stream\+::read\+Unsigned\+Longs (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{unsigned long long}]{minv,  }\item[{unsigned long long}]{maxv,  }\item[{const std\+::string \&}]{variables\+Name = {\ttfamily "{}"{}},  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03940}{3940}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a2d0d971de1cd2d7da01f7d6bb4f836a3}\label{struct_in_stream_a2d0d971de1cd2d7da01f7d6bb4f836a3} 
+\index{InStream@{InStream}!readWord@{readWord}}
+\index{readWord@{readWord}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readWord()}{readWord()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::string In\+Stream\+::read\+Word (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03374}{3374}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a7848236cb25239dc96ac1d01953116c9}\label{struct_in_stream_a7848236cb25239dc96ac1d01953116c9} 
+\index{InStream@{InStream}!readWord@{readWord}}
+\index{readWord@{readWord}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readWord()}{readWord()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::string In\+Stream\+::read\+Word (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpattern}{pattern}} \&}]{p,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03457}{3457}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a33a01a1ab403b91c58d630b2650f999e}\label{struct_in_stream_a33a01a1ab403b91c58d630b2650f999e} 
+\index{InStream@{InStream}!readWord@{readWord}}
+\index{readWord@{readWord}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readWord()}{readWord()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::string In\+Stream\+::read\+Word (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ptrn,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03495}{3495}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a0382d1f95cecf40e7c728c033c14123b}\label{struct_in_stream_a0382d1f95cecf40e7c728c033c14123b} 
+\index{InStream@{InStream}!readWords@{readWords}}
+\index{readWords@{readWords}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readWords()}{readWords()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ In\+Stream\+::read\+Words (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{const \mbox{\hyperlink{classpattern}{pattern}} \&}]{p,  }\item[{const std\+::string \&}]{variables\+Name = {\ttfamily "{}"{}},  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03485}{3485}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a05e78a1ad94e4ed2078daee8eeb7e2cf}\label{struct_in_stream_a05e78a1ad94e4ed2078daee8eeb7e2cf} 
+\index{InStream@{InStream}!readWords@{readWords}}
+\index{readWords@{readWords}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readWords()}{readWords()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ In\+Stream\+::read\+Words (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{const std\+::string \&}]{ptrn,  }\item[{const std\+::string \&}]{variables\+Name = {\ttfamily "{}"{}},  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03500}{3500}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_aaa61148d12958728cd443f21b2ed0aa3}\label{struct_in_stream_aaa61148d12958728cd443f21b2ed0aa3} 
+\index{InStream@{InStream}!readWords@{readWords}}
+\index{readWords@{readWords}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readWords()}{readWords()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ In\+Stream\+::read\+Words (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{index\+Base = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03491}{3491}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_ace052a2f951135d3a7699c3824fbc4f7}\label{struct_in_stream_ace052a2f951135d3a7699c3824fbc4f7} 
+\index{InStream@{InStream}!readWordTo@{readWordTo}}
+\index{readWordTo@{readWordTo}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readWordTo()}{readWordTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void In\+Stream\+::read\+Word\+To (\begin{DoxyParamCaption}\item[{std\+::string \&}]{result }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03379}{3379}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_aae65d2db41677626fd5ffa446be65003}\label{struct_in_stream_aae65d2db41677626fd5ffa446be65003} 
+\index{InStream@{InStream}!readWordTo@{readWordTo}}
+\index{readWordTo@{readWordTo}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readWordTo()}{readWordTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void In\+Stream\+::read\+Word\+To (\begin{DoxyParamCaption}\item[{std\+::string \&}]{result,  }\item[{const \mbox{\hyperlink{classpattern}{pattern}} \&}]{p,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03534}{3534}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a78c7969db04a87aea6263c8563dc5c93}\label{struct_in_stream_a78c7969db04a87aea6263c8563dc5c93} 
+\index{InStream@{InStream}!readWordTo@{readWordTo}}
+\index{readWordTo@{readWordTo}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readWordTo()}{readWordTo()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void In\+Stream\+::read\+Word\+To (\begin{DoxyParamCaption}\item[{std\+::string \&}]{result,  }\item[{const std\+::string \&}]{ptrn,  }\item[{const std\+::string \&}]{variable\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03548}{3548}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a0daf92605da53c68648ad78572965ca3}\label{struct_in_stream_a0daf92605da53c68648ad78572965ca3} 
+\index{InStream@{InStream}!reset@{reset}}
+\index{reset@{reset}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void In\+Stream\+::reset (\begin{DoxyParamCaption}\item[{std\+::\+FILE \texorpdfstring{$\ast$}{*}}]{file = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03247}{3247}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a2c7c8561462345e6ee18a0d8ea4bc00b}\label{struct_in_stream_a2c7c8561462345e6ee18a0d8ea4bc00b} 
+\index{InStream@{InStream}!seekEof@{seekEof}}
+\index{seekEof@{seekEof}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{seekEof()}{seekEof()}}
+{\footnotesize\ttfamily bool In\+Stream\+::seek\+Eof (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04161}{4161}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a106d09bbdd844ca246bfbf2c6409f4b6}\label{struct_in_stream_a106d09bbdd844ca246bfbf2c6409f4b6} 
+\index{InStream@{InStream}!seekEoln@{seekEoln}}
+\index{seekEoln@{seekEoln}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{seekEoln()}{seekEoln()}}
+{\footnotesize\ttfamily bool In\+Stream\+::seek\+Eoln (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04233}{4233}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a7e9ee69fe14cc6c19b059b384eebed5c}\label{struct_in_stream_a7e9ee69fe14cc6c19b059b384eebed5c} 
+\index{InStream@{InStream}!setTestCase@{setTestCase}}
+\index{setTestCase@{setTestCase}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{setTestCase()}{setTestCase()}}
+{\footnotesize\ttfamily void In\+Stream\+::set\+Test\+Case (\begin{DoxyParamCaption}\item[{int}]{test\+Case }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02865}{2865}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a3caea7dc5003207a13b690e1e6523759}\label{struct_in_stream_a3caea7dc5003207a13b690e1e6523759} 
+\index{InStream@{InStream}!skipBlanks@{skipBlanks}}
+\index{skipBlanks@{skipBlanks}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{skipBlanks()}{skipBlanks()}}
+{\footnotesize\ttfamily void In\+Stream\+::skip\+Blanks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03369}{3369}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a1ee5c101df11ec9fe00867379bf3937f}\label{struct_in_stream_a1ee5c101df11ec9fe00867379bf3937f} 
+\index{InStream@{InStream}!skipBom@{skipBom}}
+\index{skipBom@{skipBom}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{skipBom()}{skipBom()}}
+{\footnotesize\ttfamily void In\+Stream\+::skip\+Bom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03316}{3316}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a15dbd488971ba0da79085f7bd980f1f1}\label{struct_in_stream_a15dbd488971ba0da79085f7bd980f1f1} 
+\index{InStream@{InStream}!skipChar@{skipChar}}
+\index{skipChar@{skipChar}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{skipChar()}{skipChar()}}
+{\footnotesize\ttfamily void In\+Stream\+::skip\+Char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03365}{3365}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a4ff4b2110a80dea66154702116080e49}\label{struct_in_stream_a4ff4b2110a80dea66154702116080e49} 
+\index{InStream@{InStream}!textColor@{textColor}}
+\index{textColor@{textColor}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{textColor()}{textColor()}}
+{\footnotesize\ttfamily void In\+Stream\+::text\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5}{WORD}}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02924}{2924}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a8c656e9ae7175e852033fbdffe41550b}\label{struct_in_stream_a8c656e9ae7175e852033fbdffe41550b} 
+\index{InStream@{InStream}!unreadChar@{unreadChar}}
+\index{unreadChar@{unreadChar}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{unreadChar()}{unreadChar()}}
+{\footnotesize\ttfamily void In\+Stream\+::unread\+Char (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03361}{3361}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a7920954e072895d70f2127ccc7af789d}\label{struct_in_stream_a7920954e072895d70f2127ccc7af789d} 
+\index{InStream@{InStream}!xmlSafeWrite@{xmlSafeWrite}}
+\index{xmlSafeWrite@{xmlSafeWrite}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{xmlSafeWrite()}{xmlSafeWrite()}}
+{\footnotesize\ttfamily void In\+Stream\+::xml\+Safe\+Write (\begin{DoxyParamCaption}\item[{std\+::\+FILE \texorpdfstring{$\ast$}{*}}]{file,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03208}{3208}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_in_stream_af2f09659cea3fd78f1e662cd918d2c30}\label{struct_in_stream_af2f09659cea3fd78f1e662cd918d2c30} 
+\index{InStream@{InStream}!\_tmpReadToken@{\_tmpReadToken}}
+\index{\_tmpReadToken@{\_tmpReadToken}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{\_tmpReadToken}{\_tmpReadToken}}
+{\footnotesize\ttfamily std\+::string In\+Stream\+::\+\_\+tmp\+Read\+Token}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02017}{2017}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a3b35e480ab8ea91b44cd8be3bf550fa8}\label{struct_in_stream_a3b35e480ab8ea91b44cd8be3bf550fa8} 
+\index{InStream@{InStream}!CLOSE\_BRACKET@{CLOSE\_BRACKET}}
+\index{CLOSE\_BRACKET@{CLOSE\_BRACKET}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{CLOSE\_BRACKET}{CLOSE\_BRACKET}}
+{\footnotesize\ttfamily const char In\+Stream\+::\+CLOSE\+\_\+\+BRACKET = char(17)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02346}{2346}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a2e44f54a6f11bf8337e742ec131ac0b5}\label{struct_in_stream_a2e44f54a6f11bf8337e742ec131ac0b5} 
+\index{InStream@{InStream}!lastLine@{lastLine}}
+\index{lastLine@{lastLine}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{lastLine}{lastLine}}
+{\footnotesize\ttfamily int In\+Stream\+::last\+Line}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02008}{2008}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a1906bb56c67bc1c4268903f37e2604a4}\label{struct_in_stream_a1906bb56c67bc1c4268903f37e2604a4} 
+\index{InStream@{InStream}!LightCyan@{LightCyan}}
+\index{LightCyan@{LightCyan}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{LightCyan}{LightCyan}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5}{WORD}} In\+Stream\+::\+Light\+Cyan = 0x0b\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02350}{2350}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a2eb9f95d5c8ef82ec45295113294b836}\label{struct_in_stream_a2eb9f95d5c8ef82ec45295113294b836} 
+\index{InStream@{InStream}!LightGray@{LightGray}}
+\index{LightGray@{LightGray}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{LightGray}{LightGray}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5}{WORD}} In\+Stream\+::\+Light\+Gray = 0x07\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02348}{2348}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a088a42a5a342bf630b6288c308d276e3}\label{struct_in_stream_a088a42a5a342bf630b6288c308d276e3} 
+\index{InStream@{InStream}!LightGreen@{LightGreen}}
+\index{LightGreen@{LightGreen}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{LightGreen}{LightGreen}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5}{WORD}} In\+Stream\+::\+Light\+Green = 0x0a\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02351}{2351}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_aa2b66ca7098a63f267cdc650eda5b11c}\label{struct_in_stream_aa2b66ca7098a63f267cdc650eda5b11c} 
+\index{InStream@{InStream}!LightRed@{LightRed}}
+\index{LightRed@{LightRed}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{LightRed}{LightRed}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5}{WORD}} In\+Stream\+::\+Light\+Red = 0x0c\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02349}{2349}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a9dcd83240a933dee55e8195f6228ccad}\label{struct_in_stream_a9dcd83240a933dee55e8195f6228ccad} 
+\index{InStream@{InStream}!LightYellow@{LightYellow}}
+\index{LightYellow@{LightYellow}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{LightYellow}{LightYellow}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5}{WORD}} In\+Stream\+::\+Light\+Yellow = 0x0e\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02352}{2352}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a14e6d7455706cea771265a7ab8407918}\label{struct_in_stream_a14e6d7455706cea771265a7ab8407918} 
+\index{InStream@{InStream}!maxFileSize@{maxFileSize}}
+\index{maxFileSize@{maxFileSize}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{maxFileSize}{maxFileSize}}
+{\footnotesize\ttfamily size\+\_\+t In\+Stream\+::max\+File\+Size}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02020}{2020}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a8ff983747e2b08a2f8f01d226b23f20a}\label{struct_in_stream_a8ff983747e2b08a2f8f01d226b23f20a} 
+\index{InStream@{InStream}!maxMessageLength@{maxMessageLength}}
+\index{maxMessageLength@{maxMessageLength}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{maxMessageLength}{maxMessageLength}}
+{\footnotesize\ttfamily size\+\_\+t In\+Stream\+::max\+Message\+Length}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02022}{2022}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a4a4e8df78395f7be17d9429e7640eb26}\label{struct_in_stream_a4a4e8df78395f7be17d9429e7640eb26} 
+\index{InStream@{InStream}!maxTokenLength@{maxTokenLength}}
+\index{maxTokenLength@{maxTokenLength}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{maxTokenLength}{maxTokenLength}}
+{\footnotesize\ttfamily size\+\_\+t In\+Stream\+::max\+Token\+Length}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02021}{2021}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a22c9fbb12ed6da923353c3a477881686}\label{struct_in_stream_a22c9fbb12ed6da923353c3a477881686} 
+\index{InStream@{InStream}!mode@{mode}}
+\index{mode@{mode}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_ae73df2968f2f656074dc00e062600ddb}{TMode}} In\+Stream\+::mode}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02011}{2011}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a0e45bfde029064fc64c36c1462e6ba8b}\label{struct_in_stream_a0e45bfde029064fc64c36c1462e6ba8b} 
+\index{InStream@{InStream}!name@{name}}
+\index{name@{name}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string In\+Stream\+::name}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02010}{2010}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_af18bd290c3c3907be197c1878946c4d8}\label{struct_in_stream_af18bd290c3c3907be197c1878946c4d8} 
+\index{InStream@{InStream}!NO\_INDEX@{NO\_INDEX}}
+\index{NO\_INDEX@{NO\_INDEX}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{NO\_INDEX}{NO\_INDEX}}
+{\footnotesize\ttfamily const int In\+Stream\+::\+NO\+\_\+\+INDEX = INT\+\_\+\+MAX\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02344}{2344}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a582ee4c10e2543041466180e6134865a}\label{struct_in_stream_a582ee4c10e2543041466180e6134865a} 
+\index{InStream@{InStream}!OPEN\_BRACKET@{OPEN\_BRACKET}}
+\index{OPEN\_BRACKET@{OPEN\_BRACKET}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{OPEN\_BRACKET}{OPEN\_BRACKET}}
+{\footnotesize\ttfamily const char In\+Stream\+::\+OPEN\+\_\+\+BRACKET = char(11)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02345}{2345}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_ac1db0153031be42e22117179c7cc70bf}\label{struct_in_stream_ac1db0153031be42e22117179c7cc70bf} 
+\index{InStream@{InStream}!opened@{opened}}
+\index{opened@{opened}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{opened}{opened}}
+{\footnotesize\ttfamily bool In\+Stream\+::opened}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02012}{2012}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_ab970f7b2a0f0a699c6f3187f5b565c35}\label{struct_in_stream_ab970f7b2a0f0a699c6f3187f5b565c35} 
+\index{InStream@{InStream}!reader@{reader}}
+\index{reader@{reader}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{reader}{reader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_input_stream_reader}{Input\+Stream\+Reader}}\texorpdfstring{$\ast$}{*} In\+Stream\+::reader}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02007}{2007}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a47cff32cdacd0978f83382c6c81d7df4}\label{struct_in_stream_a47cff32cdacd0978f83382c6c81d7df4} 
+\index{InStream@{InStream}!readManyIteration@{readManyIteration}}
+\index{readManyIteration@{readManyIteration}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{readManyIteration}{readManyIteration}}
+{\footnotesize\ttfamily int In\+Stream\+::read\+Many\+Iteration}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02019}{2019}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a66d3e4b4c823f79d1f53ad5901733717}\label{struct_in_stream_a66d3e4b4c823f79d1f53ad5901733717} 
+\index{InStream@{InStream}!stdfile@{stdfile}}
+\index{stdfile@{stdfile}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{stdfile}{stdfile}}
+{\footnotesize\ttfamily bool In\+Stream\+::stdfile}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02013}{2013}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a8aec5ed448357d952d4fae14e4054d8c}\label{struct_in_stream_a8aec5ed448357d952d4fae14e4054d8c} 
+\index{InStream@{InStream}!strict@{strict}}
+\index{strict@{strict}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{strict}{strict}}
+{\footnotesize\ttfamily bool In\+Stream\+::strict}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02014}{2014}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{struct_in_stream_a8afeeed49266480bd239d832415fb85b}\label{struct_in_stream_a8afeeed49266480bd239d832415fb85b} 
+\index{InStream@{InStream}!wordReserveSize@{wordReserveSize}}
+\index{wordReserveSize@{wordReserveSize}!InStream@{InStream}}
+\doxysubsubsection{\texorpdfstring{wordReserveSize}{wordReserveSize}}
+{\footnotesize\ttfamily int In\+Stream\+::word\+Reserve\+Size}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02016}{2016}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{testlib_8h}{testlib.\+h}}\end{DoxyCompactItemize}

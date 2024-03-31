@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_validator_8cpp" xml:lang="en-US">
+<title>src/validator.cpp File Reference</title>
+<indexterm><primary>src/validator.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;testlib.h&quot;<?linebreak?>#include &lt;bits/stdc++.h&gt;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_validator_8cpp_1a261b5420e17ff6b4908171e2220d5cce">prime</link> (int x)</para>
+</listitem>
+            <listitem><para>int <link linkend="_validator_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627">main</link> (int argc, char **argv)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_validator_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>validator.cpp</secondary></indexterm>
+<indexterm><primary>validator.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main (int argc, char ** argv)</computeroutput></para><para>
+Definition at line <link linkend="_validator_8cpp_source_1l00014">14</link> of file <link linkend="_validator_8cpp_source">validator.cpp</link>.</para>
+</section>
+<anchor xml:id="_validator_8cpp_1a261b5420e17ff6b4908171e2220d5cce"/><section>
+    <title>prime()</title>
+<indexterm><primary>prime</primary><secondary>validator.cpp</secondary></indexterm>
+<indexterm><primary>validator.cpp</primary><secondary>prime</secondary></indexterm>
+<para><computeroutput>bool prime (int x)</computeroutput></para><para>
+Definition at line <link linkend="_validator_8cpp_source_1l00005">5</link> of file <link linkend="_validator_8cpp_source">validator.cpp</link>.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,130 @@
+\doxysection{generator.\+h}
+\hypertarget{generator_8h_source}{}\label{generator_8h_source}\index{src/generator.h@{src/generator.h}}
+\mbox{\hyperlink{generator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ Chaipat\ Jainan\ on\ 28/2/2024\ AD.}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ COMPETITIVE\_CONTEST\_GENERATOR\_H}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00006}00006\ \textcolor{preprocessor}{\#define\ COMPETITIVE\_CONTEST\_GENERATOR\_H}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <sys/stat.h>}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{officialsol_8cpp}{./officialsol.cpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00017}\mbox{\hyperlink{generator_8h_ae1d1ec9482079231e898236e2b23c9ba}{00017}}\ \textcolor{preprocessor}{\#define\ ll\ long\ long}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00019}00019\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00021}\mbox{\hyperlink{generator_8h_a99db23de96bebc61420ec1fcb37da484}{00021}}\ \textcolor{keyword}{struct\ }stat\ \mbox{\hyperlink{generator_8h_a99db23de96bebc61420ec1fcb37da484}{info}};}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00023}\mbox{\hyperlink{classgenerator}{00023}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classgenerator}{generator}}\ \{}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00025}00025\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{int}\ cases;}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00028}00028\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *input\_folder\ =\ \textcolor{stringliteral}{"{}../in/"{}};}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *output\_folder\ =\ \textcolor{stringliteral}{"{}../out/"{}};}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ output\_extension\ =\ \textcolor{stringliteral}{"{}.out"{}};}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00032}00032\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ input\_extension\ =\ \textcolor{stringliteral}{"{}.in"{}};}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00034}00034\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00035}\mbox{\hyperlink{classgenerator_a474d415a403859769a80588f08048152}{00035}}\ \ \ \ \ \mbox{\hyperlink{classgenerator_a474d415a403859769a80588f08048152}{generator}}()\ :\ cases(0)\ \{\}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00037}\mbox{\hyperlink{classgenerator_ada2fd9b302b4bba540b6daedb28abc8f}{00037}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgenerator_ada2fd9b302b4bba540b6daedb28abc8f}{gen\_input}}(\mbox{\hyperlink{generator_8h_ae1d1ec9482079231e898236e2b23c9ba}{ll}}\ max\_n\ =\ 1e14,\ \mbox{\hyperlink{generator_8h_ae1d1ec9482079231e898236e2b23c9ba}{ll}}\ max\_m\ =\ 1e3)\ \{}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ random\ number\ generator\ seed\ for\ reproducibility}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ random\_device\ rd;}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ mt19937\ gen(rd());}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ uniform\_int\_distribution<ll>\ n\_dist(1,\ max\_n);}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ uniform\_int\_distribution<ll>\ m\_dist(2,\ max\_m);}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Generate\ 10\ test\ cases}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ 10;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{generator_8h_ae1d1ec9482079231e898236e2b23c9ba}{ll}}\ \mbox{\hyperlink{checker_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\ =\ n\_dist(gen);}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{generator_8h_ae1d1ec9482079231e898236e2b23c9ba}{ll}}\ m\ =\ m\_dist(gen);}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ and\ write\ to\ the\ output\ file}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ filename\ =\ input\_folder\ +\ to\_string(cases)\ +\ input\_extension;}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ ofstream\ outfile(filename);}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!outfile.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Error:\ Could\ not\ open\ file\ "{}}\ <<\ filename\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ outfile\ <<\ \mbox{\hyperlink{checker_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ m\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ outfile.close();}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ cases++;}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00063}\mbox{\hyperlink{classgenerator_ab1d37d89b5da3d7bfd8dd32b7994c082}{00063}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgenerator_ab1d37d89b5da3d7bfd8dd32b7994c082}{gen\_input\_all}}()\ \{}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (stat(input\_folder,\ \&\mbox{\hyperlink{generator_8h_a99db23de96bebc61420ec1fcb37da484}{info}})\ !=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ create\ input\ folder}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}mkdir\ -\/p\ ../in"{}});}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00067}00067\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{generator_8h_a99db23de96bebc61420ec1fcb37da484}{info}}.st\_mode\ \&\ S\_IFDIR)\ \{}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ clear\ input\ folder}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}rm\ -\/rf\ ../in/*"{}});}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Input\ folder\ cleared!"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00073}00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classgenerator_ada2fd9b302b4bba540b6daedb28abc8f}{gen\_input}}(1e3,\ 1e1);}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00074}00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classgenerator_ada2fd9b302b4bba540b6daedb28abc8f}{gen\_input}}(1e6,\ 1e2);}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00075}00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classgenerator_ada2fd9b302b4bba540b6daedb28abc8f}{gen\_input}}(1e9,\ 1e2);}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00076}00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classgenerator_ada2fd9b302b4bba540b6daedb28abc8f}{gen\_input}}(1e12,\ 1e3);}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ gen\_input(cases,\ 1e14,\ 1e3);}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00079}00079\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Total\ "{}}\ <<\ cases\ <<\ \textcolor{stringliteral}{"{}\ test\ cases\ generated!"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00082}\mbox{\hyperlink{classgenerator_ac9539dd4517b20b6f4cb4ecfc149bcbf}{00082}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgenerator_ac9539dd4517b20b6f4cb4ecfc149bcbf}{gen\_output}}()\ \{}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ check\ output\ folder\ exists}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (stat(output\_folder,\ \&\mbox{\hyperlink{generator_8h_a99db23de96bebc61420ec1fcb37da484}{info}})\ !=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ create\ output\ folder}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}mkdir\ -\/p\ ../out"{}});}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00087}00087\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{generator_8h_a99db23de96bebc61420ec1fcb37da484}{info}}.st\_mode\ \&\ S\_IFDIR)\ \{}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ clear\ output\ folder}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}rm\ -\/rf\ ../out/*"{}});}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Output\ folder\ cleared!"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00091}00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ cases;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ in\ =\ input\_folder\ +\ to\_string(i)\ +\ input\_extension;}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{generator_8h_ae1d1ec9482079231e898236e2b23c9ba}{ll}}\ \mbox{\hyperlink{checker_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\ =\ 0,\ m\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ ifstream\ infile(in);}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!infile.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Error:\ Could\ not\ open\ file\ "{}}\ <<\ in\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ infile\ >>\ \mbox{\hyperlink{checker_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\ >>\ m;}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ out\ =\ output\_folder\ +\ to\_string(i)\ +\ output\_extension;}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ ofstream\ outfile(out);}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!outfile.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Error:\ Could\ not\ open\ file\ "{}}\ <<\ out\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ output\ =\ to\_string(\mbox{\hyperlink{officialsol_8cpp_a8d4ea4376a1012135e93cfacfa92fd97}{fib\_fast}}(\mbox{\hyperlink{checker_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}},\ m));}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ outfile\ <<\ output\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ outfile.close();}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00118}00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00120}00120\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Total\ "{}}\ <<\ cases\ <<\ \textcolor{stringliteral}{"{}\ results\ generated!"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00121}00121\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00122}00122\ \};}
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{generator_8h_source_l00124}00124\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ COMPETITIVE\_CONTEST\_GENERATOR\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="struct_testlib_finalize_guard" kind="struct" language="C++" prot="public">
+    <compoundname>TestlibFinalizeGuard</compoundname>
+    <includes refid="testlib_8h" local="no">testlib.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="struct_testlib_finalize_guard_1aea38818fd90c897e5e648db3a9cf4f00" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool TestlibFinalizeGuard::alive</definition>
+        <argsstring></argsstring>
+        <name>alive</name>
+        <qualifiedname>TestlibFinalizeGuard::alive</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2771" column="17" bodyfile="src/testlib.h" bodystart="2771" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_testlib_finalize_guard_1a4b4f03c69663c87c321fb1aafb07e9b1" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool TestlibFinalizeGuard::registered</definition>
+        <argsstring></argsstring>
+        <name>registered</name>
+        <qualifiedname>TestlibFinalizeGuard::registered</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2772" column="17" bodyfile="src/testlib.h" bodystart="2772" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_testlib_finalize_guard_1a59c31cc40e9f8a903d9da51c3cdd5186" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TestlibFinalizeGuard::quitCount</definition>
+        <argsstring></argsstring>
+        <name>quitCount</name>
+        <qualifiedname>TestlibFinalizeGuard::quitCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2774" column="9" bodyfile="src/testlib.h" bodystart="2774" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_testlib_finalize_guard_1af46c17590b5a5f22927cf208e00cb704" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TestlibFinalizeGuard::readEofCount</definition>
+        <argsstring></argsstring>
+        <name>readEofCount</name>
+        <qualifiedname>TestlibFinalizeGuard::readEofCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2774" column="19" bodyfile="src/testlib.h" bodystart="2774" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_testlib_finalize_guard_1ae2ec335476d755ccc7ef9d6b546d7aaa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TestlibFinalizeGuard::TestlibFinalizeGuard</definition>
+        <argsstring>()</argsstring>
+        <name>TestlibFinalizeGuard</name>
+        <qualifiedname>TestlibFinalizeGuard::TestlibFinalizeGuard</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2776" column="5" bodyfile="src/testlib.h" bodystart="2776" bodyend="2778"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_testlib_finalize_guard_1a45a3464e297663a49405ec2218a81565" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TestlibFinalizeGuard::~TestlibFinalizeGuard</definition>
+        <argsstring>()</argsstring>
+        <name>~TestlibFinalizeGuard</name>
+        <qualifiedname>TestlibFinalizeGuard::~TestlibFinalizeGuard</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2780" column="5" bodyfile="src/testlib.h" bodystart="2780" bodyend="2803"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="struct_testlib_finalize_guard_1ab00ba4706f1c65ff93597b36dea00162" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestlibFinalizeGuard::autoEnsureNoUnusedOpts</definition>
+        <argsstring>()</argsstring>
+        <name>autoEnsureNoUnusedOpts</name>
+        <qualifiedname>TestlibFinalizeGuard::autoEnsureNoUnusedOpts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2807" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/testlib.h" line="2770" column="1" bodyfile="src/testlib.h" bodystart="2770" bodyend="2808"/>
+    <listofallmembers>
+      <member refid="struct_testlib_finalize_guard_1aea38818fd90c897e5e648db3a9cf4f00" prot="public" virt="non-virtual"><scope>TestlibFinalizeGuard</scope><name>alive</name></member>
+      <member refid="struct_testlib_finalize_guard_1ab00ba4706f1c65ff93597b36dea00162" prot="private" virt="non-virtual"><scope>TestlibFinalizeGuard</scope><name>autoEnsureNoUnusedOpts</name></member>
+      <member refid="struct_testlib_finalize_guard_1a59c31cc40e9f8a903d9da51c3cdd5186" prot="public" virt="non-virtual"><scope>TestlibFinalizeGuard</scope><name>quitCount</name></member>
+      <member refid="struct_testlib_finalize_guard_1af46c17590b5a5f22927cf208e00cb704" prot="public" virt="non-virtual"><scope>TestlibFinalizeGuard</scope><name>readEofCount</name></member>
+      <member refid="struct_testlib_finalize_guard_1a4b4f03c69663c87c321fb1aafb07e9b1" prot="public" virt="non-virtual"><scope>TestlibFinalizeGuard</scope><name>registered</name></member>
+      <member refid="struct_testlib_finalize_guard_1ae2ec335476d755ccc7ef9d6b546d7aaa" prot="public" virt="non-virtual"><scope>TestlibFinalizeGuard</scope><name>TestlibFinalizeGuard</name></member>
+      <member refid="struct_testlib_finalize_guard_1a45a3464e297663a49405ec2218a81565" prot="public" virt="non-virtual"><scope>TestlibFinalizeGuard</scope><name>~TestlibFinalizeGuard</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

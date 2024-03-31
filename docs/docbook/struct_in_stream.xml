@@ -1,0 +1,1210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_in_stream" xml:lang="en-US">
+<title>InStream Struct Reference</title>
+<indexterm><primary>InStream</primary></indexterm>
+<para>
+<computeroutput>#include &lt;testlib.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_in_stream_1a6682d5e68cdbb92c667e6fc8e5e3c6dd">InStream</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_struct_in_stream_1ab75c26c4747d2a23388735cdfebbe4fa">~InStream</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_struct_in_stream_1a6f82f3399cf052c8b55d500feec79bd2">InStream</link> (const <link linkend="_struct_in_stream">InStream</link> &amp;baseStream, std::string content)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a249983cd8365347d249485c7840e3424">init</link> (std::string fileName, <link linkend="_testlib_8h_1ae73df2968f2f656074dc00e062600ddb">TMode</link> <link linkend="_struct_in_stream_1a22c9fbb12ed6da923353c3a477881686">mode</link>)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a4b78654581508e7ace12cdda20de48df">init</link> (std::FILE *f, <link linkend="_testlib_8h_1ae73df2968f2f656074dc00e062600ddb">TMode</link> <link linkend="_struct_in_stream_1a22c9fbb12ed6da923353c3a477881686">mode</link>)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a7e9ee69fe14cc6c19b059b384eebed5c">setTestCase</link> (int testCase)</para>
+</listitem>
+            <listitem><para>std::vector&lt; int &gt; <link linkend="_struct_in_stream_1ab88e3e00ca1111534d3d110166f275bd">getReadChars</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a3caea7dc5003207a13b690e1e6523759">skipBlanks</link> ()</para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_in_stream_1af208d97fa6484d10b88d611012fce578">curChar</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a15dbd488971ba0da79085f7bd980f1f1">skipChar</link> ()</para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_in_stream_1af46102c51b215e59e3b9e993ac999fe5">nextChar</link> ()</para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_in_stream_1aa7711bdcca7b52181fd0f3072d935205">readChar</link> ()</para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_in_stream_1a0c49c9fe193752b77e17fc7e45b0965b">readChar</link> (char c)</para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_in_stream_1a012e968b18b359b82897db805faeb0f6">readSpace</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a8c656e9ae7175e852033fbdffe41550b">unreadChar</link> (char c)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a0daf92605da53c68648ad78572965ca3">reset</link> (std::FILE *file=NULL)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_in_stream_1a8c1f774508b47b9e80c76d37d268f6f4">eof</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_in_stream_1a2c7c8561462345e6ee18a0d8ea4bc00b">seekEof</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_in_stream_1ac54c356a099d9af022d59cdcd1b75bcd">eoln</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_in_stream_1a106d09bbdd844ca246bfbf2c6409f4b6">seekEoln</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a86e63a6bb9bc47cae9f58f0591ecc53f">nextLine</link> ()</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_in_stream_1a2d0d971de1cd2d7da01f7d6bb4f836a3">readWord</link> ()</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_in_stream_1aab5bf73477536435d39efd209bf672d0">readToken</link> ()</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_in_stream_1a33a01a1ab403b91c58d630b2650f999e">readWord</link> (const std::string &amp;ptrn, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_in_stream_1a7848236cb25239dc96ac1d01953116c9">readWord</link> (const <link linkend="_classpattern">pattern</link> &amp;p, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_struct_in_stream_1a05e78a1ad94e4ed2078daee8eeb7e2cf">readWords</link> (int size, const std::string &amp;ptrn, const std::string &amp;variablesName=&quot;&quot;, int indexBase=1)</para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_struct_in_stream_1a0382d1f95cecf40e7c728c033c14123b">readWords</link> (int size, const <link linkend="_classpattern">pattern</link> &amp;p, const std::string &amp;variablesName=&quot;&quot;, int indexBase=1)</para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_struct_in_stream_1aaa61148d12958728cd443f21b2ed0aa3">readWords</link> (int size, int indexBase=1)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_in_stream_1a1551acb574a25586a2ba2ad594398e8c">readToken</link> (const std::string &amp;ptrn, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_in_stream_1aa7e276efc82ccd5bcefbfaf8f0391677">readToken</link> (const <link linkend="_classpattern">pattern</link> &amp;p, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_struct_in_stream_1a0c556560eb05d89757fc854d38ae650b">readTokens</link> (int size, const std::string &amp;ptrn, const std::string &amp;variablesName=&quot;&quot;, int indexBase=1)</para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_struct_in_stream_1a5f2d2a617eed60c5a05872af6ece6855">readTokens</link> (int size, const <link linkend="_classpattern">pattern</link> &amp;p, const std::string &amp;variablesName=&quot;&quot;, int indexBase=1)</para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_struct_in_stream_1a7b79dfec1ae85f251876f603751036d9">readTokens</link> (int size, int indexBase=1)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1ace052a2f951135d3a7699c3824fbc4f7">readWordTo</link> (std::string &amp;result)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1aae65d2db41677626fd5ffa446be65003">readWordTo</link> (std::string &amp;result, const <link linkend="_classpattern">pattern</link> &amp;p, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a78c7969db04a87aea6263c8563dc5c93">readWordTo</link> (std::string &amp;result, const std::string &amp;ptrn, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a0512828fe7bc56a8fa2ddb4e0e6f2b72">readTokenTo</link> (std::string &amp;result)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a6cc04d722a5e707b0450396c671c8732">readTokenTo</link> (std::string &amp;result, const <link linkend="_classpattern">pattern</link> &amp;p, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1ac191b4317fc175b291cae1fa4fc7b399">readTokenTo</link> (std::string &amp;result, const std::string &amp;ptrn, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>long long <link linkend="_struct_in_stream_1af964fda2b145a8c8d25965b7ef4784cd">readLong</link> ()</para>
+</listitem>
+            <listitem><para>unsigned long long <link linkend="_struct_in_stream_1a473c29087621184bb71998a12957e822">readUnsignedLong</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_in_stream_1a68a75c1f359c0b3917a3922f4512da08">readInteger</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_in_stream_1ab9c40b84ce444e0eabbec47c881b4c38">readInt</link> ()</para>
+</listitem>
+            <listitem><para>long long <link linkend="_struct_in_stream_1a1398548ec0f156ddc9add251addb63c4">readLong</link> (long long minv, long long maxv, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>std::vector&lt; long long &gt; <link linkend="_struct_in_stream_1a469d95f96c09746781621480b74c5c83">readLongs</link> (int size, long long minv, long long maxv, const std::string &amp;variablesName=&quot;&quot;, int indexBase=1)</para>
+</listitem>
+            <listitem><para>std::vector&lt; long long &gt; <link linkend="_struct_in_stream_1ab135bb75d235e57fea89a248acd51015">readLongs</link> (int size, int indexBase=1)</para>
+</listitem>
+            <listitem><para>unsigned long long <link linkend="_struct_in_stream_1ac168f51d536fd2fef12d6aa87ff5795f">readUnsignedLong</link> (unsigned long long minv, unsigned long long maxv, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>std::vector&lt; unsigned long long &gt; <link linkend="_struct_in_stream_1a8c85a1d577aeb727bec09f362e3a395a">readUnsignedLongs</link> (int size, unsigned long long minv, unsigned long long maxv, const std::string &amp;variablesName=&quot;&quot;, int indexBase=1)</para>
+</listitem>
+            <listitem><para>std::vector&lt; unsigned long long &gt; <link linkend="_struct_in_stream_1a5d3141608fafc3797171a3ea7627ec4d">readUnsignedLongs</link> (int size, int indexBase=1)</para>
+</listitem>
+            <listitem><para>unsigned long long <link linkend="_struct_in_stream_1aac4b9f822f2471eb19f89e3c0d78169b">readLong</link> (unsigned long long minv, unsigned long long maxv, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>std::vector&lt; unsigned long long &gt; <link linkend="_struct_in_stream_1a9bd7a7d10db6d24401dfd3b421ed6045">readLongs</link> (int size, unsigned long long minv, unsigned long long maxv, const std::string &amp;variablesName=&quot;&quot;, int indexBase=1)</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_in_stream_1a789739800a5332fb69578d60fef57947">readInteger</link> (int minv, int maxv, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_in_stream_1a0811e321fbb08005ef2dec953d6f3256">readInt</link> (int minv, int maxv, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>std::vector&lt; int &gt; <link linkend="_struct_in_stream_1adb2af0baf6e9e6efa47a084719f0b2ea">readIntegers</link> (int size, int minv, int maxv, const std::string &amp;variablesName=&quot;&quot;, int indexBase=1)</para>
+</listitem>
+            <listitem><para>std::vector&lt; int &gt; <link linkend="_struct_in_stream_1ab76c62ce0113ca54feb21c1bd61611cf">readIntegers</link> (int size, int indexBase=1)</para>
+</listitem>
+            <listitem><para>std::vector&lt; int &gt; <link linkend="_struct_in_stream_1afe94166e208381f17f49906ee5d50ae1">readInts</link> (int size, int minv, int maxv, const std::string &amp;variablesName=&quot;&quot;, int indexBase=1)</para>
+</listitem>
+            <listitem><para>std::vector&lt; int &gt; <link linkend="_struct_in_stream_1a9dc7971488f79c36b0c039faac9a91b1">readInts</link> (int size, int indexBase=1)</para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_in_stream_1a147bef1aea6670fb8e2e6be97e76edc2">readReal</link> ()</para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_in_stream_1a7409a09698273a264eaa9069ecf90abf">readDouble</link> ()</para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_in_stream_1afefbbd644f24959a3c0dca545c50ca8d">readReal</link> (double minv, double maxv, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>std::vector&lt; double &gt; <link linkend="_struct_in_stream_1a6d4100230dab7762fc8a67889f0af48b">readReals</link> (int size, double minv, double maxv, const std::string &amp;variablesName=&quot;&quot;, int indexBase=1)</para>
+</listitem>
+            <listitem><para>std::vector&lt; double &gt; <link linkend="_struct_in_stream_1a30e0fec1354eccc823c46fb2decb6a5d">readReals</link> (int size, int indexBase=1)</para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_in_stream_1a477dc26871b7cbb20c2d3c5aa7f51a8f">readDouble</link> (double minv, double maxv, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>std::vector&lt; double &gt; <link linkend="_struct_in_stream_1aee88ed3c11ec6eb9d1d73053e6766e8e">readDoubles</link> (int size, double minv, double maxv, const std::string &amp;variablesName=&quot;&quot;, int indexBase=1)</para>
+</listitem>
+            <listitem><para>std::vector&lt; double &gt; <link linkend="_struct_in_stream_1a9be66f81b7039ccdc58bee885ee15278">readDoubles</link> (int size, int indexBase=1)</para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_in_stream_1af4a862c387cf199c075896c046b3038b">readStrictReal</link> (double minv, double maxv, int minAfterPointDigitCount, int maxAfterPointDigitCount, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>std::vector&lt; double &gt; <link linkend="_struct_in_stream_1a05d7a1183338770dd288298e6f4378c7">readStrictReals</link> (int size, double minv, double maxv, int minAfterPointDigitCount, int maxAfterPointDigitCount, const std::string &amp;variablesName=&quot;&quot;, int indexBase=1)</para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_in_stream_1aaecf640ad9de7cf1873b2bc216e32b47">readStrictDouble</link> (double minv, double maxv, int minAfterPointDigitCount, int maxAfterPointDigitCount, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>std::vector&lt; double &gt; <link linkend="_struct_in_stream_1af2689fbf7c65b80728826fcb4230163f">readStrictDoubles</link> (int size, double minv, double maxv, int minAfterPointDigitCount, int maxAfterPointDigitCount, const std::string &amp;variablesName=&quot;&quot;, int indexBase=1)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_in_stream_1a6e45ce9c44925056ec1db59400012c3d">readString</link> ()</para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_struct_in_stream_1a2cba4bd119b24d1af9c70ce238b2fbd6">readStrings</link> (int size, int indexBase=1)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a79fc60da4d122afd8c8f6f76c1b7fa56">readStringTo</link> (std::string &amp;result)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_in_stream_1a25e0a8a1aef084955346a2b82cefa3b3">readString</link> (const <link linkend="_classpattern">pattern</link> &amp;p, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_in_stream_1a5d4fd12c9b43f1357e56aed051524f7d">readString</link> (const std::string &amp;ptrn, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_struct_in_stream_1a7566b33af0c853ce8ddfcdd7ad0e9648">readStrings</link> (int size, const <link linkend="_classpattern">pattern</link> &amp;p, const std::string &amp;variableName=&quot;&quot;, int indexBase=1)</para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_struct_in_stream_1a826426f9c306ac53747a3141f819a1c7">readStrings</link> (int size, const std::string &amp;ptrn, const std::string &amp;variableName=&quot;&quot;, int indexBase=1)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a6dd7e7971417eadfc7c89ed6063ee166">readStringTo</link> (std::string &amp;result, const <link linkend="_classpattern">pattern</link> &amp;p, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a90443a86a3a04208af259dbca2061b3b">readStringTo</link> (std::string &amp;result, const std::string &amp;ptrn, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_in_stream_1abd0f6cb6707dc00014499a12db9e7683">readLine</link> ()</para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_struct_in_stream_1a2815b773083f56cf836e3669cf467e1a">readLines</link> (int size, int indexBase=1)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a3827b74ce0965b2b080319e24fa7a447">readLineTo</link> (std::string &amp;result)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_in_stream_1a6d9a21120d8b21cf31e9bad2a1e83e92">readLine</link> (const <link linkend="_classpattern">pattern</link> &amp;p, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_in_stream_1a4fd055a2face33d5862f23ee9cb86cd5">readLine</link> (const std::string &amp;ptrn, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_struct_in_stream_1a1ce8d0614039ae608612cca5d4fc5f28">readLines</link> (int size, const <link linkend="_classpattern">pattern</link> &amp;p, const std::string &amp;variableName=&quot;&quot;, int indexBase=1)</para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_struct_in_stream_1a5f62d4bb591a6de0a04cc8cc8a876202">readLines</link> (int size, const std::string &amp;ptrn, const std::string &amp;variableName=&quot;&quot;, int indexBase=1)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a15203cdc5616988c0b76e8652ec05cb7">readLineTo</link> (std::string &amp;result, const <link linkend="_classpattern">pattern</link> &amp;p, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a727fea17af0013a7a6089734292abd24">readLineTo</link> (std::string &amp;result, const std::string &amp;ptrn, const std::string &amp;variableName=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a034c0ee97269f7bbd1e73ccc85b13f54">readEoln</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a80e53f1d7a022f34f8d88839de43d6b5">readEof</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_struct_in_stream_1a95bee5abfce70b5e663359558080ada9">quit</link> (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, const char *msg)</para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_struct_in_stream_1a3238a2d2a6fdb963d8f7c57416b5c1e5">quitf</link> (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, const char *msg,...)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a0c969f83376d50af370615d44186647d">quitif</link> (bool condition, <link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, const char *msg,...)</para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_struct_in_stream_1a65a8b22fb500b96357ad5630535ebb95">quits</link> (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, std::string msg)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a44a5027f6d7000c62ef27c6719f225ef">ensuref</link> (bool cond, const char *<link linkend="_testlib_8h_1a1921b31564b858b45e94efff9e9d54bf">format</link>,...)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1ad961f49275f9e4d97b3ab6691f4b3d07">__testlib_ensure</link> (bool cond, std::string message)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a4e6d2f97680cbc53de0d6cb1a893016f">close</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a7920954e072895d70f2127ccc7af789d">xmlSafeWrite</link> (std::FILE *file, const char *msg)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_in_stream_1a1ee5c101df11ec9fe00867379bf3937f">skipBom</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_struct_in_stream_1a4ff4b2110a80dea66154702116080e49">textColor</link> (<link linkend="_testlib_8h_1a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</link> color)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_struct_in_stream_1a681c59fb45459a1247d0bb237eb196eb">quitscr</link> (<link linkend="_testlib_8h_1a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</link> color, const char *msg)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_struct_in_stream_1ac1ca7d4baa1a28a7de0995a2581841b5">quitscrS</link> (<link linkend="_testlib_8h_1a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</link> color, std::string msg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_input_stream_reader">InputStreamReader</link> * <link linkend="_struct_in_stream_1ab970f7b2a0f0a699c6f3187f5b565c35">reader</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_in_stream_1a2e44f54a6f11bf8337e742ec131ac0b5">lastLine</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_in_stream_1a0e45bfde029064fc64c36c1462e6ba8b">name</link></para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1ae73df2968f2f656074dc00e062600ddb">TMode</link> <link linkend="_struct_in_stream_1a22c9fbb12ed6da923353c3a477881686">mode</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_in_stream_1ac1db0153031be42e22117179c7cc70bf">opened</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_in_stream_1a66d3e4b4c823f79d1f53ad5901733717">stdfile</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_in_stream_1a8aec5ed448357d952d4fae14e4054d8c">strict</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_in_stream_1a8afeeed49266480bd239d832415fb85b">wordReserveSize</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_in_stream_1af2f09659cea3fd78f1e662cd918d2c30">_tmpReadToken</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_in_stream_1a47cff32cdacd0978f83382c6c81d7df4">readManyIteration</link></para>
+</listitem>
+            <listitem><para>size_t <link linkend="_struct_in_stream_1a14e6d7455706cea771265a7ab8407918">maxFileSize</link></para>
+</listitem>
+            <listitem><para>size_t <link linkend="_struct_in_stream_1a4a4e8df78395f7be17d9429e7640eb26">maxTokenLength</link></para>
+</listitem>
+            <listitem><para>size_t <link linkend="_struct_in_stream_1a8ff983747e2b08a2f8f01d226b23f20a">maxMessageLength</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static const int <link linkend="_struct_in_stream_1af18bd290c3c3907be197c1878946c4d8">NO_INDEX</link> = INT_MAX</para>
+</listitem>
+            <listitem><para>static const char <link linkend="_struct_in_stream_1a582ee4c10e2543041466180e6134865a">OPEN_BRACKET</link> = char(11)</para>
+</listitem>
+            <listitem><para>static const char <link linkend="_struct_in_stream_1a3b35e480ab8ea91b44cd8be3bf550fa8">CLOSE_BRACKET</link> = char(17)</para>
+</listitem>
+            <listitem><para>static const <link linkend="_testlib_8h_1a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</link> <link linkend="_struct_in_stream_1a2eb9f95d5c8ef82ec45295113294b836">LightGray</link> = 0x07</para>
+</listitem>
+            <listitem><para>static const <link linkend="_testlib_8h_1a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</link> <link linkend="_struct_in_stream_1aa2b66ca7098a63f267cdc650eda5b11c">LightRed</link> = 0x0c</para>
+</listitem>
+            <listitem><para>static const <link linkend="_testlib_8h_1a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</link> <link linkend="_struct_in_stream_1a1906bb56c67bc1c4268903f37e2604a4">LightCyan</link> = 0x0b</para>
+</listitem>
+            <listitem><para>static const <link linkend="_testlib_8h_1a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</link> <link linkend="_struct_in_stream_1a088a42a5a342bf630b6288c308d276e3">LightGreen</link> = 0x0a</para>
+</listitem>
+            <listitem><para>static const <link linkend="_testlib_8h_1a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</link> <link linkend="_struct_in_stream_1a9dcd83240a933dee55e8195f6228ccad">LightYellow</link> = 0x0e</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_testlib_8h_source_1l01998">1998</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_in_stream_1a6682d5e68cdbb92c667e6fc8e5e3c6dd"/><section>
+    <title>InStream()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>InStream</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>InStream</secondary></indexterm>
+<para><computeroutput>InStream::InStream ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02828">2828</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1ab75c26c4747d2a23388735cdfebbe4fa"/><section>
+    <title>~InStream()</title>
+<indexterm><primary>~InStream</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>~InStream</secondary></indexterm>
+<para><computeroutput>InStream::~InStream ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02857">2857</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a6f82f3399cf052c8b55d500feec79bd2"/><section>
+    <title>InStream()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>InStream</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>InStream</secondary></indexterm>
+<para><computeroutput>InStream::InStream (const <link linkend="_struct_in_stream">InStream</link> &amp; baseStream, std::string content)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02843">2843</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_in_stream_1ad961f49275f9e4d97b3ab6691f4b3d07"/><section>
+    <title>__testlib_ensure()</title>
+<indexterm><primary>__testlib_ensure</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>__testlib_ensure</secondary></indexterm>
+<para><computeroutput>void InStream::__testlib_ensure (bool cond, std::string message)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04396">4396</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a4e6d2f97680cbc53de0d6cb1a893016f"/><section>
+    <title>close()</title>
+<indexterm><primary>close</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>close</secondary></indexterm>
+<para><computeroutput>void InStream::close ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04401">4401</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1af208d97fa6484d10b88d611012fce578"/><section>
+    <title>curChar()</title>
+<indexterm><primary>curChar</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>curChar</secondary></indexterm>
+<para><computeroutput>char InStream::curChar ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03331">3331</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a44a5027f6d7000c62ef27c6719f225ef"/><section>
+    <title>ensuref()</title>
+<indexterm><primary>ensuref</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>ensuref</secondary></indexterm>
+<para><computeroutput>void InStream::ensuref (bool cond, const char * format,  ...)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04389">4389</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a8c1f774508b47b9e80c76d37d268f6f4"/><section>
+    <title>eof()</title>
+<indexterm><primary>eof</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>eof</secondary></indexterm>
+<para><computeroutput>bool InStream::eof ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04154">4154</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1ac54c356a099d9af022d59cdcd1b75bcd"/><section>
+    <title>eoln()</title>
+<indexterm><primary>eoln</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>eoln</secondary></indexterm>
+<para><computeroutput>bool InStream::eoln ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04168">4168</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1ab88e3e00ca1111534d3d110166f275bd"/><section>
+    <title>getReadChars()</title>
+<indexterm><primary>getReadChars</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>getReadChars</secondary></indexterm>
+<para><computeroutput>std::vector&lt; int &gt; InStream::getReadChars ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02872">2872</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a4b78654581508e7ace12cdda20de48df"/><section>
+    <title>init()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>init</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>init</secondary></indexterm>
+<para><computeroutput>void InStream::init (std::FILE * f, <link linkend="_testlib_8h_1ae73df2968f2f656074dc00e062600ddb">TMode</link> mode)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03301">3301</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a249983cd8365347d249485c7840e3424"/><section>
+    <title>init()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>init</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>init</secondary></indexterm>
+<para><computeroutput>void InStream::init (std::string fileName, <link linkend="_testlib_8h_1ae73df2968f2f656074dc00e062600ddb">TMode</link> mode)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03277">3277</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1af46102c51b215e59e3b9e993ac999fe5"/><section>
+    <title>nextChar()</title>
+<indexterm><primary>nextChar</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>nextChar</secondary></indexterm>
+<para><computeroutput>char InStream::nextChar ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03335">3335</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a86e63a6bb9bc47cae9f58f0591ecc53f"/><section>
+    <title>nextLine()</title>
+<indexterm><primary>nextLine</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>nextLine</secondary></indexterm>
+<para><computeroutput>void InStream::nextLine ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04246">4246</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a95bee5abfce70b5e663359558080ada9"/><section>
+    <title>quit()</title>
+<indexterm><primary>quit</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>quit</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void InStream::quit (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, const char * msg)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03046">3046</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a3238a2d2a6fdb963d8f7c57416b5c1e5"/><section>
+    <title>quitf()</title>
+<indexterm><primary>quitf</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>quitf</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void InStream::quitf (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, const char * msg,  ...)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03189">3189</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a0c969f83376d50af370615d44186647d"/><section>
+    <title>quitif()</title>
+<indexterm><primary>quitif</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>quitif</secondary></indexterm>
+<para><computeroutput>void InStream::quitif (bool condition, <link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, const char * msg,  ...)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03197">3197</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a65a8b22fb500b96357ad5630535ebb95"/><section>
+    <title>quits()</title>
+<indexterm><primary>quits</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>quits</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void InStream::quits (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, std::string msg)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03204">3204</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a681c59fb45459a1247d0bb237eb196eb"/><section>
+    <title>quitscr()</title>
+<indexterm><primary>quitscr</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>quitscr</secondary></indexterm>
+<para><computeroutput>void InStream::quitscr (<link linkend="_testlib_8h_1a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</link> color, const char * msg)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03239">3239</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1ac1ca7d4baa1a28a7de0995a2581841b5"/><section>
+    <title>quitscrS()</title>
+<indexterm><primary>quitscrS</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>quitscrS</secondary></indexterm>
+<para><computeroutput>void InStream::quitscrS (<link linkend="_testlib_8h_1a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</link> color, std::string msg)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03235">3235</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1aa7711bdcca7b52181fd0f3072d935205"/><section>
+    <title>readChar()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>readChar</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readChar</secondary></indexterm>
+<para><computeroutput>char InStream::readChar ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03339">3339</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a0c49c9fe193752b77e17fc7e45b0965b"/><section>
+    <title>readChar()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>readChar</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readChar</secondary></indexterm>
+<para><computeroutput>char InStream::readChar (char c)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03343">3343</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a7409a09698273a264eaa9069ecf90abf"/><section>
+    <title>readDouble()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>readDouble</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readDouble</secondary></indexterm>
+<para><computeroutput>double InStream::readDouble ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04022">4022</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a477dc26871b7cbb20c2d3c5aa7f51a8f"/><section>
+    <title>readDouble()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>readDouble</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readDouble</secondary></indexterm>
+<para><computeroutput>double InStream::readDouble (double minv, double maxv, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04071">4071</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1aee88ed3c11ec6eb9d1d73053e6766e8e"/><section>
+    <title>readDoubles()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>readDoubles</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readDoubles</secondary></indexterm>
+<para><computeroutput>std::vector&lt; double &gt; InStream::readDoubles (int size, double minv, double maxv, const std::string &amp; variablesName = <computeroutput>&quot;&quot;</computeroutput>
+, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04076">4076</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a9be66f81b7039ccdc58bee885ee15278"/><section>
+    <title>readDoubles()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>readDoubles</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readDoubles</secondary></indexterm>
+<para><computeroutput>std::vector&lt; double &gt; InStream::readDoubles (int size, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04082">4082</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a80e53f1d7a022f34f8d88839de43d6b5"/><section>
+    <title>readEof()</title>
+<indexterm><primary>readEof</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readEof</secondary></indexterm>
+<para><computeroutput>void InStream::readEof ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04224">4224</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a034c0ee97269f7bbd1e73ccc85b13f54"/><section>
+    <title>readEoln()</title>
+<indexterm><primary>readEoln</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readEoln</secondary></indexterm>
+<para><computeroutput>void InStream::readEoln ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04218">4218</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1ab9c40b84ce444e0eabbec47c881b4c38"/><section>
+    <title>readInt()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>readInt</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readInt</secondary></indexterm>
+<para><computeroutput>int InStream::readInt ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03956">3956</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a0811e321fbb08005ef2dec953d6f3256"/><section>
+    <title>readInt()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>readInt</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readInt</secondary></indexterm>
+<para><computeroutput>int InStream::readInt (int minv, int maxv, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03960">3960</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a68a75c1f359c0b3917a3922f4512da08"/><section>
+    <title>readInteger()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>readInteger</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readInteger</secondary></indexterm>
+<para><computeroutput>int InStream::readInteger ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03832">3832</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a789739800a5332fb69578d60fef57947"/><section>
+    <title>readInteger()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>readInteger</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readInteger</secondary></indexterm>
+<para><computeroutput>int InStream::readInteger (int minv, int maxv, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03991">3991</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1ab76c62ce0113ca54feb21c1bd61611cf"/><section>
+    <title>readIntegers()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>readIntegers</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readIntegers</secondary></indexterm>
+<para><computeroutput>std::vector&lt; int &gt; InStream::readIntegers (int size, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04011">4011</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1adb2af0baf6e9e6efa47a084719f0b2ea"/><section>
+    <title>readIntegers()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>readIntegers</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readIntegers</secondary></indexterm>
+<para><computeroutput>std::vector&lt; int &gt; InStream::readIntegers (int size, int minv, int maxv, const std::string &amp; variablesName = <computeroutput>&quot;&quot;</computeroutput>
+, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04005">4005</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a9dc7971488f79c36b0c039faac9a91b1"/><section>
+    <title>readInts()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>readInts</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readInts</secondary></indexterm>
+<para><computeroutput>std::vector&lt; int &gt; InStream::readInts (int size, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04001">4001</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1afe94166e208381f17f49906ee5d50ae1"/><section>
+    <title>readInts()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>readInts</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readInts</secondary></indexterm>
+<para><computeroutput>std::vector&lt; int &gt; InStream::readInts (int size, int minv, int maxv, const std::string &amp; variablesName = <computeroutput>&quot;&quot;</computeroutput>
+, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03995">3995</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1abd0f6cb6707dc00014499a12db9e7683"/><section>
+    <title>readLine()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>readLine</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readLine</secondary></indexterm>
+<para><computeroutput>std::string InStream::readLine ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04347">4347</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a6d9a21120d8b21cf31e9bad2a1e83e92"/><section>
+    <title>readLine()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>readLine</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readLine</secondary></indexterm>
+<para><computeroutput>std::string InStream::readLine (const <link linkend="_classpattern">pattern</link> &amp; p, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04363">4363</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a4fd055a2face33d5862f23ee9cb86cd5"/><section>
+    <title>readLine()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>readLine</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readLine</secondary></indexterm>
+<para><computeroutput>std::string InStream::readLine (const std::string &amp; ptrn, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04374">4374</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a1ce8d0614039ae608612cca5d4fc5f28"/><section>
+    <title>readLines()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>readLines</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readLines</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; InStream::readLines (int size, const <link linkend="_classpattern">pattern</link> &amp; p, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04368">4368</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a5f62d4bb591a6de0a04cc8cc8a876202"/><section>
+    <title>readLines()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>readLines</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readLines</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; InStream::readLines (int size, const std::string &amp; ptrn, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04379">4379</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a2815b773083f56cf836e3669cf467e1a"/><section>
+    <title>readLines()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>readLines</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readLines</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; InStream::readLines (int size, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04351">4351</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a3827b74ce0965b2b080319e24fa7a447"/><section>
+    <title>readLineTo()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>readLineTo</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readLineTo</secondary></indexterm>
+<para><computeroutput>void InStream::readLineTo (std::string &amp; result)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04343">4343</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a15203cdc5616988c0b76e8652ec05cb7"/><section>
+    <title>readLineTo()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>readLineTo</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readLineTo</secondary></indexterm>
+<para><computeroutput>void InStream::readLineTo (std::string &amp; result, const <link linkend="_classpattern">pattern</link> &amp; p, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04355">4355</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a727fea17af0013a7a6089734292abd24"/><section>
+    <title>readLineTo()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>readLineTo</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readLineTo</secondary></indexterm>
+<para><computeroutput>void InStream::readLineTo (std::string &amp; result, const std::string &amp; ptrn, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04359">4359</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1af964fda2b145a8c8d25965b7ef4784cd"/><section>
+    <title>readLong()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>readLong</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readLong</secondary></indexterm>
+<para><computeroutput>long long InStream::readLong ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03845">3845</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a1398548ec0f156ddc9add251addb63c4"/><section>
+    <title>readLong()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>readLong</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readLong</secondary></indexterm>
+<para><computeroutput>long long InStream::readLong (long long minv, long long maxv, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03863">3863</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1aac4b9f822f2471eb19f89e3c0d78169b"/><section>
+    <title>readLong()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>readLong</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readLong</secondary></indexterm>
+<para><computeroutput>unsigned long long InStream::readLong (unsigned long long minv, unsigned long long maxv, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03952">3952</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1ab135bb75d235e57fea89a248acd51015"/><section>
+    <title>readLongs()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>readLongs</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readLongs</secondary></indexterm>
+<para><computeroutput>std::vector&lt; long long &gt; InStream::readLongs (int size, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03901">3901</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a469d95f96c09746781621480b74c5c83"/><section>
+    <title>readLongs()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>readLongs</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readLongs</secondary></indexterm>
+<para><computeroutput>std::vector&lt; long long &gt; InStream::readLongs (int size, long long minv, long long maxv, const std::string &amp; variablesName = <computeroutput>&quot;&quot;</computeroutput>
+, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03895">3895</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a9bd7a7d10db6d24401dfd3b421ed6045"/><section>
+    <title>readLongs()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>readLongs</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readLongs</secondary></indexterm>
+<para><computeroutput>std::vector&lt; unsigned long long &gt; InStream::readLongs (int size, unsigned long long minv, unsigned long long maxv, const std::string &amp; variablesName = <computeroutput>&quot;&quot;</computeroutput>
+, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para></section>
+<anchor xml:id="_struct_in_stream_1a147bef1aea6670fb8e2e6be97e76edc2"/><section>
+    <title>readReal()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>readReal</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readReal</secondary></indexterm>
+<para><computeroutput>double InStream::readReal ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04015">4015</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1afefbbd644f24959a3c0dca545c50ca8d"/><section>
+    <title>readReal()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>readReal</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readReal</secondary></indexterm>
+<para><computeroutput>double InStream::readReal (double minv, double maxv, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04026">4026</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a6d4100230dab7762fc8a67889f0af48b"/><section>
+    <title>readReals()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>readReals</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readReals</secondary></indexterm>
+<para><computeroutput>std::vector&lt; double &gt; InStream::readReals (int size, double minv, double maxv, const std::string &amp; variablesName = <computeroutput>&quot;&quot;</computeroutput>
+, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04061">4061</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a30e0fec1354eccc823c46fb2decb6a5d"/><section>
+    <title>readReals()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>readReals</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readReals</secondary></indexterm>
+<para><computeroutput>std::vector&lt; double &gt; InStream::readReals (int size, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04067">4067</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a012e968b18b359b82897db805faeb0f6"/><section>
+    <title>readSpace()</title>
+<indexterm><primary>readSpace</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readSpace</secondary></indexterm>
+<para><computeroutput>char InStream::readSpace ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03357">3357</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1aaecf640ad9de7cf1873b2bc216e32b47"/><section>
+    <title>readStrictDouble()</title>
+<indexterm><primary>readStrictDouble</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readStrictDouble</secondary></indexterm>
+<para><computeroutput>double InStream::readStrictDouble (double minv, double maxv, int minAfterPointDigitCount, int maxAfterPointDigitCount, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04136">4136</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1af2689fbf7c65b80728826fcb4230163f"/><section>
+    <title>readStrictDoubles()</title>
+<indexterm><primary>readStrictDoubles</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readStrictDoubles</secondary></indexterm>
+<para><computeroutput>std::vector&lt; double &gt; InStream::readStrictDoubles (int size, double minv, double maxv, int minAfterPointDigitCount, int maxAfterPointDigitCount, const std::string &amp; variablesName = <computeroutput>&quot;&quot;</computeroutput>
+, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04144">4144</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1af4a862c387cf199c075896c046b3038b"/><section>
+    <title>readStrictReal()</title>
+<indexterm><primary>readStrictReal</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readStrictReal</secondary></indexterm>
+<para><computeroutput>double InStream::readStrictReal (double minv, double maxv, int minAfterPointDigitCount, int maxAfterPointDigitCount, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04086">4086</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a05d7a1183338770dd288298e6f4378c7"/><section>
+    <title>readStrictReals()</title>
+<indexterm><primary>readStrictReals</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readStrictReals</secondary></indexterm>
+<para><computeroutput>std::vector&lt; double &gt; InStream::readStrictReals (int size, double minv, double maxv, int minAfterPointDigitCount, int maxAfterPointDigitCount, const std::string &amp; variablesName = <computeroutput>&quot;&quot;</computeroutput>
+, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04126">4126</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a6e45ce9c44925056ec1db59400012c3d"/><section>
+    <title>readString()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>readString</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readString</secondary></indexterm>
+<para><computeroutput>std::string InStream::readString ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04280">4280</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a25e0a8a1aef084955346a2b82cefa3b3"/><section>
+    <title>readString()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>readString</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readString</secondary></indexterm>
+<para><computeroutput>std::string InStream::readString (const <link linkend="_classpattern">pattern</link> &amp; p, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04318">4318</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a5d4fd12c9b43f1357e56aed051524f7d"/><section>
+    <title>readString()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>readString</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readString</secondary></indexterm>
+<para><computeroutput>std::string InStream::readString (const std::string &amp; ptrn, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04330">4330</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a7566b33af0c853ce8ddfcdd7ad0e9648"/><section>
+    <title>readStrings()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>readStrings</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readStrings</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; InStream::readStrings (int size, const <link linkend="_classpattern">pattern</link> &amp; p, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04324">4324</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a826426f9c306ac53747a3141f819a1c7"/><section>
+    <title>readStrings()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>readStrings</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readStrings</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; InStream::readStrings (int size, const std::string &amp; ptrn, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04336">4336</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a2cba4bd119b24d1af9c70ce238b2fbd6"/><section>
+    <title>readStrings()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>readStrings</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readStrings</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; InStream::readStrings (int size, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04285">4285</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a79fc60da4d122afd8c8f6f76c1b7fa56"/><section>
+    <title>readStringTo()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>readStringTo</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readStringTo</secondary></indexterm>
+<para><computeroutput>void InStream::readStringTo (std::string &amp; result)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04250">4250</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a6dd7e7971417eadfc7c89ed6063ee166"/><section>
+    <title>readStringTo()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>readStringTo</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readStringTo</secondary></indexterm>
+<para><computeroutput>void InStream::readStringTo (std::string &amp; result, const <link linkend="_classpattern">pattern</link> &amp; p, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04289">4289</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a90443a86a3a04208af259dbca2061b3b"/><section>
+    <title>readStringTo()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>readStringTo</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readStringTo</secondary></indexterm>
+<para><computeroutput>void InStream::readStringTo (std::string &amp; result, const std::string &amp; ptrn, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04314">4314</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1aab5bf73477536435d39efd209bf672d0"/><section>
+    <title>readToken()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>readToken</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readToken</secondary></indexterm>
+<para><computeroutput>std::string InStream::readToken ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03412">3412</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1aa7e276efc82ccd5bcefbfaf8f0391677"/><section>
+    <title>readToken()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>readToken</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readToken</secondary></indexterm>
+<para><computeroutput>std::string InStream::readToken (const <link linkend="_classpattern">pattern</link> &amp; p, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03507">3507</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a1551acb574a25586a2ba2ad594398e8c"/><section>
+    <title>readToken()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>readToken</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readToken</secondary></indexterm>
+<para><computeroutput>std::string InStream::readToken (const std::string &amp; ptrn, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03522">3522</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a5f2d2a617eed60c5a05872af6ece6855"/><section>
+    <title>readTokens()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>readTokens</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readTokens</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; InStream::readTokens (int size, const <link linkend="_classpattern">pattern</link> &amp; p, const std::string &amp; variablesName = <computeroutput>&quot;&quot;</computeroutput>
+, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03512">3512</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a0c556560eb05d89757fc854d38ae650b"/><section>
+    <title>readTokens()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>readTokens</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readTokens</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; InStream::readTokens (int size, const std::string &amp; ptrn, const std::string &amp; variablesName = <computeroutput>&quot;&quot;</computeroutput>
+, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03527">3527</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a7b79dfec1ae85f251876f603751036d9"/><section>
+    <title>readTokens()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>readTokens</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readTokens</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; InStream::readTokens (int size, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03518">3518</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a0512828fe7bc56a8fa2ddb4e0e6f2b72"/><section>
+    <title>readTokenTo()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>readTokenTo</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readTokenTo</secondary></indexterm>
+<para><computeroutput>void InStream::readTokenTo (std::string &amp; result)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03416">3416</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a6cc04d722a5e707b0450396c671c8732"/><section>
+    <title>readTokenTo()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>readTokenTo</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readTokenTo</secondary></indexterm>
+<para><computeroutput>void InStream::readTokenTo (std::string &amp; result, const <link linkend="_classpattern">pattern</link> &amp; p, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03552">3552</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1ac191b4317fc175b291cae1fa4fc7b399"/><section>
+    <title>readTokenTo()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>readTokenTo</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readTokenTo</secondary></indexterm>
+<para><computeroutput>void InStream::readTokenTo (std::string &amp; result, const std::string &amp; ptrn, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03556">3556</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a473c29087621184bb71998a12957e822"/><section>
+    <title>readUnsignedLong()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>readUnsignedLong</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readUnsignedLong</secondary></indexterm>
+<para><computeroutput>unsigned long long InStream::readUnsignedLong ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03854">3854</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1ac168f51d536fd2fef12d6aa87ff5795f"/><section>
+    <title>readUnsignedLong()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>readUnsignedLong</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readUnsignedLong</secondary></indexterm>
+<para><computeroutput>unsigned long long InStream::readUnsignedLong (unsigned long long minv, unsigned long long maxv, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03906">3906</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a5d3141608fafc3797171a3ea7627ec4d"/><section>
+    <title>readUnsignedLongs()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>readUnsignedLongs</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readUnsignedLongs</secondary></indexterm>
+<para><computeroutput>std::vector&lt; unsigned long long &gt; InStream::readUnsignedLongs (int size, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03947">3947</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a8c85a1d577aeb727bec09f362e3a395a"/><section>
+    <title>readUnsignedLongs()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>readUnsignedLongs</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readUnsignedLongs</secondary></indexterm>
+<para><computeroutput>std::vector&lt; unsigned long long &gt; InStream::readUnsignedLongs (int size, unsigned long long minv, unsigned long long maxv, const std::string &amp; variablesName = <computeroutput>&quot;&quot;</computeroutput>
+, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03940">3940</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a2d0d971de1cd2d7da01f7d6bb4f836a3"/><section>
+    <title>readWord()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>readWord</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readWord</secondary></indexterm>
+<para><computeroutput>std::string InStream::readWord ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03374">3374</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a7848236cb25239dc96ac1d01953116c9"/><section>
+    <title>readWord()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>readWord</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readWord</secondary></indexterm>
+<para><computeroutput>std::string InStream::readWord (const <link linkend="_classpattern">pattern</link> &amp; p, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03457">3457</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a33a01a1ab403b91c58d630b2650f999e"/><section>
+    <title>readWord()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>readWord</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readWord</secondary></indexterm>
+<para><computeroutput>std::string InStream::readWord (const std::string &amp; ptrn, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03495">3495</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a0382d1f95cecf40e7c728c033c14123b"/><section>
+    <title>readWords()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>readWords</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readWords</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; InStream::readWords (int size, const <link linkend="_classpattern">pattern</link> &amp; p, const std::string &amp; variablesName = <computeroutput>&quot;&quot;</computeroutput>
+, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03485">3485</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a05e78a1ad94e4ed2078daee8eeb7e2cf"/><section>
+    <title>readWords()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>readWords</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readWords</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; InStream::readWords (int size, const std::string &amp; ptrn, const std::string &amp; variablesName = <computeroutput>&quot;&quot;</computeroutput>
+, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03500">3500</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1aaa61148d12958728cd443f21b2ed0aa3"/><section>
+    <title>readWords()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>readWords</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readWords</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; InStream::readWords (int size, int indexBase = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03491">3491</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1ace052a2f951135d3a7699c3824fbc4f7"/><section>
+    <title>readWordTo()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>readWordTo</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readWordTo</secondary></indexterm>
+<para><computeroutput>void InStream::readWordTo (std::string &amp; result)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03379">3379</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1aae65d2db41677626fd5ffa446be65003"/><section>
+    <title>readWordTo()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>readWordTo</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readWordTo</secondary></indexterm>
+<para><computeroutput>void InStream::readWordTo (std::string &amp; result, const <link linkend="_classpattern">pattern</link> &amp; p, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03534">3534</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a78c7969db04a87aea6263c8563dc5c93"/><section>
+    <title>readWordTo()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>readWordTo</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readWordTo</secondary></indexterm>
+<para><computeroutput>void InStream::readWordTo (std::string &amp; result, const std::string &amp; ptrn, const std::string &amp; variableName = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03548">3548</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a0daf92605da53c68648ad78572965ca3"/><section>
+    <title>reset()</title>
+<indexterm><primary>reset</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>reset</secondary></indexterm>
+<para><computeroutput>void InStream::reset (std::FILE * file = <computeroutput>NULL</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03247">3247</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a2c7c8561462345e6ee18a0d8ea4bc00b"/><section>
+    <title>seekEof()</title>
+<indexterm><primary>seekEof</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>seekEof</secondary></indexterm>
+<para><computeroutput>bool InStream::seekEof ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04161">4161</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a106d09bbdd844ca246bfbf2c6409f4b6"/><section>
+    <title>seekEoln()</title>
+<indexterm><primary>seekEoln</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>seekEoln</secondary></indexterm>
+<para><computeroutput>bool InStream::seekEoln ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04233">4233</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a7e9ee69fe14cc6c19b059b384eebed5c"/><section>
+    <title>setTestCase()</title>
+<indexterm><primary>setTestCase</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>setTestCase</secondary></indexterm>
+<para><computeroutput>void InStream::setTestCase (int testCase)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02865">2865</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a3caea7dc5003207a13b690e1e6523759"/><section>
+    <title>skipBlanks()</title>
+<indexterm><primary>skipBlanks</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>skipBlanks</secondary></indexterm>
+<para><computeroutput>void InStream::skipBlanks ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03369">3369</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a1ee5c101df11ec9fe00867379bf3937f"/><section>
+    <title>skipBom()</title>
+<indexterm><primary>skipBom</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>skipBom</secondary></indexterm>
+<para><computeroutput>void InStream::skipBom ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03316">3316</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a15dbd488971ba0da79085f7bd980f1f1"/><section>
+    <title>skipChar()</title>
+<indexterm><primary>skipChar</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>skipChar</secondary></indexterm>
+<para><computeroutput>void InStream::skipChar ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03365">3365</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a4ff4b2110a80dea66154702116080e49"/><section>
+    <title>textColor()</title>
+<indexterm><primary>textColor</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>textColor</secondary></indexterm>
+<para><computeroutput>void InStream::textColor (<link linkend="_testlib_8h_1a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</link> color)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02924">2924</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a8c656e9ae7175e852033fbdffe41550b"/><section>
+    <title>unreadChar()</title>
+<indexterm><primary>unreadChar</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>unreadChar</secondary></indexterm>
+<para><computeroutput>void InStream::unreadChar (char c)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03361">3361</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a7920954e072895d70f2127ccc7af789d"/><section>
+    <title>xmlSafeWrite()</title>
+<indexterm><primary>xmlSafeWrite</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>xmlSafeWrite</secondary></indexterm>
+<para><computeroutput>void InStream::xmlSafeWrite (std::FILE * file, const char * msg)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l03208">3208</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_in_stream_1af2f09659cea3fd78f1e662cd918d2c30"/><section>
+    <title>_tmpReadToken</title>
+<indexterm><primary>_tmpReadToken</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>_tmpReadToken</secondary></indexterm>
+<para><computeroutput>std::string InStream::_tmpReadToken</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02017">2017</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a3b35e480ab8ea91b44cd8be3bf550fa8"/><section>
+    <title>CLOSE_BRACKET</title>
+<indexterm><primary>CLOSE_BRACKET</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>CLOSE_BRACKET</secondary></indexterm>
+<para><computeroutput>const char InStream::CLOSE_BRACKET = char(17)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02346">2346</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a2e44f54a6f11bf8337e742ec131ac0b5"/><section>
+    <title>lastLine</title>
+<indexterm><primary>lastLine</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>lastLine</secondary></indexterm>
+<para><computeroutput>int InStream::lastLine</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02008">2008</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a1906bb56c67bc1c4268903f37e2604a4"/><section>
+    <title>LightCyan</title>
+<indexterm><primary>LightCyan</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>LightCyan</secondary></indexterm>
+<para><computeroutput>const <link linkend="_testlib_8h_1a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</link> InStream::LightCyan = 0x0b<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02350">2350</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a2eb9f95d5c8ef82ec45295113294b836"/><section>
+    <title>LightGray</title>
+<indexterm><primary>LightGray</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>LightGray</secondary></indexterm>
+<para><computeroutput>const <link linkend="_testlib_8h_1a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</link> InStream::LightGray = 0x07<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02348">2348</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a088a42a5a342bf630b6288c308d276e3"/><section>
+    <title>LightGreen</title>
+<indexterm><primary>LightGreen</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>LightGreen</secondary></indexterm>
+<para><computeroutput>const <link linkend="_testlib_8h_1a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</link> InStream::LightGreen = 0x0a<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02351">2351</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1aa2b66ca7098a63f267cdc650eda5b11c"/><section>
+    <title>LightRed</title>
+<indexterm><primary>LightRed</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>LightRed</secondary></indexterm>
+<para><computeroutput>const <link linkend="_testlib_8h_1a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</link> InStream::LightRed = 0x0c<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02349">2349</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a9dcd83240a933dee55e8195f6228ccad"/><section>
+    <title>LightYellow</title>
+<indexterm><primary>LightYellow</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>LightYellow</secondary></indexterm>
+<para><computeroutput>const <link linkend="_testlib_8h_1a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</link> InStream::LightYellow = 0x0e<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02352">2352</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a14e6d7455706cea771265a7ab8407918"/><section>
+    <title>maxFileSize</title>
+<indexterm><primary>maxFileSize</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>maxFileSize</secondary></indexterm>
+<para><computeroutput>size_t InStream::maxFileSize</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02020">2020</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a8ff983747e2b08a2f8f01d226b23f20a"/><section>
+    <title>maxMessageLength</title>
+<indexterm><primary>maxMessageLength</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>maxMessageLength</secondary></indexterm>
+<para><computeroutput>size_t InStream::maxMessageLength</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02022">2022</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a4a4e8df78395f7be17d9429e7640eb26"/><section>
+    <title>maxTokenLength</title>
+<indexterm><primary>maxTokenLength</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>maxTokenLength</secondary></indexterm>
+<para><computeroutput>size_t InStream::maxTokenLength</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02021">2021</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a22c9fbb12ed6da923353c3a477881686"/><section>
+    <title>mode</title>
+<indexterm><primary>mode</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>mode</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1ae73df2968f2f656074dc00e062600ddb">TMode</link> InStream::mode</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02011">2011</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a0e45bfde029064fc64c36c1462e6ba8b"/><section>
+    <title>name</title>
+<indexterm><primary>name</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>name</secondary></indexterm>
+<para><computeroutput>std::string InStream::name</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02010">2010</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1af18bd290c3c3907be197c1878946c4d8"/><section>
+    <title>NO_INDEX</title>
+<indexterm><primary>NO_INDEX</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>NO_INDEX</secondary></indexterm>
+<para><computeroutput>const int InStream::NO_INDEX = INT_MAX<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02344">2344</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a582ee4c10e2543041466180e6134865a"/><section>
+    <title>OPEN_BRACKET</title>
+<indexterm><primary>OPEN_BRACKET</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>OPEN_BRACKET</secondary></indexterm>
+<para><computeroutput>const char InStream::OPEN_BRACKET = char(11)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02345">2345</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1ac1db0153031be42e22117179c7cc70bf"/><section>
+    <title>opened</title>
+<indexterm><primary>opened</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>opened</secondary></indexterm>
+<para><computeroutput>bool InStream::opened</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02012">2012</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1ab970f7b2a0f0a699c6f3187f5b565c35"/><section>
+    <title>reader</title>
+<indexterm><primary>reader</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>reader</secondary></indexterm>
+<para><computeroutput><link linkend="_class_input_stream_reader">InputStreamReader</link>* InStream::reader</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02007">2007</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a47cff32cdacd0978f83382c6c81d7df4"/><section>
+    <title>readManyIteration</title>
+<indexterm><primary>readManyIteration</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>readManyIteration</secondary></indexterm>
+<para><computeroutput>int InStream::readManyIteration</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02019">2019</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a66d3e4b4c823f79d1f53ad5901733717"/><section>
+    <title>stdfile</title>
+<indexterm><primary>stdfile</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>stdfile</secondary></indexterm>
+<para><computeroutput>bool InStream::stdfile</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02013">2013</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a8aec5ed448357d952d4fae14e4054d8c"/><section>
+    <title>strict</title>
+<indexterm><primary>strict</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>strict</secondary></indexterm>
+<para><computeroutput>bool InStream::strict</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02014">2014</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_in_stream_1a8afeeed49266480bd239d832415fb85b"/><section>
+    <title>wordReserveSize</title>
+<indexterm><primary>wordReserveSize</primary><secondary>InStream</secondary></indexterm>
+<indexterm><primary>InStream</primary><secondary>wordReserveSize</secondary></indexterm>
+<para><computeroutput>int InStream::wordReserveSize</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02016">2016</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+src/<link linkend="_testlib_8h">testlib.h</link></section>
+</section>

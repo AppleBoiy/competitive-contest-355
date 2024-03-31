@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classfib" xml:lang="en-US">
+<title>fib Class Reference</title>
+<indexterm><primary>fib</primary></indexterm>
+<para>
+<computeroutput>#include &lt;fib.h&gt;</computeroutput>
+</para>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_fib_8h_source_1l00014">14</link> of file <link linkend="_fib_8h_source">fib.h</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/<link linkend="_fib_8h">fib.h</link></section>
+</section>

@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainpage" xml:lang="en-US">
+<title>competitive-contest</title>
+<indexterm><primary>competitive-contest</primary></indexterm>
+
+<para><anchor xml:id="_index_1md__r_e_a_d_m_e"/></para>
+<section xml:id="_index_1autotoc_md0">
+<title><title>Fibonacci Modulo Problem</title></title>
+<section xml:id="_index_1autotoc_md1">
+<title><title>Problem Statement</title></title>
+
+<para>You are given two integers, <emphasis role="bold">n</emphasis> and <emphasis role="bold">m</emphasis>, and you need to find the <emphasis role="bold">nth Fibonacci number modulo m</emphasis>.</para>
+<section xml:id="_index_1autotoc_md2">
+<title><title>Approach</title></title>
+
+<para>The naive approach to find the Fibonacci number at position <emphasis role="bold">n</emphasis> and then taking the modulo <emphasis role="bold">m</emphasis> might be inefficient for large values of <emphasis role="bold">n</emphasis>. However, you can optimize the solution using the Pisano Period.</para>
+</section>
+<section xml:id="_index_1autotoc_md3">
+<title><title>Pisano Period</title></title>
+
+<para>The Pisano period, also known as the Fibonacci period or cycle, refers to the periodic and repetitive nature of the remainders when the Fibonacci sequence is divided by a positive integer called the &quot;modulus.&quot;</para>
+
+<para><link xlink:href="https://en.wikipedia.org/wiki/Pisano_period">read more</link></para>
+<section xml:id="_index_1autotoc_md4">
+<title><title>Fibonacci Sequence</title></title>
+
+<para>The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, usually starting with 0 and 1.</para>
+
+<para>Example Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...</para>
+</section>
+<section xml:id="_index_1autotoc_md5">
+<title><title>Pisano Period</title></title>
+
+<para>When the Fibonacci sequence is divided by a modulus (a positive integer), the remainders exhibit a periodic pattern known as the Pisano period. The length of this period depends on the modulus chosen.</para>
+
+<para>The Pisano period is useful in various applications, especially in problems related to number theory and modular arithmetic.</para>
+</section>
+<section xml:id="_index_1autotoc_md6">
+<title><title>Formula</title></title>
+
+<para>Given a modulus &apos;m,&apos; the Pisano period is denoted as π(m). The period starts with the pair (0, 1) and repeats after a certain number of terms.</para>
+</section>
+<section xml:id="_index_1autotoc_md7">
+<title><title>Example</title></title>
+
+<para>For example, if the modulus is 5: Fibonacci sequence modulo 5 <literallayout><computeroutput>0, 1, 1, 2, 3, 0, 3, 3, 1, 4,
+0, 4, 4, 3, 2, 0, 2, 2, 4, 1,
+
+--- Pisano period starts here ---
+
+0, 1, 1, 2, 3, 0, 3, 3, 1, 4,
+0, 4, 4, 3, 2, 0, 2, 2, 4, 1,
+0, 1, 1, 2, 3, 0, 3, 3, 1, 4
+
+... and so on
+</computeroutput></literallayout> In this case, the Pisano period (π(5)) is 20, as the sequence starts repeating after 20 terms.</para>
+</section>
+</section>
+<section xml:id="_index_1autotoc_md8">
+<title><title>Code Explanation</title></title>
+
+<para>Below is the C++ code implementing this approach:</para>
+
+<para><literallayout><computeroutput>#include&#32;&lt;iostream&gt;
+
+#define&#32;ll&#32;long&#32;long
+
+ll&#32;fib_fast(ll&#32;n,&#32;ll&#32;m)&#32;{
+&#32;&#32;&#32;&#32;if&#32;(n&#32;&lt;=&#32;1)
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;n;
+
+&#32;&#32;&#32;&#32;//&#32;Pisano&#32;period
+&#32;&#32;&#32;&#32;ll&#32;remainder&#32;=&#32;0;
+
+&#32;&#32;&#32;&#32;ll&#32;a&#32;=&#32;0,&#32;b&#32;=&#32;1,&#32;c;
+&#32;&#32;&#32;&#32;for&#32;(ll&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;n&#32;-&#32;1;&#32;i++)&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;c&#32;=&#32;(a&#32;+&#32;b)&#32;%&#32;m;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;a&#32;=&#32;b;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;b&#32;=&#32;c;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(a&#32;==&#32;0&#32;&amp;&amp;&#32;b&#32;==&#32;1)&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;remainder&#32;=&#32;i&#32;+&#32;1;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;break;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+&#32;&#32;&#32;&#32;}
+
+&#32;&#32;&#32;&#32;ll&#32;new_n&#32;=&#32;n&#32;%&#32;remainder;
+&#32;&#32;&#32;&#32;if&#32;(new_n&#32;&lt;=&#32;1)
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;new_n;
+
+&#32;&#32;&#32;&#32;a&#32;=&#32;0,&#32;b&#32;=&#32;1,&#32;c&#32;=&#32;a&#32;+&#32;b;
+&#32;&#32;&#32;&#32;for&#32;(ll&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;new_n&#32;-&#32;1;&#32;i++)&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;c&#32;=&#32;(a&#32;+&#32;b)&#32;%&#32;m;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;a&#32;=&#32;b;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;b&#32;=&#32;c;
+&#32;&#32;&#32;&#32;}
+
+&#32;&#32;&#32;&#32;return&#32;c&#32;%&#32;m;
+}
+
+int&#32;main()&#32;{
+&#32;&#32;&#32;&#32;long&#32;long&#32;n,&#32;m;
+&#32;&#32;&#32;&#32;std::cin&#32;&gt;&gt;&#32;n&#32;&gt;&gt;&#32;m;
+&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;fib_fast(n,&#32;m)&#32;&lt;&lt;&#32;&apos;\n&apos;;
+}
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_index_1autotoc_md9">
+<title><title>Input</title></title>
+
+<para>The program takes two inputs, <emphasis role="bold">n</emphasis> and <emphasis role="bold">m</emphasis>, representing the position of the Fibonacci number and the modulo value.</para>
+</section>
+<section xml:id="_index_1autotoc_md10">
+<title><title>Output</title></title>
+
+<para>The program outputs the <emphasis role="bold">nth Fibonacci number modulo m</emphasis>.</para>
+</section>
+<section xml:id="_index_1autotoc_md11">
+<title><title>Time Complexity</title></title>
+
+<para>The time complexity of this solution is <emphasis role="bold">O(remainder + new_n)</emphasis>, where <emphasis role="bold">remainder</emphasis> is the Pisano Period and <emphasis role="bold">new_n</emphasis> is the position of the Fibonacci number within the Pisano Period. This is a significant optimization over the naive approach. </para>
+</section>
+</section>
+</section>
+</chapter>

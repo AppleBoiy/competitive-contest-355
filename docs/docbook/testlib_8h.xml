@@ -1,0 +1,1304 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_testlib_8h" xml:lang="en-US">
+<title>src/testlib.h File Reference</title>
+<indexterm><primary>src/testlib.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdlib.h&gt;<?linebreak?>#include &lt;cstdlib&gt;<?linebreak?>#include &lt;climits&gt;<?linebreak?>#include &lt;algorithm&gt;<?linebreak?>#include &lt;cstdio&gt;<?linebreak?>#include &lt;cctype&gt;<?linebreak?>#include &lt;string&gt;<?linebreak?>#include &lt;vector&gt;<?linebreak?>#include &lt;map&gt;<?linebreak?>#include &lt;set&gt;<?linebreak?>#include &lt;cmath&gt;<?linebreak?>#include &lt;iterator&gt;<?linebreak?>#include &lt;iostream&gt;<?linebreak?>#include &lt;sstream&gt;<?linebreak?>#include &lt;fstream&gt;<?linebreak?>#include &lt;cstring&gt;<?linebreak?>#include &lt;limits&gt;<?linebreak?>#include &lt;stdarg.h&gt;<?linebreak?>#include &lt;fcntl.h&gt;<?linebreak?>#include &lt;functional&gt;<?linebreak?>#include &lt;cstdint&gt;<?linebreak?>#include &lt;unistd.h&gt;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classpattern">pattern</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classrandom__t">random_t</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_input_stream_reader">InputStreamReader</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_string_input_stream_reader">StringInputStreamReader</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_file_input_stream_reader">FileInputStreamReader</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_buffered_file_input_stream_reader">BufferedFileInputStreamReader</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_in_stream">InStream</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_validator_bounds_hit">ValidatorBoundsHit</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_constant_bound">ConstantBound</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_constant_bounds">ConstantBounds</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_validator">Validator</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_testlib_finalize_guard">TestlibFinalizeGuard</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_checker">Checker</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_testlib_8h_1a1c6d5de492ac61ad29aec7aa9a436bbf">VERSION</link>&#160;&#160;&#160;&quot;0.9.42-SNAPSHOT&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1aaac7e8b42546e8a2fd07b71fd5b12ba0">random</link>&#160;&#160;&#160;__random_deprecated</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</link>&#160;&#160;&#160;unsigned short</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1af17a13b2ae0e9c24c020ac1f044f30c2">LLONG_MIN</link>&#160;&#160;&#160;(-9223372036854775807LL - 1)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1aa1dd7166a75b73ad62b111ae6fc17c59">ULLONG_MAX</link>&#160;&#160;&#160;(18446744073709551615)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a350c9d6cb81908d59427ee96844d1a9c">LF</link>&#160;&#160;&#160;((char)10)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a876ce77f3c672c7162658151e648389e">CR</link>&#160;&#160;&#160;((char)13)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1ad58a1fbfc85c7e4790fc55e654f50221">TAB</link>&#160;&#160;&#160;((char)9)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a5ff6e798033f03e74730e99f01936f84">SPACE</link>&#160;&#160;&#160;((char)&apos; &apos;)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a09a15fa2d49e26dff40c22a309bd625f">EOFC</link>&#160;&#160;&#160;(255)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a809c8f4d2bf12a53a01098f336b97598">OK_EXIT_CODE</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a9407aadd1d7b6a24b40a94be0e1b5e6c">WA_EXIT_CODE</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1acd99fac8764b4f8513d0d78aa80878a5">PE_EXIT_CODE</link>&#160;&#160;&#160;2</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1afac612f10342c3ccbfc7f30ae563184b">FAIL_EXIT_CODE</link>&#160;&#160;&#160;3</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1ac9085792031f49686fd06d9560164d3b">DIRT_EXIT_CODE</link>&#160;&#160;&#160;4</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a58429ce36ac0b67fb7889455174c7e8a">POINTS_EXIT_CODE</link>&#160;&#160;&#160;7</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a30fb6330f5fcaf65c9347f50df26222d">UNEXPECTED_EOF_EXIT_CODE</link>&#160;&#160;&#160;8</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1ac0c3e3c9771bdfbbcbd70392bd74c03a">PC_BASE_EXIT_CODE</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a67a1b89efefde69b271ec10086a493fc">__TESTLIB_STATIC_ASSERT</link>(condition)&#160;&#160;&#160;typedef void* __testlib_static_assert_type[(condition) ? 1 : -1]</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a29ae4e28b586fcb6dcd1a4a0a69b9a49">I64</link>&#160;&#160;&#160;&quot;%lld&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a24c42244bf61006967bf37001c14d2bf">U64</link>&#160;&#160;&#160;&quot;%llu&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a795f6ad63580d1e0b860fbb9604a79db">FMT_TO_RESULT</link>(fmt,  cstr,  result)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a1e8859af5c334b6c4bebb434505b9ae4">_pc</link>(exitCode)&#160;&#160;&#160;(<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link>(<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578a5e1b770ccbf2809f1447783f97d4cece">_partially</link> + (exitCode)))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1ab882eaa72c700511353c3099d0952519">__testlib_readMany</link>(readMany,  readOne,  typeName,  space)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a6995c405db0a243abdf49c4e1de55a41">ensure</link>(cond)&#160;&#160;&#160;__testlib_ensure(cond, &quot;Condition failed: \&quot;&quot; #cond &quot;\&quot;&quot;)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a9a63ce5ce3b143f8df9df20769c2ab86">STRINGIZE_DETAIL</link>(x)&#160;&#160;&#160;#x</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a3428692efe6051ef30016ffde1a9f7bb">STRINGIZE</link>(x)&#160;&#160;&#160;<link linkend="_testlib_8h_1a9a63ce5ce3b143f8df9df20769c2ab86">STRINGIZE_DETAIL</link>(x)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a4d844981188f58cfa1385d5a4d6918c4">ensure_ext</link>(cond)&#160;&#160;&#160;__testlib_ensure(cond, &quot;Line &quot; STRINGIZE(__LINE__) &quot;: Condition failed: \&quot;&quot; #cond &quot;\&quot;&quot;)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_testlib_8h_1a390e9021e1ac7b756fdf9a49c3da47f9">RAND_THROW_STATEMENT</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_testlib_8h_1ae73df2968f2f656074dc00e062600ddb">TMode</link> { <link linkend="_testlib_8h_1ae73df2968f2f656074dc00e062600ddba090858be22ac48bf83855133ac07036a">_input</link>
+, <link linkend="_testlib_8h_1ae73df2968f2f656074dc00e062600ddbafb9d1f90fad72c2e77f29dd244dff5a6">_output</link>
+, <link linkend="_testlib_8h_1ae73df2968f2f656074dc00e062600ddba1d5993b55c5fa9053df279a83de91f61">_answer</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> { <?linebreak?><link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578a9d802c77af97a77eec509a12bcf6ae77">_ok</link> = 0
+, <link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578a77706596ca6256a69b77e763d6787585">_wa</link> = 1
+, <link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578a801994faa20251234912d2e8eaf42773">_pe</link> = 2
+, <link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578a62d8da32e96f367adeed7ccb30436457">_fail</link> = 3
+, <?linebreak?><link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578a42e718be5b94c0a545a2cffb0d7d1b43">_dirt</link> = 4
+, <link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578abf5f5cf5414425fece755c1d07df9be2">_points</link> = 5
+, <link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578aae0220bb99b9060b8561683d987b2fa1">_unexpected_eof</link> = 8
+, <link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578a5e1b770ccbf2809f1447783f97d4cece">_partially</link> = 16
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_testlib_8h_1a72dc574602eb75df785ecfc398a3158f">TTestlibMode</link> { <?linebreak?><link linkend="_testlib_8h_1a72dc574602eb75df785ecfc398a3158fa344a85f02f1ac239f9f648738a856eb6">_unknown</link>
+, <link linkend="_testlib_8h_1a72dc574602eb75df785ecfc398a3158fad23f42b9c6d23ab5679d79151c4585ff">_checker</link>
+, <link linkend="_testlib_8h_1a72dc574602eb75df785ecfc398a3158fae0b813cbde0d5fc79fcecd814910e24f">_validator</link>
+, <link linkend="_testlib_8h_1a72dc574602eb75df785ecfc398a3158fa5311ad9bde7f5dbdc28c1f8264456fd5">_generator</link>
+, <?linebreak?><link linkend="_testlib_8h_1a72dc574602eb75df785ecfc398a3158fadaea9b0ac8f600ff71b0f7616869deac">_interactor</link>
+, <link linkend="_testlib_8h_1a72dc574602eb75df785ecfc398a3158fa1bec4ab4fa6a6927ec64b3143afa14fa">_scorer</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_testlib_8h_1ad093584ea7bc2579d8d49c05d4b95347">setTestCase</link> (int testCase)</para>
+</listitem>
+            <listitem><para>void <link linkend="_testlib_8h_1a0fb214ced4215bfbfa6eba1ab4635721">unsetTestCase</link> ()</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_testlib_8h_1a3e8b5e1528a28d4832cb11dff8ad5edb">upperCase</link> (std::string s)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_testlib_8h_1a2d0670a860a887c1de821de0550c0a32">lowerCase</link> (std::string s)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_testlib_8h_1a1921b31564b858b45e94efff9e9d54bf">format</link> (const char *fmt,...)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_testlib_8h_1a133d0fb6f1e08d9483f8aa9a8e3c6f38">format</link> (const std::string fmt,...)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_testlib_8h_1afe9a738a208c2ff953b27fea24007d20">doubleCompare</link> (double expected, double result, double MAX_DOUBLE_ERROR)</para>
+</listitem>
+            <listitem><para>double <link linkend="_testlib_8h_1a7995d5ee8c9310d34ff25b19bdfdbe82">doubleDelta</link> (double expected, double result)</para>
+</listitem>
+            <listitem><para>template&lt;typename C &gt; </para><para>bool <link linkend="_testlib_8h_1a8be64904de021941ee6d1aa96ee4da14">isEof</link> (C c)</para>
+</listitem>
+            <listitem><para>template&lt;typename C &gt; </para><para>bool <link linkend="_testlib_8h_1a8da048ae3bc25fe4bb2dcfceb53a90fc">isEoln</link> (C c)</para>
+</listitem>
+            <listitem><para>template&lt;typename C &gt; </para><para>bool <link linkend="_testlib_8h_1aedd6eec8331fb12c3330f6b7a1227e2c">isBlanks</link> (C c)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_testlib_8h_1a1a32c4d3bd87256731e67936766c65ca">trim</link> (const std::string &amp;s)</para>
+</listitem>
+            <listitem><para>void <link linkend="_testlib_8h_1a2c40237203009ff06974b25b65030d68">disableFinalizeGuard</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_testlib_8h_1ac237ec9b60cb9035a69ee70750d69141">resultExitCode</link> (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> r)</para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a9282a723c3cb0d8eaf1d904e975a5897">halt</link> (int exitCode)</para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1acec28096e85b471e7121ed06ba1eeb42">quit</link> (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, const std::string &amp;msg)</para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1aed77b9d710f29f434fee76944e94202a">quit</link> (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, const char *msg)</para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1abff240fe64a3bc2dab1a7a70f73464cb">__testlib_quitp</link> (double points, const char *message)</para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a3951a3cfdcfee60d55d47a3faca1510f">__testlib_quitp</link> (int points, const char *message)</para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a96b765d3745447a9518991edeab211c5">quitp</link> (float points, const std::string &amp;message=&quot;&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1abd20355062b85779c882dfb19f3d9380">quitp</link> (double points, const std::string &amp;message=&quot;&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a4c8b51476405ff163cc57a9e0ec10aea">quitp</link> (long double points, const std::string &amp;message=&quot;&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a7c6fc64b2f0640dd5dd4b1f52210d669">quitp</link> (int points, const std::string &amp;message=&quot;&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a9e512424bd789067763542439fb1083b">quitpi</link> (const std::string &amp;points_info, const std::string &amp;message=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>template&lt;typename F &gt; </para><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a73dbf5feb8712147dfa04c19c9d6b01d">quitp</link> (F points, const char *<link linkend="_testlib_8h_1a1921b31564b858b45e94efff9e9d54bf">format</link>,...)</para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a5e727281f092efd3f19c6a84e2eacc01">quitf</link> (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, const char *<link linkend="_testlib_8h_1a1921b31564b858b45e94efff9e9d54bf">format</link>,...)</para>
+</listitem>
+            <listitem><para>void <link linkend="_testlib_8h_1ad7e7f24ac09509dc94581cf3b0a5dced">quitif</link> (bool condition, <link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, const char *<link linkend="_testlib_8h_1a1921b31564b858b45e94efff9e9d54bf">format</link>,...)</para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a694d06929cd60de7f337b6e265b2365b">__testlib_help</link> ()</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_testlib_8h_1a327d15f1f5e7c8377faf74e620514689">getTestset</link> ()</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_testlib_8h_1ae7fe33b331a1689d31d7d43eb94b125a">getGroup</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_testlib_8h_1ad1cfbe9e8fcaabcd1598206e3ff1ad76">registerGen</link> (int argc, char *argv[], int randomGeneratorVersion)</para>
+</listitem>
+            <listitem><para>void <link linkend="_testlib_8h_1a1fbb926756e2060c6e46bae99de4a781">registerGen</link> (int argc, char *argv[])</para>
+</listitem>
+            <listitem><para>void <link linkend="_testlib_8h_1aa87c56b5c1a61e59f3484778120a5797">setAppesModeEncoding</link> (std::string <link linkend="_testlib_8h_1a2f4a877b5dc48e645f2c41b5e9c99460">appesModeEncoding</link>)</para>
+</listitem>
+            <listitem><para>void <link linkend="_testlib_8h_1a01331bd5d26dd46c4bc7b9295a036aa0">registerInteraction</link> (int argc, char *argv[])</para>
+</listitem>
+            <listitem><para>void <link linkend="_testlib_8h_1a92d612e581676b81e9162f70839e88ef">registerValidation</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_testlib_8h_1af37a8d5160de18491abf562b60790dff">registerValidation</link> (int argc, char *argv[])</para>
+</listitem>
+            <listitem><para>void <link linkend="_testlib_8h_1a988dc33cd922d2f4748e4305743d03d8">addFeature</link> (const std::string &amp;<link linkend="_testlib_8h_1aca975e2860357cde841db9a2eb501e4f">feature</link>)</para>
+</listitem>
+            <listitem><para>void <link linkend="_testlib_8h_1aca975e2860357cde841db9a2eb501e4f">feature</link> (const std::string &amp;feature)</para>
+</listitem>
+            <listitem><para>void <link linkend="_testlib_8h_1aef178d6340fe04d5d616ee2da19488b4">registerTestlibCmd</link> (int argc, char *argv[])</para>
+</listitem>
+            <listitem><para>void <link linkend="_testlib_8h_1a58c2e7a2e44f8466c34b4500023cac6e">registerTestlib</link> (int argc,...)</para>
+</listitem>
+            <listitem><para>void <link linkend="_testlib_8h_1aa645d5ce2acb62ee61977d4ecf8e4dbc">ensuref</link> (bool cond, const char *<link linkend="_testlib_8h_1a1921b31564b858b45e94efff9e9d54bf">format</link>,...)</para>
+</listitem>
+            <listitem><para>void <link linkend="_testlib_8h_1a14fb24cad2f7e3d532a76f41ba4ba15b">setName</link> (const char *<link linkend="_testlib_8h_1a1921b31564b858b45e94efff9e9d54bf">format</link>,...)</para>
+</listitem>
+            <listitem><para>template&lt;typename _RandomAccessIter &gt; </para><para>void <link linkend="_testlib_8h_1a892cac7bffad68bec03005d0a771c3c7">shuffle</link> (_RandomAccessIter __first, _RandomAccessIter __last)</para>
+</listitem>
+            <listitem><para>template&lt;typename _RandomAccessIter &gt; </para><para>void <link linkend="_testlib_8h_1a2474f90782a9f77e45d81ae18d7c1ffb">random_shuffle</link> (_RandomAccessIter, _RandomAccessIter)</para>
+</listitem>
+            <listitem><para>int <link linkend="_testlib_8h_1a84b949a61c3fa63ca17fcf0b2f9ad4f3">rand</link> () <link linkend="_testlib_8h_1a390e9021e1ac7b756fdf9a49c3da47f9">RAND_THROW_STATEMENT</link></para>
+</listitem>
+            <listitem><para>void <link linkend="_testlib_8h_1a7e6ebe263f2a877015210e0ac28c3e79">srand</link> (unsigned int seed) <link linkend="_testlib_8h_1a390e9021e1ac7b756fdf9a49c3da47f9">RAND_THROW_STATEMENT</link></para>
+</listitem>
+            <listitem><para>void <link linkend="_testlib_8h_1a7b5d06041e39daeafd603dd998ce02c6">startTest</link> (int test)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_testlib_8h_1a04fed71ae23afb50bb036e98cafc4d84">compress</link> (const std::string &amp;s)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_testlib_8h_1a99a404dab8181e5e96eb0a675082f75d">englishEnding</link> (int x)</para>
+</listitem>
+            <listitem><para>template&lt;typename _ForwardIterator , typename _Separator &gt; </para><para>std::string <link linkend="_testlib_8h_1a639102617cba0cd4773c91f5eb4a1755">join</link> (_ForwardIterator first, _ForwardIterator last, _Separator separator)</para>
+</listitem>
+            <listitem><para>template&lt;typename _ForwardIterator &gt; </para><para>std::string <link linkend="_testlib_8h_1a4d11cf2b81aaccdb03807cff7c1bae28">join</link> (_ForwardIterator first, _ForwardIterator last)</para>
+</listitem>
+            <listitem><para>template&lt;typename _Collection , typename _Separator &gt; </para><para>std::string <link linkend="_testlib_8h_1a8c0f114f708064c2c01b47ab82cdf028">join</link> (const _Collection &amp;collection, _Separator separator)</para>
+</listitem>
+            <listitem><para>template&lt;typename _Collection &gt; </para><para>std::string <link linkend="_testlib_8h_1a31e919f2108a1f317e66d345a23c4923">join</link> (const _Collection &amp;collection)</para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_testlib_8h_1ad85d51a1b33f2422e08f3ca02dbd3127">split</link> (const std::string &amp;s, char separator)</para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_testlib_8h_1a955ec7cfff0acb85ba9695bda2609499">split</link> (const std::string &amp;s, const std::string &amp;separators)</para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_testlib_8h_1aab9e80a2f4e4203b27b11c5880850d8e">tokenize</link> (const std::string &amp;s, char separator)</para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_testlib_8h_1af67ac6c551dc21d30494892a51a7fbb7">tokenize</link> (const std::string &amp;s, const std::string &amp;separators)</para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a117c50c18ae39dbb09a488ac92a086db">__testlib_expectedButFound</link> (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, std::string expected, std::string found, const char *prepend)</para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a4a02f43815b2ec1d3963a3d487234d0d">__testlib_expectedButFound</link> (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, double expected, double found, const char *prepend)</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a3775e4b9dc20c18e8b0d509a145d5d90">expectedButFound</link> (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, T expected, T found, const char *prependFormat=&quot;&quot;,...)</para>
+</listitem>
+            <listitem><para>template&lt;&gt; </para><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1ace65de365c59bd5b3c271f84cf884bd8">expectedButFound&lt; std::string &gt;</link> (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, std::string expected, std::string found, const char *prependFormat,...)</para>
+</listitem>
+            <listitem><para>template&lt;&gt; </para><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a3cc2bbe22675e2d0b0bfaf8f61d005a8">expectedButFound&lt; double &gt;</link> (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, double expected, double found, const char *prependFormat,...)</para>
+</listitem>
+            <listitem><para>template&lt;&gt; </para><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a8c5e10df2297d4ebe22eb580285ae5de">expectedButFound&lt; const char * &gt;</link> (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, const char *expected, const char *found, const char *prependFormat,...)</para>
+</listitem>
+            <listitem><para>template&lt;&gt; </para><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a5f326691d44051de660eb6f3f25400f9">expectedButFound&lt; float &gt;</link> (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, float expected, float found, const char *prependFormat,...)</para>
+</listitem>
+            <listitem><para>template&lt;&gt; </para><para><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a1c7f66f9e3c4f693663ffc534807ea02">expectedButFound&lt; long double &gt;</link> (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, long double expected, long double found, const char *prependFormat,...)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>const char * <link linkend="_testlib_8h_1aca3ccf9230a0e9c7f28e21d77f26e74f">latestFeatures</link> []</para>
+</listitem>
+            <listitem><para>const long long <link linkend="_testlib_8h_1ac2e4a8f83549c96237919d8335d3cdcf">__TESTLIB_LONGLONG_MAX</link> = 9223372036854775807LL</para>
+</listitem>
+            <listitem><para>const int <link linkend="_testlib_8h_1a18fd7cadefe2367367300b4f1983d8f0">__TESTLIB_MAX_TEST_CASE</link> = 1073741823</para>
+</listitem>
+            <listitem><para>int <link linkend="_testlib_8h_1a34371151c9adbae73b89b0e7aed11a6f">__testlib_exitCode</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_testlib_8h_1a4a0af2b3cb79c442b17b7aca7c434307">__testlib_hasTestCase</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_testlib_8h_1a78d44a9b705b8375660cf7e4d99ea426">__testlib_testCase</link> = -1</para>
+</listitem>
+            <listitem><para>const std::string <link linkend="_testlib_8h_1a02aa6e42b031ee29efb38fcc1f7a1d59">outcomes</link> []</para>
+</listitem>
+            <listitem><para><link linkend="_struct_in_stream">InStream</link> <link linkend="_testlib_8h_1ad3874376581d36b1067d501d534d7b34">inf</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_in_stream">InStream</link> <link linkend="_testlib_8h_1a93822943d6413c3eba20a27b9d31336b">ouf</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_in_stream">InStream</link> <link linkend="_testlib_8h_1aca62d65c91dd6453f93a96348e78c5ac">ans</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_testlib_8h_1af4cc0994ea0f5ca9ede3bbc670fded8e">appesMode</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_testlib_8h_1a2f4a877b5dc48e645f2c41b5e9c99460">appesModeEncoding</link> = &quot;windows-1251&quot;</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_testlib_8h_1a300565f96b1c710f123009c6aa8aed29">resultName</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_testlib_8h_1a00f5e960957827ed8846cf705f810473">checkerName</link> = &quot;untitled checker&quot;</para>
+</listitem>
+            <listitem><para><link linkend="_classrandom__t">random_t</link> <link linkend="_testlib_8h_1a5743b8b2167a45883185605a8d8e10ce">rnd</link></para>
+</listitem>
+            <listitem><para><link linkend="_testlib_8h_1a72dc574602eb75df785ecfc398a3158f">TTestlibMode</link> <link linkend="_testlib_8h_1a94143519d4511e7adb6c77b5c715eeaf">testlibMode</link> = <link linkend="_testlib_8h_1a72dc574602eb75df785ecfc398a3158fa344a85f02f1ac239f9f648738a856eb6">_unknown</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_testlib_8h_1acb5280d0779ed8499169e3537ab20fd2">__testlib_points</link> = std::numeric_limits&lt;float&gt;::infinity()</para>
+</listitem>
+            <listitem><para>const size_t <link linkend="_testlib_8h_1ad2806158bb273bfbae710825328a0887">VALIDATOR_MAX_VARIABLE_COUNT</link> = 255</para>
+</listitem>
+            <listitem><para>class <link linkend="_class_validator">Validator</link> <link linkend="_testlib_8h_1a72a79ac1064de9f716b78e4369669976">validator</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_testlib_finalize_guard">TestlibFinalizeGuard</link> <link linkend="_testlib_8h_1a576c1be9a11f2136d2bfa955394d4575">testlibFinalizeGuard</link></para>
+</listitem>
+            <listitem><para>std::fstream <link linkend="_testlib_8h_1a675e9c0cb400805c69d94e7cdded4494">tout</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_testlib_8h_1adf88ff484a3ca535a2a66ea5c0713796">__testlib_testset</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_testlib_8h_1a28757a64bf4cec48f7a7e5d6187bb350">__testlib_group</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_checker">Checker</link> <link linkend="_testlib_8h_1a9ce0a964a656c5d7d59b41f935fef72c">checker</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_testlib_8h_1ab882eaa72c700511353c3099d0952519"/><section>
+    <title>__testlib_readMany</title>
+<indexterm><primary>__testlib_readMany</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>__testlib_readMany</secondary></indexterm>
+<para><computeroutput>#define __testlib_readMany( readMany,  readOne,  typeName,  space)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(size&#32;&lt;&#32;0)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;quit(<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578a62d8da32e96f367adeed7ccb30436457">_fail</link>,&#32;#readMany&#32;<emphasis role="stringliteral">&quot;:&#32;size&#32;should&#32;be&#32;non-negative.&quot;</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;if&#32;(size&#32;&gt;&#32;100000000)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;quit(<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578a62d8da32e96f367adeed7ccb30436457">_fail</link>,&#32;#readMany&#32;<emphasis role="stringliteral">&quot;:&#32;size&#32;should&#32;be&#32;at&#32;most&#32;100000000.&quot;</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;std::vector&lt;typeName&gt;&#32;result(size);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;readManyIteration&#32;=&#32;indexBase;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;for&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;size;&#32;i++)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result[i]&#32;=&#32;readOne;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;readManyIteration++;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(strict&#32;&amp;&amp;&#32;space&#32;&amp;&amp;&#32;i&#32;+&#32;1&#32;&lt;&#32;size)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;readSpace();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;}&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;readManyIteration&#32;=&#32;NO_INDEX;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;result;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+</programlisting><para>
+Definition at line <link linkend="_testlib_8h_source_1l03436">3436</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a67a1b89efefde69b271ec10086a493fc"/><section>
+    <title>__TESTLIB_STATIC_ASSERT</title>
+<indexterm><primary>__TESTLIB_STATIC_ASSERT</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>__TESTLIB_STATIC_ASSERT</secondary></indexterm>
+<para><computeroutput>#define __TESTLIB_STATIC_ASSERT( condition)&#160;&#160;&#160;typedef void* __testlib_static_assert_type[(condition) ? 1 : -1]</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00299">299</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a1e8859af5c334b6c4bebb434505b9ae4"/><section>
+    <title>_pc</title>
+<indexterm><primary>_pc</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>_pc</secondary></indexterm>
+<para><computeroutput>#define _pc( exitCode)&#160;&#160;&#160;(<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link>(<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578a5e1b770ccbf2809f1447783f97d4cece">_partially</link> + (exitCode)))</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01636">1636</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a876ce77f3c672c7162658151e648389e"/><section>
+    <title>CR</title>
+<indexterm><primary>CR</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>CR</secondary></indexterm>
+<para><computeroutput>#define CR&#160;&#160;&#160;((char)13)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00229">229</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1ac9085792031f49686fd06d9560164d3b"/><section>
+    <title>DIRT_EXIT_CODE</title>
+<indexterm><primary>DIRT_EXIT_CODE</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>DIRT_EXIT_CODE</secondary></indexterm>
+<para><computeroutput>#define DIRT_EXIT_CODE&#160;&#160;&#160;4</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00276">276</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a6995c405db0a243abdf49c4e1de55a41"/><section>
+    <title>ensure</title>
+<indexterm><primary>ensure</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>ensure</secondary></indexterm>
+<para><computeroutput>#define ensure( cond)&#160;&#160;&#160;__testlib_ensure(cond, &quot;Condition failed: \&quot;&quot; #cond &quot;\&quot;&quot;)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04908">4908</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a4d844981188f58cfa1385d5a4d6918c4"/><section>
+    <title>ensure_ext</title>
+<indexterm><primary>ensure_ext</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>ensure_ext</secondary></indexterm>
+<para><computeroutput>#define ensure_ext( cond)&#160;&#160;&#160;__testlib_ensure(cond, &quot;Line &quot; STRINGIZE(__LINE__) &quot;: Condition failed: \&quot;&quot; #cond &quot;\&quot;&quot;)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04911">4911</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a09a15fa2d49e26dff40c22a309bd625f"/><section>
+    <title>EOFC</title>
+<indexterm><primary>EOFC</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>EOFC</secondary></indexterm>
+<para><computeroutput>#define EOFC&#160;&#160;&#160;(255)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00232">232</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1afac612f10342c3ccbfc7f30ae563184b"/><section>
+    <title>FAIL_EXIT_CODE</title>
+<indexterm><primary>FAIL_EXIT_CODE</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>FAIL_EXIT_CODE</secondary></indexterm>
+<para><computeroutput>#define FAIL_EXIT_CODE&#160;&#160;&#160;3</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00268">268</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a795f6ad63580d1e0b860fbb9604a79db"/><section>
+    <title>FMT_TO_RESULT</title>
+<indexterm><primary>FMT_TO_RESULT</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>FMT_TO_RESULT</secondary></indexterm>
+<para><computeroutput>#define FMT_TO_RESULT( fmt,  cstr,  result)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;result;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(__testlib_format_buffer_usage_count&#32;!=&#32;0)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__testlib_fail(<emphasis role="stringliteral">&quot;FMT_TO_RESULT::__testlib_format_buffer_usage_count&#32;!=&#32;0&quot;</emphasis>);&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__testlib_format_buffer_usage_count++;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;va_list&#32;ap;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;va_start(ap,&#32;fmt);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vsnprintf(__testlib_format_buffer,&#32;<emphasis role="keyword">sizeof</emphasis>(__testlib_format_buffer),&#32;cstr,&#32;ap);&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;va_end(ap);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__testlib_format_buffer[<emphasis role="keyword">sizeof</emphasis>(__testlib_format_buffer)&#32;-&#32;1]&#32;=&#32;0;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;=&#32;std::string(__testlib_format_buffer);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__testlib_format_buffer_usage_count--;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+</programlisting><para>
+Definition at line <link linkend="_testlib_8h_source_1l00321">321</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a29ae4e28b586fcb6dcd1a4a0a69b9a49"/><section>
+    <title>I64</title>
+<indexterm><primary>I64</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>I64</secondary></indexterm>
+<para><computeroutput>#define I64&#160;&#160;&#160;&quot;%lld&quot;</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00306">306</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a350c9d6cb81908d59427ee96844d1a9c"/><section>
+    <title>LF</title>
+<indexterm><primary>LF</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>LF</secondary></indexterm>
+<para><computeroutput>#define LF&#160;&#160;&#160;((char)10)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00228">228</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1af17a13b2ae0e9c24c020ac1f044f30c2"/><section>
+    <title>LLONG_MIN</title>
+<indexterm><primary>LLONG_MIN</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>LLONG_MIN</secondary></indexterm>
+<para><computeroutput>#define LLONG_MIN&#160;&#160;&#160;(-9223372036854775807LL - 1)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00221">221</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1"/><section>
+    <title>NORETURN</title>
+<indexterm><primary>NORETURN</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>NORETURN</secondary></indexterm>
+<para><computeroutput>#define NORETURN</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00315">315</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a809c8f4d2bf12a53a01098f336b97598"/><section>
+    <title>OK_EXIT_CODE</title>
+<indexterm><primary>OK_EXIT_CODE</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>OK_EXIT_CODE</secondary></indexterm>
+<para><computeroutput>#define OK_EXIT_CODE&#160;&#160;&#160;0</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00238">238</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1ac0c3e3c9771bdfbbcbd70392bd74c03a"/><section>
+    <title>PC_BASE_EXIT_CODE</title>
+<indexterm><primary>PC_BASE_EXIT_CODE</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>PC_BASE_EXIT_CODE</secondary></indexterm>
+<para><computeroutput>#define PC_BASE_EXIT_CODE&#160;&#160;&#160;0</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00292">292</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1acd99fac8764b4f8513d0d78aa80878a5"/><section>
+    <title>PE_EXIT_CODE</title>
+<indexterm><primary>PE_EXIT_CODE</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>PE_EXIT_CODE</secondary></indexterm>
+<para><computeroutput>#define PE_EXIT_CODE&#160;&#160;&#160;2</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00258">258</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a58429ce36ac0b67fb7889455174c7e8a"/><section>
+    <title>POINTS_EXIT_CODE</title>
+<indexterm><primary>POINTS_EXIT_CODE</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>POINTS_EXIT_CODE</secondary></indexterm>
+<para><computeroutput>#define POINTS_EXIT_CODE&#160;&#160;&#160;7</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00281">281</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a390e9021e1ac7b756fdf9a49c3da47f9"/><section>
+    <title>RAND_THROW_STATEMENT</title>
+<indexterm><primary>RAND_THROW_STATEMENT</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>RAND_THROW_STATEMENT</secondary></indexterm>
+<para><computeroutput>#define RAND_THROW_STATEMENT</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04961">4961</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1aaac7e8b42546e8a2fd07b71fd5b12ba0"/><section>
+    <title>random</title>
+<indexterm><primary>random</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>random</secondary></indexterm>
+<para><computeroutput>#define random&#160;&#160;&#160;__random_deprecated</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00167">167</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a5ff6e798033f03e74730e99f01936f84"/><section>
+    <title>SPACE</title>
+<indexterm><primary>SPACE</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>SPACE</secondary></indexterm>
+<para><computeroutput>#define SPACE&#160;&#160;&#160;((char)&apos; &apos;)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00231">231</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a3428692efe6051ef30016ffde1a9f7bb"/><section>
+    <title>STRINGIZE</title>
+<indexterm><primary>STRINGIZE</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>STRINGIZE</secondary></indexterm>
+<para><computeroutput>#define STRINGIZE( x)&#160;&#160;&#160;<link linkend="_testlib_8h_1a9a63ce5ce3b143f8df9df20769c2ab86">STRINGIZE_DETAIL</link>(x)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04910">4910</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a9a63ce5ce3b143f8df9df20769c2ab86"/><section>
+    <title>STRINGIZE_DETAIL</title>
+<indexterm><primary>STRINGIZE_DETAIL</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>STRINGIZE_DETAIL</secondary></indexterm>
+<para><computeroutput>#define STRINGIZE_DETAIL( x)&#160;&#160;&#160;#x</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04909">4909</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1ad58a1fbfc85c7e4790fc55e654f50221"/><section>
+    <title>TAB</title>
+<indexterm><primary>TAB</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>TAB</secondary></indexterm>
+<para><computeroutput>#define TAB&#160;&#160;&#160;((char)9)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00230">230</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a24c42244bf61006967bf37001c14d2bf"/><section>
+    <title>U64</title>
+<indexterm><primary>U64</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>U64</secondary></indexterm>
+<para><computeroutput>#define U64&#160;&#160;&#160;&quot;%llu&quot;</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00307">307</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1aa1dd7166a75b73ad62b111ae6fc17c59"/><section>
+    <title>ULLONG_MAX</title>
+<indexterm><primary>ULLONG_MAX</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>ULLONG_MAX</secondary></indexterm>
+<para><computeroutput>#define ULLONG_MAX&#160;&#160;&#160;(18446744073709551615)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00225">225</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a30fb6330f5fcaf65c9347f50df26222d"/><section>
+    <title>UNEXPECTED_EOF_EXIT_CODE</title>
+<indexterm><primary>UNEXPECTED_EOF_EXIT_CODE</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>UNEXPECTED_EOF_EXIT_CODE</secondary></indexterm>
+<para><computeroutput>#define UNEXPECTED_EOF_EXIT_CODE&#160;&#160;&#160;8</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00285">285</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a1c6d5de492ac61ad29aec7aa9a436bbf"/><section>
+    <title>VERSION</title>
+<indexterm><primary>VERSION</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>VERSION</secondary></indexterm>
+<para><computeroutput>#define VERSION&#160;&#160;&#160;&quot;0.9.42-SNAPSHOT&quot;</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00028">28</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a9407aadd1d7b6a24b40a94be0e1b5e6c"/><section>
+    <title>WA_EXIT_CODE</title>
+<indexterm><primary>WA_EXIT_CODE</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>WA_EXIT_CODE</secondary></indexterm>
+<para><computeroutput>#define WA_EXIT_CODE&#160;&#160;&#160;1</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00248">248</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a4cfc63e05db4883dc4b60a1245a9ffc5"/><section>
+    <title>WORD</title>
+<indexterm><primary>WORD</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>WORD</secondary></indexterm>
+<para><computeroutput>#define WORD&#160;&#160;&#160;unsigned short</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00212">212</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_testlib_8h_1ae73df2968f2f656074dc00e062600ddb"/><section>
+    <title>TMode</title>
+<indexterm><primary>TMode</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>TMode</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_testlib_8h_1ae73df2968f2f656074dc00e062600ddb">TMode</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>_input</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>_input</secondary></indexterm>
+<anchor xml:id="_testlib_8h_1ae73df2968f2f656074dc00e062600ddba090858be22ac48bf83855133ac07036a"/>_input</entry><entry></entry></row><row><entry><indexterm><primary>_output</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>_output</secondary></indexterm>
+<anchor xml:id="_testlib_8h_1ae73df2968f2f656074dc00e062600ddbafb9d1f90fad72c2e77f29dd244dff5a6"/>_output</entry><entry></entry></row><row><entry><indexterm><primary>_answer</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>_answer</secondary></indexterm>
+<anchor xml:id="_testlib_8h_1ae73df2968f2f656074dc00e062600ddba1d5993b55c5fa9053df279a83de91f61"/>_answer</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_testlib_8h_source_1l01616">1616</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1aca738f43134375f0a18077d633f14578"/><section>
+    <title>TResult</title>
+<indexterm><primary>TResult</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>TResult</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>_ok</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>_ok</secondary></indexterm>
+<anchor xml:id="_testlib_8h_1aca738f43134375f0a18077d633f14578a9d802c77af97a77eec509a12bcf6ae77"/>_ok</entry><entry></entry></row><row><entry><indexterm><primary>_wa</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>_wa</secondary></indexterm>
+<anchor xml:id="_testlib_8h_1aca738f43134375f0a18077d633f14578a77706596ca6256a69b77e763d6787585"/>_wa</entry><entry></entry></row><row><entry><indexterm><primary>_pe</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>_pe</secondary></indexterm>
+<anchor xml:id="_testlib_8h_1aca738f43134375f0a18077d633f14578a801994faa20251234912d2e8eaf42773"/>_pe</entry><entry></entry></row><row><entry><indexterm><primary>_fail</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>_fail</secondary></indexterm>
+<anchor xml:id="_testlib_8h_1aca738f43134375f0a18077d633f14578a62d8da32e96f367adeed7ccb30436457"/>_fail</entry><entry></entry></row><row><entry><indexterm><primary>_dirt</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>_dirt</secondary></indexterm>
+<anchor xml:id="_testlib_8h_1aca738f43134375f0a18077d633f14578a42e718be5b94c0a545a2cffb0d7d1b43"/>_dirt</entry><entry></entry></row><row><entry><indexterm><primary>_points</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>_points</secondary></indexterm>
+<anchor xml:id="_testlib_8h_1aca738f43134375f0a18077d633f14578abf5f5cf5414425fece755c1d07df9be2"/>_points</entry><entry></entry></row><row><entry><indexterm><primary>_unexpected_eof</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>_unexpected_eof</secondary></indexterm>
+<anchor xml:id="_testlib_8h_1aca738f43134375f0a18077d633f14578aae0220bb99b9060b8561683d987b2fa1"/>_unexpected_eof</entry><entry></entry></row><row><entry><indexterm><primary>_partially</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>_partially</secondary></indexterm>
+<anchor xml:id="_testlib_8h_1aca738f43134375f0a18077d633f14578a5e1b770ccbf2809f1447783f97d4cece"/>_partially</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_testlib_8h_source_1l01621">1621</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a72dc574602eb75df785ecfc398a3158f"/><section>
+    <title>TTestlibMode</title>
+<indexterm><primary>TTestlibMode</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>TTestlibMode</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_testlib_8h_1a72dc574602eb75df785ecfc398a3158f">TTestlibMode</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>_unknown</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>_unknown</secondary></indexterm>
+<anchor xml:id="_testlib_8h_1a72dc574602eb75df785ecfc398a3158fa344a85f02f1ac239f9f648738a856eb6"/>_unknown</entry><entry></entry></row><row><entry><indexterm><primary>_checker</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>_checker</secondary></indexterm>
+<anchor xml:id="_testlib_8h_1a72dc574602eb75df785ecfc398a3158fad23f42b9c6d23ab5679d79151c4585ff"/>_checker</entry><entry></entry></row><row><entry><indexterm><primary>_validator</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>_validator</secondary></indexterm>
+<anchor xml:id="_testlib_8h_1a72dc574602eb75df785ecfc398a3158fae0b813cbde0d5fc79fcecd814910e24f"/>_validator</entry><entry></entry></row><row><entry><indexterm><primary>_generator</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>_generator</secondary></indexterm>
+<anchor xml:id="_testlib_8h_1a72dc574602eb75df785ecfc398a3158fa5311ad9bde7f5dbdc28c1f8264456fd5"/>_generator</entry><entry></entry></row><row><entry><indexterm><primary>_interactor</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>_interactor</secondary></indexterm>
+<anchor xml:id="_testlib_8h_1a72dc574602eb75df785ecfc398a3158fadaea9b0ac8f600ff71b0f7616869deac"/>_interactor</entry><entry></entry></row><row><entry><indexterm><primary>_scorer</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>_scorer</secondary></indexterm>
+<anchor xml:id="_testlib_8h_1a72dc574602eb75df785ecfc398a3158fa1bec4ab4fa6a6927ec64b3143afa14fa"/>_scorer</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_testlib_8h_source_1l01632">1632</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_testlib_8h_1a4a02f43815b2ec1d3963a3d487234d0d"/><section>
+    <title>__testlib_expectedButFound()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>__testlib_expectedButFound</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>__testlib_expectedButFound</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void __testlib_expectedButFound (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, double expected, double found, const char * prepend)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l05176">5176</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a117c50c18ae39dbb09a488ac92a086db"/><section>
+    <title>__testlib_expectedButFound()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>__testlib_expectedButFound</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>__testlib_expectedButFound</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void __testlib_expectedButFound (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, std::string expected, std::string found, const char * prepend)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l05165">5165</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a694d06929cd60de7f337b6e265b2365b"/><section>
+    <title>__testlib_help()</title>
+<indexterm><primary>__testlib_help</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>__testlib_help</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void __testlib_help ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04497">4497</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1abff240fe64a3bc2dab1a7a70f73464cb"/><section>
+    <title>__testlib_quitp()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>__testlib_quitp</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>__testlib_quitp</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void __testlib_quitp (double points, const char * message)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04419">4419</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a3951a3cfdcfee60d55d47a3faca1510f"/><section>
+    <title>__testlib_quitp()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>__testlib_quitp</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>__testlib_quitp</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void __testlib_quitp (int points, const char * message)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04432">4432</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a988dc33cd922d2f4748e4305743d03d8"/><section>
+    <title>addFeature()</title>
+<indexterm><primary>addFeature</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>addFeature</secondary></indexterm>
+<para><computeroutput>void addFeature (const std::string &amp; feature)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04765">4765</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a04fed71ae23afb50bb036e98cafc4d84"/><section>
+    <title>compress()</title>
+<indexterm><primary>compress</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>compress</secondary></indexterm>
+<para><computeroutput>std::string compress (const std::string &amp; s)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l05006">5006</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a2c40237203009ff06974b25b65030d68"/><section>
+    <title>disableFinalizeGuard()</title>
+<indexterm><primary>disableFinalizeGuard</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>disableFinalizeGuard</secondary></indexterm>
+<para><computeroutput>void disableFinalizeGuard ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02817">2817</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1afe9a738a208c2ff953b27fea24007d20"/><section>
+    <title>doubleCompare()</title>
+<indexterm><primary>doubleCompare</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>doubleCompare</secondary></indexterm>
+<para><computeroutput>bool doubleCompare (double expected, double result, double MAX_DOUBLE_ERROR)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00482">482</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a7995d5ee8c9310d34ff25b19bdfdbe82"/><section>
+    <title>doubleDelta()</title>
+<indexterm><primary>doubleDelta</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>doubleDelta</secondary></indexterm>
+<para><computeroutput>double doubleDelta (double expected, double result)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00508">508</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a99a404dab8181e5e96eb0a675082f75d"/><section>
+    <title>englishEnding()</title>
+<indexterm><primary>englishEnding</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>englishEnding</secondary></indexterm>
+<para><computeroutput>std::string englishEnding (int x)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l05013">5013</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1aa645d5ce2acb62ee61977d4ecf8e4dbc"/><section>
+    <title>ensuref()</title>
+<indexterm><primary>ensuref</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>ensuref</secondary></indexterm>
+<para><computeroutput>void ensuref (bool cond, const char * format,  ...)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04916">4916</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a3775e4b9dc20c18e8b0d509a145d5d90"/><section>
+    <title>expectedButFound()</title>
+<indexterm><primary>expectedButFound</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>expectedButFound</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void expectedButFound (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, T expected, T found, const char * prependFormat = <computeroutput>&quot;&quot;</computeroutput>
+,  ...)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l05186">5186</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a8c5e10df2297d4ebe22eb580285ae5de"/><section>
+    <title>expectedButFound&lt; const char * &gt;()</title>
+<indexterm><primary>expectedButFound&lt; const char * &gt;</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>expectedButFound&lt; const char * &gt;</secondary></indexterm>
+<computeroutput>template&lt;&gt; </computeroutput><para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a3775e4b9dc20c18e8b0d509a145d5d90">expectedButFound</link>&lt; const char * &gt; (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, const char * expected, const char * found, const char * prependFormat,  ...)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l05218">5218</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a3cc2bbe22675e2d0b0bfaf8f61d005a8"/><section>
+    <title>expectedButFound&lt; double &gt;()</title>
+<indexterm><primary>expectedButFound&lt; double &gt;</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>expectedButFound&lt; double &gt;</secondary></indexterm>
+<computeroutput>template&lt;&gt; </computeroutput><para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a3775e4b9dc20c18e8b0d509a145d5d90">expectedButFound</link>&lt; double &gt; (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, double expected, double found, const char * prependFormat,  ...)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l05207">5207</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a5f326691d44051de660eb6f3f25400f9"/><section>
+    <title>expectedButFound&lt; float &gt;()</title>
+<indexterm><primary>expectedButFound&lt; float &gt;</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>expectedButFound&lt; float &gt;</secondary></indexterm>
+<computeroutput>template&lt;&gt; </computeroutput><para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a3775e4b9dc20c18e8b0d509a145d5d90">expectedButFound</link>&lt; float &gt; (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, float expected, float found, const char * prependFormat,  ...)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l05229">5229</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a1c7f66f9e3c4f693663ffc534807ea02"/><section>
+    <title>expectedButFound&lt; long double &gt;()</title>
+<indexterm><primary>expectedButFound&lt; long double &gt;</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>expectedButFound&lt; long double &gt;</secondary></indexterm>
+<computeroutput>template&lt;&gt; </computeroutput><para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a3775e4b9dc20c18e8b0d509a145d5d90">expectedButFound</link>&lt; long double &gt; (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, long double expected, long double found, const char * prependFormat,  ...)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l05238">5238</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1ace65de365c59bd5b3c271f84cf884bd8"/><section>
+    <title>expectedButFound&lt; std::string &gt;()</title>
+<indexterm><primary>expectedButFound&lt; std::string &gt;</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>expectedButFound&lt; std::string &gt;</secondary></indexterm>
+<computeroutput>template&lt;&gt; </computeroutput><para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void <link linkend="_testlib_8h_1a3775e4b9dc20c18e8b0d509a145d5d90">expectedButFound</link>&lt; std::string &gt; (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, std::string expected, std::string found, const char * prependFormat,  ...)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l05197">5197</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1aca975e2860357cde841db9a2eb501e4f"/><section>
+    <title>feature()</title>
+<indexterm><primary>feature</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>feature</secondary></indexterm>
+<para><computeroutput>void feature (const std::string &amp; feature)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04771">4771</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a1921b31564b858b45e94efff9e9d54bf"/><section>
+    <title>format()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>format</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>format</secondary></indexterm>
+<para><computeroutput>std::string format (const char * fmt,  ...)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00436">436</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a133d0fb6f1e08d9483f8aa9a8e3c6f38"/><section>
+    <title>format()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>format</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>format</secondary></indexterm>
+<para><computeroutput>std::string format (const std::string fmt,  ...)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00441">441</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1ae7fe33b331a1689d31d7d43eb94b125a"/><section>
+    <title>getGroup()</title>
+<indexterm><primary>getGroup</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>getGroup</secondary></indexterm>
+<para><computeroutput>std::string getGroup ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04546">4546</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a327d15f1f5e7c8377faf74e620514689"/><section>
+    <title>getTestset()</title>
+<indexterm><primary>getTestset</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>getTestset</secondary></indexterm>
+<para><computeroutput>std::string getTestset ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04540">4540</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a9282a723c3cb0d8eaf1d904e975a5897"/><section>
+    <title>halt()</title>
+<indexterm><primary>halt</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>halt</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void halt (int exitCode)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02969">2969</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1aedd6eec8331fb12c3330f6b7a1227e2c"/><section>
+    <title>isBlanks()</title>
+<indexterm><primary>isBlanks</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>isBlanks</secondary></indexterm>
+<computeroutput>template&lt;typename C &gt; </computeroutput><para><computeroutput>bool isBlanks (C c)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01593">1593</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a8be64904de021941ee6d1aa96ee4da14"/><section>
+    <title>isEof()</title>
+<indexterm><primary>isEof</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>isEof</secondary></indexterm>
+<computeroutput>template&lt;typename C &gt; </computeroutput><para><computeroutput>bool isEof (C c)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01583">1583</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a8da048ae3bc25fe4bb2dcfceb53a90fc"/><section>
+    <title>isEoln()</title>
+<indexterm><primary>isEoln</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>isEoln</secondary></indexterm>
+<computeroutput>template&lt;typename C &gt; </computeroutput><para><computeroutput>bool isEoln (C c)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01588">1588</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a4d11cf2b81aaccdb03807cff7c1bae28"/><section>
+    <title>join()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>join</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>join</secondary></indexterm>
+<computeroutput>template&lt;typename _ForwardIterator &gt; </computeroutput><para><computeroutput>std::string join (_ForwardIterator first, _ForwardIterator last)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l05047">5047</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a639102617cba0cd4773c91f5eb4a1755"/><section>
+    <title>join()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>join</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>join</secondary></indexterm>
+<computeroutput>template&lt;typename _ForwardIterator , typename _Separator &gt; </computeroutput><para><computeroutput>std::string join (_ForwardIterator first, _ForwardIterator last, _Separator separator)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l05030">5030</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a31e919f2108a1f317e66d345a23c4923"/><section>
+    <title>join()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>join</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>join</secondary></indexterm>
+<computeroutput>template&lt;typename _Collection &gt; </computeroutput><para><computeroutput>std::string join (const _Collection &amp; collection)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l05063">5063</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a8c0f114f708064c2c01b47ab82cdf028"/><section>
+    <title>join()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>join</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>join</secondary></indexterm>
+<computeroutput>template&lt;typename _Collection , typename _Separator &gt; </computeroutput><para><computeroutput>std::string join (const _Collection &amp; collection, _Separator separator)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l05055">5055</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a2d0670a860a887c1de821de0550c0a32"/><section>
+    <title>lowerCase()</title>
+<indexterm><primary>lowerCase</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>lowerCase</secondary></indexterm>
+<para><computeroutput>std::string lowerCase (std::string s)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00426">426</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1aed77b9d710f29f434fee76944e94202a"/><section>
+    <title>quit()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>quit</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>quit</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void quit (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, const char * msg)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04415">4415</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1acec28096e85b471e7121ed06ba1eeb42"/><section>
+    <title>quit()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>quit</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>quit</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void quit (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, const std::string &amp; msg)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04411">4411</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a5e727281f092efd3f19c6a84e2eacc01"/><section>
+    <title>quitf()</title>
+<indexterm><primary>quitf</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>quitf</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void quitf (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, const char * format,  ...)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04482">4482</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1ad7e7f24ac09509dc94581cf3b0a5dced"/><section>
+    <title>quitif()</title>
+<indexterm><primary>quitif</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>quitif</secondary></indexterm>
+<para><computeroutput>void quitif (bool condition, <link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> result, const char * format,  ...)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04490">4490</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1abd20355062b85779c882dfb19f3d9380"/><section>
+    <title>quitp()<computeroutput>[1/5]</computeroutput></title>
+<indexterm><primary>quitp</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>quitp</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void quitp (double points, const std::string &amp; message = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04449">4449</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a73dbf5feb8712147dfa04c19c9d6b01d"/><section>
+    <title>quitp()<computeroutput>[2/5]</computeroutput></title>
+<indexterm><primary>quitp</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>quitp</secondary></indexterm>
+<computeroutput>template&lt;typename F &gt; </computeroutput><para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void quitp (F points, const char * format,  ...)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04474">4474</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a96b765d3745447a9518991edeab211c5"/><section>
+    <title>quitp()<computeroutput>[3/5]</computeroutput></title>
+<indexterm><primary>quitp</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>quitp</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void quitp (float points, const std::string &amp; message = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04445">4445</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a7c6fc64b2f0640dd5dd4b1f52210d669"/><section>
+    <title>quitp()<computeroutput>[4/5]</computeroutput></title>
+<indexterm><primary>quitp</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>quitp</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void quitp (int points, const std::string &amp; message = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04457">4457</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a4c8b51476405ff163cc57a9e0ec10aea"/><section>
+    <title>quitp()<computeroutput>[5/5]</computeroutput></title>
+<indexterm><primary>quitp</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>quitp</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void quitp (long double points, const std::string &amp; message = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04453">4453</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a9e512424bd789067763542439fb1083b"/><section>
+    <title>quitpi()</title>
+<indexterm><primary>quitpi</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>quitpi</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1aa1728270d73c5d1598de1fd691762eb1">NORETURN</link> void quitpi (const std::string &amp; points_info, const std::string &amp; message = <computeroutput>&quot;&quot;</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04461">4461</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a84b949a61c3fa63ca17fcf0b2f9ad4f3"/><section>
+    <title>rand()</title>
+<indexterm><primary>rand</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>rand</secondary></indexterm>
+<para><computeroutput>int rand ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04971">4971</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a2474f90782a9f77e45d81ae18d7c1ffb"/><section>
+    <title>random_shuffle()</title>
+<indexterm><primary>random_shuffle</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>random_shuffle</secondary></indexterm>
+<computeroutput>template&lt;typename _RandomAccessIter &gt; </computeroutput><para><computeroutput>void random_shuffle (_RandomAccessIter , _RandomAccessIter )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04954">4954</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a1fbb926756e2060c6e46bae99de4a781"/><section>
+    <title>registerGen()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>registerGen</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>registerGen</secondary></indexterm>
+<para><computeroutput>void registerGen (int argc, char * argv[])</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04605">4605</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1ad1cfbe9e8fcaabcd1598206e3ff1ad76"/><section>
+    <title>registerGen()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>registerGen</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>registerGen</secondary></indexterm>
+<para><computeroutput>void registerGen (int argc, char * argv[], int randomGeneratorVersion)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04566">4566</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a01331bd5d26dd46c4bc7b9295a036aa0"/><section>
+    <title>registerInteraction()</title>
+<indexterm><primary>registerInteraction</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>registerInteraction</secondary></indexterm>
+<para><computeroutput>void registerInteraction (int argc, char * argv[])</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04638">4638</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a58c2e7a2e44f8466c34b4500023cac6e"/><section>
+    <title>registerTestlib()</title>
+<indexterm><primary>registerTestlib</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>registerTestlib</secondary></indexterm>
+<para><computeroutput>void registerTestlib (int argc,  ...)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04876">4876</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1aef178d6340fe04d5d616ee2da19488b4"/><section>
+    <title>registerTestlibCmd()</title>
+<indexterm><primary>registerTestlibCmd</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>registerTestlibCmd</secondary></indexterm>
+<para><computeroutput>void registerTestlibCmd (int argc, char * argv[])</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04812">4812</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a92d612e581676b81e9162f70839e88ef"/><section>
+    <title>registerValidation()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>registerValidation</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>registerValidation</secondary></indexterm>
+<para><computeroutput>void registerValidation ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04691">4691</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1af37a8d5160de18491abf562b60790dff"/><section>
+    <title>registerValidation()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>registerValidation</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>registerValidation</secondary></indexterm>
+<para><computeroutput>void registerValidation (int argc, char * argv[])</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04705">4705</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1ac237ec9b60cb9035a69ee70750d69141"/><section>
+    <title>resultExitCode()</title>
+<indexterm><primary>resultExitCode</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>resultExitCode</secondary></indexterm>
+<para><computeroutput>int resultExitCode (<link linkend="_testlib_8h_1aca738f43134375f0a18077d633f14578">TResult</link> r)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02900">2900</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1aa87c56b5c1a61e59f3484778120a5797"/><section>
+    <title>setAppesModeEncoding()</title>
+<indexterm><primary>setAppesModeEncoding</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>setAppesModeEncoding</secondary></indexterm>
+<para><computeroutput>void setAppesModeEncoding (std::string appesModeEncoding)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04614">4614</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a14fb24cad2f7e3d532a76f41ba4ba15b"/><section>
+    <title>setName()</title>
+<indexterm><primary>setName</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>setName</secondary></indexterm>
+<para><computeroutput>void setName (const char * format,  ...)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04930">4930</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1ad093584ea7bc2579d8d49c05d4b95347"/><section>
+    <title>setTestCase()</title>
+<indexterm><primary>setTestCase</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>setTestCase</secondary></indexterm>
+<para><computeroutput>void setTestCase (int testCase)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02878">2878</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a892cac7bffad68bec03005d0a771c3c7"/><section>
+    <title>shuffle()</title>
+<indexterm><primary>shuffle</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>shuffle</secondary></indexterm>
+<computeroutput>template&lt;typename _RandomAccessIter &gt; </computeroutput><para><computeroutput>void shuffle (_RandomAccessIter __first, _RandomAccessIter __last)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04943">4943</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1ad85d51a1b33f2422e08f3ca02dbd3127"/><section>
+    <title>split()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>split</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>split</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; split (const std::string &amp; s, char separator)</computeroutput></para>
+<para>Splits string s by character separator returning exactly k+1 items, where k is the number of separator occurrences. </para>
+<para>
+Definition at line <link linkend="_testlib_8h_source_1l05074">5074</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a955ec7cfff0acb85ba9695bda2609499"/><section>
+    <title>split()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>split</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>split</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; split (const std::string &amp; s, const std::string &amp; separators)</computeroutput></para>
+<para>Splits string s by character separators returning exactly k+1 items, where k is the number of separator occurrences. </para>
+<para>
+Definition at line <link linkend="_testlib_8h_source_1l05094">5094</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a7e6ebe263f2a877015210e0ac28c3e79"/><section>
+    <title>srand()</title>
+<indexterm><primary>srand</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>srand</secondary></indexterm>
+<para><computeroutput>void srand (unsigned int seed)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04989">4989</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a7b5d06041e39daeafd603dd998ce02c6"/><section>
+    <title>startTest()</title>
+<indexterm><primary>startTest</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>startTest</secondary></indexterm>
+<para><computeroutput>void startTest (int test)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04997">4997</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1aab9e80a2f4e4203b27b11c5880850d8e"/><section>
+    <title>tokenize()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>tokenize</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>tokenize</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; tokenize (const std::string &amp; s, char separator)</computeroutput></para>
+<para>Splits string s by character separator returning non-empty items. </para>
+<para>
+Definition at line <link linkend="_testlib_8h_source_1l05120">5120</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1af67ac6c551dc21d30494892a51a7fbb7"/><section>
+    <title>tokenize()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>tokenize</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>tokenize</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; tokenize (const std::string &amp; s, const std::string &amp; separators)</computeroutput></para>
+<para>Splits string s by character separators returning non-empty items. </para>
+<para>
+Definition at line <link linkend="_testlib_8h_source_1l05141">5141</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a1a32c4d3bd87256731e67936766c65ca"/><section>
+    <title>trim()</title>
+<indexterm><primary>trim</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>trim</secondary></indexterm>
+<para><computeroutput>std::string trim (const std::string &amp; s)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01597">1597</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a0fb214ced4215bfbfa6eba1ab4635721"/><section>
+    <title>unsetTestCase()</title>
+<indexterm><primary>unsetTestCase</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>unsetTestCase</secondary></indexterm>
+<para><computeroutput>void unsetTestCase ( )</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00343">343</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a3e8b5e1528a28d4832cb11dff8ad5edb"/><section>
+    <title>upperCase()</title>
+<indexterm><primary>upperCase</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>upperCase</secondary></indexterm>
+<para><computeroutput>std::string upperCase (std::string s)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00416">416</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_testlib_8h_1a34371151c9adbae73b89b0e7aed11a6f"/><section>
+    <title>__testlib_exitCode</title>
+<indexterm><primary>__testlib_exitCode</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>__testlib_exitCode</secondary></indexterm>
+<para><computeroutput>int __testlib_exitCode</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00336">336</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a28757a64bf4cec48f7a7e5d6187bb350"/><section>
+    <title>__testlib_group</title>
+<indexterm><primary>__testlib_group</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>__testlib_group</secondary></indexterm>
+<para><computeroutput>std::string __testlib_group</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04544">4544</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a4a0af2b3cb79c442b17b7aca7c434307"/><section>
+    <title>__testlib_hasTestCase</title>
+<indexterm><primary>__testlib_hasTestCase</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>__testlib_hasTestCase</secondary></indexterm>
+<para><computeroutput>bool __testlib_hasTestCase</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00338">338</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1ac2e4a8f83549c96237919d8335d3cdcf"/><section>
+    <title>__TESTLIB_LONGLONG_MAX</title>
+<indexterm><primary>__TESTLIB_LONGLONG_MAX</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>__TESTLIB_LONGLONG_MAX</secondary></indexterm>
+<para><computeroutput>const long long __TESTLIB_LONGLONG_MAX = 9223372036854775807LL</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00333">333</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a18fd7cadefe2367367300b4f1983d8f0"/><section>
+    <title>__TESTLIB_MAX_TEST_CASE</title>
+<indexterm><primary>__TESTLIB_MAX_TEST_CASE</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>__TESTLIB_MAX_TEST_CASE</secondary></indexterm>
+<para><computeroutput>const int __TESTLIB_MAX_TEST_CASE = 1073741823</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00334">334</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1acb5280d0779ed8499169e3537ab20fd2"/><section>
+    <title>__testlib_points</title>
+<indexterm><primary>__testlib_points</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>__testlib_points</secondary></indexterm>
+<para><computeroutput>double __testlib_points = std::numeric_limits&lt;float&gt;::infinity()</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02380">2380</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a78d44a9b705b8375660cf7e4d99ea426"/><section>
+    <title>__testlib_testCase</title>
+<indexterm><primary>__testlib_testCase</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>__testlib_testCase</secondary></indexterm>
+<para><computeroutput>int __testlib_testCase = -1</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00339">339</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1adf88ff484a3ca535a2a66ea5c0713796"/><section>
+    <title>__testlib_testset</title>
+<indexterm><primary>__testlib_testset</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>__testlib_testset</secondary></indexterm>
+<para><computeroutput>std::string __testlib_testset</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l04538">4538</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1aca62d65c91dd6453f93a96348e78c5ac"/><section>
+    <title>ans</title>
+<indexterm><primary>ans</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>ans</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_in_stream">InStream</link> ans</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02373">2373</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1af4cc0994ea0f5ca9ede3bbc670fded8e"/><section>
+    <title>appesMode</title>
+<indexterm><primary>appesMode</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>appesMode</secondary></indexterm>
+<para><computeroutput>bool appesMode</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02374">2374</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a2f4a877b5dc48e645f2c41b5e9c99460"/><section>
+    <title>appesModeEncoding</title>
+<indexterm><primary>appesModeEncoding</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>appesModeEncoding</secondary></indexterm>
+<para><computeroutput>std::string appesModeEncoding = &quot;windows-1251&quot;</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02375">2375</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a9ce0a964a656c5d7d59b41f935fef72c"/><section>
+    <title>checker</title>
+<indexterm><primary>checker</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>checker</secondary></indexterm>
+<para><computeroutput>class <link linkend="_class_checker">Checker</link> checker</computeroutput></para></section>
+<anchor xml:id="_testlib_8h_1a00f5e960957827ed8846cf705f810473"/><section>
+    <title>checkerName</title>
+<indexterm><primary>checkerName</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>checkerName</secondary></indexterm>
+<para><computeroutput>std::string checkerName = &quot;untitled checker&quot;</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02377">2377</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1ad3874376581d36b1067d501d534d7b34"/><section>
+    <title>inf</title>
+<indexterm><primary>inf</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>inf</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_in_stream">InStream</link> inf</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02371">2371</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1aca3ccf9230a0e9c7f28e21d77f26e74f"/><section>
+    <title>latestFeatures</title>
+<indexterm><primary>latestFeatures</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>latestFeatures</secondary></indexterm>
+<para><computeroutput>const char* latestFeatures[]</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00065">65</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a93822943d6413c3eba20a27b9d31336b"/><section>
+    <title>ouf</title>
+<indexterm><primary>ouf</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>ouf</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_in_stream">InStream</link> ouf</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02372">2372</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a02aa6e42b031ee29efb38fcc1f7a1d59"/><section>
+    <title>outcomes</title>
+<indexterm><primary>outcomes</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>outcomes</secondary></indexterm>
+<para><computeroutput>const std::string outcomes[]</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;accepted&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;wrong-answer&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;presentation-error&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;fail&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;fail&quot;</emphasis>,
+
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;points&quot;</emphasis>,
+
+
+
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;reserved&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;reserved&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;unexpected-eof&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;reserved&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;reserved&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;reserved&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;reserved&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;reserved&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;reserved&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;reserved&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;partially-correct&quot;</emphasis>
+}
+</programlisting><para>
+Definition at line <link linkend="_testlib_8h_source_1l01639">1639</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a300565f96b1c710f123009c6aa8aed29"/><section>
+    <title>resultName</title>
+<indexterm><primary>resultName</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>resultName</secondary></indexterm>
+<para><computeroutput>std::string resultName</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02376">2376</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a5743b8b2167a45883185605a8d8e10ce"/><section>
+    <title>rnd</title>
+<indexterm><primary>rnd</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>rnd</secondary></indexterm>
+<para><computeroutput><link linkend="_classrandom__t">random_t</link> rnd</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02378">2378</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a576c1be9a11f2136d2bfa955394d4575"/><section>
+    <title>testlibFinalizeGuard</title>
+<indexterm><primary>testlibFinalizeGuard</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>testlibFinalizeGuard</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_testlib_finalize_guard">TestlibFinalizeGuard</link> testlibFinalizeGuard<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_testlib_8h_1a94143519d4511e7adb6c77b5c715eeaf"/><section>
+    <title>testlibMode</title>
+<indexterm><primary>testlibMode</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>testlibMode</secondary></indexterm>
+<para><computeroutput><link linkend="_testlib_8h_1a72dc574602eb75df785ecfc398a3158f">TTestlibMode</link> testlibMode = <link linkend="_testlib_8h_1a72dc574602eb75df785ecfc398a3158fa344a85f02f1ac239f9f648738a856eb6">_unknown</link></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02379">2379</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a675e9c0cb400805c69d94e7cdded4494"/><section>
+    <title>tout</title>
+<indexterm><primary>tout</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>tout</secondary></indexterm>
+<para><computeroutput>std::fstream tout</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02823">2823</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_testlib_8h_1a72a79ac1064de9f716b78e4369669976"/><section>
+    <title>validator</title>
+<indexterm><primary>validator</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>validator</secondary></indexterm>
+<para><computeroutput>class <link linkend="_class_validator">Validator</link> validator</computeroutput></para></section>
+<anchor xml:id="_testlib_8h_1ad2806158bb273bfbae710825328a0887"/><section>
+    <title>VALIDATOR_MAX_VARIABLE_COUNT</title>
+<indexterm><primary>VALIDATOR_MAX_VARIABLE_COUNT</primary><secondary>testlib.h</secondary></indexterm>
+<indexterm><primary>testlib.h</primary><secondary>VALIDATOR_MAX_VARIABLE_COUNT</secondary></indexterm>
+<para><computeroutput>const size_t VALIDATOR_MAX_VARIABLE_COUNT = 255</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02382">2382</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+</section>
+</section>

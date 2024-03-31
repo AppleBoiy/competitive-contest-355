@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_string_input_stream_reader" kind="class" language="C++" prot="public">
+    <compoundname>StringInputStreamReader</compoundname>
+    <basecompoundref refid="class_input_stream_reader" prot="public" virt="non-virtual">InputStreamReader</basecompoundref>
+    <includes refid="testlib_8h" local="no">testlib.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_string_input_stream_reader_1a5d9cbbee6b941e9763e2d2fc59fcaa33" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string StringInputStreamReader::s</definition>
+        <argsstring></argsstring>
+        <name>s</name>
+        <qualifiedname>StringInputStreamReader::s</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="1694" column="17" bodyfile="src/testlib.h" bodystart="1694" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_string_input_stream_reader_1a348045eb98877ffaced63f8c73f93275" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t StringInputStreamReader::pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <qualifiedname>StringInputStreamReader::pos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="1695" column="12" bodyfile="src/testlib.h" bodystart="1695" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_string_input_stream_reader_1a1282a084cf2b5894390e20fac07068ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>StringInputStreamReader::StringInputStreamReader</definition>
+        <argsstring>(const std::string &amp;content)</argsstring>
+        <name>StringInputStreamReader</name>
+        <qualifiedname>StringInputStreamReader::StringInputStreamReader</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>content</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="1698" column="5" bodyfile="src/testlib.h" bodystart="1698" bodyend="1700"/>
+      </memberdef>
+      <memberdef kind="function" id="class_string_input_stream_reader_1af5b847200799d3549c883228103bd961" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void StringInputStreamReader::setTestCase</definition>
+        <argsstring>(int)</argsstring>
+        <name>setTestCase</name>
+        <qualifiedname>StringInputStreamReader::setTestCase</qualifiedname>
+        <reimplements refid="class_input_stream_reader_1a06ef5f907b494fa52a75b2644dea6d7b">setTestCase</reimplements>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="1702" column="10" bodyfile="src/testlib.h" bodystart="1702" bodyend="1704"/>
+      </memberdef>
+      <memberdef kind="function" id="class_string_input_stream_reader_1a104e77d9ed74af3095c70d207540b2d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt; int &gt; StringInputStreamReader::getReadChars</definition>
+        <argsstring>()</argsstring>
+        <name>getReadChars</name>
+        <qualifiedname>StringInputStreamReader::getReadChars</qualifiedname>
+        <reimplements refid="class_input_stream_reader_1a382091a8b54e0f77ae1d2e59bfa34814">getReadChars</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="1706" column="17" bodyfile="src/testlib.h" bodystart="1706" bodyend="1708"/>
+      </memberdef>
+      <memberdef kind="function" id="class_string_input_stream_reader_1aa5cf9b35451b06d2b158d558e8d1bf01" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>int StringInputStreamReader::curChar</definition>
+        <argsstring>()</argsstring>
+        <name>curChar</name>
+        <qualifiedname>StringInputStreamReader::curChar</qualifiedname>
+        <reimplements refid="class_input_stream_reader_1a80448788833a59a503853b4a45a96137">curChar</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="1710" column="9" bodyfile="src/testlib.h" bodystart="1710" bodyend="1715"/>
+      </memberdef>
+      <memberdef kind="function" id="class_string_input_stream_reader_1a554fbedcf4b908fd940299e753ff009d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>int StringInputStreamReader::nextChar</definition>
+        <argsstring>()</argsstring>
+        <name>nextChar</name>
+        <qualifiedname>StringInputStreamReader::nextChar</qualifiedname>
+        <reimplements refid="class_input_stream_reader_1a243f344748d1f7de9a2fa5faa31a29c3">nextChar</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="1717" column="9" bodyfile="src/testlib.h" bodystart="1717" bodyend="1723"/>
+      </memberdef>
+      <memberdef kind="function" id="class_string_input_stream_reader_1a6d3d26f8ceb666e4017edd2e4239e30e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void StringInputStreamReader::skipChar</definition>
+        <argsstring>()</argsstring>
+        <name>skipChar</name>
+        <qualifiedname>StringInputStreamReader::skipChar</qualifiedname>
+        <reimplements refid="class_input_stream_reader_1ad01b8b4dd307c70472afb7dae417401a">skipChar</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="1725" column="10" bodyfile="src/testlib.h" bodystart="1725" bodyend="1727"/>
+      </memberdef>
+      <memberdef kind="function" id="class_string_input_stream_reader_1a193b5942839c98ed3b79e8260858dd00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void StringInputStreamReader::unreadChar</definition>
+        <argsstring>(int c)</argsstring>
+        <name>unreadChar</name>
+        <qualifiedname>StringInputStreamReader::unreadChar</qualifiedname>
+        <reimplements refid="class_input_stream_reader_1a48da3436df374a668c79b0f5b8ae7208">unreadChar</reimplements>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="1729" column="10" bodyfile="src/testlib.h" bodystart="1729" bodyend="1735"/>
+      </memberdef>
+      <memberdef kind="function" id="class_string_input_stream_reader_1a874513b4124401f7874e524fc17b1aa6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string StringInputStreamReader::getName</definition>
+        <argsstring>()</argsstring>
+        <name>getName</name>
+        <qualifiedname>StringInputStreamReader::getName</qualifiedname>
+        <reimplements refid="class_input_stream_reader_1a583d351a74f37fdabfe2e262e35760a7">getName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="1737" column="17" bodyfile="src/testlib.h" bodystart="1737" bodyend="1739"/>
+      </memberdef>
+      <memberdef kind="function" id="class_string_input_stream_reader_1a50a1cc8ef204cb6c84430b4d99c41fa1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>int StringInputStreamReader::getLine</definition>
+        <argsstring>()</argsstring>
+        <name>getLine</name>
+        <qualifiedname>StringInputStreamReader::getLine</qualifiedname>
+        <reimplements refid="class_input_stream_reader_1a90cef076b1b6ee901aaefcf1276a6881">getLine</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="1741" column="9" bodyfile="src/testlib.h" bodystart="1741" bodyend="1743"/>
+      </memberdef>
+      <memberdef kind="function" id="class_string_input_stream_reader_1a130c48a7af5de77562a4ebea4d4299c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool StringInputStreamReader::eof</definition>
+        <argsstring>()</argsstring>
+        <name>eof</name>
+        <qualifiedname>StringInputStreamReader::eof</qualifiedname>
+        <reimplements refid="class_input_stream_reader_1a90d0f46a473a2ff2f6224614b7af0ab3">eof</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="1745" column="10" bodyfile="src/testlib.h" bodystart="1745" bodyend="1747"/>
+      </memberdef>
+      <memberdef kind="function" id="class_string_input_stream_reader_1a91362e7b8706d208cda988cf136fe4c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void StringInputStreamReader::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <qualifiedname>StringInputStreamReader::close</qualifiedname>
+        <reimplements refid="class_input_stream_reader_1aa145a0fcdb6b0a73cc3b91b22e5183cb">close</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="1749" column="10" bodyfile="src/testlib.h" bodystart="1749" bodyend="1751"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>InputStreamReader</label>
+        <link refid="class_input_stream_reader"/>
+      </node>
+      <node id="1">
+        <label>StringInputStreamReader</label>
+        <link refid="class_string_input_stream_reader"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>InputStreamReader</label>
+        <link refid="class_input_stream_reader"/>
+      </node>
+      <node id="1">
+        <label>StringInputStreamReader</label>
+        <link refid="class_string_input_stream_reader"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/testlib.h" line="1692" column="1" bodyfile="src/testlib.h" bodystart="1692" bodyend="1752"/>
+    <listofallmembers>
+      <member refid="class_string_input_stream_reader_1a91362e7b8706d208cda988cf136fe4c4" prot="public" virt="virtual"><scope>StringInputStreamReader</scope><name>close</name></member>
+      <member refid="class_string_input_stream_reader_1aa5cf9b35451b06d2b158d558e8d1bf01" prot="public" virt="virtual"><scope>StringInputStreamReader</scope><name>curChar</name></member>
+      <member refid="class_string_input_stream_reader_1a130c48a7af5de77562a4ebea4d4299c5" prot="public" virt="virtual"><scope>StringInputStreamReader</scope><name>eof</name></member>
+      <member refid="class_string_input_stream_reader_1a50a1cc8ef204cb6c84430b4d99c41fa1" prot="public" virt="virtual"><scope>StringInputStreamReader</scope><name>getLine</name></member>
+      <member refid="class_string_input_stream_reader_1a874513b4124401f7874e524fc17b1aa6" prot="public" virt="virtual"><scope>StringInputStreamReader</scope><name>getName</name></member>
+      <member refid="class_string_input_stream_reader_1a104e77d9ed74af3095c70d207540b2d5" prot="public" virt="virtual"><scope>StringInputStreamReader</scope><name>getReadChars</name></member>
+      <member refid="class_string_input_stream_reader_1a554fbedcf4b908fd940299e753ff009d" prot="public" virt="virtual"><scope>StringInputStreamReader</scope><name>nextChar</name></member>
+      <member refid="class_string_input_stream_reader_1a348045eb98877ffaced63f8c73f93275" prot="private" virt="non-virtual"><scope>StringInputStreamReader</scope><name>pos</name></member>
+      <member refid="class_string_input_stream_reader_1a5d9cbbee6b941e9763e2d2fc59fcaa33" prot="private" virt="non-virtual"><scope>StringInputStreamReader</scope><name>s</name></member>
+      <member refid="class_string_input_stream_reader_1af5b847200799d3549c883228103bd961" prot="public" virt="virtual"><scope>StringInputStreamReader</scope><name>setTestCase</name></member>
+      <member refid="class_string_input_stream_reader_1a6d3d26f8ceb666e4017edd2e4239e30e" prot="public" virt="virtual"><scope>StringInputStreamReader</scope><name>skipChar</name></member>
+      <member refid="class_string_input_stream_reader_1a1282a084cf2b5894390e20fac07068ff" prot="public" virt="non-virtual"><scope>StringInputStreamReader</scope><name>StringInputStreamReader</name></member>
+      <member refid="class_string_input_stream_reader_1a193b5942839c98ed3b79e8260858dd00" prot="public" virt="virtual"><scope>StringInputStreamReader</scope><name>unreadChar</name></member>
+      <member refid="class_input_stream_reader_1a9df7ac536f2c9367abb461d203099a4d" prot="public" virt="pure-virtual"><scope>StringInputStreamReader</scope><name>~InputStreamReader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

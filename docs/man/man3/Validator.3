@@ -1,0 +1,228 @@
+.TH "Validator" 3 "competitive-contest" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Validator
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <testlib\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBValidator\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBinitialize\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBtestset\fP () \fBconst\fP"
+.br
+.ti -1c
+.RI "std::string \fBgroup\fP () \fBconst\fP"
+.br
+.ti -1c
+.RI "std::string \fBtestOverviewLogFileName\fP () \fBconst\fP"
+.br
+.ti -1c
+.RI "std::string \fBtestMarkupFileName\fP () \fBconst\fP"
+.br
+.ti -1c
+.RI "int \fBtestCase\fP () const"
+.br
+.ti -1c
+.RI "std::string \fBtestCaseFileName\fP () \fBconst\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetTestset\fP (\fBconst\fP \fBchar\fP *\fBconst\fP \fBtestset\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetGroup\fP (\fBconst\fP \fBchar\fP *\fBconst\fP \fBgroup\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetTestOverviewLogFileName\fP (\fBconst\fP \fBchar\fP *\fBconst\fP \fBtestOverviewLogFileName\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetTestMarkupFileName\fP (\fBconst\fP \fBchar\fP *\fBconst\fP \fBtestMarkupFileName\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetTestCase\fP (\fBint\fP \fBtestCase\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetTestCaseFileName\fP (\fBconst\fP \fBchar\fP *\fBconst\fP \fBtestCaseFileName\fP)"
+.br
+.ti -1c
+.RI "std::string \fBprepVariableName\fP (\fBconst\fP std::string &\fBvariableName\fP)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBignoreMinBound\fP (\fBconst\fP std::string &\fBvariableName\fP)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBignoreMaxBound\fP (\fBconst\fP std::string &\fBvariableName\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBaddBoundsHit\fP (\fBconst\fP std::string &\fBvariableName\fP, \fBValidatorBoundsHit\fP \fBboundsHit\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBaddVariable\fP (\fBconst\fP std::string &\fBvariableName\fP)"
+.br
+.ti -1c
+.RI "std::string \fBgetVariablesLog\fP ()"
+.br
+.ti -1c
+.RI "template<\fBtypename\fP \fBT\fP > \fBvoid\fP \fBadjustConstantBounds\fP (\fBconst\fP std::string &\fBvariableName\fP, \fBT\fP \fBlower\fP, \fBT\fP \fBupper\fP)"
+.br
+.ti -1c
+.RI "std::string \fBgetBoundsHitLog\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBgetConstantBoundsLog\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBgetFeaturesLog\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBwriteTestOverviewLog\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBwriteTestMarkup\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBwriteTestCase\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBaddFeature\fP (\fBconst\fP std::string &\fBfeature\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBfeature\fP (\fBconst\fP std::string &feature)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB2432\fP of file \fBtestlib\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Validator::Validator ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB2468\fP of file \fBtestlib\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBvoid\fP Validator::addBoundsHit (\fBconst\fP std::string & variableName, \fBValidatorBoundsHit\fP boundsHit)\fR [inline]\fP"
+
+.PP
+Definition at line \fB2547\fP of file \fBtestlib\&.h\fP\&.
+.SS "\fBvoid\fP Validator::addFeature (\fBconst\fP std::string & feature)\fR [inline]\fP"
+
+.PP
+Definition at line \fB2746\fP of file \fBtestlib\&.h\fP\&.
+.SS "\fBvoid\fP Validator::addVariable (\fBconst\fP std::string & variableName)\fR [inline]\fP"
+
+.PP
+Definition at line \fB2556\fP of file \fBtestlib\&.h\fP\&.
+.SS "template<\fBtypename\fP \fBT\fP > \fBvoid\fP Validator::adjustConstantBounds (\fBconst\fP std::string & variableName, \fBT\fP lower, \fBT\fP upper)\fR [inline]\fP"
+
+.PP
+Definition at line \fB2572\fP of file \fBtestlib\&.h\fP\&.
+.SS "\fBvoid\fP Validator::feature (\fBconst\fP std::string & feature)\fR [inline]\fP"
+
+.PP
+Definition at line \fB2755\fP of file \fBtestlib\&.h\fP\&.
+.SS "std::string Validator::getBoundsHitLog ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB2581\fP of file \fBtestlib\&.h\fP\&.
+.SS "std::string Validator::getConstantBoundsLog ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB2596\fP of file \fBtestlib\&.h\fP\&.
+.SS "std::string Validator::getFeaturesLog ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB2617\fP of file \fBtestlib\&.h\fP\&.
+.SS "std::string Validator::getVariablesLog ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB2564\fP of file \fBtestlib\&.h\fP\&.
+.SS "std::string Validator::group () const\fR [inline]\fP"
+
+.PP
+Definition at line \fB2481\fP of file \fBtestlib\&.h\fP\&.
+.SS "\fBbool\fP Validator::ignoreMaxBound (\fBconst\fP std::string & variableName)\fR [inline]\fP"
+
+.PP
+Definition at line \fB2543\fP of file \fBtestlib\&.h\fP\&.
+.SS "\fBbool\fP Validator::ignoreMinBound (\fBconst\fP std::string & variableName)\fR [inline]\fP"
+
+.PP
+Definition at line \fB2539\fP of file \fBtestlib\&.h\fP\&.
+.SS "\fBvoid\fP Validator::initialize ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB2471\fP of file \fBtestlib\&.h\fP\&.
+.SS "std::string Validator::prepVariableName (\fBconst\fP std::string & variableName)\fR [inline]\fP"
+
+.PP
+Definition at line \fB2527\fP of file \fBtestlib\&.h\fP\&.
+.SS "\fBvoid\fP Validator::setGroup (\fBconst\fP \fBchar\fP *\fBconst\fP group)\fR [inline]\fP"
+
+.PP
+Definition at line \fB2507\fP of file \fBtestlib\&.h\fP\&.
+.SS "\fBvoid\fP Validator::setTestCase (\fBint\fP testCase)\fR [inline]\fP"
+
+.PP
+Definition at line \fB2519\fP of file \fBtestlib\&.h\fP\&.
+.SS "\fBvoid\fP Validator::setTestCaseFileName (\fBconst\fP \fBchar\fP *\fBconst\fP testCaseFileName)\fR [inline]\fP"
+
+.PP
+Definition at line \fB2523\fP of file \fBtestlib\&.h\fP\&.
+.SS "\fBvoid\fP Validator::setTestMarkupFileName (\fBconst\fP \fBchar\fP *\fBconst\fP testMarkupFileName)\fR [inline]\fP"
+
+.PP
+Definition at line \fB2515\fP of file \fBtestlib\&.h\fP\&.
+.SS "\fBvoid\fP Validator::setTestOverviewLogFileName (\fBconst\fP \fBchar\fP *\fBconst\fP testOverviewLogFileName)\fR [inline]\fP"
+
+.PP
+Definition at line \fB2511\fP of file \fBtestlib\&.h\fP\&.
+.SS "\fBvoid\fP Validator::setTestset (\fBconst\fP \fBchar\fP *\fBconst\fP testset)\fR [inline]\fP"
+
+.PP
+Definition at line \fB2503\fP of file \fBtestlib\&.h\fP\&.
+.SS "int Validator::testCase () const\fR [inline]\fP"
+
+.PP
+Definition at line \fB2495\fP of file \fBtestlib\&.h\fP\&.
+.SS "std::string Validator::testCaseFileName () const\fR [inline]\fP"
+
+.PP
+Definition at line \fB2499\fP of file \fBtestlib\&.h\fP\&.
+.SS "std::string Validator::testMarkupFileName () const\fR [inline]\fP"
+
+.PP
+Definition at line \fB2491\fP of file \fBtestlib\&.h\fP\&.
+.SS "std::string Validator::testOverviewLogFileName () const\fR [inline]\fP"
+
+.PP
+Definition at line \fB2487\fP of file \fBtestlib\&.h\fP\&.
+.SS "std::string Validator::testset () const\fR [inline]\fP"
+
+.PP
+Definition at line \fB2475\fP of file \fBtestlib\&.h\fP\&.
+.SS "\fBvoid\fP Validator::writeTestCase ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB2698\fP of file \fBtestlib\&.h\fP\&.
+.SS "\fBvoid\fP Validator::writeTestMarkup ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB2658\fP of file \fBtestlib\&.h\fP\&.
+.SS "\fBvoid\fP Validator::writeTestOverviewLog ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB2630\fP of file \fBtestlib\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for competitive-contest from the source code\&.

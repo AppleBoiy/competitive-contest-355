@@ -1,0 +1,138 @@
+.TH "BufferedFileInputStreamReader" 3 "competitive-contest" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BufferedFileInputStreamReader
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <testlib\&.h>\fP
+.PP
+Inherits \fBInputStreamReader\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBufferedFileInputStreamReader\fP (std::FILE *file, const std::string &name)"
+.br
+.ti -1c
+.RI "\fB~BufferedFileInputStreamReader\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetTestCase\fP (int)"
+.br
+.ti -1c
+.RI "std::vector< int > \fBgetReadChars\fP ()"
+.br
+.ti -1c
+.RI "int \fBcurChar\fP ()"
+.br
+.ti -1c
+.RI "int \fBnextChar\fP ()"
+.br
+.ti -1c
+.RI "void \fBskipChar\fP ()"
+.br
+.ti -1c
+.RI "void \fBunreadChar\fP (int c)"
+.br
+.ti -1c
+.RI "std::string \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetLine\fP ()"
+.br
+.ti -1c
+.RI "bool \fBeof\fP ()"
+.br
+.ti -1c
+.RI "void \fBclose\fP ()"
+.br
+.in -1c
+
+Public Member Functions inherited from \fBInputStreamReader\fP
+.in +1c
+.ti -1c
+.RI "virtual \fB~InputStreamReader\fP ()=0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB1869\fP of file \fBtestlib\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BufferedFileInputStreamReader::BufferedFileInputStreamReader (std::FILE * file, const std::string & name)\fR [inline]\fP"
+
+.PP
+Definition at line \fB1916\fP of file \fBtestlib\&.h\fP\&.
+.SS "BufferedFileInputStreamReader::~BufferedFileInputStreamReader ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB1923\fP of file \fBtestlib\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void BufferedFileInputStreamReader::close ()\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBInputStreamReader\fP\&.
+.PP
+Definition at line \fB1982\fP of file \fBtestlib\&.h\fP\&.
+.SS "int BufferedFileInputStreamReader::curChar ()\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBInputStreamReader\fP\&.
+.PP
+Definition at line \fB1942\fP of file \fBtestlib\&.h\fP\&.
+.SS "bool BufferedFileInputStreamReader::eof ()\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBInputStreamReader\fP\&.
+.PP
+Definition at line \fB1978\fP of file \fBtestlib\&.h\fP\&.
+.SS "int BufferedFileInputStreamReader::getLine ()\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBInputStreamReader\fP\&.
+.PP
+Definition at line \fB1974\fP of file \fBtestlib\&.h\fP\&.
+.SS "std::string BufferedFileInputStreamReader::getName ()\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBInputStreamReader\fP\&.
+.PP
+Definition at line \fB1970\fP of file \fBtestlib\&.h\fP\&.
+.SS "std::vector< int > BufferedFileInputStreamReader::getReadChars ()\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBInputStreamReader\fP\&.
+.PP
+Definition at line \fB1938\fP of file \fBtestlib\&.h\fP\&.
+.SS "int BufferedFileInputStreamReader::nextChar ()\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBInputStreamReader\fP\&.
+.PP
+Definition at line \fB1949\fP of file \fBtestlib\&.h\fP\&.
+.SS "void BufferedFileInputStreamReader::setTestCase (int)\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBInputStreamReader\fP\&.
+.PP
+Definition at line \fB1934\fP of file \fBtestlib\&.h\fP\&.
+.SS "void BufferedFileInputStreamReader::skipChar ()\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBInputStreamReader\fP\&.
+.PP
+Definition at line \fB1956\fP of file \fBtestlib\&.h\fP\&.
+.SS "void BufferedFileInputStreamReader::unreadChar (int c)\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBInputStreamReader\fP\&.
+.PP
+Definition at line \fB1960\fP of file \fBtestlib\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for competitive-contest from the source code\&.

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_validator_bounds_hit" xml:lang="en-US">
+<title>ValidatorBoundsHit Struct Reference</title>
+<indexterm><primary>ValidatorBoundsHit</primary></indexterm>
+<para>
+<computeroutput>#include &lt;testlib.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_validator_bounds_hit_1a9795fcb90f8ec3f0f069cb659e587281">ValidatorBoundsHit</link> (bool <link linkend="_struct_validator_bounds_hit_1a450ae2118accb6096ac01a9f1bc62f59">minHit</link>=false, bool <link linkend="_struct_validator_bounds_hit_1af47cea308d23bf8c74eb43d99c373f4c">maxHit</link>=false)</para>
+</listitem>
+            <listitem><para><link linkend="_struct_validator_bounds_hit">ValidatorBoundsHit</link> <link linkend="_struct_validator_bounds_hit_1ac8444da34d710fac080ec0d30e49874a">merge</link> (const <link linkend="_struct_validator_bounds_hit">ValidatorBoundsHit</link> &amp;validatorBoundsHit, bool ignoreMinBound, bool ignoreMaxBound)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_struct_validator_bounds_hit_1a450ae2118accb6096ac01a9f1bc62f59">minHit</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_validator_bounds_hit_1af47cea308d23bf8c74eb43d99c373f4c">maxHit</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static const double <link linkend="_struct_validator_bounds_hit_1a794be9f0bcc3692f3662b670c9086128">EPS</link> = 1E-12</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_testlib_8h_source_1l02384">2384</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_validator_bounds_hit_1a9795fcb90f8ec3f0f069cb659e587281"/><section>
+    <title>ValidatorBoundsHit()</title>
+<indexterm><primary>ValidatorBoundsHit</primary><secondary>ValidatorBoundsHit</secondary></indexterm>
+<indexterm><primary>ValidatorBoundsHit</primary><secondary>ValidatorBoundsHit</secondary></indexterm>
+<para><computeroutput>ValidatorBoundsHit::ValidatorBoundsHit (bool minHit = <computeroutput>false</computeroutput>
+, bool maxHit = <computeroutput>false</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02389">2389</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_validator_bounds_hit_1ac8444da34d710fac080ec0d30e49874a"/><section>
+    <title>merge()</title>
+<indexterm><primary>merge</primary><secondary>ValidatorBoundsHit</secondary></indexterm>
+<indexterm><primary>ValidatorBoundsHit</primary><secondary>merge</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_validator_bounds_hit">ValidatorBoundsHit</link> ValidatorBoundsHit::merge (const <link linkend="_struct_validator_bounds_hit">ValidatorBoundsHit</link> &amp; validatorBoundsHit, bool ignoreMinBound, bool ignoreMaxBound)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02392">2392</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_validator_bounds_hit_1a794be9f0bcc3692f3662b670c9086128"/><section>
+    <title>EPS</title>
+<indexterm><primary>EPS</primary><secondary>ValidatorBoundsHit</secondary></indexterm>
+<indexterm><primary>ValidatorBoundsHit</primary><secondary>EPS</secondary></indexterm>
+<para><computeroutput>const double ValidatorBoundsHit::EPS = 1E-12<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02385">2385</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_validator_bounds_hit_1af47cea308d23bf8c74eb43d99c373f4c"/><section>
+    <title>maxHit</title>
+<indexterm><primary>maxHit</primary><secondary>ValidatorBoundsHit</secondary></indexterm>
+<indexterm><primary>ValidatorBoundsHit</primary><secondary>maxHit</secondary></indexterm>
+<para><computeroutput>bool ValidatorBoundsHit::maxHit</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02387">2387</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_validator_bounds_hit_1a450ae2118accb6096ac01a9f1bc62f59"/><section>
+    <title>minHit</title>
+<indexterm><primary>minHit</primary><secondary>ValidatorBoundsHit</secondary></indexterm>
+<indexterm><primary>ValidatorBoundsHit</primary><secondary>minHit</secondary></indexterm>
+<para><computeroutput>bool ValidatorBoundsHit::minHit</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02386">2386</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+src/<link linkend="_testlib_8h">testlib.h</link></section>
+</section>

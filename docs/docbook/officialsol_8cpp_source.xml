@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_officialsol_8cpp_source" xml:lang="en-US">
+<title>officialsol.cpp</title>
+<indexterm><primary>src/officialsol.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_officialsol_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+<anchor xml:id="_officialsol_8cpp_source_1l00002"/>00002 
+<anchor xml:id="_officialsol_8cpp_source_1l00003"/><link linkend="_officialsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba">00003</link> <emphasis role="preprocessor">#define&#32;ll&#32;long&#32;long</emphasis>
+<anchor xml:id="_officialsol_8cpp_source_1l00004"/>00004 
+<anchor xml:id="_officialsol_8cpp_source_1l00005"/><link linkend="_officialsol_8cpp_1a8d4ea4376a1012135e93cfacfa92fd97">00005</link> <link linkend="_officialsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba">ll</link>&#32;<link linkend="_officialsol_8cpp_1a8d4ea4376a1012135e93cfacfa92fd97">fib_fast</link>(<link linkend="_officialsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba">ll</link>&#32;<link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>,&#32;<link linkend="_officialsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba">ll</link>&#32;m)&#32;{
+<anchor xml:id="_officialsol_8cpp_source_1l00006"/>00006 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>&#32;&lt;=&#32;1)
+<anchor xml:id="_officialsol_8cpp_source_1l00007"/>00007 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>;
+<anchor xml:id="_officialsol_8cpp_source_1l00008"/>00008 
+<anchor xml:id="_officialsol_8cpp_source_1l00009"/>00009 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Pisano&#32;period</emphasis>
+<anchor xml:id="_officialsol_8cpp_source_1l00010"/>00010 &#32;&#32;&#32;&#32;<link linkend="_officialsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba">ll</link>&#32;remainder&#32;=&#32;0;
+<anchor xml:id="_officialsol_8cpp_source_1l00011"/>00011 
+<anchor xml:id="_officialsol_8cpp_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<link linkend="_officialsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba">ll</link>&#32;a&#32;=&#32;0,&#32;b&#32;=&#32;1,&#32;c;
+<anchor xml:id="_officialsol_8cpp_source_1l00013"/>00013 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<link linkend="_officialsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba">ll</link>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;<link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>&#32;-&#32;1;&#32;i++)&#32;{
+<anchor xml:id="_officialsol_8cpp_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;c&#32;=&#32;(a&#32;+&#32;b)&#32;%&#32;m;
+<anchor xml:id="_officialsol_8cpp_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;a&#32;=&#32;b;
+<anchor xml:id="_officialsol_8cpp_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;b&#32;=&#32;c;
+<anchor xml:id="_officialsol_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(a&#32;==&#32;0&#32;&amp;&amp;&#32;b&#32;==&#32;1)&#32;{
+<anchor xml:id="_officialsol_8cpp_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;remainder&#32;=&#32;i&#32;+&#32;1;
+<anchor xml:id="_officialsol_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_officialsol_8cpp_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_officialsol_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_officialsol_8cpp_source_1l00022"/>00022 
+<anchor xml:id="_officialsol_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<link linkend="_officialsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba">ll</link>&#32;new_n&#32;=&#32;<link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>&#32;%&#32;remainder;
+<anchor xml:id="_officialsol_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(new_n&#32;&lt;=&#32;1)
+<anchor xml:id="_officialsol_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;new_n;
+<anchor xml:id="_officialsol_8cpp_source_1l00026"/>00026 
+<anchor xml:id="_officialsol_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;a&#32;=&#32;0,&#32;b&#32;=&#32;1,&#32;c&#32;=&#32;a&#32;+&#32;b;
+<anchor xml:id="_officialsol_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<link linkend="_officialsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba">ll</link>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;new_n&#32;-&#32;1;&#32;i++)&#32;{
+<anchor xml:id="_officialsol_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;c&#32;=&#32;(a&#32;+&#32;b)&#32;%&#32;m;
+<anchor xml:id="_officialsol_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;a&#32;=&#32;b;
+<anchor xml:id="_officialsol_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;b&#32;=&#32;c;
+<anchor xml:id="_officialsol_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_officialsol_8cpp_source_1l00033"/>00033 
+<anchor xml:id="_officialsol_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;c&#32;%&#32;m;
+<anchor xml:id="_officialsol_8cpp_source_1l00035"/>00035 }
+<anchor xml:id="_officialsol_8cpp_source_1l00036"/>00036 
+<anchor xml:id="_officialsol_8cpp_source_1l00037"/><link linkend="_officialsol_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">00037</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_officialsol_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link>()&#32;{
+<anchor xml:id="_officialsol_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">long</emphasis>&#32;<emphasis role="keywordtype">long</emphasis>&#32;<link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>,&#32;m;
+<anchor xml:id="_officialsol_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;std::cin&#32;&gt;&gt;&#32;<link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>&#32;&gt;&gt;&#32;m;
+<anchor xml:id="_officialsol_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;std::cout&#32;&lt;&lt;&#32;get_fibonacci_huge_naive(n,&#32;m)&#32;&lt;&lt;&#32;&apos;\n&apos;;</emphasis>
+<anchor xml:id="_officialsol_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<link linkend="_officialsol_8cpp_1a8d4ea4376a1012135e93cfacfa92fd97">fib_fast</link>(<link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>,&#32;m)&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;\n&apos;</emphasis>;
+<anchor xml:id="_officialsol_8cpp_source_1l00042"/>00042 }
+</programlisting></section>

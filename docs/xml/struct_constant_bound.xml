@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="struct_constant_bound" kind="struct" language="C++" prot="public">
+    <compoundname>ConstantBound</compoundname>
+    <includes refid="testlib_8h" local="no">testlib.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_constant_bound_1a37ce6882c4711965f38109dd1e06f72a" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ConstantBound::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>ConstantBound::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2401" column="17" bodyfile="src/testlib.h" bodystart="2401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_constant_bound_1ab23ab3aaa958191925daabfaed1872ce" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ConstantBound::broken</definition>
+        <argsstring></argsstring>
+        <name>broken</name>
+        <qualifiedname>ConstantBound::broken</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2402" column="10" bodyfile="src/testlib.h" bodystart="2402" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_constant_bound_1a3d4ab449600fba6a75ad6c5f3584bade" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ConstantBound::adjust</definition>
+        <argsstring>(T t)</argsstring>
+        <name>adjust</name>
+        <qualifiedname>ConstantBound::adjust</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2405" column="10" bodyfile="src/testlib.h" bodystart="2405" bodyend="2418"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_constant_bound_1a6e761d07b67ec9dcf0ca867e261f1997" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ConstantBound::has_value</definition>
+        <argsstring>()</argsstring>
+        <name>has_value</name>
+        <qualifiedname>ConstantBound::has_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2420" column="10" bodyfile="src/testlib.h" bodystart="2420" bodyend="2422"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/testlib.h" line="2400" column="1" bodyfile="src/testlib.h" bodystart="2400" bodyend="2423"/>
+    <listofallmembers>
+      <member refid="struct_constant_bound_1a3d4ab449600fba6a75ad6c5f3584bade" prot="public" virt="non-virtual"><scope>ConstantBound</scope><name>adjust</name></member>
+      <member refid="struct_constant_bound_1ab23ab3aaa958191925daabfaed1872ce" prot="public" virt="non-virtual"><scope>ConstantBound</scope><name>broken</name></member>
+      <member refid="struct_constant_bound_1a6e761d07b67ec9dcf0ca867e261f1997" prot="public" virt="non-virtual"><scope>ConstantBound</scope><name>has_value</name></member>
+      <member refid="struct_constant_bound_1a37ce6882c4711965f38109dd1e06f72a" prot="public" virt="non-virtual"><scope>ConstantBound</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

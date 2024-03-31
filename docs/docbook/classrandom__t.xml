@@ -1,0 +1,448 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classrandom__t" xml:lang="en-US">
+<title>random_t Class Reference</title>
+<indexterm><primary>random_t</primary></indexterm>
+<para>
+<computeroutput>#include &lt;testlib.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classrandom__t_1a200954ff6ef69dbe691a1d9bc6f73543">random_t</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrandom__t_1a091210e52bff54e02afeda4d343e081d">setSeed</link> (int argc, char *argv[])</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrandom__t_1a5a4c52c8814df1402bd4451a54c62596">setSeed</link> (long long _seed)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classrandom__t_1adb0b3734666df2f17c7d60b33db87ad6">next</link> (const std::string &amp;ptrn)</para>
+</listitem>
+            <listitem><para>int <link linkend="_classrandom__t_1a6a2a9da34c281767ff0d2eba26ab10aa">next</link> (int <link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>)</para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_classrandom__t_1a1a80c042ba815ff52c119c52771170b7">next</link> (unsigned int <link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>)</para>
+</listitem>
+            <listitem><para>long long <link linkend="_classrandom__t_1a45c008fa70962b5f24cd3b964fe4685a">next</link> (long long <link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>)</para>
+</listitem>
+            <listitem><para>unsigned long long <link linkend="_classrandom__t_1a67074aceedb1cc4e0e632d766bdecb64">next</link> (unsigned long long <link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>)</para>
+</listitem>
+            <listitem><para>long <link linkend="_classrandom__t_1abfb4c6c332de59554b9ff536f739f6f6">next</link> (long <link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>)</para>
+</listitem>
+            <listitem><para>unsigned long <link linkend="_classrandom__t_1a92799ea85fc3b92554ca5d1c0696a48f">next</link> (unsigned long <link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>)</para>
+</listitem>
+            <listitem><para>int <link linkend="_classrandom__t_1a02e0d6d3acf4dc0348b7e6893a9db59a">next</link> (int from, int to)</para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_classrandom__t_1a96576e50564fa3380dcd950a8ae708b2">next</link> (unsigned int from, unsigned int to)</para>
+</listitem>
+            <listitem><para>long long <link linkend="_classrandom__t_1ac8efd50ad04ad63205279f8ad9f5cfd8">next</link> (long long from, long long to)</para>
+</listitem>
+            <listitem><para>unsigned long long <link linkend="_classrandom__t_1af906bf4a0d3f94dce8362e6ad91b73c1">next</link> (unsigned long long from, unsigned long long to)</para>
+</listitem>
+            <listitem><para>long <link linkend="_classrandom__t_1a94266e882ca443601604c27215b5b4b6">next</link> (long from, long to)</para>
+</listitem>
+            <listitem><para>unsigned long <link linkend="_classrandom__t_1a4d087e798a7882b0e06ea23bffee99b6">next</link> (unsigned long from, unsigned long to)</para>
+</listitem>
+            <listitem><para>double <link linkend="_classrandom__t_1af18b3616494fc94e3953b3c09fdf4c26">next</link> ()</para>
+</listitem>
+            <listitem><para>double <link linkend="_classrandom__t_1a025fe558e59c74de018660fcc106afa1">next</link> (double <link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>)</para>
+</listitem>
+            <listitem><para>double <link linkend="_classrandom__t_1a8066c6224478692f9df72ab92268cee9">next</link> (double from, double to)</para>
+</listitem>
+            <listitem><para>template&lt;typename Container &gt; </para><para>Container::value_type <link linkend="_classrandom__t_1a6ad67430ee6f8a5ba04d716239ad0001">any</link> (const Container &amp;c)</para>
+</listitem>
+            <listitem><para>template&lt;typename Iter &gt; </para><para>Iter::value_type <link linkend="_classrandom__t_1a56614b8ab0529e6fe2b17d50f9188184">any</link> (const Iter &amp;begin, const Iter &amp;end)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classrandom__t_1aacdef5e80fbdb890878a20d22bf819fd">next</link> (const char *<link linkend="_testlib_8h_1a1921b31564b858b45e94efff9e9d54bf">format</link>,...)</para>
+</listitem>
+            <listitem><para>int <link linkend="_classrandom__t_1af706ad8761d232b9a0fb0ab7ab4939c9">wnext</link> (int <link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>, int type)</para>
+</listitem>
+            <listitem><para>long long <link linkend="_classrandom__t_1a0ee4b3d21fe3f8e765cdb55593f6b698">wnext</link> (long long <link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>, int type)</para>
+</listitem>
+            <listitem><para>double <link linkend="_classrandom__t_1a45f6cc6e3ecc6677b66e5c756fe4bfe4">wnext</link> (double <link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>, int type)</para>
+</listitem>
+            <listitem><para>double <link linkend="_classrandom__t_1a040834a196ac9423950b70444fa9e815">wnext</link> (int type)</para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_classrandom__t_1a25bd3838df67822270e9b357ed99753b">wnext</link> (unsigned int <link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>, int type)</para>
+</listitem>
+            <listitem><para>unsigned long long <link linkend="_classrandom__t_1adc03869fcf6b80381e36e196d324a792">wnext</link> (unsigned long long <link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>, int type)</para>
+</listitem>
+            <listitem><para>long <link linkend="_classrandom__t_1a78d4e3af24a4d2dc4330d5cbcce6504a">wnext</link> (long <link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>, int type)</para>
+</listitem>
+            <listitem><para>unsigned long <link linkend="_classrandom__t_1a02872a7a16d8e5012c679b84b79a3c9f">wnext</link> (unsigned long <link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link>, int type)</para>
+</listitem>
+            <listitem><para>int <link linkend="_classrandom__t_1aa72f4c64829957376aad6cc9103d4201">wnext</link> (int from, int to, int type)</para>
+</listitem>
+            <listitem><para>int <link linkend="_classrandom__t_1a1b4c0bf6ead1bb3d8fe4dc2175dacdf4">wnext</link> (unsigned int from, unsigned int to, int type)</para>
+</listitem>
+            <listitem><para>long long <link linkend="_classrandom__t_1a5257c1a948d7ef92d664980e9a435fa5">wnext</link> (long long from, long long to, int type)</para>
+</listitem>
+            <listitem><para>unsigned long long <link linkend="_classrandom__t_1abd0776ec850dcd8f057699f03cd54d49">wnext</link> (unsigned long long from, unsigned long long to, int type)</para>
+</listitem>
+            <listitem><para>long <link linkend="_classrandom__t_1a501082f1d8f8ca94d9a952c822d7c992">wnext</link> (long from, long to, int type)</para>
+</listitem>
+            <listitem><para>unsigned long <link linkend="_classrandom__t_1a652d3dac50de94daaef2e69cc3ab8ede">wnext</link> (unsigned long from, unsigned long to, int type)</para>
+</listitem>
+            <listitem><para>double <link linkend="_classrandom__t_1a90cf6b1677f5c6f875f8c88a5933ea40">wnext</link> (double from, double to, int type)</para>
+</listitem>
+            <listitem><para>template&lt;typename Container &gt; </para><para>Container::value_type <link linkend="_classrandom__t_1a9f733f388bbb553a9afabcbbfc68888d">wany</link> (const Container &amp;c, int type)</para>
+</listitem>
+            <listitem><para>template&lt;typename Iter &gt; </para><para>Iter::value_type <link linkend="_classrandom__t_1aa988d6e195c81a659985aa9714ee5607">wany</link> (const Iter &amp;begin, const Iter &amp;end, int type)</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename E &gt; </para><para>std::vector&lt; E &gt; <link linkend="_classrandom__t_1a8307bf13307e17694c4d38f76e1457e0">perm</link> (T size, E first)</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>std::vector&lt; T &gt; <link linkend="_classrandom__t_1ae7d1ae42c9e6f534a871b0e38a6b5743">perm</link> (T size)</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>std::vector&lt; T &gt; <link linkend="_classrandom__t_1a025458a94bf9aa69b265ba6df283f3f5">distinct</link> (int size, T from, T to)</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>std::vector&lt; T &gt; <link linkend="_classrandom__t_1a1333938e6448e31ea379d246a7f007cb">distinct</link> (int size, T upper)</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>std::vector&lt; T &gt; <link linkend="_classrandom__t_1a7aa0ff6ea67a8e4e8f13caa5ab74f445">partition</link> (int size, T sum, T min_part)</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>std::vector&lt; T &gt; <link linkend="_classrandom__t_1a2a9ceb1c9f011f481d967f162f16d53a">partition</link> (int size, T sum)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static int <link linkend="_classrandom__t_1ac5cf08808bff4c4ec04ca387e2764868">version</link> = -1</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_testlib_8h_source_1l00749">749</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classrandom__t_1a200954ff6ef69dbe691a1d9bc6f73543"/><section>
+    <title>random_t()</title>
+<indexterm><primary>random_t</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>random_t</secondary></indexterm>
+<para><computeroutput>random_t::random_t ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00778">778</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classrandom__t_1a6ad67430ee6f8a5ba04d716239ad0001"/><section>
+    <title>any()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>any</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>any</secondary></indexterm>
+<computeroutput>template&lt;typename Container &gt; </computeroutput><para><computeroutput>Container::value_type random_t::any (const Container &amp; c)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00936">936</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a56614b8ab0529e6fe2b17d50f9188184"/><section>
+    <title>any()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>any</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>any</secondary></indexterm>
+<computeroutput>template&lt;typename Iter &gt; </computeroutput><para><computeroutput>Iter::value_type random_t::any (const Iter &amp; begin, const Iter &amp; end)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00947">947</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a025458a94bf9aa69b265ba6df283f3f5"/><section>
+    <title>distinct()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>distinct</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>distinct</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>std::vector&lt; T &gt; random_t::distinct (int size, T from, T to)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01184">1184</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a1333938e6448e31ea379d246a7f007cb"/><section>
+    <title>distinct()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>distinct</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>distinct</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>std::vector&lt; T &gt; random_t::distinct (int size, T upper)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01222">1222</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1af18b3616494fc94e3953b3c09fdf4c26"/><section>
+    <title>next()<computeroutput>[1/17]</computeroutput></title>
+<indexterm><primary>next</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>double random_t::next ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00914">914</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1aacdef5e80fbdb890878a20d22bf819fd"/><section>
+    <title>next()<computeroutput>[2/17]</computeroutput></title>
+<indexterm><primary>next</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>std::string random_t::next (const char * format,  ...)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00960">960</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1adb0b3734666df2f17c7d60b33db87ad6"/><section>
+    <title>next()<computeroutput>[3/17]</computeroutput></title>
+<indexterm><primary>next</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>std::string random_t::next (const std::string &amp; ptrn)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00806">806</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a8066c6224478692f9df72ab92268cee9"/><section>
+    <title>next()<computeroutput>[4/17]</computeroutput></title>
+<indexterm><primary>next</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>double random_t::next (double from, double to)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00928">928</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a025fe558e59c74de018660fcc106afa1"/><section>
+    <title>next()<computeroutput>[5/17]</computeroutput></title>
+<indexterm><primary>next</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>double random_t::next (double n)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00921">921</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a02e0d6d3acf4dc0348b7e6893a9db59a"/><section>
+    <title>next()<computeroutput>[6/17]</computeroutput></title>
+<indexterm><primary>next</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>int random_t::next (int from, int to)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00880">880</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a6a2a9da34c281767ff0d2eba26ab10aa"/><section>
+    <title>next()<computeroutput>[7/17]</computeroutput></title>
+<indexterm><primary>next</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>int random_t::next (int n)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00821">821</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a94266e882ca443601604c27215b5b4b6"/><section>
+    <title>next()<computeroutput>[8/17]</computeroutput></title>
+<indexterm><primary>next</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>long random_t::next (long from, long to)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00902">902</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1ac8efd50ad04ad63205279f8ad9f5cfd8"/><section>
+    <title>next()<computeroutput>[9/17]</computeroutput></title>
+<indexterm><primary>next</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>long long random_t::next (long long from, long long to)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00890">890</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a45c008fa70962b5f24cd3b964fe4685a"/><section>
+    <title>next()<computeroutput>[10/17]</computeroutput></title>
+<indexterm><primary>next</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>long long random_t::next (long long n)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00846">846</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1abfb4c6c332de59554b9ff536f739f6f6"/><section>
+    <title>next()<computeroutput>[11/17]</computeroutput></title>
+<indexterm><primary>next</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>long random_t::next (long n)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00868">868</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a96576e50564fa3380dcd950a8ae708b2"/><section>
+    <title>next()<computeroutput>[12/17]</computeroutput></title>
+<indexterm><primary>next</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>unsigned int random_t::next (unsigned int from, unsigned int to)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00885">885</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a1a80c042ba815ff52c119c52771170b7"/><section>
+    <title>next()<computeroutput>[13/17]</computeroutput></title>
+<indexterm><primary>next</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>unsigned int random_t::next (unsigned int n)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00839">839</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a4d087e798a7882b0e06ea23bffee99b6"/><section>
+    <title>next()<computeroutput>[14/17]</computeroutput></title>
+<indexterm><primary>next</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>unsigned long random_t::next (unsigned long from, unsigned long to)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00907">907</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1af906bf4a0d3f94dce8362e6ad91b73c1"/><section>
+    <title>next()<computeroutput>[15/17]</computeroutput></title>
+<indexterm><primary>next</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>unsigned long long random_t::next (unsigned long long from, unsigned long long to)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00895">895</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a67074aceedb1cc4e0e632d766bdecb64"/><section>
+    <title>next()<computeroutput>[16/17]</computeroutput></title>
+<indexterm><primary>next</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>unsigned long long random_t::next (unsigned long long n)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00861">861</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a92799ea85fc3b92554ca5d1c0696a48f"/><section>
+    <title>next()<computeroutput>[17/17]</computeroutput></title>
+<indexterm><primary>next</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>unsigned long random_t::next (unsigned long n)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00873">873</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a2a9ceb1c9f011f481d967f162f16d53a"/><section>
+    <title>partition()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>partition</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>partition</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>std::vector&lt; T &gt; random_t::partition (int size, T sum)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01282">1282</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a7aa0ff6ea67a8e4e8f13caa5ab74f445"/><section>
+    <title>partition()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>partition</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>partition</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>std::vector&lt; T &gt; random_t::partition (int size, T sum, T min_part)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01238">1238</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1ae7d1ae42c9e6f534a871b0e38a6b5743"/><section>
+    <title>perm()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>perm</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>perm</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>std::vector&lt; T &gt; random_t::perm (T size)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01178">1178</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a8307bf13307e17694c4d38f76e1457e0"/><section>
+    <title>perm()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>perm</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>perm</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename E &gt; </computeroutput><para><computeroutput>std::vector&lt; E &gt; random_t::perm (T size, E first)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01161">1161</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a091210e52bff54e02afeda4d343e081d"/><section>
+    <title>setSeed()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>setSeed</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>setSeed</secondary></indexterm>
+<para><computeroutput>void random_t::setSeed (int argc, char * argv[])<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00783">783</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a5a4c52c8814df1402bd4451a54c62596"/><section>
+    <title>setSeed()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>setSeed</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>setSeed</secondary></indexterm>
+<para><computeroutput>void random_t::setSeed (long long _seed)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00798">798</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a9f733f388bbb553a9afabcbbfc68888d"/><section>
+    <title>wany()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>wany</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>wany</secondary></indexterm>
+<computeroutput>template&lt;typename Container &gt; </computeroutput><para><computeroutput>Container::value_type random_t::wany (const Container &amp; c, int type)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01138">1138</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1aa988d6e195c81a659985aa9714ee5607"/><section>
+    <title>wany()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>wany</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>wany</secondary></indexterm>
+<computeroutput>template&lt;typename Iter &gt; </computeroutput><para><computeroutput>Iter::value_type random_t::wany (const Iter &amp; begin, const Iter &amp; end, int type)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01149">1149</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a90cf6b1677f5c6f875f8c88a5933ea40"/><section>
+    <title>wnext()<computeroutput>[1/15]</computeroutput></title>
+<indexterm><primary>wnext</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>wnext</secondary></indexterm>
+<para><computeroutput>double random_t::wnext (double from, double to, int type)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01130">1130</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a45f6cc6e3ecc6677b66e5c756fe4bfe4"/><section>
+    <title>wnext()<computeroutput>[2/15]</computeroutput></title>
+<indexterm><primary>wnext</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>wnext</secondary></indexterm>
+<para><computeroutput>double random_t::wnext (double n, int type)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01027">1027</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1aa72f4c64829957376aad6cc9103d4201"/><section>
+    <title>wnext()<computeroutput>[3/15]</computeroutput></title>
+<indexterm><primary>wnext</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>wnext</secondary></indexterm>
+<para><computeroutput>int random_t::wnext (int from, int to, int type)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01087">1087</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1af706ad8761d232b9a0fb0ab7ab4939c9"/><section>
+    <title>wnext()<computeroutput>[4/15]</computeroutput></title>
+<indexterm><primary>wnext</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>wnext</secondary></indexterm>
+<para><computeroutput>int random_t::wnext (int n, int type)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00973">973</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a040834a196ac9423950b70444fa9e815"/><section>
+    <title>wnext()<computeroutput>[5/15]</computeroutput></title>
+<indexterm><primary>wnext</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>wnext</secondary></indexterm>
+<para><computeroutput>double random_t::wnext (int type)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01054">1054</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a501082f1d8f8ca94d9a952c822d7c992"/><section>
+    <title>wnext()<computeroutput>[6/15]</computeroutput></title>
+<indexterm><primary>wnext</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>wnext</secondary></indexterm>
+<para><computeroutput>long random_t::wnext (long from, long to, int type)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01116">1116</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a5257c1a948d7ef92d664980e9a435fa5"/><section>
+    <title>wnext()<computeroutput>[7/15]</computeroutput></title>
+<indexterm><primary>wnext</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>wnext</secondary></indexterm>
+<para><computeroutput>long long random_t::wnext (long long from, long long to, int type)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01101">1101</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a0ee4b3d21fe3f8e765cdb55593f6b698"/><section>
+    <title>wnext()<computeroutput>[8/15]</computeroutput></title>
+<indexterm><primary>wnext</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>wnext</secondary></indexterm>
+<para><computeroutput>long long random_t::wnext (long long n, int type)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01000">1000</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a78d4e3af24a4d2dc4330d5cbcce6504a"/><section>
+    <title>wnext()<computeroutput>[9/15]</computeroutput></title>
+<indexterm><primary>wnext</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>wnext</secondary></indexterm>
+<para><computeroutput>long random_t::wnext (long n, int type)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01074">1074</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a1b4c0bf6ead1bb3d8fe4dc2175dacdf4"/><section>
+    <title>wnext()<computeroutput>[10/15]</computeroutput></title>
+<indexterm><primary>wnext</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>wnext</secondary></indexterm>
+<para><computeroutput>int random_t::wnext (unsigned int from, unsigned int to, int type)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01094">1094</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a25bd3838df67822270e9b357ed99753b"/><section>
+    <title>wnext()<computeroutput>[11/15]</computeroutput></title>
+<indexterm><primary>wnext</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>wnext</secondary></indexterm>
+<para><computeroutput>unsigned int random_t::wnext (unsigned int n, int type)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01059">1059</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a652d3dac50de94daaef2e69cc3ab8ede"/><section>
+    <title>wnext()<computeroutput>[12/15]</computeroutput></title>
+<indexterm><primary>wnext</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>wnext</secondary></indexterm>
+<para><computeroutput>unsigned long random_t::wnext (unsigned long from, unsigned long to, int type)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01123">1123</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1abd0776ec850dcd8f057699f03cd54d49"/><section>
+    <title>wnext()<computeroutput>[13/15]</computeroutput></title>
+<indexterm><primary>wnext</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>wnext</secondary></indexterm>
+<para><computeroutput>unsigned long long random_t::wnext (unsigned long long from, unsigned long long to, int type)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01108">1108</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1adc03869fcf6b80381e36e196d324a792"/><section>
+    <title>wnext()<computeroutput>[14/15]</computeroutput></title>
+<indexterm><primary>wnext</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>wnext</secondary></indexterm>
+<para><computeroutput>unsigned long long random_t::wnext (unsigned long long n, int type)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01066">1066</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classrandom__t_1a02872a7a16d8e5012c679b84b79a3c9f"/><section>
+    <title>wnext()<computeroutput>[15/15]</computeroutput></title>
+<indexterm><primary>wnext</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>wnext</secondary></indexterm>
+<para><computeroutput>unsigned long random_t::wnext (unsigned long n, int type)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01079">1079</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classrandom__t_1ac5cf08808bff4c4ec04ca387e2764868"/><section>
+    <title>version</title>
+<indexterm><primary>version</primary><secondary>random_t</secondary></indexterm>
+<indexterm><primary>random_t</primary><secondary>version</secondary></indexterm>
+<para><computeroutput>int random_t::version = -1<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l00775">775</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/<link linkend="_testlib_8h">testlib.h</link></section>
+</section>

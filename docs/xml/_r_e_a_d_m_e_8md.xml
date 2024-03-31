@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;!--</highlight></codeline>
+<codeline><highlight class="normal">&lt;p<sp/>align=&quot;center&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;img<sp/>src=&quot;sample.png&quot;/&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;/p&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">--&gt;</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Fibonacci<sp/>Modulo<sp/>Problem</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Problem<sp/>Statement</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>are<sp/>given<sp/>two<sp/>integers,<sp/>**n**<sp/>and<sp/>**m**,<sp/>and<sp/>you<sp/>need<sp/>to<sp/>find<sp/>the<sp/>**nth<sp/>Fibonacci<sp/>number<sp/>modulo<sp/>m**.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Approach</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>naive<sp/>approach<sp/>to<sp/>find<sp/>the<sp/>Fibonacci<sp/>number<sp/>at<sp/>position<sp/>**n**<sp/>and<sp/>then<sp/>taking<sp/>the<sp/>modulo<sp/>**m**<sp/>might<sp/>be<sp/>inefficient</highlight></codeline>
+<codeline><highlight class="normal">for<sp/>large<sp/>values<sp/>of<sp/>**n**.<sp/>However,<sp/>you<sp/>can<sp/>optimize<sp/>the<sp/>solution<sp/>using<sp/>the<sp/>Pisano<sp/>Period.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Pisano<sp/>Period</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>Pisano<sp/>period,<sp/>also<sp/>known<sp/>as<sp/>the<sp/>Fibonacci<sp/>period<sp/>or<sp/>cycle,<sp/>refers<sp/>to<sp/>the<sp/>periodic<sp/>and<sp/>repetitive<sp/>nature<sp/>of<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">remainders<sp/>when<sp/>the<sp/>Fibonacci<sp/>sequence<sp/>is<sp/>divided<sp/>by<sp/>a<sp/>positive<sp/>integer<sp/>called<sp/>the<sp/>&quot;modulus.&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[read<sp/>more](https://en.wikipedia.org/wiki/Pisano_period)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Fibonacci<sp/>Sequence</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>Fibonacci<sp/>sequence<sp/>is<sp/>a<sp/>series<sp/>of<sp/>numbers<sp/>where<sp/>each<sp/>number<sp/>is<sp/>the<sp/>sum<sp/>of<sp/>the<sp/>two<sp/>preceding<sp/>ones,<sp/>usually<sp/>starting</highlight></codeline>
+<codeline><highlight class="normal">with<sp/>0<sp/>and<sp/>1.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Example<sp/>Fibonacci<sp/>sequence:<sp/>0,<sp/>1,<sp/>1,<sp/>2,<sp/>3,<sp/>5,<sp/>8,<sp/>13,<sp/>21,<sp/>34,<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Pisano<sp/>Period</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">When<sp/>the<sp/>Fibonacci<sp/>sequence<sp/>is<sp/>divided<sp/>by<sp/>a<sp/>modulus<sp/>(a<sp/>positive<sp/>integer),<sp/>the<sp/>remainders<sp/>exhibit<sp/>a<sp/>periodic<sp/>pattern</highlight></codeline>
+<codeline><highlight class="normal">known<sp/>as<sp/>the<sp/>Pisano<sp/>period.<sp/>The<sp/>length<sp/>of<sp/>this<sp/>period<sp/>depends<sp/>on<sp/>the<sp/>modulus<sp/>chosen.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>Pisano<sp/>period<sp/>is<sp/>useful<sp/>in<sp/>various<sp/>applications,<sp/>especially<sp/>in<sp/>problems<sp/>related<sp/>to<sp/>number<sp/>theory<sp/>and<sp/>modular</highlight></codeline>
+<codeline><highlight class="normal">arithmetic.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Formula</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Given<sp/>a<sp/>modulus<sp/>&apos;m,&apos;<sp/>the<sp/>Pisano<sp/>period<sp/>is<sp/>denoted<sp/>as<sp/>π(m).<sp/>The<sp/>period<sp/>starts<sp/>with<sp/>the<sp/>pair<sp/>(0,<sp/>1)<sp/>and<sp/>repeats<sp/>after<sp/>a</highlight></codeline>
+<codeline><highlight class="normal">certain<sp/>number<sp/>of<sp/>terms.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Example</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>example,<sp/>if<sp/>the<sp/>modulus<sp/>is<sp/>5:</highlight></codeline>
+<codeline><highlight class="normal">Fibonacci<sp/>sequence<sp/>modulo<sp/>5</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>0,<sp/>1,<sp/>1,<sp/>2,<sp/>3,<sp/>0,<sp/>3,<sp/>3,<sp/>1,<sp/>4,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>0,<sp/>4,<sp/>4,<sp/>3,<sp/>2,<sp/>0,<sp/>2,<sp/>2,<sp/>4,<sp/>1,</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>---<sp/>Pisano<sp/>period<sp/>starts<sp/>here<sp/>---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>0,<sp/>1,<sp/>1,<sp/>2,<sp/>3,<sp/>0,<sp/>3,<sp/>3,<sp/>1,<sp/>4,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>0,<sp/>4,<sp/>4,<sp/>3,<sp/>2,<sp/>0,<sp/>2,<sp/>2,<sp/>4,<sp/>1,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>0,<sp/>1,<sp/>1,<sp/>2,<sp/>3,<sp/>0,<sp/>3,<sp/>3,<sp/>1,<sp/>4</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...<sp/>and<sp/>so<sp/>on</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>this<sp/>case,<sp/>the<sp/>Pisano<sp/>period<sp/>(π(5))<sp/>is<sp/>20,<sp/>as<sp/>the<sp/>sequence<sp/>starts<sp/>repeating<sp/>after<sp/>20<sp/>terms.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Code<sp/>Explanation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Below<sp/>is<sp/>the<sp/>C++<sp/>code<sp/>implementing<sp/>this<sp/>approach:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;iostream&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#define<sp/>ll<sp/>long<sp/>long</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">ll<sp/>fib_fast(ll<sp/>n,<sp/>ll<sp/>m)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(n<sp/>&lt;=<sp/>1)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>n;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Pisano<sp/>period</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ll<sp/>remainder<sp/>=<sp/>0;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ll<sp/>a<sp/>=<sp/>0,<sp/>b<sp/>=<sp/>1,<sp/>c;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(ll<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n<sp/>-<sp/>1;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c<sp/>=<sp/>(a<sp/>+<sp/>b)<sp/>%<sp/>m;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>b;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>c;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>b<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remainder<sp/>=<sp/>i<sp/>+<sp/>1;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ll<sp/>new_n<sp/>=<sp/>n<sp/>%<sp/>remainder;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(new_n<sp/>&lt;=<sp/>1)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>new_n;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>a<sp/>=<sp/>0,<sp/>b<sp/>=<sp/>1,<sp/>c<sp/>=<sp/>a<sp/>+<sp/>b;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(ll<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>new_n<sp/>-<sp/>1;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c<sp/>=<sp/>(a<sp/>+<sp/>b)<sp/>%<sp/>m;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>b;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>c;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>c<sp/>%<sp/>m;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>long<sp/>long<sp/>n,<sp/>m;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::cin<sp/>&gt;&gt;<sp/>n<sp/>&gt;&gt;<sp/>m;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>fib_fast(n,<sp/>m)<sp/>&lt;&lt;<sp/>&apos;\n&apos;;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Input</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>program<sp/>takes<sp/>two<sp/>inputs,<sp/>**n**<sp/>and<sp/>**m**,<sp/>representing<sp/>the<sp/>position<sp/>of<sp/>the<sp/>Fibonacci<sp/>number<sp/>and<sp/>the<sp/>modulo<sp/>value.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Output</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>program<sp/>outputs<sp/>the<sp/>**nth<sp/>Fibonacci<sp/>number<sp/>modulo<sp/>m**.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Time<sp/>Complexity</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>time<sp/>complexity<sp/>of<sp/>this<sp/>solution<sp/>is<sp/>**O(remainder<sp/>+<sp/>new_n)**,<sp/>where<sp/>**remainder**<sp/>is<sp/>the<sp/>Pisano<sp/>Period<sp/>and<sp/>**new_n**</highlight></codeline>
+<codeline><highlight class="normal">is<sp/>the<sp/>position<sp/>of<sp/>the<sp/>Fibonacci<sp/>number<sp/>within<sp/>the<sp/>Pisano<sp/>Period.<sp/>This<sp/>is<sp/>a<sp/>significant<sp/>optimization<sp/>over<sp/>the<sp/>naive</highlight></codeline>
+<codeline><highlight class="normal">approach.</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

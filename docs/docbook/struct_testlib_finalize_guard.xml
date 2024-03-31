@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_testlib_finalize_guard" xml:lang="en-US">
+<title>TestlibFinalizeGuard Struct Reference</title>
+<indexterm><primary>TestlibFinalizeGuard</primary></indexterm>
+<para>
+<computeroutput>#include &lt;testlib.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_testlib_finalize_guard_1ae2ec335476d755ccc7ef9d6b546d7aaa">TestlibFinalizeGuard</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_struct_testlib_finalize_guard_1a45a3464e297663a49405ec2218a81565">~TestlibFinalizeGuard</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_testlib_finalize_guard_1a59c31cc40e9f8a903d9da51c3cdd5186">quitCount</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_testlib_finalize_guard_1af46c17590b5a5f22927cf208e00cb704">readEofCount</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static bool <link linkend="_struct_testlib_finalize_guard_1aea38818fd90c897e5e648db3a9cf4f00">alive</link> = true</para>
+</listitem>
+            <listitem><para>static bool <link linkend="_struct_testlib_finalize_guard_1a4b4f03c69663c87c321fb1aafb07e9b1">registered</link> = false</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_testlib_8h_source_1l02770">2770</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_testlib_finalize_guard_1ae2ec335476d755ccc7ef9d6b546d7aaa"/><section>
+    <title>TestlibFinalizeGuard()</title>
+<indexterm><primary>TestlibFinalizeGuard</primary><secondary>TestlibFinalizeGuard</secondary></indexterm>
+<indexterm><primary>TestlibFinalizeGuard</primary><secondary>TestlibFinalizeGuard</secondary></indexterm>
+<para><computeroutput>TestlibFinalizeGuard::TestlibFinalizeGuard ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02776">2776</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_testlib_finalize_guard_1a45a3464e297663a49405ec2218a81565"/><section>
+    <title>~TestlibFinalizeGuard()</title>
+<indexterm><primary>~TestlibFinalizeGuard</primary><secondary>TestlibFinalizeGuard</secondary></indexterm>
+<indexterm><primary>TestlibFinalizeGuard</primary><secondary>~TestlibFinalizeGuard</secondary></indexterm>
+<para><computeroutput>TestlibFinalizeGuard::~TestlibFinalizeGuard ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02780">2780</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_testlib_finalize_guard_1aea38818fd90c897e5e648db3a9cf4f00"/><section>
+    <title>alive</title>
+<indexterm><primary>alive</primary><secondary>TestlibFinalizeGuard</secondary></indexterm>
+<indexterm><primary>TestlibFinalizeGuard</primary><secondary>alive</secondary></indexterm>
+<para><computeroutput>bool TestlibFinalizeGuard::alive = true<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02771">2771</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_testlib_finalize_guard_1a59c31cc40e9f8a903d9da51c3cdd5186"/><section>
+    <title>quitCount</title>
+<indexterm><primary>quitCount</primary><secondary>TestlibFinalizeGuard</secondary></indexterm>
+<indexterm><primary>TestlibFinalizeGuard</primary><secondary>quitCount</secondary></indexterm>
+<para><computeroutput>int TestlibFinalizeGuard::quitCount</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02774">2774</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_testlib_finalize_guard_1af46c17590b5a5f22927cf208e00cb704"/><section>
+    <title>readEofCount</title>
+<indexterm><primary>readEofCount</primary><secondary>TestlibFinalizeGuard</secondary></indexterm>
+<indexterm><primary>TestlibFinalizeGuard</primary><secondary>readEofCount</secondary></indexterm>
+<para><computeroutput>int TestlibFinalizeGuard::readEofCount</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02774">2774</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_testlib_finalize_guard_1a4b4f03c69663c87c321fb1aafb07e9b1"/><section>
+    <title>registered</title>
+<indexterm><primary>registered</primary><secondary>TestlibFinalizeGuard</secondary></indexterm>
+<indexterm><primary>TestlibFinalizeGuard</primary><secondary>registered</secondary></indexterm>
+<para><computeroutput>bool TestlibFinalizeGuard::registered = false<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02772">2772</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+src/<link linkend="_testlib_8h">testlib.h</link></section>
+</section>

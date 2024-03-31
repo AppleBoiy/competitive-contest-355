@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classpattern" xml:lang="en-US">
+<title>pattern Class Reference</title>
+<indexterm><primary>pattern</primary></indexterm>
+<para>
+<computeroutput>#include &lt;testlib.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classpattern_1a40258f871a5d68827191054e3e845ccf">pattern</link> (std::string s)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classpattern_1afc240d1630f47a451af22aff8dbf073d">next</link> (<link linkend="_classrandom__t">random_t</link> &amp;<link linkend="_testlib_8h_1a5743b8b2167a45883185605a8d8e10ce">rnd</link>) const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classpattern_1ab4c557a012185d453ddf8730f7a98dc0">matches</link> (const std::string &amp;s) const</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classpattern_1a4795cb9cb1b3b10c551fdce03608786a">src</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_testlib_8h_source_1l00713">713</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classpattern_1a40258f871a5d68827191054e3e845ccf"/><section>
+    <title>pattern()</title>
+<indexterm><primary>pattern</primary><secondary>pattern</secondary></indexterm>
+<indexterm><primary>pattern</primary><secondary>pattern</secondary></indexterm>
+<para><computeroutput>pattern::pattern (std::string s)</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01524">1524</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classpattern_1ab4c557a012185d453ddf8730f7a98dc0"/><section>
+    <title>matches()</title>
+<indexterm><primary>matches</primary><secondary>pattern</secondary></indexterm>
+<indexterm><primary>pattern</primary><secondary>matches</secondary></indexterm>
+<para><computeroutput>bool pattern::matches (const std::string &amp; s) const</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01294">1294</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classpattern_1afc240d1630f47a451af22aff8dbf073d"/><section>
+    <title>next()</title>
+<indexterm><primary>next</primary><secondary>pattern</secondary></indexterm>
+<indexterm><primary>pattern</primary><secondary>next</secondary></indexterm>
+<para><computeroutput>std::string pattern::next (<link linkend="_classrandom__t">random_t</link> &amp; rnd) const</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01369">1369</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_classpattern_1a4795cb9cb1b3b10c551fdce03608786a"/><section>
+    <title>src()</title>
+<indexterm><primary>src</primary><secondary>pattern</secondary></indexterm>
+<indexterm><primary>pattern</primary><secondary>src</secondary></indexterm>
+<para><computeroutput>std::string pattern::src ( ) const</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l01344">1344</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/<link linkend="_testlib_8h">testlib.h</link></section>
+</section>

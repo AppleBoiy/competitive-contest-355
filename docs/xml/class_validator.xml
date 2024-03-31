@@ -1,0 +1,797 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_validator" kind="class" language="C++" prot="public">
+    <compoundname>Validator</compoundname>
+    <includes refid="testlib_8h" local="no">testlib.h</includes>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_validator_1a06f23562aad90e807617aa54f26df8b5" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref> std::string</type>
+        <definition>const std::string Validator::TEST_MARKUP_HEADER</definition>
+        <argsstring></argsstring>
+        <name>TEST_MARKUP_HEADER</name>
+        <qualifiedname>Validator::TEST_MARKUP_HEADER</qualifiedname>
+        <initializer>= &quot;MU\xF3\x01&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2434" column="30" bodyfile="src/testlib.h" bodystart="2434" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_validator_1a917b345a8e2d9e4342aa517a73323678" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref> std::string</type>
+        <definition>const std::string Validator::TEST_CASE_OPEN_TAG</definition>
+        <argsstring></argsstring>
+        <name>TEST_CASE_OPEN_TAG</name>
+        <qualifiedname>Validator::TEST_CASE_OPEN_TAG</qualifiedname>
+        <initializer>= &quot;!c&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2435" column="30" bodyfile="src/testlib.h" bodystart="2435" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_validator_1a1f86676c60c1d7ebb7fe9ac0bfdfa86f" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref> std::string</type>
+        <definition>const std::string Validator::TEST_CASE_CLOSE_TAG</definition>
+        <argsstring></argsstring>
+        <name>TEST_CASE_CLOSE_TAG</name>
+        <qualifiedname>Validator::TEST_CASE_CLOSE_TAG</qualifiedname>
+        <initializer>= &quot;;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2436" column="30" bodyfile="src/testlib.h" bodystart="2436" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_validator_1a13f25381a860f67d33f1d5baf71fbebd" prot="private" static="no" mutable="no">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">bool</ref></type>
+        <definition>bool Validator::_initialized</definition>
+        <argsstring></argsstring>
+        <name>_initialized</name>
+        <qualifiedname>Validator::_initialized</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2438" column="10" bodyfile="src/testlib.h" bodystart="2438" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_validator_1a89dc20b9e5a3c0fd89f508e51c27e8f1" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Validator::_testset</definition>
+        <argsstring></argsstring>
+        <name>_testset</name>
+        <qualifiedname>Validator::_testset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2439" column="17" bodyfile="src/testlib.h" bodystart="2439" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_validator_1a76b6453649ae255cd98c6a58dc83c678" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Validator::_group</definition>
+        <argsstring></argsstring>
+        <name>_group</name>
+        <qualifiedname>Validator::_group</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2440" column="17" bodyfile="src/testlib.h" bodystart="2440" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_validator_1a23cb826d945fbe92585e2d93811bb967" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Validator::_testOverviewLogFileName</definition>
+        <argsstring></argsstring>
+        <name>_testOverviewLogFileName</name>
+        <qualifiedname>Validator::_testOverviewLogFileName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2442" column="17" bodyfile="src/testlib.h" bodystart="2442" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_validator_1a0c7f5941106a13ed8587621cfe091220" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Validator::_testMarkupFileName</definition>
+        <argsstring></argsstring>
+        <name>_testMarkupFileName</name>
+        <qualifiedname>Validator::_testMarkupFileName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2443" column="17" bodyfile="src/testlib.h" bodystart="2443" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_validator_1acbb628b231b76f90a496c016e8814950" prot="private" static="no" mutable="no">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">int</ref></type>
+        <definition>int Validator::_testCase</definition>
+        <argsstring></argsstring>
+        <name>_testCase</name>
+        <qualifiedname>Validator::_testCase</qualifiedname>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2444" column="9" bodyfile="src/testlib.h" bodystart="2444" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_validator_1ae279db2861f9038614a5dcc7424ef4ac" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Validator::_testCaseFileName</definition>
+        <argsstring></argsstring>
+        <name>_testCaseFileName</name>
+        <qualifiedname>Validator::_testCaseFileName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2445" column="17" bodyfile="src/testlib.h" bodystart="2445" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_validator_1acc8cb3a5570af775ed0f088d17d363e9" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, <ref refid="struct_validator_bounds_hit" kindref="compound">ValidatorBoundsHit</ref> &gt;</type>
+        <definition>std::map&lt;std::string, ValidatorBoundsHit&gt; Validator::_boundsHitByVariableName</definition>
+        <argsstring></argsstring>
+        <name>_boundsHitByVariableName</name>
+        <qualifiedname>Validator::_boundsHitByVariableName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2447" column="14" bodyfile="src/testlib.h" bodystart="2447" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_validator_1a400a67db7ead87f41344e16b3322db25" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, <ref refid="struct_constant_bounds" kindref="compound">ConstantBounds</ref> &gt;</type>
+        <definition>std::map&lt;std::string, ConstantBounds&gt; Validator::_constantBoundsByVariableName</definition>
+        <argsstring></argsstring>
+        <name>_constantBoundsByVariableName</name>
+        <qualifiedname>Validator::_constantBoundsByVariableName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2448" column="14" bodyfile="src/testlib.h" bodystart="2448" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_validator_1aebc4f0d425decc368d3f5be005243713" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; Validator::_features</definition>
+        <argsstring></argsstring>
+        <name>_features</name>
+        <qualifiedname>Validator::_features</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2449" column="14" bodyfile="src/testlib.h" bodystart="2449" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_validator_1ad04a6eaaef0c62c499a4e9b4e668543f" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; Validator::_hitFeatures</definition>
+        <argsstring></argsstring>
+        <name>_hitFeatures</name>
+        <qualifiedname>Validator::_hitFeatures</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2450" column="14" bodyfile="src/testlib.h" bodystart="2450" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_validator_1ab559ec268edfe5fb5b97f3c0dcce4441" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; Validator::_variables</definition>
+        <argsstring></argsstring>
+        <name>_variables</name>
+        <qualifiedname>Validator::_variables</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2451" column="14" bodyfile="src/testlib.h" bodystart="2451" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_validator_1ab03fd3088629e55966304c1d437abb5e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">bool</ref></type>
+        <definition>bool Validator::isVariableNameBoundsAnalyzable</definition>
+        <argsstring>(const std::string &amp;variableName)</argsstring>
+        <name>isVariableNameBoundsAnalyzable</name>
+        <qualifiedname>Validator::isVariableNameBoundsAnalyzable</qualifiedname>
+        <param>
+          <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref> std::string &amp;</type>
+          <declname>variableName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2453" column="10" bodyfile="src/testlib.h" bodystart="2453" bodyend="2458"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1aa2c9c596f58c9d6b2607391b8d89e8ad" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">bool</ref></type>
+        <definition>bool Validator::isFeatureNameAnalyzable</definition>
+        <argsstring>(const std::string &amp;featureName)</argsstring>
+        <name>isFeatureNameAnalyzable</name>
+        <qualifiedname>Validator::isFeatureNameAnalyzable</qualifiedname>
+        <param>
+          <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref> std::string &amp;</type>
+          <declname>featureName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2460" column="10" bodyfile="src/testlib.h" bodystart="2460" bodyend="2465"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_validator_1a5059febd30a909b60107c591fe72eaca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Validator::Validator</definition>
+        <argsstring>()</argsstring>
+        <name>Validator</name>
+        <qualifiedname>Validator::Validator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2468" column="5" bodyfile="src/testlib.h" bodystart="2468" bodyend="2469"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1aeb0b49097c1087062e53aac935028b47" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">void</ref></type>
+        <definition>void Validator::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <qualifiedname>Validator::initialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2471" column="10" bodyfile="src/testlib.h" bodystart="2471" bodyend="2473"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1a302f9e1dada936024fbb9ba1df4584fa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Validator::testset</definition>
+        <argsstring>() const</argsstring>
+        <name>testset</name>
+        <qualifiedname>Validator::testset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2475" column="17" bodyfile="src/testlib.h" bodystart="2475" bodyend="2479"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1a6e369a966da7b21efa5a9f43c05c0bc4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Validator::group</definition>
+        <argsstring>() const</argsstring>
+        <name>group</name>
+        <qualifiedname>Validator::group</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2481" column="17" bodyfile="src/testlib.h" bodystart="2481" bodyend="2485"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1a487fd29bc4d2e64ad3dfe1d02cde353b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Validator::testOverviewLogFileName</definition>
+        <argsstring>() const</argsstring>
+        <name>testOverviewLogFileName</name>
+        <qualifiedname>Validator::testOverviewLogFileName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2487" column="17" bodyfile="src/testlib.h" bodystart="2487" bodyend="2489"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1a381a78834499e48587efca2376747ce8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Validator::testMarkupFileName</definition>
+        <argsstring>() const</argsstring>
+        <name>testMarkupFileName</name>
+        <qualifiedname>Validator::testMarkupFileName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2491" column="17" bodyfile="src/testlib.h" bodystart="2491" bodyend="2493"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Validator::testCase</definition>
+        <argsstring>() const</argsstring>
+        <name>testCase</name>
+        <qualifiedname>Validator::testCase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2495" column="9" bodyfile="src/testlib.h" bodystart="2495" bodyend="2497"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1a5968d80e9fb476b8cd4315a51318e3c4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Validator::testCaseFileName</definition>
+        <argsstring>() const</argsstring>
+        <name>testCaseFileName</name>
+        <qualifiedname>Validator::testCaseFileName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2499" column="17" bodyfile="src/testlib.h" bodystart="2499" bodyend="2501"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1a98abe366b29d8445a77b0a8467dceb41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">void</ref></type>
+        <definition>void Validator::setTestset</definition>
+        <argsstring>(const char *const testset)</argsstring>
+        <name>setTestset</name>
+        <qualifiedname>Validator::setTestset</qualifiedname>
+        <param>
+          <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref> <ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">char</ref> *<ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref></type>
+          <declname>testset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2503" column="10" bodyfile="src/testlib.h" bodystart="2503" bodyend="2505"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1aad2457aadd48a75837e2770aa6c380bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">void</ref></type>
+        <definition>void Validator::setGroup</definition>
+        <argsstring>(const char *const group)</argsstring>
+        <name>setGroup</name>
+        <qualifiedname>Validator::setGroup</qualifiedname>
+        <param>
+          <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref> <ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">char</ref> *<ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref></type>
+          <declname>group</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2507" column="10" bodyfile="src/testlib.h" bodystart="2507" bodyend="2509"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1a759723fc94643a78cc0b14da68b0107e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">void</ref></type>
+        <definition>void Validator::setTestOverviewLogFileName</definition>
+        <argsstring>(const char *const testOverviewLogFileName)</argsstring>
+        <name>setTestOverviewLogFileName</name>
+        <qualifiedname>Validator::setTestOverviewLogFileName</qualifiedname>
+        <param>
+          <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref> <ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">char</ref> *<ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref></type>
+          <declname>testOverviewLogFileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2511" column="10" bodyfile="src/testlib.h" bodystart="2511" bodyend="2513"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1a82a648685268dc91e9bf48f1c4fb8d57" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">void</ref></type>
+        <definition>void Validator::setTestMarkupFileName</definition>
+        <argsstring>(const char *const testMarkupFileName)</argsstring>
+        <name>setTestMarkupFileName</name>
+        <qualifiedname>Validator::setTestMarkupFileName</qualifiedname>
+        <param>
+          <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref> <ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">char</ref> *<ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref></type>
+          <declname>testMarkupFileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2515" column="10" bodyfile="src/testlib.h" bodystart="2515" bodyend="2517"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1ab4fd3b0dbe4e35310a9c7b0b7c2a411d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">void</ref></type>
+        <definition>void Validator::setTestCase</definition>
+        <argsstring>(int testCase)</argsstring>
+        <name>setTestCase</name>
+        <qualifiedname>Validator::setTestCase</qualifiedname>
+        <param>
+          <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">int</ref></type>
+          <declname>testCase</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2519" column="10" bodyfile="src/testlib.h" bodystart="2519" bodyend="2521"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1abe2f949d8c9bff6fe61e0f9fab6e68e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">void</ref></type>
+        <definition>void Validator::setTestCaseFileName</definition>
+        <argsstring>(const char *const testCaseFileName)</argsstring>
+        <name>setTestCaseFileName</name>
+        <qualifiedname>Validator::setTestCaseFileName</qualifiedname>
+        <param>
+          <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref> <ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">char</ref> *<ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref></type>
+          <declname>testCaseFileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2523" column="10" bodyfile="src/testlib.h" bodystart="2523" bodyend="2525"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1af116e261ded245f21c249bccd6db5628" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Validator::prepVariableName</definition>
+        <argsstring>(const std::string &amp;variableName)</argsstring>
+        <name>prepVariableName</name>
+        <qualifiedname>Validator::prepVariableName</qualifiedname>
+        <param>
+          <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref> std::string &amp;</type>
+          <declname>variableName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2527" column="17" bodyfile="src/testlib.h" bodystart="2527" bodyend="2537"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1aac12f8f1d2ce11e029f6d370d4706373" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">bool</ref></type>
+        <definition>bool Validator::ignoreMinBound</definition>
+        <argsstring>(const std::string &amp;variableName)</argsstring>
+        <name>ignoreMinBound</name>
+        <qualifiedname>Validator::ignoreMinBound</qualifiedname>
+        <param>
+          <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref> std::string &amp;</type>
+          <declname>variableName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2539" column="10" bodyfile="src/testlib.h" bodystart="2539" bodyend="2541"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1ad076fd6410b4468890720fb73ae7045a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">bool</ref></type>
+        <definition>bool Validator::ignoreMaxBound</definition>
+        <argsstring>(const std::string &amp;variableName)</argsstring>
+        <name>ignoreMaxBound</name>
+        <qualifiedname>Validator::ignoreMaxBound</qualifiedname>
+        <param>
+          <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref> std::string &amp;</type>
+          <declname>variableName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2543" column="10" bodyfile="src/testlib.h" bodystart="2543" bodyend="2545"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1ae8b56de5926c72fbfdd537f1b1d7eadd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">void</ref></type>
+        <definition>void Validator::addBoundsHit</definition>
+        <argsstring>(const std::string &amp;variableName, ValidatorBoundsHit boundsHit)</argsstring>
+        <name>addBoundsHit</name>
+        <qualifiedname>Validator::addBoundsHit</qualifiedname>
+        <param>
+          <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref> std::string &amp;</type>
+          <declname>variableName</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_validator_bounds_hit" kindref="compound">ValidatorBoundsHit</ref></type>
+          <declname>boundsHit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2547" column="10" bodyfile="src/testlib.h" bodystart="2547" bodyend="2554"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1ac33cdd122f71e88613526650d1bb3c45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">void</ref></type>
+        <definition>void Validator::addVariable</definition>
+        <argsstring>(const std::string &amp;variableName)</argsstring>
+        <name>addVariable</name>
+        <qualifiedname>Validator::addVariable</qualifiedname>
+        <param>
+          <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref> std::string &amp;</type>
+          <declname>variableName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2556" column="10" bodyfile="src/testlib.h" bodystart="2556" bodyend="2562"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1a40810a5c5baf5da95aa391f858a9e9a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Validator::getVariablesLog</definition>
+        <argsstring>()</argsstring>
+        <name>getVariablesLog</name>
+        <qualifiedname>Validator::getVariablesLog</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2564" column="17" bodyfile="src/testlib.h" bodystart="2564" bodyend="2569"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1aaf48c6b401e8417c3da493f28ca65061" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">typename</ref> <ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">void</ref></type>
+        <definition>void Validator::adjustConstantBounds</definition>
+        <argsstring>(const std::string &amp;variableName, T lower, T upper)</argsstring>
+        <name>adjustConstantBounds</name>
+        <qualifiedname>Validator::adjustConstantBounds</qualifiedname>
+        <param>
+          <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref> std::string &amp;</type>
+          <declname>variableName</declname>
+        </param>
+        <param>
+          <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">T</ref></type>
+          <declname>lower</declname>
+        </param>
+        <param>
+          <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">T</ref></type>
+          <declname>upper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2572" column="10" bodyfile="src/testlib.h" bodystart="2572" bodyend="2579"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1a2c32c475bb31fb5ca96ed0ac3921417d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Validator::getBoundsHitLog</definition>
+        <argsstring>()</argsstring>
+        <name>getBoundsHitLog</name>
+        <qualifiedname>Validator::getBoundsHitLog</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2581" column="17" bodyfile="src/testlib.h" bodystart="2581" bodyend="2594"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1a71f5bf142881342a9967da8671c35676" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Validator::getConstantBoundsLog</definition>
+        <argsstring>()</argsstring>
+        <name>getConstantBoundsLog</name>
+        <qualifiedname>Validator::getConstantBoundsLog</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2596" column="17" bodyfile="src/testlib.h" bodystart="2596" bodyend="2615"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1ab8c173d330b6ead6d5f51587213cfe7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Validator::getFeaturesLog</definition>
+        <argsstring>()</argsstring>
+        <name>getFeaturesLog</name>
+        <qualifiedname>Validator::getFeaturesLog</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2617" column="17" bodyfile="src/testlib.h" bodystart="2617" bodyend="2628"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1ac71a3aab99085ef6da45357db1d0fd5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">void</ref></type>
+        <definition>void Validator::writeTestOverviewLog</definition>
+        <argsstring>()</argsstring>
+        <name>writeTestOverviewLog</name>
+        <qualifiedname>Validator::writeTestOverviewLog</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2630" column="10" bodyfile="src/testlib.h" bodystart="2630" bodyend="2656"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1aca38cbb740f48b16c3d5efa5a2c9fc0b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">void</ref></type>
+        <definition>void Validator::writeTestMarkup</definition>
+        <argsstring>()</argsstring>
+        <name>writeTestMarkup</name>
+        <qualifiedname>Validator::writeTestMarkup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2658" column="10" bodyfile="src/testlib.h" bodystart="2658" bodyend="2696"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1ac0567612d6c3449a42bccd3930cda249" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">void</ref></type>
+        <definition>void Validator::writeTestCase</definition>
+        <argsstring>()</argsstring>
+        <name>writeTestCase</name>
+        <qualifiedname>Validator::writeTestCase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2698" column="10" bodyfile="src/testlib.h" bodystart="2698" bodyend="2744"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1ad584b1395f153ccfedf884750ff10f70" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">void</ref></type>
+        <definition>void Validator::addFeature</definition>
+        <argsstring>(const std::string &amp;feature)</argsstring>
+        <name>addFeature</name>
+        <qualifiedname>Validator::addFeature</qualifiedname>
+        <param>
+          <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref> std::string &amp;</type>
+          <declname>feature</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2746" column="10" bodyfile="src/testlib.h" bodystart="2746" bodyend="2753"/>
+      </memberdef>
+      <memberdef kind="function" id="class_validator_1a85dd9d919dbd6668399ca595658bba80" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">void</ref></type>
+        <definition>void Validator::feature</definition>
+        <argsstring>(const std::string &amp;feature)</argsstring>
+        <name>feature</name>
+        <qualifiedname>Validator::feature</qualifiedname>
+        <param>
+          <type><ref refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" kindref="member">const</ref> std::string &amp;</type>
+          <declname>feature</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2755" column="10" bodyfile="src/testlib.h" bodystart="2755" bodyend="2763"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/testlib.h" line="2432" column="1" bodyfile="src/testlib.h" bodystart="2432" bodyend="2764"/>
+    <listofallmembers>
+      <member refid="class_validator_1acc8cb3a5570af775ed0f088d17d363e9" prot="private" virt="non-virtual"><scope>Validator</scope><name>_boundsHitByVariableName</name></member>
+      <member refid="class_validator_1a400a67db7ead87f41344e16b3322db25" prot="private" virt="non-virtual"><scope>Validator</scope><name>_constantBoundsByVariableName</name></member>
+      <member refid="class_validator_1aebc4f0d425decc368d3f5be005243713" prot="private" virt="non-virtual"><scope>Validator</scope><name>_features</name></member>
+      <member refid="class_validator_1a76b6453649ae255cd98c6a58dc83c678" prot="private" virt="non-virtual"><scope>Validator</scope><name>_group</name></member>
+      <member refid="class_validator_1ad04a6eaaef0c62c499a4e9b4e668543f" prot="private" virt="non-virtual"><scope>Validator</scope><name>_hitFeatures</name></member>
+      <member refid="class_validator_1a13f25381a860f67d33f1d5baf71fbebd" prot="private" virt="non-virtual"><scope>Validator</scope><name>_initialized</name></member>
+      <member refid="class_validator_1acbb628b231b76f90a496c016e8814950" prot="private" virt="non-virtual"><scope>Validator</scope><name>_testCase</name></member>
+      <member refid="class_validator_1ae279db2861f9038614a5dcc7424ef4ac" prot="private" virt="non-virtual"><scope>Validator</scope><name>_testCaseFileName</name></member>
+      <member refid="class_validator_1a0c7f5941106a13ed8587621cfe091220" prot="private" virt="non-virtual"><scope>Validator</scope><name>_testMarkupFileName</name></member>
+      <member refid="class_validator_1a23cb826d945fbe92585e2d93811bb967" prot="private" virt="non-virtual"><scope>Validator</scope><name>_testOverviewLogFileName</name></member>
+      <member refid="class_validator_1a89dc20b9e5a3c0fd89f508e51c27e8f1" prot="private" virt="non-virtual"><scope>Validator</scope><name>_testset</name></member>
+      <member refid="class_validator_1ab559ec268edfe5fb5b97f3c0dcce4441" prot="private" virt="non-virtual"><scope>Validator</scope><name>_variables</name></member>
+      <member refid="class_validator_1ae8b56de5926c72fbfdd537f1b1d7eadd" prot="public" virt="non-virtual"><scope>Validator</scope><name>addBoundsHit</name></member>
+      <member refid="class_validator_1ad584b1395f153ccfedf884750ff10f70" prot="public" virt="non-virtual"><scope>Validator</scope><name>addFeature</name></member>
+      <member refid="class_validator_1ac33cdd122f71e88613526650d1bb3c45" prot="public" virt="non-virtual"><scope>Validator</scope><name>addVariable</name></member>
+      <member refid="class_validator_1aaf48c6b401e8417c3da493f28ca65061" prot="public" virt="non-virtual"><scope>Validator</scope><name>adjustConstantBounds</name></member>
+      <member refid="class_validator_1a85dd9d919dbd6668399ca595658bba80" prot="public" virt="non-virtual"><scope>Validator</scope><name>feature</name></member>
+      <member refid="class_validator_1a2c32c475bb31fb5ca96ed0ac3921417d" prot="public" virt="non-virtual"><scope>Validator</scope><name>getBoundsHitLog</name></member>
+      <member refid="class_validator_1a71f5bf142881342a9967da8671c35676" prot="public" virt="non-virtual"><scope>Validator</scope><name>getConstantBoundsLog</name></member>
+      <member refid="class_validator_1ab8c173d330b6ead6d5f51587213cfe7b" prot="public" virt="non-virtual"><scope>Validator</scope><name>getFeaturesLog</name></member>
+      <member refid="class_validator_1a40810a5c5baf5da95aa391f858a9e9a6" prot="public" virt="non-virtual"><scope>Validator</scope><name>getVariablesLog</name></member>
+      <member refid="class_validator_1a6e369a966da7b21efa5a9f43c05c0bc4" prot="public" virt="non-virtual"><scope>Validator</scope><name>group</name></member>
+      <member refid="class_validator_1ad076fd6410b4468890720fb73ae7045a" prot="public" virt="non-virtual"><scope>Validator</scope><name>ignoreMaxBound</name></member>
+      <member refid="class_validator_1aac12f8f1d2ce11e029f6d370d4706373" prot="public" virt="non-virtual"><scope>Validator</scope><name>ignoreMinBound</name></member>
+      <member refid="class_validator_1aeb0b49097c1087062e53aac935028b47" prot="public" virt="non-virtual"><scope>Validator</scope><name>initialize</name></member>
+      <member refid="class_validator_1aa2c9c596f58c9d6b2607391b8d89e8ad" prot="private" virt="non-virtual"><scope>Validator</scope><name>isFeatureNameAnalyzable</name></member>
+      <member refid="class_validator_1ab03fd3088629e55966304c1d437abb5e" prot="private" virt="non-virtual"><scope>Validator</scope><name>isVariableNameBoundsAnalyzable</name></member>
+      <member refid="class_validator_1af116e261ded245f21c249bccd6db5628" prot="public" virt="non-virtual"><scope>Validator</scope><name>prepVariableName</name></member>
+      <member refid="class_validator_1aad2457aadd48a75837e2770aa6c380bb" prot="public" virt="non-virtual"><scope>Validator</scope><name>setGroup</name></member>
+      <member refid="class_validator_1ab4fd3b0dbe4e35310a9c7b0b7c2a411d" prot="public" virt="non-virtual"><scope>Validator</scope><name>setTestCase</name></member>
+      <member refid="class_validator_1abe2f949d8c9bff6fe61e0f9fab6e68e4" prot="public" virt="non-virtual"><scope>Validator</scope><name>setTestCaseFileName</name></member>
+      <member refid="class_validator_1a82a648685268dc91e9bf48f1c4fb8d57" prot="public" virt="non-virtual"><scope>Validator</scope><name>setTestMarkupFileName</name></member>
+      <member refid="class_validator_1a759723fc94643a78cc0b14da68b0107e" prot="public" virt="non-virtual"><scope>Validator</scope><name>setTestOverviewLogFileName</name></member>
+      <member refid="class_validator_1a98abe366b29d8445a77b0a8467dceb41" prot="public" virt="non-virtual"><scope>Validator</scope><name>setTestset</name></member>
+      <member refid="class_validator_1a1f86676c60c1d7ebb7fe9ac0bfdfa86f" prot="private" virt="non-virtual"><scope>Validator</scope><name>TEST_CASE_CLOSE_TAG</name></member>
+      <member refid="class_validator_1a917b345a8e2d9e4342aa517a73323678" prot="private" virt="non-virtual"><scope>Validator</scope><name>TEST_CASE_OPEN_TAG</name></member>
+      <member refid="class_validator_1a06f23562aad90e807617aa54f26df8b5" prot="private" virt="non-virtual"><scope>Validator</scope><name>TEST_MARKUP_HEADER</name></member>
+      <member refid="class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c" prot="public" virt="non-virtual"><scope>Validator</scope><name>testCase</name></member>
+      <member refid="class_validator_1a5968d80e9fb476b8cd4315a51318e3c4" prot="public" virt="non-virtual"><scope>Validator</scope><name>testCaseFileName</name></member>
+      <member refid="class_validator_1a381a78834499e48587efca2376747ce8" prot="public" virt="non-virtual"><scope>Validator</scope><name>testMarkupFileName</name></member>
+      <member refid="class_validator_1a487fd29bc4d2e64ad3dfe1d02cde353b" prot="public" virt="non-virtual"><scope>Validator</scope><name>testOverviewLogFileName</name></member>
+      <member refid="class_validator_1a302f9e1dada936024fbb9ba1df4584fa" prot="public" virt="non-virtual"><scope>Validator</scope><name>testset</name></member>
+      <member refid="class_validator_1a5059febd30a909b60107c591fe72eaca" prot="public" virt="non-virtual"><scope>Validator</scope><name>Validator</name></member>
+      <member refid="class_validator_1ac0567612d6c3449a42bccd3930cda249" prot="public" virt="non-virtual"><scope>Validator</scope><name>writeTestCase</name></member>
+      <member refid="class_validator_1aca38cbb740f48b16c3d5efa5a2c9fc0b" prot="public" virt="non-virtual"><scope>Validator</scope><name>writeTestMarkup</name></member>
+      <member refid="class_validator_1ac71a3aab99085ef6da45357db1d0fd5a" prot="public" virt="non-virtual"><scope>Validator</scope><name>writeTestOverviewLog</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

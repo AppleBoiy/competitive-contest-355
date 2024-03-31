@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_checker_8cpp" xml:lang="en-US">
+<title>src/checker.cpp File Reference</title>
+<indexterm><primary>src/checker.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;testlib.h&quot;<?linebreak?>#include &lt;bits/stdc++.h&gt;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_checker_8cpp_1a261b5420e17ff6b4908171e2220d5cce">prime</link> (int x)</para>
+</listitem>
+            <listitem><para>int <link linkend="_checker_8cpp_1a5658d4f0098d134fbb3f18f22a031bb0">readAns</link> (<link linkend="_struct_in_stream">InStream</link> &amp;stream)</para>
+</listitem>
+            <listitem><para>int <link linkend="_checker_8cpp_1a0ddf1224851353fc92bfbff6f499fa97">main</link> (int argc, char *argv[])</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240">n</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_checker_8cpp_1a5e6a1812b4a51260850c1c8c675b0999">has</link> [1010]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_checker_8cpp_1a0ddf1224851353fc92bfbff6f499fa97"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>checker.cpp</secondary></indexterm>
+<indexterm><primary>checker.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main (int argc, char * argv[])</computeroutput></para><para>
+Definition at line <link linkend="_checker_8cpp_source_1l00026">26</link> of file <link linkend="_checker_8cpp_source">checker.cpp</link>.</para>
+</section>
+<anchor xml:id="_checker_8cpp_1a261b5420e17ff6b4908171e2220d5cce"/><section>
+    <title>prime()</title>
+<indexterm><primary>prime</primary><secondary>checker.cpp</secondary></indexterm>
+<indexterm><primary>checker.cpp</primary><secondary>prime</secondary></indexterm>
+<para><computeroutput>bool prime (int x)</computeroutput></para><para>
+Definition at line <link linkend="_checker_8cpp_source_1l00008">8</link> of file <link linkend="_checker_8cpp_source">checker.cpp</link>.</para>
+</section>
+<anchor xml:id="_checker_8cpp_1a5658d4f0098d134fbb3f18f22a031bb0"/><section>
+    <title>readAns()</title>
+<indexterm><primary>readAns</primary><secondary>checker.cpp</secondary></indexterm>
+<indexterm><primary>checker.cpp</primary><secondary>readAns</secondary></indexterm>
+<para><computeroutput>int readAns (<link linkend="_struct_in_stream">InStream</link> &amp; stream)</computeroutput></para><para>
+Definition at line <link linkend="_checker_8cpp_source_1l00017">17</link> of file <link linkend="_checker_8cpp_source">checker.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_checker_8cpp_1a5e6a1812b4a51260850c1c8c675b0999"/><section>
+    <title>has</title>
+<indexterm><primary>has</primary><secondary>checker.cpp</secondary></indexterm>
+<indexterm><primary>checker.cpp</primary><secondary>has</secondary></indexterm>
+<para><computeroutput>bool has[1010]</computeroutput></para><para>
+Definition at line <link linkend="_checker_8cpp_source_1l00007">7</link> of file <link linkend="_checker_8cpp_source">checker.cpp</link>.</para>
+</section>
+<anchor xml:id="_checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240"/><section>
+    <title>n</title>
+<indexterm><primary>n</primary><secondary>checker.cpp</secondary></indexterm>
+<indexterm><primary>checker.cpp</primary><secondary>n</secondary></indexterm>
+<para><computeroutput>int n</computeroutput></para><para>
+Definition at line <link linkend="_checker_8cpp_source_1l00005">5</link> of file <link linkend="_checker_8cpp_source">checker.cpp</link>.</para>
+</section>
+</section>
+</section>

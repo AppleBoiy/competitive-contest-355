@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="struct_validator_bounds_hit" kind="struct" language="C++" prot="public">
+    <compoundname>ValidatorBoundsHit</compoundname>
+    <includes refid="testlib_8h" local="no">testlib.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="struct_validator_bounds_hit_1a794be9f0bcc3692f3662b670c9086128" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double ValidatorBoundsHit::EPS</definition>
+        <argsstring></argsstring>
+        <name>EPS</name>
+        <qualifiedname>ValidatorBoundsHit::EPS</qualifiedname>
+        <initializer>= 1E-12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2385" column="25" bodyfile="src/testlib.h" bodystart="2385" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_validator_bounds_hit_1a450ae2118accb6096ac01a9f1bc62f59" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ValidatorBoundsHit::minHit</definition>
+        <argsstring></argsstring>
+        <name>minHit</name>
+        <qualifiedname>ValidatorBoundsHit::minHit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2386" column="10" bodyfile="src/testlib.h" bodystart="2386" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_validator_bounds_hit_1af47cea308d23bf8c74eb43d99c373f4c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ValidatorBoundsHit::maxHit</definition>
+        <argsstring></argsstring>
+        <name>maxHit</name>
+        <qualifiedname>ValidatorBoundsHit::maxHit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2387" column="10" bodyfile="src/testlib.h" bodystart="2387" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_validator_bounds_hit_1a9795fcb90f8ec3f0f069cb659e587281" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ValidatorBoundsHit::ValidatorBoundsHit</definition>
+        <argsstring>(bool minHit=false, bool maxHit=false)</argsstring>
+        <name>ValidatorBoundsHit</name>
+        <qualifiedname>ValidatorBoundsHit::ValidatorBoundsHit</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>minHit</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>maxHit</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2389" column="5" bodyfile="src/testlib.h" bodystart="2389" bodyend="2390"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_validator_bounds_hit_1ac8444da34d710fac080ec0d30e49874a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_validator_bounds_hit" kindref="compound">ValidatorBoundsHit</ref></type>
+        <definition>ValidatorBoundsHit ValidatorBoundsHit::merge</definition>
+        <argsstring>(const ValidatorBoundsHit &amp;validatorBoundsHit, bool ignoreMinBound, bool ignoreMaxBound)</argsstring>
+        <name>merge</name>
+        <qualifiedname>ValidatorBoundsHit::merge</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_validator_bounds_hit" kindref="compound">ValidatorBoundsHit</ref> &amp;</type>
+          <declname>validatorBoundsHit</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ignoreMinBound</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ignoreMaxBound</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="2392" column="24" bodyfile="src/testlib.h" bodystart="2392" bodyend="2397"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/testlib.h" line="2384" column="1" bodyfile="src/testlib.h" bodystart="2384" bodyend="2398"/>
+    <listofallmembers>
+      <member refid="struct_validator_bounds_hit_1a794be9f0bcc3692f3662b670c9086128" prot="public" virt="non-virtual"><scope>ValidatorBoundsHit</scope><name>EPS</name></member>
+      <member refid="struct_validator_bounds_hit_1af47cea308d23bf8c74eb43d99c373f4c" prot="public" virt="non-virtual"><scope>ValidatorBoundsHit</scope><name>maxHit</name></member>
+      <member refid="struct_validator_bounds_hit_1ac8444da34d710fac080ec0d30e49874a" prot="public" virt="non-virtual"><scope>ValidatorBoundsHit</scope><name>merge</name></member>
+      <member refid="struct_validator_bounds_hit_1a450ae2118accb6096ac01a9f1bc62f59" prot="public" virt="non-virtual"><scope>ValidatorBoundsHit</scope><name>minHit</name></member>
+      <member refid="struct_validator_bounds_hit_1a9795fcb90f8ec3f0f069cb659e587281" prot="public" virt="non-virtual"><scope>ValidatorBoundsHit</scope><name>ValidatorBoundsHit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,58 @@
+\doxysection{checker.\+cpp}
+\hypertarget{checker_8cpp_source}{}\label{checker_8cpp_source}\index{src/checker.cpp@{src/checker.cpp}}
+\mbox{\hyperlink{checker_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{testlib_8h}{testlib.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <bits/stdc++.h>}}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00004}00004\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00005}\mbox{\hyperlink{checker_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{00005}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{checker_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}};}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00007}\mbox{\hyperlink{checker_8cpp_a5e6a1812b4a51260850c1c8c675b0999}{00007}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{checker_8cpp_a5e6a1812b4a51260850c1c8c675b0999}{has}}[1010];}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00008}\mbox{\hyperlink{checker_8cpp_a261b5420e17ff6b4908171e2220d5cce}{00008}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{checker_8cpp_a261b5420e17ff6b4908171e2220d5cce}{prime}}(\textcolor{keywordtype}{int}\ x)\ \{}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00009}00009\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ ==\ 1)}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 2;\ i\ *\ i\ <=\ x;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ \%\ i\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00014}00014\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00016}00016\ \}}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00017}\mbox{\hyperlink{checker_8cpp_a5658d4f0098d134fbb3f18f22a031bb0}{00017}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{checker_8cpp_a5658d4f0098d134fbb3f18f22a031bb0}{readAns}}(\mbox{\hyperlink{struct_in_stream}{InStream}}\ \&stream)\ \{}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00018}00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{testlib_8h_aca62d65c91dd6453f93a96348e78c5ac}{ans}}\ =\ stream.\mbox{\hyperlink{struct_in_stream_ab9c40b84ce444e0eabbec47c881b4c38}{readInt}}(1,\ 1000);}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{checker_8cpp_a5e6a1812b4a51260850c1c8c675b0999}{has}}[\mbox{\hyperlink{testlib_8h_aca62d65c91dd6453f93a96348e78c5ac}{ans}}]\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{checker_8cpp_a261b5420e17ff6b4908171e2220d5cce}{prime}}(\mbox{\hyperlink{testlib_8h_aca62d65c91dd6453f93a96348e78c5ac}{ans}})\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00026}\mbox{\hyperlink{checker_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{00026}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{defaultsol_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])\ \{}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{testlib_8h_aef178d6340fe04d5d616ee2da19488b4}{registerTestlibCmd}}(argc,\ argv);}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{checker_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\ =\ \mbox{\hyperlink{testlib_8h_ad3874376581d36b1067d501d534d7b34}{inf}}.\mbox{\hyperlink{struct_in_stream_ab9c40b84ce444e0eabbec47c881b4c38}{readInt}}();}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{checker_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ \mbox{\hyperlink{testlib_8h_ad3874376581d36b1067d501d534d7b34}{inf}}.\mbox{\hyperlink{struct_in_stream_ab9c40b84ce444e0eabbec47c881b4c38}{readInt}}();}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{checker_8cpp_a5e6a1812b4a51260850c1c8c675b0999}{has}}[x]\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordtype}{int}\ jans\ =\ \mbox{\hyperlink{checker_8cpp_a5658d4f0098d134fbb3f18f22a031bb0}{readAns}}(\mbox{\hyperlink{testlib_8h_aca62d65c91dd6453f93a96348e78c5ac}{ans}});}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordtype}{int}\ pans\ =\ \mbox{\hyperlink{checker_8cpp_a5658d4f0098d134fbb3f18f22a031bb0}{readAns}}(\mbox{\hyperlink{testlib_8h_a93822943d6413c3eba20a27b9d31336b}{ouf}});}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{if}\ (jans\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{testlib_8h_a5e727281f092efd3f19c6a84e2eacc01}{quitf}}(\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578a62d8da32e96f367adeed7ccb30436457}{\_fail}},\ \textcolor{stringliteral}{"{}Jury\ answer\ Incorrect,\ The\ number\ is\ not\ prime!!!"{}});}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{if}\ (jans\ ==\ -\/1)}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{testlib_8h_a5e727281f092efd3f19c6a84e2eacc01}{quitf}}(}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578a62d8da32e96f367adeed7ccb30436457}{\_fail}},}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Jury\ answer\ Incorrect,\ the\ number\ is\ not\ from\ the\ input\ array!!!"{}});}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{if}\ (pans\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{testlib_8h_a5e727281f092efd3f19c6a84e2eacc01}{quitf}}(\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578a77706596ca6256a69b77e763d6787585}{\_wa}},\ \textcolor{stringliteral}{"{}participant\ answer\ Incorrect,\ The\ number\ is\ not\ prime."{}});}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{if}\ (pans\ ==\ -\/1)}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{testlib_8h_a5e727281f092efd3f19c6a84e2eacc01}{quitf}}(\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578a77706596ca6256a69b77e763d6787585}{\_wa}},}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}participant\ answer\ Incorrect,\ the\ number\ is\ not\ from\ the\ input\ "{}}}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}array."{}});}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{testlib_8h_aca62d65c91dd6453f93a96348e78c5ac}{ans}}.\mbox{\hyperlink{struct_in_stream_a2c7c8561462345e6ee18a0d8ea4bc00b}{seekEof}}())}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{testlib_8h_a5e727281f092efd3f19c6a84e2eacc01}{quitf}}(\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578a62d8da32e96f367adeed7ccb30436457}{\_fail}},\ \textcolor{stringliteral}{"{}Jury\ answer\ contain\ extra\ tokens!!!"{}});}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{testlib_8h_a93822943d6413c3eba20a27b9d31336b}{ouf}}.\mbox{\hyperlink{struct_in_stream_a2c7c8561462345e6ee18a0d8ea4bc00b}{seekEof}}())}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{testlib_8h_a5e727281f092efd3f19c6a84e2eacc01}{quitf}}(\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578a77706596ca6256a69b77e763d6787585}{\_wa}},\ \textcolor{stringliteral}{"{}Participant\ answer\ contain\ extra\ tokens."{}});}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00051}00051\ \ \ \ \ \mbox{\hyperlink{testlib_8h_a5e727281f092efd3f19c6a84e2eacc01}{quitf}}(\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578a9d802c77af97a77eec509a12bcf6ae77}{\_ok}},\ \textcolor{stringliteral}{"{}Passed\ all\ tests."{}});}
+\DoxyCodeLine{\Hypertarget{checker_8cpp_source_l00052}00052\ \}}
+
+\end{DoxyCode}

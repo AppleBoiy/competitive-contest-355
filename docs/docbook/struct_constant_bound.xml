@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_constant_bound" xml:lang="en-US">
+<title>ConstantBound Struct Reference</title>
+<indexterm><primary>ConstantBound</primary></indexterm>
+<para>
+<computeroutput>#include &lt;testlib.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename T &gt; </para><para>void <link linkend="_struct_constant_bound_1a3d4ab449600fba6a75ad6c5f3584bade">adjust</link> (T t)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_constant_bound_1a6e761d07b67ec9dcf0ca867e261f1997">has_value</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_struct_constant_bound_1a37ce6882c4711965f38109dd1e06f72a">value</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_constant_bound_1ab23ab3aaa958191925daabfaed1872ce">broken</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_testlib_8h_source_1l02400">2400</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_constant_bound_1a3d4ab449600fba6a75ad6c5f3584bade"/><section>
+    <title>adjust()</title>
+<indexterm><primary>adjust</primary><secondary>ConstantBound</secondary></indexterm>
+<indexterm><primary>ConstantBound</primary><secondary>adjust</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>void ConstantBound::adjust (T t)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02405">2405</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_constant_bound_1a6e761d07b67ec9dcf0ca867e261f1997"/><section>
+    <title>has_value()</title>
+<indexterm><primary>has_value</primary><secondary>ConstantBound</secondary></indexterm>
+<indexterm><primary>ConstantBound</primary><secondary>has_value</secondary></indexterm>
+<para><computeroutput>bool ConstantBound::has_value ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02420">2420</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_constant_bound_1ab23ab3aaa958191925daabfaed1872ce"/><section>
+    <title>broken</title>
+<indexterm><primary>broken</primary><secondary>ConstantBound</secondary></indexterm>
+<indexterm><primary>ConstantBound</primary><secondary>broken</secondary></indexterm>
+<para><computeroutput>bool ConstantBound::broken</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02402">2402</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_struct_constant_bound_1a37ce6882c4711965f38109dd1e06f72a"/><section>
+    <title>value</title>
+<indexterm><primary>value</primary><secondary>ConstantBound</secondary></indexterm>
+<indexterm><primary>ConstantBound</primary><secondary>value</secondary></indexterm>
+<para><computeroutput>std::string ConstantBound::value</computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02401">2401</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+src/<link linkend="_testlib_8h">testlib.h</link></section>
+</section>

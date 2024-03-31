@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>competitive-contest</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md__r_e_a_d_m_e"/></para>
+<sect1 id="index_1autotoc_md0">
+<title>Fibonacci Modulo Problem</title><sect2 id="index_1autotoc_md1">
+<title>Problem Statement</title><para>You are given two integers, <bold>n</bold> and <bold>m</bold>, and you need to find the <bold>nth Fibonacci number modulo m</bold>.</para>
+<sect3 id="index_1autotoc_md2">
+<title>Approach</title><para>The naive approach to find the Fibonacci number at position <bold>n</bold> and then taking the modulo <bold>m</bold> might be inefficient for large values of <bold>n</bold>. However, you can optimize the solution using the Pisano Period.</para>
+</sect3>
+<sect3 id="index_1autotoc_md3">
+<title>Pisano Period</title><para>The Pisano period, also known as the Fibonacci period or cycle, refers to the periodic and repetitive nature of the remainders when the Fibonacci sequence is divided by a positive integer called the &quot;modulus.&quot;</para>
+<para><ulink url="https://en.wikipedia.org/wiki/Pisano_period">read more</ulink></para>
+<sect4 id="index_1autotoc_md4">
+<title>Fibonacci Sequence</title><para>The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, usually starting with 0 and 1.</para>
+<para>Example Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...</para>
+</sect4>
+<sect4 id="index_1autotoc_md5">
+<title>Pisano Period</title><para>When the Fibonacci sequence is divided by a modulus (a positive integer), the remainders exhibit a periodic pattern known as the Pisano period. The length of this period depends on the modulus chosen.</para>
+<para>The Pisano period is useful in various applications, especially in problems related to number theory and modular arithmetic.</para>
+</sect4>
+<sect4 id="index_1autotoc_md6">
+<title>Formula</title><para>Given a modulus &apos;m,&apos; the Pisano period is denoted as π(m). The period starts with the pair (0, 1) and repeats after a certain number of terms.</para>
+</sect4>
+<sect4 id="index_1autotoc_md7">
+<title>Example</title><para>For example, if the modulus is 5: Fibonacci sequence modulo 5 <verbatim>0, 1, 1, 2, 3, 0, 3, 3, 1, 4,
+0, 4, 4, 3, 2, 0, 2, 2, 4, 1,
+
+--- Pisano period starts here ---
+
+0, 1, 1, 2, 3, 0, 3, 3, 1, 4,
+0, 4, 4, 3, 2, 0, 2, 2, 4, 1,
+0, 1, 1, 2, 3, 0, 3, 3, 1, 4
+
+... and so on
+</verbatim> In this case, the Pisano period (π(5)) is 20, as the sequence starts repeating after 20 terms.</para>
+</sect4>
+</sect3>
+<sect3 id="index_1autotoc_md8">
+<title>Code Explanation</title><para>Below is the C++ code implementing this approach:</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ll<sp/>long<sp/>long</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="defaultsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba" kindref="member">ll</ref><sp/><ref refid="officialsol_8cpp_1a8d4ea4376a1012135e93cfacfa92fd97" kindref="member">fib_fast</ref>(<ref refid="defaultsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba" kindref="member">ll</ref><sp/><ref refid="checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240" kindref="member">n</ref>,<sp/><ref refid="defaultsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba" kindref="member">ll</ref><sp/>m)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240" kindref="member">n</ref><sp/>&lt;=<sp/>1)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240" kindref="member">n</ref>;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pisano<sp/>period</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defaultsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba" kindref="member">ll</ref><sp/>remainder<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defaultsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba" kindref="member">ll</ref><sp/>a<sp/>=<sp/>0,<sp/>b<sp/>=<sp/>1,<sp/>c;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="defaultsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba" kindref="member">ll</ref><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240" kindref="member">n</ref><sp/>-<sp/>1;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c<sp/>=<sp/>(a<sp/>+<sp/>b)<sp/>%<sp/>m;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>b;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>c;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>b<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remainder<sp/>=<sp/>i<sp/>+<sp/>1;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="defaultsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba" kindref="member">ll</ref><sp/>new_n<sp/>=<sp/><ref refid="checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240" kindref="member">n</ref><sp/>%<sp/>remainder;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(new_n<sp/>&lt;=<sp/>1)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>new_n;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>a<sp/>=<sp/>0,<sp/>b<sp/>=<sp/>1,<sp/>c<sp/>=<sp/>a<sp/>+<sp/>b;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="defaultsol_8cpp_1ae1d1ec9482079231e898236e2b23c9ba" kindref="member">ll</ref><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>new_n<sp/>-<sp/>1;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c<sp/>=<sp/>(a<sp/>+<sp/>b)<sp/>%<sp/>m;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>b;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>c;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c<sp/>%<sp/>m;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="defaultsol_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240" kindref="member">n</ref>,<sp/>m;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::cin<sp/>&gt;&gt;<sp/><ref refid="checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240" kindref="member">n</ref><sp/>&gt;&gt;<sp/>m;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/><ref refid="officialsol_8cpp_1a8d4ea4376a1012135e93cfacfa92fd97" kindref="member">fib_fast</ref>(<ref refid="checker_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240" kindref="member">n</ref>,<sp/>m)<sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="index_1autotoc_md9">
+<title>Input</title><para>The program takes two inputs, <bold>n</bold> and <bold>m</bold>, representing the position of the Fibonacci number and the modulo value.</para>
+</sect3>
+<sect3 id="index_1autotoc_md10">
+<title>Output</title><para>The program outputs the <bold>nth Fibonacci number modulo m</bold>.</para>
+</sect3>
+<sect3 id="index_1autotoc_md11">
+<title>Time Complexity</title><para>The time complexity of this solution is <bold>O(remainder + new_n)</bold>, where <bold>remainder</bold> is the Pisano Period and <bold>new_n</bold> is the position of the Fibonacci number within the Pisano Period. This is a significant optimization over the naive approach. </para>
+</sect3>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

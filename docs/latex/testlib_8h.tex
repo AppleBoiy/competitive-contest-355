@@ -1,0 +1,1704 @@
+\doxysection{src/testlib.h File Reference}
+\hypertarget{testlib_8h}{}\label{testlib_8h}\index{src/testlib.h@{src/testlib.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$climits$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpattern}{pattern}}
+\item 
+class \mbox{\hyperlink{classrandom__t}{random\+\_\+t}}
+\item 
+class \mbox{\hyperlink{class_input_stream_reader}{Input\+Stream\+Reader}}
+\item 
+class \mbox{\hyperlink{class_string_input_stream_reader}{String\+Input\+Stream\+Reader}}
+\item 
+class \mbox{\hyperlink{class_file_input_stream_reader}{File\+Input\+Stream\+Reader}}
+\item 
+class \mbox{\hyperlink{class_buffered_file_input_stream_reader}{Buffered\+File\+Input\+Stream\+Reader}}
+\item 
+struct \mbox{\hyperlink{struct_in_stream}{In\+Stream}}
+\item 
+struct \mbox{\hyperlink{struct_validator_bounds_hit}{Validator\+Bounds\+Hit}}
+\item 
+struct \mbox{\hyperlink{struct_constant_bound}{Constant\+Bound}}
+\item 
+struct \mbox{\hyperlink{struct_constant_bounds}{Constant\+Bounds}}
+\item 
+class \mbox{\hyperlink{class_validator}{Validator}}
+\item 
+struct \mbox{\hyperlink{struct_testlib_finalize_guard}{Testlib\+Finalize\+Guard}}
+\item 
+class \mbox{\hyperlink{class_checker}{Checker}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a1c6d5de492ac61ad29aec7aa9a436bbf}{VERSION}}~"{}0.\+9.\+42-\/SNAPSHOT"{}
+\item 
+\#define \mbox{\hyperlink{testlib_8h_aaac7e8b42546e8a2fd07b71fd5b12ba0}{random}}~\+\_\+\+\_\+random\+\_\+deprecated
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5}{WORD}}~unsigned short
+\item 
+\#define \mbox{\hyperlink{testlib_8h_af17a13b2ae0e9c24c020ac1f044f30c2}{LLONG\+\_\+\+MIN}}~(-\/9223372036854775807LL -\/ 1)
+\item 
+\#define \mbox{\hyperlink{testlib_8h_aa1dd7166a75b73ad62b111ae6fc17c59}{ULLONG\+\_\+\+MAX}}~(18446744073709551615)
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a350c9d6cb81908d59427ee96844d1a9c}{LF}}~((char)10)
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a876ce77f3c672c7162658151e648389e}{CR}}~((char)13)
+\item 
+\#define \mbox{\hyperlink{testlib_8h_ad58a1fbfc85c7e4790fc55e654f50221}{TAB}}~((char)9)
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a5ff6e798033f03e74730e99f01936f84}{SPACE}}~((char)\textquotesingle{} \textquotesingle{})
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a09a15fa2d49e26dff40c22a309bd625f}{EOFC}}~(255)
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a809c8f4d2bf12a53a01098f336b97598}{OK\+\_\+\+EXIT\+\_\+\+CODE}}~0
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a9407aadd1d7b6a24b40a94be0e1b5e6c}{WA\+\_\+\+EXIT\+\_\+\+CODE}}~1
+\item 
+\#define \mbox{\hyperlink{testlib_8h_acd99fac8764b4f8513d0d78aa80878a5}{PE\+\_\+\+EXIT\+\_\+\+CODE}}~2
+\item 
+\#define \mbox{\hyperlink{testlib_8h_afac612f10342c3ccbfc7f30ae563184b}{FAIL\+\_\+\+EXIT\+\_\+\+CODE}}~3
+\item 
+\#define \mbox{\hyperlink{testlib_8h_ac9085792031f49686fd06d9560164d3b}{DIRT\+\_\+\+EXIT\+\_\+\+CODE}}~4
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a58429ce36ac0b67fb7889455174c7e8a}{POINTS\+\_\+\+EXIT\+\_\+\+CODE}}~7
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a30fb6330f5fcaf65c9347f50df26222d}{UNEXPECTED\+\_\+\+EOF\+\_\+\+EXIT\+\_\+\+CODE}}~8
+\item 
+\#define \mbox{\hyperlink{testlib_8h_ac0c3e3c9771bdfbbcbd70392bd74c03a}{PC\+\_\+\+BASE\+\_\+\+EXIT\+\_\+\+CODE}}~0
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a67a1b89efefde69b271ec10086a493fc}{\+\_\+\+\_\+\+TESTLIB\+\_\+\+STATIC\+\_\+\+ASSERT}}(condition)~typedef void\texorpdfstring{$\ast$}{*} \+\_\+\+\_\+testlib\+\_\+static\+\_\+assert\+\_\+type\mbox{[}(condition) ? 1 \+: -\/1\mbox{]}
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a29ae4e28b586fcb6dcd1a4a0a69b9a49}{I64}}~"{}\%lld"{}
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a24c42244bf61006967bf37001c14d2bf}{U64}}~"{}\%llu"{}
+\item 
+\#define \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}}
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a795f6ad63580d1e0b860fbb9604a79db}{FMT\+\_\+\+TO\+\_\+\+RESULT}}(fmt,  cstr,  result)
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a1e8859af5c334b6c4bebb434505b9ae4}{\+\_\+pc}}(exit\+Code)~(\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}(\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578a5e1b770ccbf2809f1447783f97d4cece}{\+\_\+partially}} + (exit\+Code)))
+\item 
+\#define \mbox{\hyperlink{testlib_8h_ab882eaa72c700511353c3099d0952519}{\+\_\+\+\_\+testlib\+\_\+read\+Many}}(read\+Many,  read\+One,  type\+Name,  space)
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a6995c405db0a243abdf49c4e1de55a41}{ensure}}(cond)~\+\_\+\+\_\+testlib\+\_\+ensure(cond, "{}Condition failed\+: \textbackslash{}"{}"{} \#cond "{}\textbackslash{}"{}"{})
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a9a63ce5ce3b143f8df9df20769c2ab86}{STRINGIZE\+\_\+\+DETAIL}}(x)~\#x
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a3428692efe6051ef30016ffde1a9f7bb}{STRINGIZE}}(x)~\mbox{\hyperlink{testlib_8h_a9a63ce5ce3b143f8df9df20769c2ab86}{STRINGIZE\+\_\+\+DETAIL}}(x)
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a4d844981188f58cfa1385d5a4d6918c4}{ensure\+\_\+ext}}(cond)~\+\_\+\+\_\+testlib\+\_\+ensure(cond, "{}Line "{} STRINGIZE(\+\_\+\+\_\+\+LINE\+\_\+\+\_\+) "{}\+: Condition failed\+: \textbackslash{}"{}"{} \#cond "{}\textbackslash{}"{}"{})
+\item 
+\#define \mbox{\hyperlink{testlib_8h_a390e9021e1ac7b756fdf9a49c3da47f9}{RAND\+\_\+\+THROW\+\_\+\+STATEMENT}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{testlib_8h_ae73df2968f2f656074dc00e062600ddb}{TMode}} \{ \mbox{\hyperlink{testlib_8h_ae73df2968f2f656074dc00e062600ddba090858be22ac48bf83855133ac07036a}{\+\_\+input}}
+, \mbox{\hyperlink{testlib_8h_ae73df2968f2f656074dc00e062600ddbafb9d1f90fad72c2e77f29dd244dff5a6}{\+\_\+output}}
+, \mbox{\hyperlink{testlib_8h_ae73df2968f2f656074dc00e062600ddba1d5993b55c5fa9053df279a83de91f61}{\+\_\+answer}}
+ \}
+\item 
+enum \mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}} \{ \newline
+\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578a9d802c77af97a77eec509a12bcf6ae77}{\+\_\+ok}} = 0
+, \mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578a77706596ca6256a69b77e763d6787585}{\+\_\+wa}} = 1
+, \mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578a801994faa20251234912d2e8eaf42773}{\+\_\+pe}} = 2
+, \mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578a62d8da32e96f367adeed7ccb30436457}{\+\_\+fail}} = 3
+, \newline
+\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578a42e718be5b94c0a545a2cffb0d7d1b43}{\+\_\+dirt}} = 4
+, \mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578abf5f5cf5414425fece755c1d07df9be2}{\+\_\+points}} = 5
+, \mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578aae0220bb99b9060b8561683d987b2fa1}{\+\_\+unexpected\+\_\+eof}} = 8
+, \mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578a5e1b770ccbf2809f1447783f97d4cece}{\+\_\+partially}} = 16
+ \}
+\item 
+enum \mbox{\hyperlink{testlib_8h_a72dc574602eb75df785ecfc398a3158f}{TTestlib\+Mode}} \{ \newline
+\mbox{\hyperlink{testlib_8h_a72dc574602eb75df785ecfc398a3158fa344a85f02f1ac239f9f648738a856eb6}{\+\_\+unknown}}
+, \mbox{\hyperlink{testlib_8h_a72dc574602eb75df785ecfc398a3158fad23f42b9c6d23ab5679d79151c4585ff}{\+\_\+checker}}
+, \mbox{\hyperlink{testlib_8h_a72dc574602eb75df785ecfc398a3158fae0b813cbde0d5fc79fcecd814910e24f}{\+\_\+validator}}
+, \mbox{\hyperlink{testlib_8h_a72dc574602eb75df785ecfc398a3158fa5311ad9bde7f5dbdc28c1f8264456fd5}{\+\_\+generator}}
+, \newline
+\mbox{\hyperlink{testlib_8h_a72dc574602eb75df785ecfc398a3158fadaea9b0ac8f600ff71b0f7616869deac}{\+\_\+interactor}}
+, \mbox{\hyperlink{testlib_8h_a72dc574602eb75df785ecfc398a3158fa1bec4ab4fa6a6927ec64b3143afa14fa}{\+\_\+scorer}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{testlib_8h_ad093584ea7bc2579d8d49c05d4b95347}{set\+Test\+Case}} (int test\+Case)
+\item 
+void \mbox{\hyperlink{testlib_8h_a0fb214ced4215bfbfa6eba1ab4635721}{unset\+Test\+Case}} ()
+\item 
+std\+::string \mbox{\hyperlink{testlib_8h_a3e8b5e1528a28d4832cb11dff8ad5edb}{upper\+Case}} (std\+::string s)
+\item 
+std\+::string \mbox{\hyperlink{testlib_8h_a2d0670a860a887c1de821de0550c0a32}{lower\+Case}} (std\+::string s)
+\item 
+std\+::string \mbox{\hyperlink{testlib_8h_a1921b31564b858b45e94efff9e9d54bf}{format}} (const char \texorpdfstring{$\ast$}{*}fmt,...)
+\item 
+std\+::string \mbox{\hyperlink{testlib_8h_a133d0fb6f1e08d9483f8aa9a8e3c6f38}{format}} (const std\+::string fmt,...)
+\item 
+bool \mbox{\hyperlink{testlib_8h_afe9a738a208c2ff953b27fea24007d20}{double\+Compare}} (double expected, double result, double MAX\+\_\+\+DOUBLE\+\_\+\+ERROR)
+\item 
+double \mbox{\hyperlink{testlib_8h_a7995d5ee8c9310d34ff25b19bdfdbe82}{double\+Delta}} (double expected, double result)
+\item 
+{\footnotesize template$<$typename C $>$ }\\bool \mbox{\hyperlink{testlib_8h_a8be64904de021941ee6d1aa96ee4da14}{is\+Eof}} (C c)
+\item 
+{\footnotesize template$<$typename C $>$ }\\bool \mbox{\hyperlink{testlib_8h_a8da048ae3bc25fe4bb2dcfceb53a90fc}{is\+Eoln}} (C c)
+\item 
+{\footnotesize template$<$typename C $>$ }\\bool \mbox{\hyperlink{testlib_8h_aedd6eec8331fb12c3330f6b7a1227e2c}{is\+Blanks}} (C c)
+\item 
+std\+::string \mbox{\hyperlink{testlib_8h_a1a32c4d3bd87256731e67936766c65ca}{trim}} (const std\+::string \&s)
+\item 
+void \mbox{\hyperlink{testlib_8h_a2c40237203009ff06974b25b65030d68}{disable\+Finalize\+Guard}} ()
+\item 
+int \mbox{\hyperlink{testlib_8h_ac237ec9b60cb9035a69ee70750d69141}{result\+Exit\+Code}} (\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}} r)
+\item 
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a9282a723c3cb0d8eaf1d904e975a5897}{halt}} (int exit\+Code)
+\item 
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_acec28096e85b471e7121ed06ba1eeb42}{quit}} (\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}} result, const std\+::string \&msg)
+\item 
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_aed77b9d710f29f434fee76944e94202a}{quit}} (\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}} result, const char \texorpdfstring{$\ast$}{*}msg)
+\item 
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_abff240fe64a3bc2dab1a7a70f73464cb}{\+\_\+\+\_\+testlib\+\_\+quitp}} (double points, const char \texorpdfstring{$\ast$}{*}message)
+\item 
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a3951a3cfdcfee60d55d47a3faca1510f}{\+\_\+\+\_\+testlib\+\_\+quitp}} (int points, const char \texorpdfstring{$\ast$}{*}message)
+\item 
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a96b765d3745447a9518991edeab211c5}{quitp}} (float points, const std\+::string \&message="{}"{})
+\item 
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_abd20355062b85779c882dfb19f3d9380}{quitp}} (double points, const std\+::string \&message="{}"{})
+\item 
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a4c8b51476405ff163cc57a9e0ec10aea}{quitp}} (long double points, const std\+::string \&message="{}"{})
+\item 
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a7c6fc64b2f0640dd5dd4b1f52210d669}{quitp}} (int points, const std\+::string \&message="{}"{})
+\item 
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a9e512424bd789067763542439fb1083b}{quitpi}} (const std\+::string \&points\+\_\+info, const std\+::string \&message="{}"{})
+\item 
+{\footnotesize template$<$typename F $>$ }\\\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a73dbf5feb8712147dfa04c19c9d6b01d}{quitp}} (F points, const char \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{testlib_8h_a1921b31564b858b45e94efff9e9d54bf}{format}},...)
+\item 
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a5e727281f092efd3f19c6a84e2eacc01}{quitf}} (\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}} result, const char \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{testlib_8h_a1921b31564b858b45e94efff9e9d54bf}{format}},...)
+\item 
+void \mbox{\hyperlink{testlib_8h_ad7e7f24ac09509dc94581cf3b0a5dced}{quitif}} (bool condition, \mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}} result, const char \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{testlib_8h_a1921b31564b858b45e94efff9e9d54bf}{format}},...)
+\item 
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a694d06929cd60de7f337b6e265b2365b}{\+\_\+\+\_\+testlib\+\_\+help}} ()
+\item 
+std\+::string \mbox{\hyperlink{testlib_8h_a327d15f1f5e7c8377faf74e620514689}{get\+Testset}} ()
+\item 
+std\+::string \mbox{\hyperlink{testlib_8h_ae7fe33b331a1689d31d7d43eb94b125a}{get\+Group}} ()
+\item 
+void \mbox{\hyperlink{testlib_8h_ad1cfbe9e8fcaabcd1598206e3ff1ad76}{register\+Gen}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]}, int random\+Generator\+Version)
+\item 
+void \mbox{\hyperlink{testlib_8h_a1fbb926756e2060c6e46bae99de4a781}{register\+Gen}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{testlib_8h_aa87c56b5c1a61e59f3484778120a5797}{set\+Appes\+Mode\+Encoding}} (std\+::string \mbox{\hyperlink{testlib_8h_a2f4a877b5dc48e645f2c41b5e9c99460}{appes\+Mode\+Encoding}})
+\item 
+void \mbox{\hyperlink{testlib_8h_a01331bd5d26dd46c4bc7b9295a036aa0}{register\+Interaction}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{testlib_8h_a92d612e581676b81e9162f70839e88ef}{register\+Validation}} ()
+\item 
+void \mbox{\hyperlink{testlib_8h_af37a8d5160de18491abf562b60790dff}{register\+Validation}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{testlib_8h_a988dc33cd922d2f4748e4305743d03d8}{add\+Feature}} (const std\+::string \&\mbox{\hyperlink{testlib_8h_aca975e2860357cde841db9a2eb501e4f}{feature}})
+\item 
+void \mbox{\hyperlink{testlib_8h_aca975e2860357cde841db9a2eb501e4f}{feature}} (const std\+::string \&feature)
+\item 
+void \mbox{\hyperlink{testlib_8h_aef178d6340fe04d5d616ee2da19488b4}{register\+Testlib\+Cmd}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{testlib_8h_a58c2e7a2e44f8466c34b4500023cac6e}{register\+Testlib}} (int argc,...)
+\item 
+void \mbox{\hyperlink{testlib_8h_aa645d5ce2acb62ee61977d4ecf8e4dbc}{ensuref}} (bool cond, const char \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{testlib_8h_a1921b31564b858b45e94efff9e9d54bf}{format}},...)
+\item 
+void \mbox{\hyperlink{testlib_8h_a14fb24cad2f7e3d532a76f41ba4ba15b}{set\+Name}} (const char \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{testlib_8h_a1921b31564b858b45e94efff9e9d54bf}{format}},...)
+\item 
+{\footnotesize template$<$typename \+\_\+\+Random\+Access\+Iter $>$ }\\void \mbox{\hyperlink{testlib_8h_a892cac7bffad68bec03005d0a771c3c7}{shuffle}} (\+\_\+\+Random\+Access\+Iter \+\_\+\+\_\+first, \+\_\+\+Random\+Access\+Iter \+\_\+\+\_\+last)
+\item 
+{\footnotesize template$<$typename \+\_\+\+Random\+Access\+Iter $>$ }\\void \mbox{\hyperlink{testlib_8h_a2474f90782a9f77e45d81ae18d7c1ffb}{random\+\_\+shuffle}} (\+\_\+\+Random\+Access\+Iter, \+\_\+\+Random\+Access\+Iter)
+\item 
+int \mbox{\hyperlink{testlib_8h_a84b949a61c3fa63ca17fcf0b2f9ad4f3}{rand}} () \mbox{\hyperlink{testlib_8h_a390e9021e1ac7b756fdf9a49c3da47f9}{RAND\+\_\+\+THROW\+\_\+\+STATEMENT}}
+\item 
+void \mbox{\hyperlink{testlib_8h_a7e6ebe263f2a877015210e0ac28c3e79}{srand}} (unsigned int seed) \mbox{\hyperlink{testlib_8h_a390e9021e1ac7b756fdf9a49c3da47f9}{RAND\+\_\+\+THROW\+\_\+\+STATEMENT}}
+\item 
+void \mbox{\hyperlink{testlib_8h_a7b5d06041e39daeafd603dd998ce02c6}{start\+Test}} (int test)
+\item 
+std\+::string \mbox{\hyperlink{testlib_8h_a04fed71ae23afb50bb036e98cafc4d84}{compress}} (const std\+::string \&s)
+\item 
+std\+::string \mbox{\hyperlink{testlib_8h_a99a404dab8181e5e96eb0a675082f75d}{english\+Ending}} (int x)
+\item 
+{\footnotesize template$<$typename \+\_\+\+Forward\+Iterator , typename \+\_\+\+Separator $>$ }\\std\+::string \mbox{\hyperlink{testlib_8h_a639102617cba0cd4773c91f5eb4a1755}{join}} (\+\_\+\+Forward\+Iterator first, \+\_\+\+Forward\+Iterator last, \+\_\+\+Separator separator)
+\item 
+{\footnotesize template$<$typename \+\_\+\+Forward\+Iterator $>$ }\\std\+::string \mbox{\hyperlink{testlib_8h_a4d11cf2b81aaccdb03807cff7c1bae28}{join}} (\+\_\+\+Forward\+Iterator first, \+\_\+\+Forward\+Iterator last)
+\item 
+{\footnotesize template$<$typename \+\_\+\+Collection , typename \+\_\+\+Separator $>$ }\\std\+::string \mbox{\hyperlink{testlib_8h_a8c0f114f708064c2c01b47ab82cdf028}{join}} (const \+\_\+\+Collection \&collection, \+\_\+\+Separator separator)
+\item 
+{\footnotesize template$<$typename \+\_\+\+Collection $>$ }\\std\+::string \mbox{\hyperlink{testlib_8h_a31e919f2108a1f317e66d345a23c4923}{join}} (const \+\_\+\+Collection \&collection)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{testlib_8h_ad85d51a1b33f2422e08f3ca02dbd3127}{split}} (const std\+::string \&s, char separator)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{testlib_8h_a955ec7cfff0acb85ba9695bda2609499}{split}} (const std\+::string \&s, const std\+::string \&separators)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{testlib_8h_aab9e80a2f4e4203b27b11c5880850d8e}{tokenize}} (const std\+::string \&s, char separator)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{testlib_8h_af67ac6c551dc21d30494892a51a7fbb7}{tokenize}} (const std\+::string \&s, const std\+::string \&separators)
+\item 
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a117c50c18ae39dbb09a488ac92a086db}{\+\_\+\+\_\+testlib\+\_\+expected\+But\+Found}} (\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}} result, std\+::string expected, std\+::string found, const char \texorpdfstring{$\ast$}{*}prepend)
+\item 
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a4a02f43815b2ec1d3963a3d487234d0d}{\+\_\+\+\_\+testlib\+\_\+expected\+But\+Found}} (\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}} result, double expected, double found, const char \texorpdfstring{$\ast$}{*}prepend)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a3775e4b9dc20c18e8b0d509a145d5d90}{expected\+But\+Found}} (\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}} result, T expected, T found, const char \texorpdfstring{$\ast$}{*}prepend\+Format="{}"{},...)
+\item 
+template$<$$>$ \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_ace65de365c59bd5b3c271f84cf884bd8}{expected\+But\+Found$<$ std\+::string $>$}} (\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}} result, std\+::string expected, std\+::string found, const char \texorpdfstring{$\ast$}{*}prepend\+Format,...)
+\item 
+template$<$$>$ \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a3cc2bbe22675e2d0b0bfaf8f61d005a8}{expected\+But\+Found$<$ double $>$}} (\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}} result, double expected, double found, const char \texorpdfstring{$\ast$}{*}prepend\+Format,...)
+\item 
+template$<$$>$ \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a8c5e10df2297d4ebe22eb580285ae5de}{expected\+But\+Found$<$ const char \texorpdfstring{$\ast$}{*} $>$}} (\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}} result, const char \texorpdfstring{$\ast$}{*}expected, const char \texorpdfstring{$\ast$}{*}found, const char \texorpdfstring{$\ast$}{*}prepend\+Format,...)
+\item 
+template$<$$>$ \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a5f326691d44051de660eb6f3f25400f9}{expected\+But\+Found$<$ float $>$}} (\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}} result, float expected, float found, const char \texorpdfstring{$\ast$}{*}prepend\+Format,...)
+\item 
+template$<$$>$ \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a1c7f66f9e3c4f693663ffc534807ea02}{expected\+But\+Found$<$ long double $>$}} (\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}} result, long double expected, long double found, const char \texorpdfstring{$\ast$}{*}prepend\+Format,...)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{testlib_8h_aca3ccf9230a0e9c7f28e21d77f26e74f}{latest\+Features}} \mbox{[}$\,$\mbox{]}
+\item 
+const long long \mbox{\hyperlink{testlib_8h_ac2e4a8f83549c96237919d8335d3cdcf}{\+\_\+\+\_\+\+TESTLIB\+\_\+\+LONGLONG\+\_\+\+MAX}} = 9223372036854775807LL
+\item 
+const int \mbox{\hyperlink{testlib_8h_a18fd7cadefe2367367300b4f1983d8f0}{\+\_\+\+\_\+\+TESTLIB\+\_\+\+MAX\+\_\+\+TEST\+\_\+\+CASE}} = 1073741823
+\item 
+int \mbox{\hyperlink{testlib_8h_a34371151c9adbae73b89b0e7aed11a6f}{\+\_\+\+\_\+testlib\+\_\+exit\+Code}}
+\item 
+bool \mbox{\hyperlink{testlib_8h_a4a0af2b3cb79c442b17b7aca7c434307}{\+\_\+\+\_\+testlib\+\_\+has\+Test\+Case}}
+\item 
+int \mbox{\hyperlink{testlib_8h_a78d44a9b705b8375660cf7e4d99ea426}{\+\_\+\+\_\+testlib\+\_\+test\+Case}} = -\/1
+\item 
+const std\+::string \mbox{\hyperlink{testlib_8h_a02aa6e42b031ee29efb38fcc1f7a1d59}{outcomes}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{struct_in_stream}{In\+Stream}} \mbox{\hyperlink{testlib_8h_ad3874376581d36b1067d501d534d7b34}{inf}}
+\item 
+\mbox{\hyperlink{struct_in_stream}{In\+Stream}} \mbox{\hyperlink{testlib_8h_a93822943d6413c3eba20a27b9d31336b}{ouf}}
+\item 
+\mbox{\hyperlink{struct_in_stream}{In\+Stream}} \mbox{\hyperlink{testlib_8h_aca62d65c91dd6453f93a96348e78c5ac}{ans}}
+\item 
+bool \mbox{\hyperlink{testlib_8h_af4cc0994ea0f5ca9ede3bbc670fded8e}{appes\+Mode}}
+\item 
+std\+::string \mbox{\hyperlink{testlib_8h_a2f4a877b5dc48e645f2c41b5e9c99460}{appes\+Mode\+Encoding}} = "{}windows-\/1251"{}
+\item 
+std\+::string \mbox{\hyperlink{testlib_8h_a300565f96b1c710f123009c6aa8aed29}{result\+Name}}
+\item 
+std\+::string \mbox{\hyperlink{testlib_8h_a00f5e960957827ed8846cf705f810473}{checker\+Name}} = "{}untitled checker"{}
+\item 
+\mbox{\hyperlink{classrandom__t}{random\+\_\+t}} \mbox{\hyperlink{testlib_8h_a5743b8b2167a45883185605a8d8e10ce}{rnd}}
+\item 
+\mbox{\hyperlink{testlib_8h_a72dc574602eb75df785ecfc398a3158f}{TTestlib\+Mode}} \mbox{\hyperlink{testlib_8h_a94143519d4511e7adb6c77b5c715eeaf}{testlib\+Mode}} = \mbox{\hyperlink{testlib_8h_a72dc574602eb75df785ecfc398a3158fa344a85f02f1ac239f9f648738a856eb6}{\+\_\+unknown}}
+\item 
+double \mbox{\hyperlink{testlib_8h_acb5280d0779ed8499169e3537ab20fd2}{\+\_\+\+\_\+testlib\+\_\+points}} = std\+::numeric\+\_\+limits$<$float$>$\+::infinity()
+\item 
+const size\+\_\+t \mbox{\hyperlink{testlib_8h_ad2806158bb273bfbae710825328a0887}{VALIDATOR\+\_\+\+MAX\+\_\+\+VARIABLE\+\_\+\+COUNT}} = 255
+\item 
+class \mbox{\hyperlink{class_validator}{Validator}} \mbox{\hyperlink{testlib_8h_a72a79ac1064de9f716b78e4369669976}{validator}}
+\item 
+\mbox{\hyperlink{struct_testlib_finalize_guard}{Testlib\+Finalize\+Guard}} \mbox{\hyperlink{testlib_8h_a576c1be9a11f2136d2bfa955394d4575}{testlib\+Finalize\+Guard}}
+\item 
+std\+::fstream \mbox{\hyperlink{testlib_8h_a675e9c0cb400805c69d94e7cdded4494}{tout}}
+\item 
+std\+::string \mbox{\hyperlink{testlib_8h_adf88ff484a3ca535a2a66ea5c0713796}{\+\_\+\+\_\+testlib\+\_\+testset}}
+\item 
+std\+::string \mbox{\hyperlink{testlib_8h_a28757a64bf4cec48f7a7e5d6187bb350}{\+\_\+\+\_\+testlib\+\_\+group}}
+\item 
+class \mbox{\hyperlink{class_checker}{Checker}} \mbox{\hyperlink{testlib_8h_a9ce0a964a656c5d7d59b41f935fef72c}{checker}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{testlib_8h_ab882eaa72c700511353c3099d0952519}\label{testlib_8h_ab882eaa72c700511353c3099d0952519} 
+\index{testlib.h@{testlib.h}!\_\_testlib\_readMany@{\_\_testlib\_readMany}}
+\index{\_\_testlib\_readMany@{\_\_testlib\_readMany}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{\_\_testlib\_readMany}{\_\_testlib\_readMany}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+testlib\+\_\+read\+Many(\begin{DoxyParamCaption}\item[{}]{read\+Many,  }\item[{}]{read\+One,  }\item[{}]{type\+Name,  }\item[{}]{space }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (size\ <\ 0)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ quit(\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578a62d8da32e96f367adeed7ccb30436457}{\_fail}},\ \#readMany\ \textcolor{stringliteral}{"{}:\ size\ should\ be\ non-\/negative."{}});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ if\ (size\ >\ 100000000)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ quit(\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578a62d8da32e96f367adeed7ccb30436457}{\_fail}},\ \#readMany\ \textcolor{stringliteral}{"{}:\ size\ should\ be\ at\ most\ 100000000."{}});\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ std::vector<typeName>\ result(size);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ readManyIteration\ =\ indexBase;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ for\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size;\ i++)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ result[i]\ =\ readOne;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ readManyIteration++;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (strict\ \&\&\ space\ \&\&\ i\ +\ 1\ <\ size)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ readSpace();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ readManyIteration\ =\ NO\_INDEX;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ result;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l03436}{3436}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a67a1b89efefde69b271ec10086a493fc}\label{testlib_8h_a67a1b89efefde69b271ec10086a493fc} 
+\index{testlib.h@{testlib.h}!\_\_TESTLIB\_STATIC\_ASSERT@{\_\_TESTLIB\_STATIC\_ASSERT}}
+\index{\_\_TESTLIB\_STATIC\_ASSERT@{\_\_TESTLIB\_STATIC\_ASSERT}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{\_\_TESTLIB\_STATIC\_ASSERT}{\_\_TESTLIB\_STATIC\_ASSERT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+TESTLIB\+\_\+\+STATIC\+\_\+\+ASSERT(\begin{DoxyParamCaption}\item[{}]{condition }\end{DoxyParamCaption})~typedef void\texorpdfstring{$\ast$}{*} \+\_\+\+\_\+testlib\+\_\+static\+\_\+assert\+\_\+type\mbox{[}(condition) ? 1 \+: -\/1\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00299}{299}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a1e8859af5c334b6c4bebb434505b9ae4}\label{testlib_8h_a1e8859af5c334b6c4bebb434505b9ae4} 
+\index{testlib.h@{testlib.h}!\_pc@{\_pc}}
+\index{\_pc@{\_pc}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{\_pc}{\_pc}}
+{\footnotesize\ttfamily \#define \+\_\+pc(\begin{DoxyParamCaption}\item[{}]{exit\+Code }\end{DoxyParamCaption})~(\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}(\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578a5e1b770ccbf2809f1447783f97d4cece}{\+\_\+partially}} + (exit\+Code)))}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l01636}{1636}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a876ce77f3c672c7162658151e648389e}\label{testlib_8h_a876ce77f3c672c7162658151e648389e} 
+\index{testlib.h@{testlib.h}!CR@{CR}}
+\index{CR@{CR}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{CR}{CR}}
+{\footnotesize\ttfamily \#define CR~((char)13)}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00229}{229}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_ac9085792031f49686fd06d9560164d3b}\label{testlib_8h_ac9085792031f49686fd06d9560164d3b} 
+\index{testlib.h@{testlib.h}!DIRT\_EXIT\_CODE@{DIRT\_EXIT\_CODE}}
+\index{DIRT\_EXIT\_CODE@{DIRT\_EXIT\_CODE}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{DIRT\_EXIT\_CODE}{DIRT\_EXIT\_CODE}}
+{\footnotesize\ttfamily \#define DIRT\+\_\+\+EXIT\+\_\+\+CODE~4}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00276}{276}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a6995c405db0a243abdf49c4e1de55a41}\label{testlib_8h_a6995c405db0a243abdf49c4e1de55a41} 
+\index{testlib.h@{testlib.h}!ensure@{ensure}}
+\index{ensure@{ensure}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{ensure}{ensure}}
+{\footnotesize\ttfamily \#define ensure(\begin{DoxyParamCaption}\item[{}]{cond }\end{DoxyParamCaption})~\+\_\+\+\_\+testlib\+\_\+ensure(cond, "{}Condition failed\+: \textbackslash{}"{}"{} \#cond "{}\textbackslash{}"{}"{})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04908}{4908}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a4d844981188f58cfa1385d5a4d6918c4}\label{testlib_8h_a4d844981188f58cfa1385d5a4d6918c4} 
+\index{testlib.h@{testlib.h}!ensure\_ext@{ensure\_ext}}
+\index{ensure\_ext@{ensure\_ext}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{ensure\_ext}{ensure\_ext}}
+{\footnotesize\ttfamily \#define ensure\+\_\+ext(\begin{DoxyParamCaption}\item[{}]{cond }\end{DoxyParamCaption})~\+\_\+\+\_\+testlib\+\_\+ensure(cond, "{}Line "{} STRINGIZE(\+\_\+\+\_\+\+LINE\+\_\+\+\_\+) "{}\+: Condition failed\+: \textbackslash{}"{}"{} \#cond "{}\textbackslash{}"{}"{})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04911}{4911}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a09a15fa2d49e26dff40c22a309bd625f}\label{testlib_8h_a09a15fa2d49e26dff40c22a309bd625f} 
+\index{testlib.h@{testlib.h}!EOFC@{EOFC}}
+\index{EOFC@{EOFC}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{EOFC}{EOFC}}
+{\footnotesize\ttfamily \#define EOFC~(255)}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00232}{232}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_afac612f10342c3ccbfc7f30ae563184b}\label{testlib_8h_afac612f10342c3ccbfc7f30ae563184b} 
+\index{testlib.h@{testlib.h}!FAIL\_EXIT\_CODE@{FAIL\_EXIT\_CODE}}
+\index{FAIL\_EXIT\_CODE@{FAIL\_EXIT\_CODE}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{FAIL\_EXIT\_CODE}{FAIL\_EXIT\_CODE}}
+{\footnotesize\ttfamily \#define FAIL\+\_\+\+EXIT\+\_\+\+CODE~3}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00268}{268}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a795f6ad63580d1e0b860fbb9604a79db}\label{testlib_8h_a795f6ad63580d1e0b860fbb9604a79db} 
+\index{testlib.h@{testlib.h}!FMT\_TO\_RESULT@{FMT\_TO\_RESULT}}
+\index{FMT\_TO\_RESULT@{FMT\_TO\_RESULT}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{FMT\_TO\_RESULT}{FMT\_TO\_RESULT}}
+{\footnotesize\ttfamily \#define FMT\+\_\+\+TO\+\_\+\+RESULT(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{cstr,  }\item[{}]{result }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ std::string\ result;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ if\ (\_\_testlib\_format\_buffer\_usage\_count\ !=\ 0)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_testlib\_fail(\textcolor{stringliteral}{"{}FMT\_TO\_RESULT::\_\_testlib\_format\_buffer\_usage\_count\ !=\ 0"{}});\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \_\_testlib\_format\_buffer\_usage\_count++;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ va\_list\ ap;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ va\_start(ap,\ fmt);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ vsnprintf(\_\_testlib\_format\_buffer,\ \textcolor{keyword}{sizeof}(\_\_testlib\_format\_buffer),\ cstr,\ ap);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ va\_end(ap);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \_\_testlib\_format\_buffer[\textcolor{keyword}{sizeof}(\_\_testlib\_format\_buffer)\ -\/\ 1]\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ result\ =\ std::string(\_\_testlib\_format\_buffer);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \_\_testlib\_format\_buffer\_usage\_count-\/-\/;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00321}{321}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a29ae4e28b586fcb6dcd1a4a0a69b9a49}\label{testlib_8h_a29ae4e28b586fcb6dcd1a4a0a69b9a49} 
+\index{testlib.h@{testlib.h}!I64@{I64}}
+\index{I64@{I64}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{I64}{I64}}
+{\footnotesize\ttfamily \#define I64~"{}\%lld"{}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00306}{306}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a350c9d6cb81908d59427ee96844d1a9c}\label{testlib_8h_a350c9d6cb81908d59427ee96844d1a9c} 
+\index{testlib.h@{testlib.h}!LF@{LF}}
+\index{LF@{LF}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{LF}{LF}}
+{\footnotesize\ttfamily \#define LF~((char)10)}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00228}{228}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_af17a13b2ae0e9c24c020ac1f044f30c2}\label{testlib_8h_af17a13b2ae0e9c24c020ac1f044f30c2} 
+\index{testlib.h@{testlib.h}!LLONG\_MIN@{LLONG\_MIN}}
+\index{LLONG\_MIN@{LLONG\_MIN}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{LLONG\_MIN}{LLONG\_MIN}}
+{\footnotesize\ttfamily \#define LLONG\+\_\+\+MIN~(-\/9223372036854775807LL -\/ 1)}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00221}{221}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}\label{testlib_8h_aa1728270d73c5d1598de1fd691762eb1} 
+\index{testlib.h@{testlib.h}!NORETURN@{NORETURN}}
+\index{NORETURN@{NORETURN}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{NORETURN}{NORETURN}}
+{\footnotesize\ttfamily \#define NORETURN}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00315}{315}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a809c8f4d2bf12a53a01098f336b97598}\label{testlib_8h_a809c8f4d2bf12a53a01098f336b97598} 
+\index{testlib.h@{testlib.h}!OK\_EXIT\_CODE@{OK\_EXIT\_CODE}}
+\index{OK\_EXIT\_CODE@{OK\_EXIT\_CODE}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{OK\_EXIT\_CODE}{OK\_EXIT\_CODE}}
+{\footnotesize\ttfamily \#define OK\+\_\+\+EXIT\+\_\+\+CODE~0}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00238}{238}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_ac0c3e3c9771bdfbbcbd70392bd74c03a}\label{testlib_8h_ac0c3e3c9771bdfbbcbd70392bd74c03a} 
+\index{testlib.h@{testlib.h}!PC\_BASE\_EXIT\_CODE@{PC\_BASE\_EXIT\_CODE}}
+\index{PC\_BASE\_EXIT\_CODE@{PC\_BASE\_EXIT\_CODE}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{PC\_BASE\_EXIT\_CODE}{PC\_BASE\_EXIT\_CODE}}
+{\footnotesize\ttfamily \#define PC\+\_\+\+BASE\+\_\+\+EXIT\+\_\+\+CODE~0}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00292}{292}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_acd99fac8764b4f8513d0d78aa80878a5}\label{testlib_8h_acd99fac8764b4f8513d0d78aa80878a5} 
+\index{testlib.h@{testlib.h}!PE\_EXIT\_CODE@{PE\_EXIT\_CODE}}
+\index{PE\_EXIT\_CODE@{PE\_EXIT\_CODE}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{PE\_EXIT\_CODE}{PE\_EXIT\_CODE}}
+{\footnotesize\ttfamily \#define PE\+\_\+\+EXIT\+\_\+\+CODE~2}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00258}{258}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a58429ce36ac0b67fb7889455174c7e8a}\label{testlib_8h_a58429ce36ac0b67fb7889455174c7e8a} 
+\index{testlib.h@{testlib.h}!POINTS\_EXIT\_CODE@{POINTS\_EXIT\_CODE}}
+\index{POINTS\_EXIT\_CODE@{POINTS\_EXIT\_CODE}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{POINTS\_EXIT\_CODE}{POINTS\_EXIT\_CODE}}
+{\footnotesize\ttfamily \#define POINTS\+\_\+\+EXIT\+\_\+\+CODE~7}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00281}{281}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a390e9021e1ac7b756fdf9a49c3da47f9}\label{testlib_8h_a390e9021e1ac7b756fdf9a49c3da47f9} 
+\index{testlib.h@{testlib.h}!RAND\_THROW\_STATEMENT@{RAND\_THROW\_STATEMENT}}
+\index{RAND\_THROW\_STATEMENT@{RAND\_THROW\_STATEMENT}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{RAND\_THROW\_STATEMENT}{RAND\_THROW\_STATEMENT}}
+{\footnotesize\ttfamily \#define RAND\+\_\+\+THROW\+\_\+\+STATEMENT}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04961}{4961}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_aaac7e8b42546e8a2fd07b71fd5b12ba0}\label{testlib_8h_aaac7e8b42546e8a2fd07b71fd5b12ba0} 
+\index{testlib.h@{testlib.h}!random@{random}}
+\index{random@{random}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{random}{random}}
+{\footnotesize\ttfamily \#define random~\+\_\+\+\_\+random\+\_\+deprecated}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00167}{167}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a5ff6e798033f03e74730e99f01936f84}\label{testlib_8h_a5ff6e798033f03e74730e99f01936f84} 
+\index{testlib.h@{testlib.h}!SPACE@{SPACE}}
+\index{SPACE@{SPACE}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{SPACE}{SPACE}}
+{\footnotesize\ttfamily \#define SPACE~((char)\textquotesingle{} \textquotesingle{})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00231}{231}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a3428692efe6051ef30016ffde1a9f7bb}\label{testlib_8h_a3428692efe6051ef30016ffde1a9f7bb} 
+\index{testlib.h@{testlib.h}!STRINGIZE@{STRINGIZE}}
+\index{STRINGIZE@{STRINGIZE}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{STRINGIZE}{STRINGIZE}}
+{\footnotesize\ttfamily \#define STRINGIZE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{testlib_8h_a9a63ce5ce3b143f8df9df20769c2ab86}{STRINGIZE\+\_\+\+DETAIL}}(x)}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04910}{4910}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a9a63ce5ce3b143f8df9df20769c2ab86}\label{testlib_8h_a9a63ce5ce3b143f8df9df20769c2ab86} 
+\index{testlib.h@{testlib.h}!STRINGIZE\_DETAIL@{STRINGIZE\_DETAIL}}
+\index{STRINGIZE\_DETAIL@{STRINGIZE\_DETAIL}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{STRINGIZE\_DETAIL}{STRINGIZE\_DETAIL}}
+{\footnotesize\ttfamily \#define STRINGIZE\+\_\+\+DETAIL(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\#x}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04909}{4909}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_ad58a1fbfc85c7e4790fc55e654f50221}\label{testlib_8h_ad58a1fbfc85c7e4790fc55e654f50221} 
+\index{testlib.h@{testlib.h}!TAB@{TAB}}
+\index{TAB@{TAB}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{TAB}{TAB}}
+{\footnotesize\ttfamily \#define TAB~((char)9)}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00230}{230}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a24c42244bf61006967bf37001c14d2bf}\label{testlib_8h_a24c42244bf61006967bf37001c14d2bf} 
+\index{testlib.h@{testlib.h}!U64@{U64}}
+\index{U64@{U64}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{U64}{U64}}
+{\footnotesize\ttfamily \#define U64~"{}\%llu"{}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00307}{307}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_aa1dd7166a75b73ad62b111ae6fc17c59}\label{testlib_8h_aa1dd7166a75b73ad62b111ae6fc17c59} 
+\index{testlib.h@{testlib.h}!ULLONG\_MAX@{ULLONG\_MAX}}
+\index{ULLONG\_MAX@{ULLONG\_MAX}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{ULLONG\_MAX}{ULLONG\_MAX}}
+{\footnotesize\ttfamily \#define ULLONG\+\_\+\+MAX~(18446744073709551615)}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00225}{225}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a30fb6330f5fcaf65c9347f50df26222d}\label{testlib_8h_a30fb6330f5fcaf65c9347f50df26222d} 
+\index{testlib.h@{testlib.h}!UNEXPECTED\_EOF\_EXIT\_CODE@{UNEXPECTED\_EOF\_EXIT\_CODE}}
+\index{UNEXPECTED\_EOF\_EXIT\_CODE@{UNEXPECTED\_EOF\_EXIT\_CODE}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{UNEXPECTED\_EOF\_EXIT\_CODE}{UNEXPECTED\_EOF\_EXIT\_CODE}}
+{\footnotesize\ttfamily \#define UNEXPECTED\+\_\+\+EOF\+\_\+\+EXIT\+\_\+\+CODE~8}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00285}{285}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a1c6d5de492ac61ad29aec7aa9a436bbf}\label{testlib_8h_a1c6d5de492ac61ad29aec7aa9a436bbf} 
+\index{testlib.h@{testlib.h}!VERSION@{VERSION}}
+\index{VERSION@{VERSION}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{VERSION}{VERSION}}
+{\footnotesize\ttfamily \#define VERSION~"{}0.\+9.\+42-\/SNAPSHOT"{}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00028}{28}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a9407aadd1d7b6a24b40a94be0e1b5e6c}\label{testlib_8h_a9407aadd1d7b6a24b40a94be0e1b5e6c} 
+\index{testlib.h@{testlib.h}!WA\_EXIT\_CODE@{WA\_EXIT\_CODE}}
+\index{WA\_EXIT\_CODE@{WA\_EXIT\_CODE}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{WA\_EXIT\_CODE}{WA\_EXIT\_CODE}}
+{\footnotesize\ttfamily \#define WA\+\_\+\+EXIT\+\_\+\+CODE~1}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00248}{248}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5}\label{testlib_8h_a4cfc63e05db4883dc4b60a1245a9ffc5} 
+\index{testlib.h@{testlib.h}!WORD@{WORD}}
+\index{WORD@{WORD}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{WORD}{WORD}}
+{\footnotesize\ttfamily \#define WORD~unsigned short}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00212}{212}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{testlib_8h_ae73df2968f2f656074dc00e062600ddb}\label{testlib_8h_ae73df2968f2f656074dc00e062600ddb} 
+\index{testlib.h@{testlib.h}!TMode@{TMode}}
+\index{TMode@{TMode}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{TMode}{TMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{testlib_8h_ae73df2968f2f656074dc00e062600ddb}{TMode}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_input@{\_input}!testlib.h@{testlib.h}}\index{testlib.h@{testlib.h}!\_input@{\_input}}}\Hypertarget{testlib_8h_ae73df2968f2f656074dc00e062600ddba090858be22ac48bf83855133ac07036a}\label{testlib_8h_ae73df2968f2f656074dc00e062600ddba090858be22ac48bf83855133ac07036a} 
+\+\_\+input&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_output@{\_output}!testlib.h@{testlib.h}}\index{testlib.h@{testlib.h}!\_output@{\_output}}}\Hypertarget{testlib_8h_ae73df2968f2f656074dc00e062600ddbafb9d1f90fad72c2e77f29dd244dff5a6}\label{testlib_8h_ae73df2968f2f656074dc00e062600ddbafb9d1f90fad72c2e77f29dd244dff5a6} 
+\+\_\+output&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_answer@{\_answer}!testlib.h@{testlib.h}}\index{testlib.h@{testlib.h}!\_answer@{\_answer}}}\Hypertarget{testlib_8h_ae73df2968f2f656074dc00e062600ddba1d5993b55c5fa9053df279a83de91f61}\label{testlib_8h_ae73df2968f2f656074dc00e062600ddba1d5993b55c5fa9053df279a83de91f61} 
+\+\_\+answer&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l01616}{1616}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_aca738f43134375f0a18077d633f14578}\label{testlib_8h_aca738f43134375f0a18077d633f14578} 
+\index{testlib.h@{testlib.h}!TResult@{TResult}}
+\index{TResult@{TResult}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{TResult}{TResult}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_ok@{\_ok}!testlib.h@{testlib.h}}\index{testlib.h@{testlib.h}!\_ok@{\_ok}}}\Hypertarget{testlib_8h_aca738f43134375f0a18077d633f14578a9d802c77af97a77eec509a12bcf6ae77}\label{testlib_8h_aca738f43134375f0a18077d633f14578a9d802c77af97a77eec509a12bcf6ae77} 
+\+\_\+ok&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_wa@{\_wa}!testlib.h@{testlib.h}}\index{testlib.h@{testlib.h}!\_wa@{\_wa}}}\Hypertarget{testlib_8h_aca738f43134375f0a18077d633f14578a77706596ca6256a69b77e763d6787585}\label{testlib_8h_aca738f43134375f0a18077d633f14578a77706596ca6256a69b77e763d6787585} 
+\+\_\+wa&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_pe@{\_pe}!testlib.h@{testlib.h}}\index{testlib.h@{testlib.h}!\_pe@{\_pe}}}\Hypertarget{testlib_8h_aca738f43134375f0a18077d633f14578a801994faa20251234912d2e8eaf42773}\label{testlib_8h_aca738f43134375f0a18077d633f14578a801994faa20251234912d2e8eaf42773} 
+\+\_\+pe&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_fail@{\_fail}!testlib.h@{testlib.h}}\index{testlib.h@{testlib.h}!\_fail@{\_fail}}}\Hypertarget{testlib_8h_aca738f43134375f0a18077d633f14578a62d8da32e96f367adeed7ccb30436457}\label{testlib_8h_aca738f43134375f0a18077d633f14578a62d8da32e96f367adeed7ccb30436457} 
+\+\_\+fail&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_dirt@{\_dirt}!testlib.h@{testlib.h}}\index{testlib.h@{testlib.h}!\_dirt@{\_dirt}}}\Hypertarget{testlib_8h_aca738f43134375f0a18077d633f14578a42e718be5b94c0a545a2cffb0d7d1b43}\label{testlib_8h_aca738f43134375f0a18077d633f14578a42e718be5b94c0a545a2cffb0d7d1b43} 
+\+\_\+dirt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_points@{\_points}!testlib.h@{testlib.h}}\index{testlib.h@{testlib.h}!\_points@{\_points}}}\Hypertarget{testlib_8h_aca738f43134375f0a18077d633f14578abf5f5cf5414425fece755c1d07df9be2}\label{testlib_8h_aca738f43134375f0a18077d633f14578abf5f5cf5414425fece755c1d07df9be2} 
+\+\_\+points&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_unexpected\_eof@{\_unexpected\_eof}!testlib.h@{testlib.h}}\index{testlib.h@{testlib.h}!\_unexpected\_eof@{\_unexpected\_eof}}}\Hypertarget{testlib_8h_aca738f43134375f0a18077d633f14578aae0220bb99b9060b8561683d987b2fa1}\label{testlib_8h_aca738f43134375f0a18077d633f14578aae0220bb99b9060b8561683d987b2fa1} 
+\+\_\+unexpected\+\_\+eof&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_partially@{\_partially}!testlib.h@{testlib.h}}\index{testlib.h@{testlib.h}!\_partially@{\_partially}}}\Hypertarget{testlib_8h_aca738f43134375f0a18077d633f14578a5e1b770ccbf2809f1447783f97d4cece}\label{testlib_8h_aca738f43134375f0a18077d633f14578a5e1b770ccbf2809f1447783f97d4cece} 
+\+\_\+partially&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l01621}{1621}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a72dc574602eb75df785ecfc398a3158f}\label{testlib_8h_a72dc574602eb75df785ecfc398a3158f} 
+\index{testlib.h@{testlib.h}!TTestlibMode@{TTestlibMode}}
+\index{TTestlibMode@{TTestlibMode}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{TTestlibMode}{TTestlibMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{testlib_8h_a72dc574602eb75df785ecfc398a3158f}{TTestlib\+Mode}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_unknown@{\_unknown}!testlib.h@{testlib.h}}\index{testlib.h@{testlib.h}!\_unknown@{\_unknown}}}\Hypertarget{testlib_8h_a72dc574602eb75df785ecfc398a3158fa344a85f02f1ac239f9f648738a856eb6}\label{testlib_8h_a72dc574602eb75df785ecfc398a3158fa344a85f02f1ac239f9f648738a856eb6} 
+\+\_\+unknown&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_checker@{\_checker}!testlib.h@{testlib.h}}\index{testlib.h@{testlib.h}!\_checker@{\_checker}}}\Hypertarget{testlib_8h_a72dc574602eb75df785ecfc398a3158fad23f42b9c6d23ab5679d79151c4585ff}\label{testlib_8h_a72dc574602eb75df785ecfc398a3158fad23f42b9c6d23ab5679d79151c4585ff} 
+\+\_\+checker&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_validator@{\_validator}!testlib.h@{testlib.h}}\index{testlib.h@{testlib.h}!\_validator@{\_validator}}}\Hypertarget{testlib_8h_a72dc574602eb75df785ecfc398a3158fae0b813cbde0d5fc79fcecd814910e24f}\label{testlib_8h_a72dc574602eb75df785ecfc398a3158fae0b813cbde0d5fc79fcecd814910e24f} 
+\+\_\+validator&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_generator@{\_generator}!testlib.h@{testlib.h}}\index{testlib.h@{testlib.h}!\_generator@{\_generator}}}\Hypertarget{testlib_8h_a72dc574602eb75df785ecfc398a3158fa5311ad9bde7f5dbdc28c1f8264456fd5}\label{testlib_8h_a72dc574602eb75df785ecfc398a3158fa5311ad9bde7f5dbdc28c1f8264456fd5} 
+\+\_\+generator&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_interactor@{\_interactor}!testlib.h@{testlib.h}}\index{testlib.h@{testlib.h}!\_interactor@{\_interactor}}}\Hypertarget{testlib_8h_a72dc574602eb75df785ecfc398a3158fadaea9b0ac8f600ff71b0f7616869deac}\label{testlib_8h_a72dc574602eb75df785ecfc398a3158fadaea9b0ac8f600ff71b0f7616869deac} 
+\+\_\+interactor&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_scorer@{\_scorer}!testlib.h@{testlib.h}}\index{testlib.h@{testlib.h}!\_scorer@{\_scorer}}}\Hypertarget{testlib_8h_a72dc574602eb75df785ecfc398a3158fa1bec4ab4fa6a6927ec64b3143afa14fa}\label{testlib_8h_a72dc574602eb75df785ecfc398a3158fa1bec4ab4fa6a6927ec64b3143afa14fa} 
+\+\_\+scorer&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l01632}{1632}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{testlib_8h_a4a02f43815b2ec1d3963a3d487234d0d}\label{testlib_8h_a4a02f43815b2ec1d3963a3d487234d0d} 
+\index{testlib.h@{testlib.h}!\_\_testlib\_expectedButFound@{\_\_testlib\_expectedButFound}}
+\index{\_\_testlib\_expectedButFound@{\_\_testlib\_expectedButFound}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{\_\_testlib\_expectedButFound()}{\_\_testlib\_expectedButFound()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \+\_\+\+\_\+testlib\+\_\+expected\+But\+Found (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}}]{result,  }\item[{double}]{expected,  }\item[{double}]{found,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{prepend }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l05176}{5176}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a117c50c18ae39dbb09a488ac92a086db}\label{testlib_8h_a117c50c18ae39dbb09a488ac92a086db} 
+\index{testlib.h@{testlib.h}!\_\_testlib\_expectedButFound@{\_\_testlib\_expectedButFound}}
+\index{\_\_testlib\_expectedButFound@{\_\_testlib\_expectedButFound}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{\_\_testlib\_expectedButFound()}{\_\_testlib\_expectedButFound()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \+\_\+\+\_\+testlib\+\_\+expected\+But\+Found (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}}]{result,  }\item[{std\+::string}]{expected,  }\item[{std\+::string}]{found,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{prepend }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l05165}{5165}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a694d06929cd60de7f337b6e265b2365b}\label{testlib_8h_a694d06929cd60de7f337b6e265b2365b} 
+\index{testlib.h@{testlib.h}!\_\_testlib\_help@{\_\_testlib\_help}}
+\index{\_\_testlib\_help@{\_\_testlib\_help}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{\_\_testlib\_help()}{\_\_testlib\_help()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \+\_\+\+\_\+testlib\+\_\+help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04497}{4497}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_abff240fe64a3bc2dab1a7a70f73464cb}\label{testlib_8h_abff240fe64a3bc2dab1a7a70f73464cb} 
+\index{testlib.h@{testlib.h}!\_\_testlib\_quitp@{\_\_testlib\_quitp}}
+\index{\_\_testlib\_quitp@{\_\_testlib\_quitp}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{\_\_testlib\_quitp()}{\_\_testlib\_quitp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \+\_\+\+\_\+testlib\+\_\+quitp (\begin{DoxyParamCaption}\item[{double}]{points,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{message }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04419}{4419}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a3951a3cfdcfee60d55d47a3faca1510f}\label{testlib_8h_a3951a3cfdcfee60d55d47a3faca1510f} 
+\index{testlib.h@{testlib.h}!\_\_testlib\_quitp@{\_\_testlib\_quitp}}
+\index{\_\_testlib\_quitp@{\_\_testlib\_quitp}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{\_\_testlib\_quitp()}{\_\_testlib\_quitp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \+\_\+\+\_\+testlib\+\_\+quitp (\begin{DoxyParamCaption}\item[{int}]{points,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{message }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04432}{4432}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a988dc33cd922d2f4748e4305743d03d8}\label{testlib_8h_a988dc33cd922d2f4748e4305743d03d8} 
+\index{testlib.h@{testlib.h}!addFeature@{addFeature}}
+\index{addFeature@{addFeature}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{addFeature()}{addFeature()}}
+{\footnotesize\ttfamily void add\+Feature (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{feature }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04765}{4765}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a04fed71ae23afb50bb036e98cafc4d84}\label{testlib_8h_a04fed71ae23afb50bb036e98cafc4d84} 
+\index{testlib.h@{testlib.h}!compress@{compress}}
+\index{compress@{compress}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{compress()}{compress()}}
+{\footnotesize\ttfamily std\+::string compress (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l05006}{5006}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a2c40237203009ff06974b25b65030d68}\label{testlib_8h_a2c40237203009ff06974b25b65030d68} 
+\index{testlib.h@{testlib.h}!disableFinalizeGuard@{disableFinalizeGuard}}
+\index{disableFinalizeGuard@{disableFinalizeGuard}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{disableFinalizeGuard()}{disableFinalizeGuard()}}
+{\footnotesize\ttfamily void disable\+Finalize\+Guard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02817}{2817}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_afe9a738a208c2ff953b27fea24007d20}\label{testlib_8h_afe9a738a208c2ff953b27fea24007d20} 
+\index{testlib.h@{testlib.h}!doubleCompare@{doubleCompare}}
+\index{doubleCompare@{doubleCompare}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{doubleCompare()}{doubleCompare()}}
+{\footnotesize\ttfamily bool double\+Compare (\begin{DoxyParamCaption}\item[{double}]{expected,  }\item[{double}]{result,  }\item[{double}]{MAX\+\_\+\+DOUBLE\+\_\+\+ERROR }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00482}{482}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a7995d5ee8c9310d34ff25b19bdfdbe82}\label{testlib_8h_a7995d5ee8c9310d34ff25b19bdfdbe82} 
+\index{testlib.h@{testlib.h}!doubleDelta@{doubleDelta}}
+\index{doubleDelta@{doubleDelta}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{doubleDelta()}{doubleDelta()}}
+{\footnotesize\ttfamily double double\+Delta (\begin{DoxyParamCaption}\item[{double}]{expected,  }\item[{double}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00508}{508}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a99a404dab8181e5e96eb0a675082f75d}\label{testlib_8h_a99a404dab8181e5e96eb0a675082f75d} 
+\index{testlib.h@{testlib.h}!englishEnding@{englishEnding}}
+\index{englishEnding@{englishEnding}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{englishEnding()}{englishEnding()}}
+{\footnotesize\ttfamily std\+::string english\+Ending (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l05013}{5013}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_aa645d5ce2acb62ee61977d4ecf8e4dbc}\label{testlib_8h_aa645d5ce2acb62ee61977d4ecf8e4dbc} 
+\index{testlib.h@{testlib.h}!ensuref@{ensuref}}
+\index{ensuref@{ensuref}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{ensuref()}{ensuref()}}
+{\footnotesize\ttfamily void ensuref (\begin{DoxyParamCaption}\item[{bool}]{cond,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{format,  }\item[{}]{... }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04916}{4916}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a3775e4b9dc20c18e8b0d509a145d5d90}\label{testlib_8h_a3775e4b9dc20c18e8b0d509a145d5d90} 
+\index{testlib.h@{testlib.h}!expectedButFound@{expectedButFound}}
+\index{expectedButFound@{expectedButFound}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{expectedButFound()}{expectedButFound()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void expected\+But\+Found (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}}]{result,  }\item[{T}]{expected,  }\item[{T}]{found,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{prepend\+Format = {\ttfamily "{}"{}},  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l05186}{5186}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a8c5e10df2297d4ebe22eb580285ae5de}\label{testlib_8h_a8c5e10df2297d4ebe22eb580285ae5de} 
+\index{testlib.h@{testlib.h}!expectedButFound$<$ const char \texorpdfstring{$\ast$}{*} $>$@{expectedButFound$<$ const char \texorpdfstring{$\ast$}{*} $>$}}
+\index{expectedButFound$<$ const char \texorpdfstring{$\ast$}{*} $>$@{expectedButFound$<$ const char \texorpdfstring{$\ast$}{*} $>$}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{expectedButFound$<$ const char \texorpdfstring{$\ast$}{*} $>$()}{expectedButFound< const char * >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a3775e4b9dc20c18e8b0d509a145d5d90}{expected\+But\+Found}}$<$ const char \texorpdfstring{$\ast$}{*} $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}}]{result,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{expected,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{found,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{prepend\+Format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l05218}{5218}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a3cc2bbe22675e2d0b0bfaf8f61d005a8}\label{testlib_8h_a3cc2bbe22675e2d0b0bfaf8f61d005a8} 
+\index{testlib.h@{testlib.h}!expectedButFound$<$ double $>$@{expectedButFound$<$ double $>$}}
+\index{expectedButFound$<$ double $>$@{expectedButFound$<$ double $>$}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{expectedButFound$<$ double $>$()}{expectedButFound< double >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a3775e4b9dc20c18e8b0d509a145d5d90}{expected\+But\+Found}}$<$ double $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}}]{result,  }\item[{double}]{expected,  }\item[{double}]{found,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{prepend\+Format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l05207}{5207}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a5f326691d44051de660eb6f3f25400f9}\label{testlib_8h_a5f326691d44051de660eb6f3f25400f9} 
+\index{testlib.h@{testlib.h}!expectedButFound$<$ float $>$@{expectedButFound$<$ float $>$}}
+\index{expectedButFound$<$ float $>$@{expectedButFound$<$ float $>$}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{expectedButFound$<$ float $>$()}{expectedButFound< float >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a3775e4b9dc20c18e8b0d509a145d5d90}{expected\+But\+Found}}$<$ float $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}}]{result,  }\item[{float}]{expected,  }\item[{float}]{found,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{prepend\+Format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l05229}{5229}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a1c7f66f9e3c4f693663ffc534807ea02}\label{testlib_8h_a1c7f66f9e3c4f693663ffc534807ea02} 
+\index{testlib.h@{testlib.h}!expectedButFound$<$ long double $>$@{expectedButFound$<$ long double $>$}}
+\index{expectedButFound$<$ long double $>$@{expectedButFound$<$ long double $>$}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{expectedButFound$<$ long double $>$()}{expectedButFound< long double >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a3775e4b9dc20c18e8b0d509a145d5d90}{expected\+But\+Found}}$<$ long double $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}}]{result,  }\item[{long double}]{expected,  }\item[{long double}]{found,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{prepend\+Format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l05238}{5238}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_ace65de365c59bd5b3c271f84cf884bd8}\label{testlib_8h_ace65de365c59bd5b3c271f84cf884bd8} 
+\index{testlib.h@{testlib.h}!expectedButFound$<$ std::string $>$@{expectedButFound$<$ std::string $>$}}
+\index{expectedButFound$<$ std::string $>$@{expectedButFound$<$ std::string $>$}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{expectedButFound$<$ std::string $>$()}{expectedButFound< std::string >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void \mbox{\hyperlink{testlib_8h_a3775e4b9dc20c18e8b0d509a145d5d90}{expected\+But\+Found}}$<$ std\+::string $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}}]{result,  }\item[{std\+::string}]{expected,  }\item[{std\+::string}]{found,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{prepend\+Format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l05197}{5197}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_aca975e2860357cde841db9a2eb501e4f}\label{testlib_8h_aca975e2860357cde841db9a2eb501e4f} 
+\index{testlib.h@{testlib.h}!feature@{feature}}
+\index{feature@{feature}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{feature()}{feature()}}
+{\footnotesize\ttfamily void feature (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{feature }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04771}{4771}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a1921b31564b858b45e94efff9e9d54bf}\label{testlib_8h_a1921b31564b858b45e94efff9e9d54bf} 
+\index{testlib.h@{testlib.h}!format@{format}}
+\index{format@{format}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string format (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00436}{436}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a133d0fb6f1e08d9483f8aa9a8e3c6f38}\label{testlib_8h_a133d0fb6f1e08d9483f8aa9a8e3c6f38} 
+\index{testlib.h@{testlib.h}!format@{format}}
+\index{format@{format}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string format (\begin{DoxyParamCaption}\item[{const std\+::string}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00441}{441}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_ae7fe33b331a1689d31d7d43eb94b125a}\label{testlib_8h_ae7fe33b331a1689d31d7d43eb94b125a} 
+\index{testlib.h@{testlib.h}!getGroup@{getGroup}}
+\index{getGroup@{getGroup}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{getGroup()}{getGroup()}}
+{\footnotesize\ttfamily std\+::string get\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04546}{4546}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a327d15f1f5e7c8377faf74e620514689}\label{testlib_8h_a327d15f1f5e7c8377faf74e620514689} 
+\index{testlib.h@{testlib.h}!getTestset@{getTestset}}
+\index{getTestset@{getTestset}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{getTestset()}{getTestset()}}
+{\footnotesize\ttfamily std\+::string get\+Testset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04540}{4540}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a9282a723c3cb0d8eaf1d904e975a5897}\label{testlib_8h_a9282a723c3cb0d8eaf1d904e975a5897} 
+\index{testlib.h@{testlib.h}!halt@{halt}}
+\index{halt@{halt}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{halt()}{halt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void halt (\begin{DoxyParamCaption}\item[{int}]{exit\+Code }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02969}{2969}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_aedd6eec8331fb12c3330f6b7a1227e2c}\label{testlib_8h_aedd6eec8331fb12c3330f6b7a1227e2c} 
+\index{testlib.h@{testlib.h}!isBlanks@{isBlanks}}
+\index{isBlanks@{isBlanks}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{isBlanks()}{isBlanks()}}
+{\footnotesize\ttfamily template$<$typename C $>$ \\
+bool is\+Blanks (\begin{DoxyParamCaption}\item[{C}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l01593}{1593}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a8be64904de021941ee6d1aa96ee4da14}\label{testlib_8h_a8be64904de021941ee6d1aa96ee4da14} 
+\index{testlib.h@{testlib.h}!isEof@{isEof}}
+\index{isEof@{isEof}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{isEof()}{isEof()}}
+{\footnotesize\ttfamily template$<$typename C $>$ \\
+bool is\+Eof (\begin{DoxyParamCaption}\item[{C}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l01583}{1583}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a8da048ae3bc25fe4bb2dcfceb53a90fc}\label{testlib_8h_a8da048ae3bc25fe4bb2dcfceb53a90fc} 
+\index{testlib.h@{testlib.h}!isEoln@{isEoln}}
+\index{isEoln@{isEoln}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{isEoln()}{isEoln()}}
+{\footnotesize\ttfamily template$<$typename C $>$ \\
+bool is\+Eoln (\begin{DoxyParamCaption}\item[{C}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l01588}{1588}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a4d11cf2b81aaccdb03807cff7c1bae28}\label{testlib_8h_a4d11cf2b81aaccdb03807cff7c1bae28} 
+\index{testlib.h@{testlib.h}!join@{join}}
+\index{join@{join}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Forward\+Iterator $>$ \\
+std\+::string join (\begin{DoxyParamCaption}\item[{\+\_\+\+Forward\+Iterator}]{first,  }\item[{\+\_\+\+Forward\+Iterator}]{last }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l05047}{5047}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a639102617cba0cd4773c91f5eb4a1755}\label{testlib_8h_a639102617cba0cd4773c91f5eb4a1755} 
+\index{testlib.h@{testlib.h}!join@{join}}
+\index{join@{join}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Forward\+Iterator , typename \+\_\+\+Separator $>$ \\
+std\+::string join (\begin{DoxyParamCaption}\item[{\+\_\+\+Forward\+Iterator}]{first,  }\item[{\+\_\+\+Forward\+Iterator}]{last,  }\item[{\+\_\+\+Separator}]{separator }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l05030}{5030}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a31e919f2108a1f317e66d345a23c4923}\label{testlib_8h_a31e919f2108a1f317e66d345a23c4923} 
+\index{testlib.h@{testlib.h}!join@{join}}
+\index{join@{join}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Collection $>$ \\
+std\+::string join (\begin{DoxyParamCaption}\item[{const \+\_\+\+Collection \&}]{collection }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l05063}{5063}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a8c0f114f708064c2c01b47ab82cdf028}\label{testlib_8h_a8c0f114f708064c2c01b47ab82cdf028} 
+\index{testlib.h@{testlib.h}!join@{join}}
+\index{join@{join}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Collection , typename \+\_\+\+Separator $>$ \\
+std\+::string join (\begin{DoxyParamCaption}\item[{const \+\_\+\+Collection \&}]{collection,  }\item[{\+\_\+\+Separator}]{separator }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l05055}{5055}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a2d0670a860a887c1de821de0550c0a32}\label{testlib_8h_a2d0670a860a887c1de821de0550c0a32} 
+\index{testlib.h@{testlib.h}!lowerCase@{lowerCase}}
+\index{lowerCase@{lowerCase}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{lowerCase()}{lowerCase()}}
+{\footnotesize\ttfamily std\+::string lower\+Case (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00426}{426}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_aed77b9d710f29f434fee76944e94202a}\label{testlib_8h_aed77b9d710f29f434fee76944e94202a} 
+\index{testlib.h@{testlib.h}!quit@{quit}}
+\index{quit@{quit}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{quit()}{quit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void quit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}}]{result,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04415}{4415}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_acec28096e85b471e7121ed06ba1eeb42}\label{testlib_8h_acec28096e85b471e7121ed06ba1eeb42} 
+\index{testlib.h@{testlib.h}!quit@{quit}}
+\index{quit@{quit}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{quit()}{quit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void quit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}}]{result,  }\item[{const std\+::string \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04411}{4411}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a5e727281f092efd3f19c6a84e2eacc01}\label{testlib_8h_a5e727281f092efd3f19c6a84e2eacc01} 
+\index{testlib.h@{testlib.h}!quitf@{quitf}}
+\index{quitf@{quitf}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{quitf()}{quitf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void quitf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}}]{result,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04482}{4482}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_ad7e7f24ac09509dc94581cf3b0a5dced}\label{testlib_8h_ad7e7f24ac09509dc94581cf3b0a5dced} 
+\index{testlib.h@{testlib.h}!quitif@{quitif}}
+\index{quitif@{quitif}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{quitif()}{quitif()}}
+{\footnotesize\ttfamily void quitif (\begin{DoxyParamCaption}\item[{bool}]{condition,  }\item[{\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}}]{result,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04490}{4490}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_abd20355062b85779c882dfb19f3d9380}\label{testlib_8h_abd20355062b85779c882dfb19f3d9380} 
+\index{testlib.h@{testlib.h}!quitp@{quitp}}
+\index{quitp@{quitp}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{quitp()}{quitp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void quitp (\begin{DoxyParamCaption}\item[{double}]{points,  }\item[{const std\+::string \&}]{message = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04449}{4449}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a73dbf5feb8712147dfa04c19c9d6b01d}\label{testlib_8h_a73dbf5feb8712147dfa04c19c9d6b01d} 
+\index{testlib.h@{testlib.h}!quitp@{quitp}}
+\index{quitp@{quitp}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{quitp()}{quitp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename F $>$ \\
+\mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void quitp (\begin{DoxyParamCaption}\item[{F}]{points,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04474}{4474}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a96b765d3745447a9518991edeab211c5}\label{testlib_8h_a96b765d3745447a9518991edeab211c5} 
+\index{testlib.h@{testlib.h}!quitp@{quitp}}
+\index{quitp@{quitp}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{quitp()}{quitp()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void quitp (\begin{DoxyParamCaption}\item[{float}]{points,  }\item[{const std\+::string \&}]{message = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04445}{4445}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a7c6fc64b2f0640dd5dd4b1f52210d669}\label{testlib_8h_a7c6fc64b2f0640dd5dd4b1f52210d669} 
+\index{testlib.h@{testlib.h}!quitp@{quitp}}
+\index{quitp@{quitp}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{quitp()}{quitp()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void quitp (\begin{DoxyParamCaption}\item[{int}]{points,  }\item[{const std\+::string \&}]{message = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04457}{4457}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a4c8b51476405ff163cc57a9e0ec10aea}\label{testlib_8h_a4c8b51476405ff163cc57a9e0ec10aea} 
+\index{testlib.h@{testlib.h}!quitp@{quitp}}
+\index{quitp@{quitp}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{quitp()}{quitp()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void quitp (\begin{DoxyParamCaption}\item[{long double}]{points,  }\item[{const std\+::string \&}]{message = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04453}{4453}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a9e512424bd789067763542439fb1083b}\label{testlib_8h_a9e512424bd789067763542439fb1083b} 
+\index{testlib.h@{testlib.h}!quitpi@{quitpi}}
+\index{quitpi@{quitpi}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{quitpi()}{quitpi()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_aa1728270d73c5d1598de1fd691762eb1}{NORETURN}} void quitpi (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{points\+\_\+info,  }\item[{const std\+::string \&}]{message = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04461}{4461}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a84b949a61c3fa63ca17fcf0b2f9ad4f3}\label{testlib_8h_a84b949a61c3fa63ca17fcf0b2f9ad4f3} 
+\index{testlib.h@{testlib.h}!rand@{rand}}
+\index{rand@{rand}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{rand()}{rand()}}
+{\footnotesize\ttfamily int rand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04971}{4971}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a2474f90782a9f77e45d81ae18d7c1ffb}\label{testlib_8h_a2474f90782a9f77e45d81ae18d7c1ffb} 
+\index{testlib.h@{testlib.h}!random\_shuffle@{random\_shuffle}}
+\index{random\_shuffle@{random\_shuffle}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{random\_shuffle()}{random\_shuffle()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Random\+Access\+Iter $>$ \\
+void random\+\_\+shuffle (\begin{DoxyParamCaption}\item[{\+\_\+\+Random\+Access\+Iter}]{,  }\item[{\+\_\+\+Random\+Access\+Iter}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04954}{4954}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a1fbb926756e2060c6e46bae99de4a781}\label{testlib_8h_a1fbb926756e2060c6e46bae99de4a781} 
+\index{testlib.h@{testlib.h}!registerGen@{registerGen}}
+\index{registerGen@{registerGen}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{registerGen()}{registerGen()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void register\+Gen (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04605}{4605}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_ad1cfbe9e8fcaabcd1598206e3ff1ad76}\label{testlib_8h_ad1cfbe9e8fcaabcd1598206e3ff1ad76} 
+\index{testlib.h@{testlib.h}!registerGen@{registerGen}}
+\index{registerGen@{registerGen}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{registerGen()}{registerGen()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void register\+Gen (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]},  }\item[{int}]{random\+Generator\+Version }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04566}{4566}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a01331bd5d26dd46c4bc7b9295a036aa0}\label{testlib_8h_a01331bd5d26dd46c4bc7b9295a036aa0} 
+\index{testlib.h@{testlib.h}!registerInteraction@{registerInteraction}}
+\index{registerInteraction@{registerInteraction}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{registerInteraction()}{registerInteraction()}}
+{\footnotesize\ttfamily void register\+Interaction (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04638}{4638}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a58c2e7a2e44f8466c34b4500023cac6e}\label{testlib_8h_a58c2e7a2e44f8466c34b4500023cac6e} 
+\index{testlib.h@{testlib.h}!registerTestlib@{registerTestlib}}
+\index{registerTestlib@{registerTestlib}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{registerTestlib()}{registerTestlib()}}
+{\footnotesize\ttfamily void register\+Testlib (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04876}{4876}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_aef178d6340fe04d5d616ee2da19488b4}\label{testlib_8h_aef178d6340fe04d5d616ee2da19488b4} 
+\index{testlib.h@{testlib.h}!registerTestlibCmd@{registerTestlibCmd}}
+\index{registerTestlibCmd@{registerTestlibCmd}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{registerTestlibCmd()}{registerTestlibCmd()}}
+{\footnotesize\ttfamily void register\+Testlib\+Cmd (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04812}{4812}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a92d612e581676b81e9162f70839e88ef}\label{testlib_8h_a92d612e581676b81e9162f70839e88ef} 
+\index{testlib.h@{testlib.h}!registerValidation@{registerValidation}}
+\index{registerValidation@{registerValidation}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{registerValidation()}{registerValidation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void register\+Validation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04691}{4691}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_af37a8d5160de18491abf562b60790dff}\label{testlib_8h_af37a8d5160de18491abf562b60790dff} 
+\index{testlib.h@{testlib.h}!registerValidation@{registerValidation}}
+\index{registerValidation@{registerValidation}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{registerValidation()}{registerValidation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void register\+Validation (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04705}{4705}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_ac237ec9b60cb9035a69ee70750d69141}\label{testlib_8h_ac237ec9b60cb9035a69ee70750d69141} 
+\index{testlib.h@{testlib.h}!resultExitCode@{resultExitCode}}
+\index{resultExitCode@{resultExitCode}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{resultExitCode()}{resultExitCode()}}
+{\footnotesize\ttfamily int result\+Exit\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{testlib_8h_aca738f43134375f0a18077d633f14578}{TResult}}}]{r }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02900}{2900}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_aa87c56b5c1a61e59f3484778120a5797}\label{testlib_8h_aa87c56b5c1a61e59f3484778120a5797} 
+\index{testlib.h@{testlib.h}!setAppesModeEncoding@{setAppesModeEncoding}}
+\index{setAppesModeEncoding@{setAppesModeEncoding}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{setAppesModeEncoding()}{setAppesModeEncoding()}}
+{\footnotesize\ttfamily void set\+Appes\+Mode\+Encoding (\begin{DoxyParamCaption}\item[{std\+::string}]{appes\+Mode\+Encoding }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04614}{4614}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a14fb24cad2f7e3d532a76f41ba4ba15b}\label{testlib_8h_a14fb24cad2f7e3d532a76f41ba4ba15b} 
+\index{testlib.h@{testlib.h}!setName@{setName}}
+\index{setName@{setName}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void set\+Name (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04930}{4930}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_ad093584ea7bc2579d8d49c05d4b95347}\label{testlib_8h_ad093584ea7bc2579d8d49c05d4b95347} 
+\index{testlib.h@{testlib.h}!setTestCase@{setTestCase}}
+\index{setTestCase@{setTestCase}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{setTestCase()}{setTestCase()}}
+{\footnotesize\ttfamily void set\+Test\+Case (\begin{DoxyParamCaption}\item[{int}]{test\+Case }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02878}{2878}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a892cac7bffad68bec03005d0a771c3c7}\label{testlib_8h_a892cac7bffad68bec03005d0a771c3c7} 
+\index{testlib.h@{testlib.h}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{shuffle()}{shuffle()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Random\+Access\+Iter $>$ \\
+void shuffle (\begin{DoxyParamCaption}\item[{\+\_\+\+Random\+Access\+Iter}]{\+\_\+\+\_\+first,  }\item[{\+\_\+\+Random\+Access\+Iter}]{\+\_\+\+\_\+last }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04943}{4943}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_ad85d51a1b33f2422e08f3ca02dbd3127}\label{testlib_8h_ad85d51a1b33f2422e08f3ca02dbd3127} 
+\index{testlib.h@{testlib.h}!split@{split}}
+\index{split@{split}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ split (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s,  }\item[{char}]{separator }\end{DoxyParamCaption})}
+
+Splits string s by character separator returning exactly k+1 items, where k is the number of separator occurrences. 
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l05074}{5074}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a955ec7cfff0acb85ba9695bda2609499}\label{testlib_8h_a955ec7cfff0acb85ba9695bda2609499} 
+\index{testlib.h@{testlib.h}!split@{split}}
+\index{split@{split}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ split (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s,  }\item[{const std\+::string \&}]{separators }\end{DoxyParamCaption})}
+
+Splits string s by character separators returning exactly k+1 items, where k is the number of separator occurrences. 
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l05094}{5094}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a7e6ebe263f2a877015210e0ac28c3e79}\label{testlib_8h_a7e6ebe263f2a877015210e0ac28c3e79} 
+\index{testlib.h@{testlib.h}!srand@{srand}}
+\index{srand@{srand}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{srand()}{srand()}}
+{\footnotesize\ttfamily void srand (\begin{DoxyParamCaption}\item[{unsigned int}]{seed }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04989}{4989}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a7b5d06041e39daeafd603dd998ce02c6}\label{testlib_8h_a7b5d06041e39daeafd603dd998ce02c6} 
+\index{testlib.h@{testlib.h}!startTest@{startTest}}
+\index{startTest@{startTest}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{startTest()}{startTest()}}
+{\footnotesize\ttfamily void start\+Test (\begin{DoxyParamCaption}\item[{int}]{test }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04997}{4997}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_aab9e80a2f4e4203b27b11c5880850d8e}\label{testlib_8h_aab9e80a2f4e4203b27b11c5880850d8e} 
+\index{testlib.h@{testlib.h}!tokenize@{tokenize}}
+\index{tokenize@{tokenize}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{tokenize()}{tokenize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ tokenize (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s,  }\item[{char}]{separator }\end{DoxyParamCaption})}
+
+Splits string s by character separator returning non-\/empty items. 
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l05120}{5120}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_af67ac6c551dc21d30494892a51a7fbb7}\label{testlib_8h_af67ac6c551dc21d30494892a51a7fbb7} 
+\index{testlib.h@{testlib.h}!tokenize@{tokenize}}
+\index{tokenize@{tokenize}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{tokenize()}{tokenize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ tokenize (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s,  }\item[{const std\+::string \&}]{separators }\end{DoxyParamCaption})}
+
+Splits string s by character separators returning non-\/empty items. 
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l05141}{5141}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a1a32c4d3bd87256731e67936766c65ca}\label{testlib_8h_a1a32c4d3bd87256731e67936766c65ca} 
+\index{testlib.h@{testlib.h}!trim@{trim}}
+\index{trim@{trim}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily std\+::string trim (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l01597}{1597}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a0fb214ced4215bfbfa6eba1ab4635721}\label{testlib_8h_a0fb214ced4215bfbfa6eba1ab4635721} 
+\index{testlib.h@{testlib.h}!unsetTestCase@{unsetTestCase}}
+\index{unsetTestCase@{unsetTestCase}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{unsetTestCase()}{unsetTestCase()}}
+{\footnotesize\ttfamily void unset\+Test\+Case (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00343}{343}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a3e8b5e1528a28d4832cb11dff8ad5edb}\label{testlib_8h_a3e8b5e1528a28d4832cb11dff8ad5edb} 
+\index{testlib.h@{testlib.h}!upperCase@{upperCase}}
+\index{upperCase@{upperCase}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{upperCase()}{upperCase()}}
+{\footnotesize\ttfamily std\+::string upper\+Case (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00416}{416}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{testlib_8h_a34371151c9adbae73b89b0e7aed11a6f}\label{testlib_8h_a34371151c9adbae73b89b0e7aed11a6f} 
+\index{testlib.h@{testlib.h}!\_\_testlib\_exitCode@{\_\_testlib\_exitCode}}
+\index{\_\_testlib\_exitCode@{\_\_testlib\_exitCode}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{\_\_testlib\_exitCode}{\_\_testlib\_exitCode}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+testlib\+\_\+exit\+Code}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00336}{336}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a28757a64bf4cec48f7a7e5d6187bb350}\label{testlib_8h_a28757a64bf4cec48f7a7e5d6187bb350} 
+\index{testlib.h@{testlib.h}!\_\_testlib\_group@{\_\_testlib\_group}}
+\index{\_\_testlib\_group@{\_\_testlib\_group}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{\_\_testlib\_group}{\_\_testlib\_group}}
+{\footnotesize\ttfamily std\+::string \+\_\+\+\_\+testlib\+\_\+group}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04544}{4544}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a4a0af2b3cb79c442b17b7aca7c434307}\label{testlib_8h_a4a0af2b3cb79c442b17b7aca7c434307} 
+\index{testlib.h@{testlib.h}!\_\_testlib\_hasTestCase@{\_\_testlib\_hasTestCase}}
+\index{\_\_testlib\_hasTestCase@{\_\_testlib\_hasTestCase}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{\_\_testlib\_hasTestCase}{\_\_testlib\_hasTestCase}}
+{\footnotesize\ttfamily bool \+\_\+\+\_\+testlib\+\_\+has\+Test\+Case}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00338}{338}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_ac2e4a8f83549c96237919d8335d3cdcf}\label{testlib_8h_ac2e4a8f83549c96237919d8335d3cdcf} 
+\index{testlib.h@{testlib.h}!\_\_TESTLIB\_LONGLONG\_MAX@{\_\_TESTLIB\_LONGLONG\_MAX}}
+\index{\_\_TESTLIB\_LONGLONG\_MAX@{\_\_TESTLIB\_LONGLONG\_MAX}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{\_\_TESTLIB\_LONGLONG\_MAX}{\_\_TESTLIB\_LONGLONG\_MAX}}
+{\footnotesize\ttfamily const long long \+\_\+\+\_\+\+TESTLIB\+\_\+\+LONGLONG\+\_\+\+MAX = 9223372036854775807LL}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00333}{333}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a18fd7cadefe2367367300b4f1983d8f0}\label{testlib_8h_a18fd7cadefe2367367300b4f1983d8f0} 
+\index{testlib.h@{testlib.h}!\_\_TESTLIB\_MAX\_TEST\_CASE@{\_\_TESTLIB\_MAX\_TEST\_CASE}}
+\index{\_\_TESTLIB\_MAX\_TEST\_CASE@{\_\_TESTLIB\_MAX\_TEST\_CASE}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{\_\_TESTLIB\_MAX\_TEST\_CASE}{\_\_TESTLIB\_MAX\_TEST\_CASE}}
+{\footnotesize\ttfamily const int \+\_\+\+\_\+\+TESTLIB\+\_\+\+MAX\+\_\+\+TEST\+\_\+\+CASE = 1073741823}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00334}{334}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_acb5280d0779ed8499169e3537ab20fd2}\label{testlib_8h_acb5280d0779ed8499169e3537ab20fd2} 
+\index{testlib.h@{testlib.h}!\_\_testlib\_points@{\_\_testlib\_points}}
+\index{\_\_testlib\_points@{\_\_testlib\_points}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{\_\_testlib\_points}{\_\_testlib\_points}}
+{\footnotesize\ttfamily double \+\_\+\+\_\+testlib\+\_\+points = std\+::numeric\+\_\+limits$<$float$>$\+::infinity()}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02380}{2380}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a78d44a9b705b8375660cf7e4d99ea426}\label{testlib_8h_a78d44a9b705b8375660cf7e4d99ea426} 
+\index{testlib.h@{testlib.h}!\_\_testlib\_testCase@{\_\_testlib\_testCase}}
+\index{\_\_testlib\_testCase@{\_\_testlib\_testCase}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{\_\_testlib\_testCase}{\_\_testlib\_testCase}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+testlib\+\_\+test\+Case = -\/1}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00339}{339}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_adf88ff484a3ca535a2a66ea5c0713796}\label{testlib_8h_adf88ff484a3ca535a2a66ea5c0713796} 
+\index{testlib.h@{testlib.h}!\_\_testlib\_testset@{\_\_testlib\_testset}}
+\index{\_\_testlib\_testset@{\_\_testlib\_testset}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{\_\_testlib\_testset}{\_\_testlib\_testset}}
+{\footnotesize\ttfamily std\+::string \+\_\+\+\_\+testlib\+\_\+testset}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l04538}{4538}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_aca62d65c91dd6453f93a96348e78c5ac}\label{testlib_8h_aca62d65c91dd6453f93a96348e78c5ac} 
+\index{testlib.h@{testlib.h}!ans@{ans}}
+\index{ans@{ans}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{ans}{ans}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_in_stream}{In\+Stream}} ans}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02373}{2373}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_af4cc0994ea0f5ca9ede3bbc670fded8e}\label{testlib_8h_af4cc0994ea0f5ca9ede3bbc670fded8e} 
+\index{testlib.h@{testlib.h}!appesMode@{appesMode}}
+\index{appesMode@{appesMode}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{appesMode}{appesMode}}
+{\footnotesize\ttfamily bool appes\+Mode}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02374}{2374}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a2f4a877b5dc48e645f2c41b5e9c99460}\label{testlib_8h_a2f4a877b5dc48e645f2c41b5e9c99460} 
+\index{testlib.h@{testlib.h}!appesModeEncoding@{appesModeEncoding}}
+\index{appesModeEncoding@{appesModeEncoding}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{appesModeEncoding}{appesModeEncoding}}
+{\footnotesize\ttfamily std\+::string appes\+Mode\+Encoding = "{}windows-\/1251"{}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02375}{2375}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a9ce0a964a656c5d7d59b41f935fef72c}\label{testlib_8h_a9ce0a964a656c5d7d59b41f935fef72c} 
+\index{testlib.h@{testlib.h}!checker@{checker}}
+\index{checker@{checker}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{checker}{checker}}
+{\footnotesize\ttfamily class \mbox{\hyperlink{class_checker}{Checker}} checker}
+
+\Hypertarget{testlib_8h_a00f5e960957827ed8846cf705f810473}\label{testlib_8h_a00f5e960957827ed8846cf705f810473} 
+\index{testlib.h@{testlib.h}!checkerName@{checkerName}}
+\index{checkerName@{checkerName}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{checkerName}{checkerName}}
+{\footnotesize\ttfamily std\+::string checker\+Name = "{}untitled checker"{}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02377}{2377}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_ad3874376581d36b1067d501d534d7b34}\label{testlib_8h_ad3874376581d36b1067d501d534d7b34} 
+\index{testlib.h@{testlib.h}!inf@{inf}}
+\index{inf@{inf}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{inf}{inf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_in_stream}{In\+Stream}} inf}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02371}{2371}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_aca3ccf9230a0e9c7f28e21d77f26e74f}\label{testlib_8h_aca3ccf9230a0e9c7f28e21d77f26e74f} 
+\index{testlib.h@{testlib.h}!latestFeatures@{latestFeatures}}
+\index{latestFeatures@{latestFeatures}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{latestFeatures}{latestFeatures}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} latest\+Features\mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l00065}{65}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a93822943d6413c3eba20a27b9d31336b}\label{testlib_8h_a93822943d6413c3eba20a27b9d31336b} 
+\index{testlib.h@{testlib.h}!ouf@{ouf}}
+\index{ouf@{ouf}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{ouf}{ouf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_in_stream}{In\+Stream}} ouf}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02372}{2372}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a02aa6e42b031ee29efb38fcc1f7a1d59}\label{testlib_8h_a02aa6e42b031ee29efb38fcc1f7a1d59} 
+\index{testlib.h@{testlib.h}!outcomes@{outcomes}}
+\index{outcomes@{outcomes}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{outcomes}{outcomes}}
+{\footnotesize\ttfamily const std\+::string outcomes\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}accepted"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}wrong-\/answer"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}presentation-\/error"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}fail"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}fail"{}},}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}points"{}},}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}reserved"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}reserved"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}unexpected-\/eof"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}reserved"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}reserved"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}reserved"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}reserved"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}reserved"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}reserved"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}reserved"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}partially-\/correct"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l01639}{1639}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a300565f96b1c710f123009c6aa8aed29}\label{testlib_8h_a300565f96b1c710f123009c6aa8aed29} 
+\index{testlib.h@{testlib.h}!resultName@{resultName}}
+\index{resultName@{resultName}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{resultName}{resultName}}
+{\footnotesize\ttfamily std\+::string result\+Name}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02376}{2376}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a5743b8b2167a45883185605a8d8e10ce}\label{testlib_8h_a5743b8b2167a45883185605a8d8e10ce} 
+\index{testlib.h@{testlib.h}!rnd@{rnd}}
+\index{rnd@{rnd}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{rnd}{rnd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrandom__t}{random\+\_\+t}} rnd}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02378}{2378}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a576c1be9a11f2136d2bfa955394d4575}\label{testlib_8h_a576c1be9a11f2136d2bfa955394d4575} 
+\index{testlib.h@{testlib.h}!testlibFinalizeGuard@{testlibFinalizeGuard}}
+\index{testlibFinalizeGuard@{testlibFinalizeGuard}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{testlibFinalizeGuard}{testlibFinalizeGuard}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_testlib_finalize_guard}{Testlib\+Finalize\+Guard}} testlib\+Finalize\+Guard\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{testlib_8h_a94143519d4511e7adb6c77b5c715eeaf}\label{testlib_8h_a94143519d4511e7adb6c77b5c715eeaf} 
+\index{testlib.h@{testlib.h}!testlibMode@{testlibMode}}
+\index{testlibMode@{testlibMode}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{testlibMode}{testlibMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{testlib_8h_a72dc574602eb75df785ecfc398a3158f}{TTestlib\+Mode}} testlib\+Mode = \mbox{\hyperlink{testlib_8h_a72dc574602eb75df785ecfc398a3158fa344a85f02f1ac239f9f648738a856eb6}{\+\_\+unknown}}}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02379}{2379}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a675e9c0cb400805c69d94e7cdded4494}\label{testlib_8h_a675e9c0cb400805c69d94e7cdded4494} 
+\index{testlib.h@{testlib.h}!tout@{tout}}
+\index{tout@{tout}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{tout}{tout}}
+{\footnotesize\ttfamily std\+::fstream tout}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02823}{2823}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+
+\Hypertarget{testlib_8h_a72a79ac1064de9f716b78e4369669976}\label{testlib_8h_a72a79ac1064de9f716b78e4369669976} 
+\index{testlib.h@{testlib.h}!validator@{validator}}
+\index{validator@{validator}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{validator}{validator}}
+{\footnotesize\ttfamily class \mbox{\hyperlink{class_validator}{Validator}} validator}
+
+\Hypertarget{testlib_8h_ad2806158bb273bfbae710825328a0887}\label{testlib_8h_ad2806158bb273bfbae710825328a0887} 
+\index{testlib.h@{testlib.h}!VALIDATOR\_MAX\_VARIABLE\_COUNT@{VALIDATOR\_MAX\_VARIABLE\_COUNT}}
+\index{VALIDATOR\_MAX\_VARIABLE\_COUNT@{VALIDATOR\_MAX\_VARIABLE\_COUNT}!testlib.h@{testlib.h}}
+\doxysubsubsection{\texorpdfstring{VALIDATOR\_MAX\_VARIABLE\_COUNT}{VALIDATOR\_MAX\_VARIABLE\_COUNT}}
+{\footnotesize\ttfamily const size\+\_\+t VALIDATOR\+\_\+\+MAX\+\_\+\+VARIABLE\+\_\+\+COUNT = 255}
+
+
+
+Definition at line \mbox{\hyperlink{testlib_8h_source_l02382}{2382}} of file \mbox{\hyperlink{testlib_8h_source}{testlib.\+h}}.
+

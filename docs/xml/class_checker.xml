@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_checker" kind="class" language="C++" prot="public">
+    <compoundname>Checker</compoundname>
+    <includes refid="testlib_8h" local="no">testlib.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_checker_1ad144daf0d932bb7df4b38a1d3c1d8cfe" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Checker::_initialized</definition>
+        <argsstring></argsstring>
+        <name>_initialized</name>
+        <qualifiedname>Checker::_initialized</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="4779" column="10" bodyfile="src/testlib.h" bodystart="4779" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_checker_1a7b81a7e37cca99156cb347da56e27005" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Checker::_testset</definition>
+        <argsstring></argsstring>
+        <name>_testset</name>
+        <qualifiedname>Checker::_testset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="4780" column="17" bodyfile="src/testlib.h" bodystart="4780" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_checker_1a3b5a3c391f5306d58000de6c3375b57d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Checker::_group</definition>
+        <argsstring></argsstring>
+        <name>_group</name>
+        <qualifiedname>Checker::_group</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="4781" column="17" bodyfile="src/testlib.h" bodystart="4781" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_checker_1aafe6cbd15f04ea271878f54c424c4b2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Checker::Checker</definition>
+        <argsstring>()</argsstring>
+        <name>Checker</name>
+        <qualifiedname>Checker::Checker</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="4784" column="5" bodyfile="src/testlib.h" bodystart="4784" bodyend="4785"/>
+      </memberdef>
+      <memberdef kind="function" id="class_checker_1a271ef5fb00c4230cebb26ef476117a9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Checker::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <qualifiedname>Checker::initialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="4787" column="10" bodyfile="src/testlib.h" bodystart="4787" bodyend="4789"/>
+      </memberdef>
+      <memberdef kind="function" id="class_checker_1ac0b5f297b97d53d2662d6faf87da23c4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Checker::testset</definition>
+        <argsstring>() const</argsstring>
+        <name>testset</name>
+        <qualifiedname>Checker::testset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="4791" column="17" bodyfile="src/testlib.h" bodystart="4791" bodyend="4795"/>
+      </memberdef>
+      <memberdef kind="function" id="class_checker_1a30f363a82bc2c6345314b5aa690c6ab2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Checker::group</definition>
+        <argsstring>() const</argsstring>
+        <name>group</name>
+        <qualifiedname>Checker::group</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="4797" column="17" bodyfile="src/testlib.h" bodystart="4797" bodyend="4801"/>
+      </memberdef>
+      <memberdef kind="function" id="class_checker_1a9d820f5d5a3026e8f0fa4548a329b6b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Checker::setTestset</definition>
+        <argsstring>(const char *const testset)</argsstring>
+        <name>setTestset</name>
+        <qualifiedname>Checker::setTestset</qualifiedname>
+        <param>
+          <type>const char *const</type>
+          <declname>testset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="4803" column="10" bodyfile="src/testlib.h" bodystart="4803" bodyend="4805"/>
+      </memberdef>
+      <memberdef kind="function" id="class_checker_1a86db664876730b34937e5be2552eb9a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Checker::setGroup</definition>
+        <argsstring>(const char *const group)</argsstring>
+        <name>setGroup</name>
+        <qualifiedname>Checker::setGroup</qualifiedname>
+        <param>
+          <type>const char *const</type>
+          <declname>group</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/testlib.h" line="4807" column="10" bodyfile="src/testlib.h" bodystart="4807" bodyend="4809"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/testlib.h" line="4777" column="1" bodyfile="src/testlib.h" bodystart="4777" bodyend="4810"/>
+    <listofallmembers>
+      <member refid="class_checker_1a3b5a3c391f5306d58000de6c3375b57d" prot="private" virt="non-virtual"><scope>Checker</scope><name>_group</name></member>
+      <member refid="class_checker_1ad144daf0d932bb7df4b38a1d3c1d8cfe" prot="private" virt="non-virtual"><scope>Checker</scope><name>_initialized</name></member>
+      <member refid="class_checker_1a7b81a7e37cca99156cb347da56e27005" prot="private" virt="non-virtual"><scope>Checker</scope><name>_testset</name></member>
+      <member refid="class_checker_1aafe6cbd15f04ea271878f54c424c4b2a" prot="public" virt="non-virtual"><scope>Checker</scope><name>Checker</name></member>
+      <member refid="class_checker_1a30f363a82bc2c6345314b5aa690c6ab2" prot="public" virt="non-virtual"><scope>Checker</scope><name>group</name></member>
+      <member refid="class_checker_1a271ef5fb00c4230cebb26ef476117a9d" prot="public" virt="non-virtual"><scope>Checker</scope><name>initialize</name></member>
+      <member refid="class_checker_1a86db664876730b34937e5be2552eb9a0" prot="public" virt="non-virtual"><scope>Checker</scope><name>setGroup</name></member>
+      <member refid="class_checker_1a9d820f5d5a3026e8f0fa4548a329b6b7" prot="public" virt="non-virtual"><scope>Checker</scope><name>setTestset</name></member>
+      <member refid="class_checker_1ac0b5f297b97d53d2662d6faf87da23c4" prot="public" virt="non-virtual"><scope>Checker</scope><name>testset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

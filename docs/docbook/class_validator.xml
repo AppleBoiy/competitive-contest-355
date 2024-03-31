@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_validator" xml:lang="en-US">
+<title>Validator Class Reference</title>
+<indexterm><primary>Validator</primary></indexterm>
+<para>
+<computeroutput>#include &lt;testlib.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_validator_1a5059febd30a909b60107c591fe72eaca">Validator</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> <link linkend="_class_validator_1aeb0b49097c1087062e53aac935028b47">initialize</link> ()</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_validator_1a302f9e1dada936024fbb9ba1df4584fa">testset</link> () <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_validator_1a6e369a966da7b21efa5a9f43c05c0bc4">group</link> () <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_validator_1a487fd29bc4d2e64ad3dfe1d02cde353b">testOverviewLogFileName</link> () <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_validator_1a381a78834499e48587efca2376747ce8">testMarkupFileName</link> () <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">testCase</link> () const</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_validator_1a5968d80e9fb476b8cd4315a51318e3c4">testCaseFileName</link> () <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> <link linkend="_class_validator_1a98abe366b29d8445a77b0a8467dceb41">setTestset</link> (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">char</link> *<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> <link linkend="_class_validator_1a302f9e1dada936024fbb9ba1df4584fa">testset</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> <link linkend="_class_validator_1aad2457aadd48a75837e2770aa6c380bb">setGroup</link> (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">char</link> *<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> <link linkend="_class_validator_1a6e369a966da7b21efa5a9f43c05c0bc4">group</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> <link linkend="_class_validator_1a759723fc94643a78cc0b14da68b0107e">setTestOverviewLogFileName</link> (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">char</link> *<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> <link linkend="_class_validator_1a487fd29bc4d2e64ad3dfe1d02cde353b">testOverviewLogFileName</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> <link linkend="_class_validator_1a82a648685268dc91e9bf48f1c4fb8d57">setTestMarkupFileName</link> (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">char</link> *<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> <link linkend="_class_validator_1a381a78834499e48587efca2376747ce8">testMarkupFileName</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> <link linkend="_class_validator_1ab4fd3b0dbe4e35310a9c7b0b7c2a411d">setTestCase</link> (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">int</link> <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">testCase</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> <link linkend="_class_validator_1abe2f949d8c9bff6fe61e0f9fab6e68e4">setTestCaseFileName</link> (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">char</link> *<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> <link linkend="_class_validator_1a5968d80e9fb476b8cd4315a51318e3c4">testCaseFileName</link>)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_validator_1af116e261ded245f21c249bccd6db5628">prepVariableName</link> (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> std::string &amp;<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">variableName</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">bool</link> <link linkend="_class_validator_1aac12f8f1d2ce11e029f6d370d4706373">ignoreMinBound</link> (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> std::string &amp;<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">variableName</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">bool</link> <link linkend="_class_validator_1ad076fd6410b4468890720fb73ae7045a">ignoreMaxBound</link> (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> std::string &amp;<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">variableName</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> <link linkend="_class_validator_1ae8b56de5926c72fbfdd537f1b1d7eadd">addBoundsHit</link> (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> std::string &amp;<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">variableName</link>, <link linkend="_struct_validator_bounds_hit">ValidatorBoundsHit</link> <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">boundsHit</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> <link linkend="_class_validator_1ac33cdd122f71e88613526650d1bb3c45">addVariable</link> (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> std::string &amp;<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">variableName</link>)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_validator_1a40810a5c5baf5da95aa391f858a9e9a6">getVariablesLog</link> ()</para>
+</listitem>
+            <listitem><para>template&lt;<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">typename</link> <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">T</link> &gt; </para><para><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> <link linkend="_class_validator_1aaf48c6b401e8417c3da493f28ca65061">adjustConstantBounds</link> (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> std::string &amp;<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">variableName</link>, <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">T</link> <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">lower</link>, <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">T</link> <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">upper</link>)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_validator_1a2c32c475bb31fb5ca96ed0ac3921417d">getBoundsHitLog</link> ()</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_validator_1a71f5bf142881342a9967da8671c35676">getConstantBoundsLog</link> ()</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_validator_1ab8c173d330b6ead6d5f51587213cfe7b">getFeaturesLog</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> <link linkend="_class_validator_1ac71a3aab99085ef6da45357db1d0fd5a">writeTestOverviewLog</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> <link linkend="_class_validator_1aca38cbb740f48b16c3d5efa5a2c9fc0b">writeTestMarkup</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> <link linkend="_class_validator_1ac0567612d6c3449a42bccd3930cda249">writeTestCase</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> <link linkend="_class_validator_1ad584b1395f153ccfedf884750ff10f70">addFeature</link> (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> std::string &amp;<link linkend="_class_validator_1a85dd9d919dbd6668399ca595658bba80">feature</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> <link linkend="_class_validator_1a85dd9d919dbd6668399ca595658bba80">feature</link> (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> std::string &amp;feature)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_testlib_8h_source_1l02432">2432</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_validator_1a5059febd30a909b60107c591fe72eaca"/><section>
+    <title>Validator()</title>
+<indexterm><primary>Validator</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>Validator</secondary></indexterm>
+<para><computeroutput>Validator::Validator ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02468">2468</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_validator_1ae8b56de5926c72fbfdd537f1b1d7eadd"/><section>
+    <title>addBoundsHit()</title>
+<indexterm><primary>addBoundsHit</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>addBoundsHit</secondary></indexterm>
+<para><computeroutput><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> Validator::addBoundsHit (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> std::string &amp; variableName, <link linkend="_struct_validator_bounds_hit">ValidatorBoundsHit</link> boundsHit)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02547">2547</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1ad584b1395f153ccfedf884750ff10f70"/><section>
+    <title>addFeature()</title>
+<indexterm><primary>addFeature</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>addFeature</secondary></indexterm>
+<para><computeroutput><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> Validator::addFeature (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> std::string &amp; feature)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02746">2746</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1ac33cdd122f71e88613526650d1bb3c45"/><section>
+    <title>addVariable()</title>
+<indexterm><primary>addVariable</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>addVariable</secondary></indexterm>
+<para><computeroutput><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> Validator::addVariable (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> std::string &amp; variableName)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02556">2556</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1aaf48c6b401e8417c3da493f28ca65061"/><section>
+    <title>adjustConstantBounds()</title>
+<indexterm><primary>adjustConstantBounds</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>adjustConstantBounds</secondary></indexterm>
+<computeroutput>template&lt;<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">typename</link> <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">T</link> &gt; </computeroutput><para><computeroutput><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> Validator::adjustConstantBounds (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> std::string &amp; variableName, <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">T</link> lower, <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">T</link> upper)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02572">2572</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1a85dd9d919dbd6668399ca595658bba80"/><section>
+    <title>feature()</title>
+<indexterm><primary>feature</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>feature</secondary></indexterm>
+<para><computeroutput><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> Validator::feature (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> std::string &amp; feature)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02755">2755</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1a2c32c475bb31fb5ca96ed0ac3921417d"/><section>
+    <title>getBoundsHitLog()</title>
+<indexterm><primary>getBoundsHitLog</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>getBoundsHitLog</secondary></indexterm>
+<para><computeroutput>std::string Validator::getBoundsHitLog ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02581">2581</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1a71f5bf142881342a9967da8671c35676"/><section>
+    <title>getConstantBoundsLog()</title>
+<indexterm><primary>getConstantBoundsLog</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>getConstantBoundsLog</secondary></indexterm>
+<para><computeroutput>std::string Validator::getConstantBoundsLog ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02596">2596</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1ab8c173d330b6ead6d5f51587213cfe7b"/><section>
+    <title>getFeaturesLog()</title>
+<indexterm><primary>getFeaturesLog</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>getFeaturesLog</secondary></indexterm>
+<para><computeroutput>std::string Validator::getFeaturesLog ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02617">2617</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1a40810a5c5baf5da95aa391f858a9e9a6"/><section>
+    <title>getVariablesLog()</title>
+<indexterm><primary>getVariablesLog</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>getVariablesLog</secondary></indexterm>
+<para><computeroutput>std::string Validator::getVariablesLog ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02564">2564</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1a6e369a966da7b21efa5a9f43c05c0bc4"/><section>
+    <title>group()</title>
+<indexterm><primary>group</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>group</secondary></indexterm>
+<para><computeroutput>std::string Validator::group ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02481">2481</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1ad076fd6410b4468890720fb73ae7045a"/><section>
+    <title>ignoreMaxBound()</title>
+<indexterm><primary>ignoreMaxBound</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>ignoreMaxBound</secondary></indexterm>
+<para><computeroutput><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">bool</link> Validator::ignoreMaxBound (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> std::string &amp; variableName)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02543">2543</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1aac12f8f1d2ce11e029f6d370d4706373"/><section>
+    <title>ignoreMinBound()</title>
+<indexterm><primary>ignoreMinBound</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>ignoreMinBound</secondary></indexterm>
+<para><computeroutput><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">bool</link> Validator::ignoreMinBound (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> std::string &amp; variableName)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02539">2539</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1aeb0b49097c1087062e53aac935028b47"/><section>
+    <title>initialize()</title>
+<indexterm><primary>initialize</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>initialize</secondary></indexterm>
+<para><computeroutput><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> Validator::initialize ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02471">2471</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1af116e261ded245f21c249bccd6db5628"/><section>
+    <title>prepVariableName()</title>
+<indexterm><primary>prepVariableName</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>prepVariableName</secondary></indexterm>
+<para><computeroutput>std::string Validator::prepVariableName (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> std::string &amp; variableName)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02527">2527</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1aad2457aadd48a75837e2770aa6c380bb"/><section>
+    <title>setGroup()</title>
+<indexterm><primary>setGroup</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>setGroup</secondary></indexterm>
+<para><computeroutput><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> Validator::setGroup (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">char</link> *<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> group)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02507">2507</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1ab4fd3b0dbe4e35310a9c7b0b7c2a411d"/><section>
+    <title>setTestCase()</title>
+<indexterm><primary>setTestCase</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>setTestCase</secondary></indexterm>
+<para><computeroutput><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> Validator::setTestCase (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">int</link> testCase)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02519">2519</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1abe2f949d8c9bff6fe61e0f9fab6e68e4"/><section>
+    <title>setTestCaseFileName()</title>
+<indexterm><primary>setTestCaseFileName</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>setTestCaseFileName</secondary></indexterm>
+<para><computeroutput><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> Validator::setTestCaseFileName (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">char</link> *<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> testCaseFileName)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02523">2523</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1a82a648685268dc91e9bf48f1c4fb8d57"/><section>
+    <title>setTestMarkupFileName()</title>
+<indexterm><primary>setTestMarkupFileName</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>setTestMarkupFileName</secondary></indexterm>
+<para><computeroutput><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> Validator::setTestMarkupFileName (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">char</link> *<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> testMarkupFileName)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02515">2515</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1a759723fc94643a78cc0b14da68b0107e"/><section>
+    <title>setTestOverviewLogFileName()</title>
+<indexterm><primary>setTestOverviewLogFileName</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>setTestOverviewLogFileName</secondary></indexterm>
+<para><computeroutput><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> Validator::setTestOverviewLogFileName (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">char</link> *<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> testOverviewLogFileName)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02511">2511</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1a98abe366b29d8445a77b0a8467dceb41"/><section>
+    <title>setTestset()</title>
+<indexterm><primary>setTestset</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>setTestset</secondary></indexterm>
+<para><computeroutput><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> Validator::setTestset (<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> <link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">char</link> *<link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">const</link> testset)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02503">2503</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c"/><section>
+    <title>testCase()</title>
+<indexterm><primary>testCase</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>testCase</secondary></indexterm>
+<para><computeroutput>int Validator::testCase ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02495">2495</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1a5968d80e9fb476b8cd4315a51318e3c4"/><section>
+    <title>testCaseFileName()</title>
+<indexterm><primary>testCaseFileName</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>testCaseFileName</secondary></indexterm>
+<para><computeroutput>std::string Validator::testCaseFileName ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02499">2499</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1a381a78834499e48587efca2376747ce8"/><section>
+    <title>testMarkupFileName()</title>
+<indexterm><primary>testMarkupFileName</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>testMarkupFileName</secondary></indexterm>
+<para><computeroutput>std::string Validator::testMarkupFileName ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02491">2491</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1a487fd29bc4d2e64ad3dfe1d02cde353b"/><section>
+    <title>testOverviewLogFileName()</title>
+<indexterm><primary>testOverviewLogFileName</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>testOverviewLogFileName</secondary></indexterm>
+<para><computeroutput>std::string Validator::testOverviewLogFileName ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02487">2487</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1a302f9e1dada936024fbb9ba1df4584fa"/><section>
+    <title>testset()</title>
+<indexterm><primary>testset</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>testset</secondary></indexterm>
+<para><computeroutput>std::string Validator::testset ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02475">2475</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1ac0567612d6c3449a42bccd3930cda249"/><section>
+    <title>writeTestCase()</title>
+<indexterm><primary>writeTestCase</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>writeTestCase</secondary></indexterm>
+<para><computeroutput><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> Validator::writeTestCase ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02698">2698</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1aca38cbb740f48b16c3d5efa5a2c9fc0b"/><section>
+    <title>writeTestMarkup()</title>
+<indexterm><primary>writeTestMarkup</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>writeTestMarkup</secondary></indexterm>
+<para><computeroutput><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> Validator::writeTestMarkup ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02658">2658</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<anchor xml:id="_class_validator_1ac71a3aab99085ef6da45357db1d0fd5a"/><section>
+    <title>writeTestOverviewLog()</title>
+<indexterm><primary>writeTestOverviewLog</primary><secondary>Validator</secondary></indexterm>
+<indexterm><primary>Validator</primary><secondary>writeTestOverviewLog</secondary></indexterm>
+<para><computeroutput><link linkend="_class_validator_1a9e106664d07fbf5f535cd66d27ab0e7c">void</link> Validator::writeTestOverviewLog ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_testlib_8h_source_1l02630">2630</link> of file <link linkend="_testlib_8h_source">testlib.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/<link linkend="_testlib_8h">testlib.h</link></section>
+</section>
