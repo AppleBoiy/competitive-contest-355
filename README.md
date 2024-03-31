@@ -1,15 +1,12 @@
 <!--
 <p align="center">
   <img src="sample.png"/>
-</p> 
+</p>
+
 -->
+# Fibonacci Modulo Problem
 
-
-# Competitive contest
-
-## Fibonacci Modulo Problem
-
-### Problem Statement
+## Problem Statement
 
 You are given two integers, **n** and **m**, and you need to find the **nth Fibonacci number modulo m**.
 
