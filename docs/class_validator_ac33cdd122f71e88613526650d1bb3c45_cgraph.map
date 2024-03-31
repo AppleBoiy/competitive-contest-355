@@ -1,8 +1,0 @@
-<map id="Validator::addVariable" name="Validator::addVariable">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,152,56"/>
-<area shape="rect" id="Node000002" href="$class_validator.html#af116e261ded245f21c249bccd6db5628" title=" " alt="" coords="200,5,385,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,32,184,28,185,34,152,38"/>
-<area shape="rect" id="Node000003" href="$class_validator.html#a9e106664d07fbf5f535cd66d27ab0e7c" title=" " alt="" coords="433,31,565,56"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="152,41,417,41,417,46,152,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="386,27,418,31,417,36,385,32"/>
-</map>

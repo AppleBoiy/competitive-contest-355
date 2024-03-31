@@ -1,8 +1,0 @@
-<map id="random_t::distinct" name="random_t::distinct">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,131,31"/>
-<area shape="rect" id="Node000002" href="$classrandom__t.html#af18b3616494fc94e3953b3c09fdf4c26" title=" " alt="" coords="339,5,447,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,16,324,16,324,21,131,21"/>
-<area shape="rect" id="Node000003" href="$classrandom__t.html#a8307bf13307e17694c4d38f76e1457e0" title=" " alt="" coords="179,31,291,56"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="131,25,164,30,163,35,131,30"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="291,32,323,27,324,32,292,37"/>
-</map>

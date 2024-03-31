@@ -1,9 +1,0 @@
-<map id="join" name="join">
-<area shape="rect" id="Node000001" title=" " alt="" coords="95,55,136,80"/>
-<area shape="rect" id="Node000002" href="$testlib_8h.html#a4d11cf2b81aaccdb03807cff7c1bae28" title=" " alt="" coords="5,5,47,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,51,46,32,48,27,82,46"/>
-<area shape="rect" id="Node000003" href="$testlib_8h.html#a31e919f2108a1f317e66d345a23c4923" title=" " alt="" coords="5,55,47,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="79,70,47,70,47,65,79,65"/>
-<area shape="rect" id="Node000004" href="$testlib_8h.html#a8c0f114f708064c2c01b47ab82cdf028" title=" " alt="" coords="5,104,47,130"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="82,89,48,108,46,103,80,84"/>
-</map>

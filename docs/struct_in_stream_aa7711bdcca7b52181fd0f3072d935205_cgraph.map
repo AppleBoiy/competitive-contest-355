@@ -1,7 +1,0 @@
-<map id="InStream::readChar" name="InStream::readChar">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,141,39"/>
-<area shape="rect" id="Node000002" href="$struct_in_stream.html#af46102c51b215e59e3b9e993ac999fe5" title=" " alt="" coords="189,13,324,39"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,23,173,23,173,28,141,28"/>
-<area shape="rect" id="Node000003" href="$class_input_stream_reader.html#a243f344748d1f7de9a2fa5faa31a29c3" title=" " alt="" coords="372,5,514,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="324,23,357,23,357,28,324,28"/>
-</map>

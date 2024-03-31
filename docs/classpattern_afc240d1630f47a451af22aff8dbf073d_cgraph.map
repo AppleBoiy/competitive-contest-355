@@ -1,6 +1,0 @@
-<map id="pattern::next" name="pattern::next">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,100,31"/>
-<area shape="rect" id="Node000002" href="$classrandom__t.html#adb0b3734666df2f17c7d60b33db87ad6" title=" " alt="" coords="148,5,256,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,24,132,24,132,30,100,29"/>
-<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="147,12,115,12,115,7,147,7"/>
-</map>
