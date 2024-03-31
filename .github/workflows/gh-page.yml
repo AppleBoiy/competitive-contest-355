@@ -1,36 +1,48 @@
-name: Doxygen CI
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
 
-on: 
+on:
+  # Runs on pushes targeting the default branch
   push:
-    branches: [dev]
+    branches: ["docs"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  build:
-    runs-on: macos-latest
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: true
-      - name: Install requirements
-        run: |
-          brew install graphviz ninja doxygen
-      - name: configure
-        run: cmake -G Ninja -B ./build -S .
-      - name: build
-        run: cmake --build build -t doc
-      - name: gh-pages
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: "gh-pages"
-          clean: false
-      - name: Move & Commit files
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Install Requirements
         run: |
-          git config --global user.name github-actions
-          git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-          rm -rf d* && rm *.html && rm *.svg && rm *.map && rm *.md5 && rm *.png && rm *.js && rm *.css
-          git add .
-          cp -rp ./build/html/* . && rm -rf ./build && ls -lah
-          git add .
-          git commit -m "Documentation for $GITHUB_SHA" ||  true
-          git push --force || true
+          brew install doxygen
+      - name: Build
+        run: doxygen
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: 'docs'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
