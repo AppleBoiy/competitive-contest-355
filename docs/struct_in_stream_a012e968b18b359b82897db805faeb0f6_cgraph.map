@@ -1,0 +1,9 @@
+<map id="InStream::readSpace" name="InStream::readSpace">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,150,39"/>
+<area shape="rect" id="Node000002" href="$struct_in_stream.html#aa7711bdcca7b52181fd0f3072d935205" title=" " alt="" coords="198,13,333,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,23,182,23,182,28,150,28"/>
+<area shape="rect" id="Node000003" href="$struct_in_stream.html#af46102c51b215e59e3b9e993ac999fe5" title=" " alt="" coords="381,13,516,39"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="333,23,366,23,366,28,333,28"/>
+<area shape="rect" id="Node000004" href="$class_input_stream_reader.html#a243f344748d1f7de9a2fa5faa31a29c3" title=" " alt="" coords="564,5,707,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="516,23,549,23,549,28,516,28"/>
+</map>
