@@ -24,12 +24,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - name: Install dependencies
-        run: brew install doxygen graphviz
+      # - name: Install dependencies
+      #   run: brew install doxygen graphviz
       
-      - name: Build and deploy
-        run: |
-          doxygen Doxyfile
+      # - name: Build and deploy
+      #   run: |
+      #     doxygen Doxyfile
 
       - name: gh-pages
         uses: actions/checkout@v4
