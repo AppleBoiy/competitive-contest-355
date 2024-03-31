@@ -1,0 +1,15 @@
+<map id="InStream::skipBom" name="InStream::skipBom">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,78,139,104"/>
+<area shape="rect" id="Node000002" href="$struct_in_stream.html#af208d97fa6484d10b88d611012fce578" title=" " alt="" coords="197,21,326,47"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,75,201,49,203,54,118,80"/>
+<area shape="rect" id="Node000004" href="$struct_in_stream.html#a15dbd488971ba0da79085f7bd980f1f1" title=" " alt="" coords="194,78,329,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="139,88,178,88,178,94,139,94"/>
+<area shape="rect" id="Node000006" href="$struct_in_stream.html#a8c656e9ae7175e852033fbdffe41550b" title=" " alt="" coords="187,136,336,161"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="118,102,203,128,201,133,116,107"/>
+<area shape="rect" id="Node000003" href="$class_input_stream_reader.html#a80448788833a59a503853b4a45a96137" title=" " alt="" coords="384,5,526,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="326,28,368,27,368,32,326,34"/>
+<area shape="rect" id="Node000005" href="$class_input_stream_reader.html#ad01b8b4dd307c70472afb7dae417401a" title=" " alt="" coords="384,71,526,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="329,88,368,88,368,94,329,94"/>
+<area shape="rect" id="Node000007" href="$class_input_stream_reader.html#a48da3436df374a668c79b0f5b8ae7208" title=" " alt="" coords="384,136,526,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="337,149,369,150,369,155,336,154"/>
+</map>
