@@ -1,8 +1,0 @@
-<map id="InStream::readLines" name="InStream::readLines">
-<area shape="rect" id="Node000001" title=" " alt="" coords="192,31,330,56"/>
-<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="293,18,282,12,261,9,241,11,231,16,229,21,234,29,229,32,223,22,227,12,240,6,261,4,283,7,295,13"/>
-<area shape="rect" id="Node000002" href="$struct_in_stream.html#a1ce8d0614039ae608612cca5d4fc5f28" title=" " alt="" coords="5,5,144,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,35,144,30,145,25,177,29"/>
-<area shape="rect" id="Node000003" href="$struct_in_stream.html#a5f62d4bb591a6de0a04cc8cc8a876202" title=" " alt="" coords="5,55,144,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="177,57,145,61,144,56,176,52"/>
-</map>

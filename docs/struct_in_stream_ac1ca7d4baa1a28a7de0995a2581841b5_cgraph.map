@@ -1,7 +1,0 @@
-<map id="InStream::quitscrS" name="InStream::quitscrS">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,136,31"/>
-<area shape="rect" id="Node000002" href="$struct_in_stream.html#a681c59fb45459a1247d0bb237eb196eb" title=" " alt="" coords="184,5,305,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,16,168,16,168,21,136,21"/>
-<area shape="rect" id="Node000003" href="$struct_in_stream.html#a4ff4b2110a80dea66154702116080e49" title=" " alt="" coords="353,5,488,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="305,16,338,16,338,21,305,21"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="InStream::skipBlanks" name="InStream::skipBlanks">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,70,152,96"/>
-<area shape="rect" id="Node000002" href="$class_input_stream_reader.html#a80448788833a59a503853b4a45a96137" title=" " alt="" coords="200,5,342,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,67,185,48,186,54,125,72"/>
-<area shape="rect" id="Node000003" href="$testlib_8h.html#aedd6eec8331fb12c3330f6b7a1227e2c" title=" " alt="" coords="235,70,307,96"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="152,80,220,80,220,86,152,86"/>
-<area shape="rect" id="Node000004" href="$class_input_stream_reader.html#ad01b8b4dd307c70472afb7dae417401a" title=" " alt="" coords="200,120,342,161"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="125,94,186,112,185,118,124,99"/>
-</map>
